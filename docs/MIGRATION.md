@@ -1,5 +1,20 @@
 # 운영 이전 기록
 
+## 확인된 진행 상태 (2026-11-02)
+
+- 웹 저장소 `moo3sing/moo3sing.github.io` public, Minecraft 저장소 `moo3sing/singgyul-minecraft` private, 모두 main branch로 생성·push 완료
+- GitHub Pages Actions 배포 성공, custom domain 등록 전 기본 URL의 실제 Chromium 검증 성공
+- production 공개 파일 32개와 GitHub Pages 응답 SHA256 모두 일치
+- GitHub CI: Python 117개 및 기존 JavaScript·브라우저 검사 통과
+- 실제 manual workflow dry-run 성공. raw 7,984,415 / 보정 -70,000 / adjusted 7,914,415를 확인했으며 게시하지 않음
+- apply·실패 rollback·429 즉시 중단·100개 후보 중복 요청 없음·원격 gate 저장 실패 시 API 0회는 격리된 테스트로 검증
+- 실제 collector workflow offline 실행 성공, API 0회. 자동 수집은 COLLECTOR_ENABLED=false 유지, 기존 GCP cron 유지
+- Pages custom domain에 taehyeon-masu.xyz 등록 완료. 가비아 DNS와 GitHub 계정 TXT 검증은 사용자 적용 대기
+- Minecraft는 사용하지 않는 프로젝트로 확인. 사용자 승인으로 게임 서비스만 중지하고, 소스 및 복구 archive를 별도 비공개 저장소에 보관
+- Minecraft 약 750 MB archive를 업로드한 뒤 원격 다운로드 스트림의 전체 SHA256과 파일 718개 재검증. 실제 게임 복원·접속 테스트는 재개 시 필요
+
+현재 GCP 종료 가능 여부는 **NO**입니다. 도메인의 Pages 전환·HTTPS와 실제 자동 수집 인계가 아직 완료되지 않았습니다.
+
 ## 원본 선택
 
 2026-11-02 조사에서 public 32개 파일 중 staging과 다른 파일은 `assets/data/ranking.json` 및 `collection-status.json`이었습니다. 실제 서비스 중인 production 파일을 우선했습니다. 수집기·테스트는 기존 source를 사용합니다. 최종 공개 파일의 해시 대조 결과는 VM의 별도 audit 폴더에 보관합니다.
@@ -23,7 +38,7 @@ GitHub 어댑터가 바꾸는 부분은 경로·입력·게시 방식입니다. 
 6. 운영의 최신 데이터·이력·gate 상태를 다시 동기화합니다. 성공 여부와 당일 시도를 확인한 뒤 GCP의 해당 cron만 중지하고 Actions 변수를 활성화합니다. 같은 KST 날짜에 전체 수집을 두 번 실행하지 않습니다.
 7. 예약 실행과 실제 JSON 게시, 수동 apply, 실패·429 보존 동작을 확인합니다. 추가 호스트와 Minecraft runtime 이전까지 확인한 뒤 GCP 종료를 별도로 결정합니다.
 
-현재는 이 순서가 완료되지 않았습니다. 기존 GCP 서비스와 DNS를 유지합니다.
+현재는 웹 저장소·기본 Pages 검증·custom domain 사전 등록까지 완료했습니다. GCP 웹 서비스와 기존 DNS는 유지하며 Minecraft 서비스는 사용자 승인으로 중지했습니다.
 
 ## DNS 전환안과 복구
 

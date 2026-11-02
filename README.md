@@ -2,7 +2,7 @@
 
 운영 중인 `https://taehyeon-masu.xyz`의 정적 화면과 최신 공개 데이터를 보존하고, 수집·수동 갱신을 GitHub Actions로 옮기는 저장소입니다. 대상 계정은 **moo3sing**입니다.
 
-현재 단계는 로컬 준비 및 검증입니다. 이 문서만으로 DNS 전환이나 GCP 종료가 완료되었다고 판단하지 마세요. 운영 인계 결과는 `docs/MIGRATION.md`에 기록합니다.
+GitHub Pages 배포와 기본 URL 검증을 마쳤습니다. 현재 custom domain의 DNS·TXT·HTTPS 인계를 기다리며 자동 수집은 비활성 상태입니다. GCP 웹은 유지합니다. 운영 인계 결과는 `docs/MIGRATION.md`에 기록합니다.
 
 ## 구성
 
