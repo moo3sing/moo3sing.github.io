@@ -49,6 +49,8 @@ Actions → **Manual ranking update** → Run workflow에서 먼저 `dry_run=tru
 
 기존 수집기의 하루 1회 gate, 429 즉시 중단, Retry-After와 blockedUntil, source correction 검토, 원자적 JSON 교체를 재사용합니다. 실패 시 순위 JSON과 성공 이력은 원래 값으로 되돌리고 차단·시도 상태만 보존합니다. 불필요한 중복 요청은 하지 않으며, 기존 정책의 이상값 재확인은 유지합니다.
 
+당일 gate는 첫 API 요청 전에 GitHub에 커밋합니다. 이 저장에 실패하면 API를 호출하지 않습니다. runner가 강제로 종료되어도 다음 실행은 같은 날의 기존 시도를 존중합니다. 수집 중 다른 코드 push가 있으면 일반 rebase로 처리하며 force-push하지 않습니다.
+
 데이터 커밋은 `GITHUB_TOKEN`으로 수행하고 Pages workflow를 명시적으로 dispatch합니다. 토큰으로 push한 변경만으로 다른 workflow가 자동 실행된다고 가정하지 않습니다.
 
 ## 비밀값과 운영 경계

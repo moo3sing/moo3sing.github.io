@@ -12,4 +12,4 @@ regexes = ['''^\s*"comparisonKey": "[a-f0-9]{64}",?\s*$''']
 
 [[allowlists]]
 description = "Ignored dependencies, scanner, generated artifact and runtime request logs are never committed."
-paths = ['(^|/)(node_modules|\.git|\.tools|_site|dist|__pycache__)/', '(^|/)state/runs/']
+paths = ['(^|/)(node_modules|\.git|\.tools|_site|dist|__pycache__|runs)/', '(^|/)state/runs/']

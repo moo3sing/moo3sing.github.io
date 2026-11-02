@@ -10,6 +10,7 @@ from pathlib import Path
 import shutil
 import sys
 import tempfile
+import subprocess
 from datetime import datetime, timezone
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -185,6 +186,13 @@ def run_collection(root=ROOT,*,dry_run=True,enabled=False):
         prior_status=read(output.with_name('collection-status.json'),{})
         prior_daily=read(collector.DAILY_STATE,{})
         successful=False
+        original_claim=collector.claim_daily
+        if os.environ.get('PERSIST_DAILY_CLAIM')=='true':
+            def persistent_claim(path,status_path,now,writer):
+                claimed=original_claim(path,status_path,now,writer)
+                if claimed:persist_daily_claim(root,path)
+                return claimed
+            collector.claim_daily=persistent_claim
         try:
             ok=collector.collect(output,force=True,history_dir=history,block_state=collector.BLOCK_STATE,
                 daily_state=collector.DAILY_STATE,adjustment_policy=read(root/'data/viewer-adjustments.json'))
@@ -203,6 +211,8 @@ def run_collection(root=ROOT,*,dry_run=True,enabled=False):
             atomic_json(output.with_name('collection-status.json'),status)
             daily=read(collector.DAILY_STATE,{})
             if daily:atomic_json(collector.DAILY_STATE,{**daily,'status':'validation_failed'})
+        finally:
+            collector.claim_daily=original_claim
         if not successful:
             output.write_bytes(old_bytes)
             shutil.rmtree(history);shutil.copytree(saved,history)
@@ -214,6 +224,17 @@ def run_collection(root=ROOT,*,dry_run=True,enabled=False):
             'collectionStatus':status.get('collectionStatus'),'newAttempt':attempted,
             'apiRequests':(daily.get('apiRequests') or {}).get('totalRequests',0) if attempted else 0,
             'rankingPreservedOnFailure':successful or output.read_bytes()==old_bytes}
+
+
+def persist_daily_claim(root,path):
+    """Persist the existing gate before any API call, including runner failure/cancellation."""
+    branch=os.environ['DEFAULT_BRANCH']
+    commands=[['git','config','user.name','github-actions[bot]'],
+              ['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],
+              ['git','add','--',str(Path(path).relative_to(root))],
+              ['git','commit','-m','chore(state): claim daily collection '+read(Path(path))['kstDate']],
+              ['git','push','origin','HEAD:'+branch]]
+    for command in commands:subprocess.run(command,cwd=root,check=True)
 
 
 def emit(summary):

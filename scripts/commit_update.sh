@@ -11,6 +11,11 @@ if git diff --cached --quiet; then
 else
   ranking_date=$(TZ=Asia/Seoul date +%F)
   git commit -m "chore(data): update ranking $ranking_date"
-  git push origin "HEAD:$DEFAULT_BRANCH"
+  if ! git push origin "HEAD:$DEFAULT_BRANCH"; then
+    # A human code push may arrive while collection runs. Never force-push data.
+    git fetch origin "$DEFAULT_BRANCH"
+    git rebase "origin/$DEFAULT_BRANCH"
+    git push origin "HEAD:$DEFAULT_BRANCH"
+  fi
   echo 'has_commit=true' >> "$GITHUB_OUTPUT"
 fi

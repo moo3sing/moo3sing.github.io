@@ -112,6 +112,16 @@ class GitHubRuntimeTests(unittest.TestCase):
         self.assertEqual((self.root/'assets/data/ranking.json').read_bytes(),self.before)
         self.assertEqual(result['collectionStatus'],'validation_failed')
 
+    def test_remote_gate_must_be_saved_before_any_api_request(self):
+        with patch.dict('os.environ',{'PERSIST_DAILY_CLAIM':'true'}),\
+             patch('scripts.github_runtime.persist_daily_claim',side_effect=RuntimeError('Push failed')) as save,\
+             patch.object(collector,'datetime',Clock),\
+             patch.object(collector,'Trackify',side_effect=AssertionError('No API before remote claim')):
+            result=run_collection(self.root,dry_run=False,enabled=True)
+        save.assert_called_once()
+        self.assertFalse(result['collectionOk']);self.assertEqual(result['apiRequests'],0)
+        self.assertEqual((self.root/'assets/data/ranking.json').read_bytes(),self.before)
+
     def test_success_uses_one_overview_per_candidate_then_daily_gate_stops_retries(self):
         calls=[]
         raw={}

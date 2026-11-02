@@ -35,9 +35,15 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Scan source before persisting a daily claim
+        run: |
+          python scripts/install_scan_tool.py
+          .tools/gitleaks dir . --no-banner --redact=100 --max-target-megabytes 10
       - name: Existing daily gate, 429 handling and atomic collector
         env:
           COLLECTOR_ENABLED: ${{ vars.COLLECTOR_ENABLED }}
+          PERSIST_DAILY_CLAIM: 'true'
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           INPUT_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
         run: python scripts/github_runtime.py collect
       - name: Persist data on success, or only gate/status after a blocked/failed collection
