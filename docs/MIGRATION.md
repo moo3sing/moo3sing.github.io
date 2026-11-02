@@ -13,7 +13,7 @@
 - Minecraft는 사용하지 않는 프로젝트로 확인. 사용자 승인으로 게임 서비스만 중지하고, 소스 및 복구 archive를 별도 비공개 저장소에 보관
 - Minecraft 약 750 MB archive를 업로드한 뒤 원격 다운로드 스트림의 전체 SHA256과 파일 718개 재검증. 실제 게임 복원·접속 테스트는 재개 시 필요
 
-현재 GCP 종료 가능 여부는 **NO**입니다. 사용자 완료 기준인 실제 전체 자동 갱신 성공은 Trackify 차단으로 아직 검증하지 못했습니다. 구 singdboo.xyz 및 launcher/play/api 호스트도 기존 VM을 가리키며 폐기 여부를 확인 중입니다.
+현재 GCP 종료 가능 여부는 **NO**입니다. 사용자 완료 기준인 실제 전체 자동 갱신 성공은 Trackify 차단으로 아직 검증하지 못했습니다. 구 singdboo.xyz 및 launcher/play/api 호스트는 사용자 확인에 따라 종료했고 기존 VM A 응답이 사라진 것을 확인했습니다.
 
 ## 원본 선택
 
@@ -38,7 +38,7 @@ GitHub 어댑터가 바꾸는 부분은 경로·입력·게시 방식입니다. 
 6. 운영의 최신 데이터·이력·gate 상태를 다시 동기화합니다. 성공 여부와 당일 시도를 확인한 뒤 GCP의 해당 cron만 중지하고 Actions 변수를 활성화합니다. 같은 KST 날짜에 전체 수집을 두 번 실행하지 않습니다.
 7. 예약 실행과 실제 JSON 게시, 수동 apply, 실패·429 보존 동작을 확인합니다. 추가 호스트와 Minecraft runtime 이전까지 확인한 뒤 GCP 종료를 별도로 결정합니다.
 
-웹 저장소·기본 Pages·custom domain·HTTPS 검증과 수집 운영 인계를 완료했습니다. Minecraft 서비스는 사용자 승인으로 중지했습니다. 기존 웹 nginx와 Python admin은 rollback을 위해 유지하며, 구 singdboo.xyz 및 launcher/play/api DNS는 사용자 폐기 확인 전까지 수정하지 않습니다.
+웹 저장소·기본 Pages·custom domain·HTTPS 검증과 수집 운영 인계를 완료했습니다. Minecraft 서비스는 사용자 승인으로 중지했습니다. 기존 웹 nginx와 Python admin은 rollback을 위해 유지하며, 구 singdboo.xyz 및 launcher/play/api DNS는 사용자가 삭제·저장을 완료했고, 가비아 및 공용 리졸버에서 기존 VM IP 응답이 사라졌습니다. 현재는 REFUSED/SERVFAIL의 비활성 상태입니다.
 
 ## DNS 전환안과 복구
 
