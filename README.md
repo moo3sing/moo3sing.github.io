@@ -2,7 +2,7 @@
 
 운영 중인 `https://taehyeon-masu.xyz`의 정적 화면과 최신 공개 데이터를 보존하고, 수집·수동 갱신을 GitHub Actions로 옮기는 저장소입니다. 대상 계정은 **moo3sing**입니다.
 
-GitHub Pages 배포와 기본 URL 검증을 마쳤습니다. 현재 custom domain의 DNS·TXT·HTTPS 인계를 기다리며 자동 수집은 비활성 상태입니다. GCP 웹은 유지합니다. 운영 인계 결과는 `docs/MIGRATION.md`에 기록합니다.
+GitHub Pages와 `taehyeon-masu.xyz`의 DNS·TXT·HTTPS 전환을 마쳤습니다. GCP cron은 비활성화했고 Actions 수집을 활성화했습니다. 첫 실제 수집은 Trackify 429로 중단되어 기존 데이터를 보존했으며, 응답의 차단 기간을 존중합니다. 운영 인계 결과는 `docs/MIGRATION.md`에 기록합니다.
 
 ## 구성
 
@@ -50,6 +50,10 @@ Actions → **Manual ranking update** → Run workflow에서 먼저 `dry_run=tru
 기존 수집기의 하루 1회 gate, 429 즉시 중단, Retry-After와 blockedUntil, source correction 검토, 원자적 JSON 교체를 재사용합니다. 실패 시 순위 JSON과 성공 이력은 원래 값으로 되돌리고 차단·시도 상태만 보존합니다. 불필요한 중복 요청은 하지 않으며, 기존 정책의 이상값 재확인은 유지합니다.
 
 당일 gate는 첫 API 요청 전에 GitHub에 커밋합니다. 이 저장에 실패하면 API를 호출하지 않습니다. runner가 강제로 종료되어도 다음 실행은 같은 날의 기존 시도를 존중합니다. 수집 중 다른 코드 push가 있으면 일반 rebase로 처리하며 force-push하지 않습니다.
+
+2026-11-02 첫 실제 실행은 61번째 요청에서 HTTP 429를 받았습니다. 중복 요청은 0회였고 순위 JSON과 관측 이력은 변경하지 않았습니다. 응답 기준 차단 만료는 11월 9일 14:07 KST, 다음 정규 수집 가능 시각은 11월 10일 03:15 KST입니다. 차단 중의 예약 실행은 API 호출 전에 종료합니다. 요청 집중을 줄이기 위해 이후 요청 간격을 최소 2초로 넓혔으며, 이것이 차단 원인을 해결한다고 확정할 수는 없습니다. 추가 실수집 검증은 차단 해제 후에 진행합니다.
+
+`/admin/`에서 현재 차단과 다음 수집 가능 시각을 확인할 수 있습니다. 직접 확인한 연간 자료는 차단 기간에도 수동 workflow로 반영할 수 있습니다.
 
 데이터 커밋은 `GITHUB_TOKEN`으로 수행하고 Pages workflow를 명시적으로 dispatch합니다. 토큰으로 push한 변경만으로 다른 workflow가 자동 실행된다고 가정하지 않습니다.
 

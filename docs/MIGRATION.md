@@ -5,15 +5,15 @@
 - 웹 저장소 `moo3sing/moo3sing.github.io` public, Minecraft 저장소 `moo3sing/singgyul-minecraft` private, 모두 main branch로 생성·push 완료
 - GitHub Pages Actions 배포 성공, custom domain 등록 전 기본 URL의 실제 Chromium 검증 성공
 - production 공개 파일 32개와 GitHub Pages 응답 SHA256 모두 일치
-- GitHub CI: Python 117개 및 기존 JavaScript·브라우저 검사 통과
+- 기존 GitHub CI Python 117개 통과. 수집 간격·차단 일정 안내를 추가한 로컬 Python 119개와 JavaScript·브라우저 검사 통과; 새 CI 결과 별도 확인
 - 실제 manual workflow dry-run 성공. raw 7,984,415 / 보정 -70,000 / adjusted 7,914,415를 확인했으며 게시하지 않음
 - apply·실패 rollback·429 즉시 중단·100개 후보 중복 요청 없음·원격 gate 저장 실패 시 API 0회는 격리된 테스트로 검증
-- 실제 collector workflow offline 실행 성공, API 0회. 자동 수집은 COLLECTOR_ENABLED=false 유지, 기존 GCP cron 유지
-- Pages custom domain에 taehyeon-masu.xyz 등록 완료. 가비아 DNS와 GitHub 계정 TXT 검증은 사용자 적용 대기
+- offline 실행 API 0회 확인 후 기존 cron을 보존·비활성화하고 COLLECTOR_ENABLED=true로 인계. 첫 실제 수집은 요청 61개, 중복 0개, HTTP 429 1개로 즉시 종료. 상태·제어 파일 3개만 커밋했고 ranking.json 및 성공 관측 이력은 보존
+- taehyeon-masu.xyz의 가비아 DNS 및 GitHub 계정 TXT 검증 완료. 인증서 승인·Enforce HTTPS와 실제 custom domain 브라우저 검증 완료
 - Minecraft는 사용하지 않는 프로젝트로 확인. 사용자 승인으로 게임 서비스만 중지하고, 소스 및 복구 archive를 별도 비공개 저장소에 보관
 - Minecraft 약 750 MB archive를 업로드한 뒤 원격 다운로드 스트림의 전체 SHA256과 파일 718개 재검증. 실제 게임 복원·접속 테스트는 재개 시 필요
 
-현재 GCP 종료 가능 여부는 **NO**입니다. 도메인의 Pages 전환·HTTPS와 실제 자동 수집 인계가 아직 완료되지 않았습니다.
+현재 GCP 종료 가능 여부는 **NO**입니다. 사용자 완료 기준인 실제 전체 자동 갱신 성공은 Trackify 차단으로 아직 검증하지 못했습니다. 구 singdboo.xyz 및 launcher/play/api 호스트도 기존 VM을 가리키며 폐기 여부를 확인 중입니다.
 
 ## 원본 선택
 
@@ -38,7 +38,7 @@ GitHub 어댑터가 바꾸는 부분은 경로·입력·게시 방식입니다. 
 6. 운영의 최신 데이터·이력·gate 상태를 다시 동기화합니다. 성공 여부와 당일 시도를 확인한 뒤 GCP의 해당 cron만 중지하고 Actions 변수를 활성화합니다. 같은 KST 날짜에 전체 수집을 두 번 실행하지 않습니다.
 7. 예약 실행과 실제 JSON 게시, 수동 apply, 실패·429 보존 동작을 확인합니다. 추가 호스트와 Minecraft runtime 이전까지 확인한 뒤 GCP 종료를 별도로 결정합니다.
 
-현재는 웹 저장소·기본 Pages 검증·custom domain 사전 등록까지 완료했습니다. GCP 웹 서비스와 기존 DNS는 유지하며 Minecraft 서비스는 사용자 승인으로 중지했습니다.
+웹 저장소·기본 Pages·custom domain·HTTPS 검증과 수집 운영 인계를 완료했습니다. Minecraft 서비스는 사용자 승인으로 중지했습니다. 기존 웹 nginx와 Python admin은 rollback을 위해 유지하며, 구 singdboo.xyz 및 launcher/play/api DNS는 사용자 폐기 확인 전까지 수정하지 않습니다.
 
 ## DNS 전환안과 복구
 
@@ -72,3 +72,15 @@ Pages 기본 URL 검증 및 custom domain 등록 후 apex A를 다음 네 값으
 - [Actions schedule 및 timezone](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 - [Custom domain과 DNS](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 - [GITHUB_TOKEN과 workflow 재실행](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow)
+
+## 첫 실제 수집과 차단
+
+2026-11-02 14:07 KST의 [실제 수집 실행](https://github.com/moo3sing/moo3sing.github.io/actions/runs/41392131733)은 61번째 요청에서 429를 받았습니다. 중복·추가 확인 요청은 0건입니다. 차단 응답 후 API를 재호출하지 않았으며, 전체 후보 수집이 끝나지 않아 ranking.json은 커밋하지 않았습니다.
+
+blockedUntil은 2026-11-09 14:07:43 KST이며, 다음 정규 수집 가능 시각은 2026-11-10 03:15 KST입니다. GCP와 GitHub 양쪽에서 61번째 차단이 관측되어 요청 집중을 줄이도록 간격을 0.4초에서 최소 2초로 넓혔습니다. 공개된 공식 제한값은 확인하지 못했으므로 원인 확정이나 재발 방지를 보장하지 않습니다.
+
+실제 자동 전체 갱신은 차단 만료 뒤 확인해야 합니다. 로컬·CI의 성공 모의 수집은 100개 후보당 overview 1회, 총 100회이며, 429·gate 재진입은 즉시 중단/0회로 검증합니다.
+
+## 현재 rollback 주의점
+
+수집을 GCP로 되돌릴 때에는 먼저 Actions 변수를 false로 내리고 최신 GitHub state의 당일 gate와 blockedUntil을 VM으로 동기화합니다. 최신 collector의 2초 간격도 적용한 뒤 기존 cron을 복구합니다. 오래된 백업의 만료된 차단 상태만 복원하여 추가 API를 호출하지 않습니다.

@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 BASE = 'https://www.trackify.kr/api/v1/p/soop'
 KST = ZoneInfo('Asia/Seoul')
 CACHE_SECONDS = 60 * 60
+MIN_REQUEST_INTERVAL_SECONDS = 2.0
 
 
 class NoRedirect(HTTPRedirectHandler):
@@ -50,7 +51,7 @@ class Trackify:
         if not fresh and url in self.responses:
             self.cache_hits += 1
             return copy.deepcopy(self.responses[url])
-        time.sleep(max(0, .4 - (time.monotonic() - self.last_request)))
+        time.sleep(max(0, MIN_REQUEST_INTERVAL_SECONDS - (time.monotonic() - self.last_request)))
         self.last_request = time.monotonic()
         record = {'url':url, 'freshConfirmation':fresh, 'httpStatus':None}
         self.requests.append(record)

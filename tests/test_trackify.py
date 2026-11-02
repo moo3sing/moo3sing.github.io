@@ -7,6 +7,17 @@ from services.trackify import normalize, select_candidates, collection_date, Tra
 
 
 class AdapterTests(unittest.TestCase):
+    def test_sequential_request_spacing_does_not_add_requests_and_cache_needs_no_sleep(self):
+        with patch('services.trackify.urlopen') as request,\
+             patch('services.trackify.time.monotonic',side_effect=[100,100,100.1,102]),\
+             patch('services.trackify.time.sleep') as sleep:
+            response=request.return_value.__enter__.return_value
+            response.status=200;response.read.return_value=b'{"value":1}'
+            api=Trackify();api.get('/a',{});api.get('/a',{});api.get('/b',{})
+        self.assertEqual(request.call_count,2)
+        self.assertEqual(api.cache_hits,1)
+        self.assertAlmostEqual(sleep.call_args_list[1].args[0],1.9)
+
     def test_verified_fields(self):
         c={'broadUserId':'khm11903','nick':'봉준','rank':1}
         o={'userId':'khm11903','totalViewCountDelta':113705545,'monthBalloon':11752539,'monthDonors':42876,'donors':{'total':50}}

@@ -11,11 +11,11 @@ import shutil
 import sys
 import tempfile
 import subprocess
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from services.trackify import KST
+from services.trackify import KST, MIN_REQUEST_INTERVAL_SECONDS
 from scripts.collect import atomic_json
 from scripts import collect as collector
 from scripts.dynamic_collect import calculate_targets, daily_record
@@ -34,6 +34,20 @@ def read(path,default=None):
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def collection_schedule(root,now=None):
+    now=(now or datetime.now(timezone.utc)).astimezone(KST)
+    scheduled=now.replace(hour=3,minute=15,second=0,microsecond=0)
+    if scheduled<=now:scheduled+=timedelta(days=1)
+    blocked=read(Path(root)/'state/trackify-block.json',{}).get('blockedUntil')
+    until=datetime.fromisoformat(blocked).astimezone(KST) if blocked else None
+    eligible=scheduled
+    while until and eligible<until:eligible+=timedelta(days=1)
+    return {'platform':'github_actions','timezone':'Asia/Seoul','cron':'15 3 * * *','kstTime':'03:15',
+        'maxFullAttemptsPerKstDay':1,'retryOnFailure':False,'minRequestIntervalSeconds':MIN_REQUEST_INTERVAL_SECONDS,
+        'nextScheduledKST':scheduled.isoformat(),'blockedUntil':until.isoformat() if until and until>now else None,
+        'nextEligibleDailyKST':eligible.isoformat() if eligible.date().isoformat()<='2026-11-30' else None}
 
 
 def adjusted_policy(policy,desired,reason,observed,now):
@@ -164,6 +178,7 @@ def run_manual(root=ROOT,*,dry_run=True,annual_table_path='data/incoming/annual.
             actualDataScope=working['actualDataScope'],publicationStatus='published_manual_partial')
         status['viewerAdjustmentReview']={'applied':True,'assumptionBased':True,'rawViewer':summary['rawViewer'],
             'viewerAdjustmentTotal':summary['viewerAdjustment'],'adjustedViewer':summary['adjustedViewer']}
+        status['automaticCollection']=collection_schedule(root,applied)
         atomic_json(root/'data/viewer-adjustments.json',new_policy)
         atomic_json(output.with_name('collection-status.json'),status)
         atomic_json(output,working)
@@ -220,9 +235,15 @@ def run_collection(root=ROOT,*,dry_run=True,enabled=False):
         if isinstance(daily.get('apiRequests'),dict):daily['apiRequests'].pop('requests',None)
         if daily:atomic_json(collector.DAILY_STATE,daily)
     attempted=bool(daily.get('startedAt') and daily.get('startedAt')!=prior_daily.get('startedAt'))
+    status['automaticCollection']=collection_schedule(root)
+    if not attempted:
+        status['lastRunApiRequests']={key:0 for key in ['totalRequests','cacheHits','duplicateRequests','freshConfirmationRequests','http429']}
+    atomic_json(output.with_name('collection-status.json'),status)
     return {'dryRun':False,'published':successful and output.read_bytes()!=old_bytes,'collectionOk':successful,
             'collectionStatus':status.get('collectionStatus'),'newAttempt':attempted,
             'apiRequests':(daily.get('apiRequests') or {}).get('totalRequests',0) if attempted else 0,
+            'blockedUntil':status['automaticCollection']['blockedUntil'],
+            'nextEligibleDailyKST':status['automaticCollection']['nextEligibleDailyKST'],
             'rankingPreservedOnFailure':successful or output.read_bytes()==old_bytes}
 
 

@@ -33,14 +33,16 @@
     }
   },
   "automaticCollection": {
-    "timezone": "Etc/UTC",
-    "cron": "15 18 * * *",
+    "platform": "github_actions",
+    "timezone": "Asia/Seoul",
+    "cron": "15 3 * * *",
     "kstTime": "03:15",
     "maxFullAttemptsPerKstDay": 1,
     "retryOnFailure": false,
-    "nextScheduledKST": "2026-10-19T03:15:00+09:00",
-    "blockedUntil": "2026-10-24T19:07:48.314117+00:00",
-    "nextEligibleDailyKST": "2026-10-26T03:15:00+09:00"
+    "minRequestIntervalSeconds": 2.0,
+    "nextScheduledKST": "2026-11-03T03:15:00+09:00",
+    "blockedUntil": "2026-11-09T14:07:43.243679+09:00",
+    "nextEligibleDailyKST": "2026-11-10T03:15:00+09:00"
   },
   "reason": "Blocked IP",
   "blockedUntil": "2026-11-09T05:07:43.243679+00:00",

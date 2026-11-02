@@ -10,7 +10,11 @@ if git diff --cached --quiet; then
   echo 'has_commit=false' >> "$GITHUB_OUTPUT"
 else
   ranking_date=$(TZ=Asia/Seoul date +%F)
-  git commit -m "chore(data): update ranking $ranking_date"
+  if git diff --cached --quiet -- assets/data/ranking.json; then
+    git commit -m "chore(state): update collector status $ranking_date"
+  else
+    git commit -m "chore(data): update ranking $ranking_date"
+  fi
   if ! git push origin "HEAD:$DEFAULT_BRANCH"; then
     # A human code push may arrive while collection runs. Never force-push data.
     git fetch origin "$DEFAULT_BRANCH"

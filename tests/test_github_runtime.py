@@ -7,7 +7,7 @@ import unittest
 from datetime import datetime, timezone
 from unittest.mock import patch
 from urllib.error import HTTPError
-from scripts.github_runtime import run_manual, run_collection, prepare_manual
+from scripts.github_runtime import run_manual, run_collection, prepare_manual, collection_schedule
 from scripts import collect as collector
 from services.trackify import KST
 from scripts.viewer_adjustments import raw_previous
@@ -80,6 +80,14 @@ class GitHubRuntimeTests(unittest.TestCase):
         self.assertEqual(result['apiRequests'],0);self.assertEqual(result2['apiRequests'],0)
         self.assertEqual((self.root/'assets/data/ranking.json').read_bytes(),self.before)
 
+    def test_retry_after_and_next_daily_slot_are_reported_in_kst(self):
+        (self.root/'state/trackify-block.json').write_text(json.dumps({'blockedUntil':'2026-11-09T05:07:43+00:00'}))
+        result=collection_schedule(self.root,NOW)
+        self.assertEqual(result['blockedUntil'],'2026-11-09T14:07:43+09:00')
+        self.assertEqual(result['nextEligibleDailyKST'],'2026-11-10T03:15:00+09:00')
+        self.assertEqual(result['timezone'],'Asia/Seoul')
+        self.assertEqual(result['minRequestIntervalSeconds'],2)
+
     def test_429_aborts_once_persists_gate_and_never_changes_ranking(self):
         calls=[]
         class API:
@@ -100,6 +108,8 @@ class GitHubRuntimeTests(unittest.TestCase):
         state=json.loads((self.root/'state/daily-collection.json').read_text())
         self.assertEqual(state['kstDate'],'2026-11-02');self.assertNotIn('requests',state['apiRequests'])
         self.assertEqual(again['collectionStatus'],'api_blocked')
+        current=json.loads((self.root/'assets/data/collection-status.json').read_text())
+        self.assertEqual(current['lastRunApiRequests']['totalRequests'],0)
 
     def test_validation_failure_never_publishes_changed_ranking(self):
         def corrupt(output,**kwargs):

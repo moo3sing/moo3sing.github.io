@@ -75,6 +75,11 @@ const server = http.createServer((req,res) => {
     for(const route of ['/privacy','/assets/ranking-favicon.svg','/robots.txt','/admin/']) {
       assert.equal((await context.request.get(base + route)).status(),200,route);
     }
+    await page.goto(base + '/admin/');
+    await page.waitForFunction(() => !document.getElementById('auto-state').textContent.includes('확인하고 있습니다'));
+    const automaticStatus = await page.locator('#auto-state').innerText();
+    assert.match(automaticStatus,/자동 수집/);
+    assert.equal(automaticStatus.includes('불러오지'),false);
     if(!process.env.BASE_URL) {
       for(const route of ['/admin/server.py','/services/trackify.py','/data/viewer-adjustments.json','/.env']) {
         assert.equal((await context.request.get(base + route)).status(),404,route);
