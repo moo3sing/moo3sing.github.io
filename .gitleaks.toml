@@ -1,0 +1,15 @@
+title = "Existing SOOP production source: secret protection"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Chart comparisonKey is the SHA-256 of forecast inputs, not an authentication credential."
+condition = "AND"
+regexTarget = "line"
+paths = ['''(^|/)(assets/data|history)/.*\.json$''']
+regexes = ['''^\s*"comparisonKey": "[a-f0-9]{64}",?\s*$''']
+
+
+[[allowlists]]
+description = "Ignored dependencies, scanner, generated artifact and runtime request logs are never committed."
+paths = ['(^|/)(node_modules|\.git|\.tools|_site|dist|__pycache__)/', '(^|/)state/runs/']

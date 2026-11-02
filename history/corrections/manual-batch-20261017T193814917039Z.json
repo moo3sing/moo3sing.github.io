@@ -1,0 +1,126 @@
+{
+  "source": "user_pasted_trackify_table",
+  "corrections": [
+    {
+      "streamerId": "legendhyuk",
+      "streamerName": "오아",
+      "metric": "cumulativeUsers",
+      "previous": 20849956,
+      "current": 20077564,
+      "delta": -772392,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "ititit",
+      "streamerName": "정중만",
+      "metric": "cumulativeUsers",
+      "previous": 19949281,
+      "current": 15930675,
+      "delta": -4018606,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "danchu17",
+      "streamerName": "단츄♪",
+      "metric": "cumulativeUsers",
+      "previous": 14160144,
+      "current": 12790650,
+      "delta": -1369494,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "since821",
+      "streamerName": "♥심장",
+      "metric": "cumulativeUsers",
+      "previous": 9383334,
+      "current": 9296064,
+      "delta": -87270,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "yjkim5500",
+      "streamerName": "조디악악악",
+      "metric": "cumulativeUsers",
+      "previous": 9167617,
+      "current": 8523112,
+      "delta": -644505,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "mygomiee",
+      "streamerName": "마이곰이",
+      "metric": "cumulativeUsers",
+      "previous": 9032350,
+      "current": 8955868,
+      "delta": -76482,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "yangdoki",
+      "streamerName": "양도끼",
+      "metric": "cumulativeUsers",
+      "previous": 8323605,
+      "current": 7510676,
+      "delta": -812929,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "mj0128",
+      "streamerName": "백하♥",
+      "metric": "cumulativeUsers",
+      "previous": 7931802,
+      "current": 7091847,
+      "delta": -839955,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "nyouuu30810",
+      "streamerName": "이주하!",
+      "metric": "cumulativeUsers",
+      "previous": 7052642,
+      "current": 6472762,
+      "delta": -579880,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "dkfksl00",
+      "streamerName": "아란♥",
+      "metric": "cumulativeUsers",
+      "previous": 6877569,
+      "current": 6809941,
+      "delta": -67628,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    },
+    {
+      "streamerId": "rmlrl771",
+      "streamerName": "끠끼",
+      "metric": "cumulativeUsers",
+      "previous": 6075190,
+      "current": 6024677,
+      "delta": -50513,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:36:41.315685+09:00"
+    }
+  ]
+}

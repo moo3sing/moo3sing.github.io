@@ -1,0 +1,59 @@
+{
+  "streamerId": "singgyul",
+  "viewerAdjustments": [
+    {
+      "date": "2026-10-17",
+      "delta": -20000,
+      "reason": "suspected_viewbot_traffic",
+      "eventId": "2026-10-17-existing"
+    },
+    {
+      "date": "2026-10-18",
+      "delta": -20000,
+      "reason": "suspected_viewbot_traffic",
+      "eventId": "2026-10-18-dawn-existing"
+    },
+    {
+      "eventId": "2026-10-18-evening-new",
+      "date": "2026-10-18",
+      "timeBand": "evening",
+      "delta": -20000,
+      "reason": "suspected_viewbot_traffic",
+      "includedIn2311Snapshot": "user_confirmed"
+    },
+    {
+      "eventId": "2026-10-19-user-requested-10000",
+      "date": "2026-10-19",
+      "delta": -10000,
+      "reason": "suspected_viewbot_traffic",
+      "amountIsApproximate": true,
+      "source": "user_request",
+      "includedInSourceAsOf": "2026-10-19T23:22:00+09:00"
+    }
+  ],
+  "sourceCorrectionResolutions": [],
+  "sourceCorrectionReview": {
+    "status": "user_confirmed_no_source_correction",
+    "previousRawViewer": 7311517,
+    "currentRawViewer": 7422588,
+    "rawDelta": 111071,
+    "confirmedKstDate": "2026-10-18",
+    "reason": "User confirmed no source correction and revised both dates to -20000; today's daily viewer reference is 84818, with possible source update delay.",
+    "dailyViewerReference": 84818
+  },
+  "assumptionReview": {
+    "confirmedBy": "user",
+    "reviewedOn": "2026-10-19",
+    "adjustmentEntries": 4,
+    "previousConfirmedEvents": 3,
+    "total": -70000,
+    "notLogMeasured": true,
+    "latestAdjustment": {
+      "date": "2026-10-19",
+      "delta": -10000,
+      "approximate": true,
+      "sourceObservedAt": "2026-10-19T23:22:00+09:00"
+    },
+    "note": "Preserve earlier three events totaling -60000 and add the user-requested approximate -10000 on October 19. Apply the cumulative adjustment once to raw annual users. Donors and balloons are not adjusted."
+  }
+}

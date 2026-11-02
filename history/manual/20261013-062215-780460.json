@@ -1,0 +1,36 @@
+{
+  "mode": "manual_partial",
+  "observedAt": "2026-10-13T15:21:00+09:00",
+  "competitorDataAsOf": "2026-10-03T15:15:01.688785+00:00",
+  "previous": {
+    "cumulativeUsers": 7102523,
+    "donorCount": 4790,
+    "balloonCount": 4839755
+  },
+  "actual": {
+    "cumulativeUsers": 7163522,
+    "donorCount": 4794,
+    "balloonCount": 4859376
+  },
+  "projected": {
+    "cumulativeUsers": 9144918,
+    "donorCount": 5368,
+    "balloonCount": 6600846
+  },
+  "models": {
+    "rank": 1728500,
+    "ratio": 1419334,
+    "minmax": 1472332
+  },
+  "safeTarget": 1728500,
+  "predictedRank": 64,
+  "corrections": [],
+  "source": "manual",
+  "streamerId": "singgyul",
+  "appliedAt": "2026-10-13T06:22:15.780460+00:00",
+  "current": {
+    "cumulativeUsers": 7163522,
+    "donorCount": 4794,
+    "balloonCount": 4859376
+  }
+}

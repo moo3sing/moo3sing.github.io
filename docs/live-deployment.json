@@ -1,0 +1,35 @@
+{
+  "status": "deployed",
+  "at": "2026-10-01T08:53:17.107379+00:00",
+  "backup": "/var/backups/soop-ranking/live-target-20261001T085317Z",
+  "rankingUnchanged": {
+    "ranking.html": "e096e8c4f7cbd4569f579b55bfa3043a9cb003a2e29e609078f69911bd872746",
+    "assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e",
+    "assets/ranking-ui.js": "c6d522b29fba3f87ecd189ac837761c8ff50ab33eade1a5103485f8c7d6543c9",
+    "assets/ranking.css": "532e3f69b2200401091045290c4ae6a5e9f36691ffc4224158521a34eeb84e2d"
+  },
+  "baselinePreserved": true,
+  "forecastPreserved": true,
+  "schedule": "hourly :15 UTC; final observation Nov 30 14:58 UTC",
+  "files": [
+    "/var/www/singdboo-site/public/assets/live-target.js",
+    "/var/www/singdboo-site/public/assets/simulation-ui.js",
+    "/var/www/singdboo-site/public/assets/simulation.css",
+    "/opt/soop-ranking/scripts/collect.py",
+    "/opt/soop-ranking/scripts/live_collect.py",
+    "/opt/soop-ranking/services/trackify.py",
+    "/etc/cron.d/soop-ranking",
+    "/var/www/singdboo-site/public/assets/data/ranking.json",
+    "/var/www/singdboo-site/public/index.html"
+  ],
+  "validation": {
+    "tests": "62 passed",
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "browser": "production and local main/ranking passed; responsive, dark, errors, ended, regression"
+  },
+  "lastPollAt": "2026-10-01T08:53:40.569692+00:00",
+  "lastPollChanged": false,
+  "nextScheduledAt": "2026-10-01T09:15:00+00:00"
+}

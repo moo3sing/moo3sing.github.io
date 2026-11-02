@@ -1,0 +1,44 @@
+{
+  "release": "20260929T171843Z",
+  "platform": "existing Debian/Nginx server",
+  "url": "https://singdboo.xyz/",
+  "gitCommit": null,
+  "backup": "/var/backups/soop-ranking/20260929T171843Z",
+  "status": "production-active",
+  "files": {
+    "index.html": "43a976cde313613a52e086ae533d469d7a0fc94b4c8e0cc87ccd17b7c056b7a4",
+    "assets/ranking.css": "532e3f69b2200401091045290c4ae6a5e9f36691ffc4224158521a34eeb84e2d",
+    "assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e",
+    "assets/ranking-ui.js": "c6d522b29fba3f87ecd189ac837761c8ff50ab33eade1a5103485f8c7d6543c9",
+    "assets/ranking-favicon.svg": "6c99a18dae7d89a4e1c1606fec9996cd89a5d831b8619c976507ca979ceb4dbd"
+  },
+  "artifactSha256": "9b459f224836f7b752a51be3a8a98daf559cd841609b27d220746448adc5e8f6",
+  "manualCollection": {
+    "startedAt": "2026-09-29T17:18:43.875252+00:00",
+    "completedAt": "2026-09-29T17:19:24.442521+00:00",
+    "exitCode": 0
+  },
+  "publishedAt": "2026-09-29T17:19:24.671093+00:00",
+  "snapshotUpdatedAt": "2026-09-29T17:18:44.019001+00:00",
+  "verifiedAt": "2026-09-29T17:36:37.617868+00:00",
+  "scheduler": {
+    "type": "server cron",
+    "path": "/etc/cron.d/soop-ranking",
+    "expression": "15 */6 * * *",
+    "timezone": "UTC",
+    "nextRunUtc": "2026-09-29T18:15:00+00:00",
+    "nextRunKst": "2026-09-30T03:15:00+09:00",
+    "duplicateSchedulers": 0,
+    "daemonProbeUtc": "2026-09-29T17:36:01+00:00",
+    "temporaryProbeRemoved": true
+  },
+  "tests": {
+    "unit": 20,
+    "lint": "pass",
+    "typecheck": "pass",
+    "productionBuild": "pass",
+    "desktopProduction": "pass",
+    "mobileProduction": "pass"
+  },
+  "rollbackVerified": true
+}

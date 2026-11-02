@@ -1,0 +1,90 @@
+name: Manual ranking update
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Single account or an annual viewer-ordered table'
+        type: choice
+        options: [single, annual_batch]
+        default: single
+      viewer:
+        description: 'Raw ANNUAL cumulative viewers, before the existing bot adjustment'
+        type: string
+      donor:
+        description: 'Verified ANNUAL unique donors; blank preserves value and observation date'
+        type: string
+      balloon:
+        description: 'ANNUAL balloons; blank preserves the last verified value'
+        type: string
+      observed_at:
+        description: 'YYYY-MM-DD HH:MM KST; blank uses this run time'
+        type: string
+      viewer_adjustment:
+        description: 'Cumulative negative correction; blank preserves existing -70000 policy'
+        type: string
+      reason:
+        description: 'Required only when adding a correction; do not enter secrets'
+        type: string
+      dry_run:
+        description: 'Preview only: no JSON, commit or publication changes'
+        type: boolean
+        default: true
+      allow_correction:
+        description: 'Confirm a source decrease; existing source-review rules still apply'
+        type: boolean
+        default: false
+      annual_table_path:
+        description: 'annual_batch only: committed text file inside data/incoming/'
+        type: string
+        default: data/incoming/annual.txt
+
+permissions:
+  contents: read
+concurrency:
+  group: ranking-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    permissions:
+      contents: write
+      actions: write
+    runs-on: ubuntu-latest
+    outputs:
+      has_commit: ${{ steps.commit.outputs.has_commit }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Validate and preview/apply using existing calculations
+        env:
+          INPUT_MODE: ${{ inputs.mode }}
+          INPUT_VIEWER: ${{ inputs.viewer }}
+          INPUT_DONOR: ${{ inputs.donor }}
+          INPUT_BALLOON: ${{ inputs.balloon }}
+          INPUT_OBSERVED_AT: ${{ inputs.observed_at }}
+          INPUT_VIEWER_ADJUSTMENT: ${{ inputs.viewer_adjustment }}
+          INPUT_REASON: ${{ inputs.reason }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+          INPUT_ALLOW_CORRECTION: ${{ inputs.allow_correction }}
+          INPUT_ANNUAL_TABLE_PATH: ${{ inputs.annual_table_path }}
+        run: python scripts/github_runtime.py manual
+      - name: Scan, commit and push validated changes
+        if: inputs.dry_run == false
+        id: commit
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: sh scripts/commit_update.sh
+      - name: Deploy the newly committed default-branch revision
+        if: steps.commit.outputs.has_commit == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: gh workflow run pages.yml --ref "$DEFAULT_BRANCH"

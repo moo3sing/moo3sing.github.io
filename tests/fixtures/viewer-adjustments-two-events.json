@@ -1,0 +1,16 @@
+{
+  "streamerId": "singgyul",
+  "viewerAdjustments": [
+    {
+      "date": "2026-10-17",
+      "delta": -20000,
+      "reason": "suspected_viewbot_traffic"
+    },
+    {
+      "date": "2026-10-18",
+      "delta": -20000,
+      "reason": "suspected_viewbot_traffic"
+    }
+  ],
+  "sourceCorrectionResolutions": []
+}

@@ -1,0 +1,74 @@
+{
+  "verifiedAt": "2026-09-30T04:57:01Z",
+  "snapshotUpdatedAt": "2026-09-30T04:55:32.059977+00:00",
+  "simulationBaselineStatus": "provisional",
+  "simulationBaselineNote": "9월 30일 종료 전 최신 관측값이며, 종료 후 최초 수집에서 자동 고정됩니다.",
+  "referenceMonth": "2026-09",
+  "targetMonthlyUsers": 872472,
+  "targetSupportRaw": {
+    "donorCount": 4584,
+    "balloonCount": 4264796
+  },
+  "supportDiversityAudit": [
+    {"soopId":"singgyul","donorCount":4584,"balloonCount":4264796,"rankDonorScore":54.63917525773196,"ratioDonorScore":10.691295829834873,"minmaxDonorScore":9.76954616145907},
+    {"soopId":"khm11903","donorCount":42876,"balloonCount":11752539,"rankDonorScore":100,"ratioDonorScore":100,"minmaxDonorScore":100},
+    {"soopId":"y1026","donorCount":9305,"balloonCount":138487560,"rankDonorScore":92.78350515463917,"ratioDonorScore":21.70211773486333,"minmaxDonorScore":20.89401008530091}
+  ],
+  "cohort": {
+    "candidates": 100,
+    "scored": 98,
+    "unavailable": 2,
+    "monthlyFallbacks": 4
+  },
+  "models": {
+    "ratio": {
+      "donorScore": 10.691295829834873,
+      "balloonScore": 2.239146581514893,
+      "currentRank": 81,
+      "baselineRank": 78,
+      "minimumAdditionalUsers": 2621664,
+      "minimumRank": 70,
+      "oneLessRank": 71,
+      "monthlyNeeded": 1310832,
+      "growthNeededPercent": 50.24344620801584,
+      "finalUsers": 9131516
+    },
+    "minmax": {
+      "donorScore": 9.76954616145907,
+      "balloonScore": 2.222743699667808,
+      "currentRank": 81,
+      "baselineRank": 78,
+      "minimumAdditionalUsers": 2645143,
+      "minimumRank": 70,
+      "oneLessRank": 71,
+      "monthlyNeeded": 1322571.5,
+      "growthNeededPercent": 51.58899082148194,
+      "finalUsers": 9154995
+    },
+    "rank": {
+      "donorRank": 45,
+      "balloonRank": 33,
+      "donorScore": 54.63917525773196,
+      "balloonScore": 67.01030927835052,
+      "currentRank": 80,
+      "baselineRank": 81,
+      "minimumAdditionalUsers": 2424643,
+      "minimumRank": 70,
+      "oneLessRank": 72,
+      "monthlyNeeded": 1212321.5,
+      "growthNeededPercent": 38.9524821426934,
+      "finalUsers": 8934495
+    }
+  },
+  "production": {
+    "mainStatus": 200,
+    "rankingStatus": 200,
+    "snapshotStatus": "ok",
+    "monthlyStatus": "ok",
+    "securityHeadersPresent": true,
+    "productionBrowserSuitesPassed": 2,
+    "scheduledRefreshPassed": true,
+    "cutoffCaptureScheduled": "2026-10-01T00:05:00+09:00",
+    "fixedSupportProductionBrowserPassed": true
+  }
+}

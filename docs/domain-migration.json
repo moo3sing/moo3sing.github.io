@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "verifiedAt": "2026-09-30T06:05:36Z",
+  "hosting": {
+    "platform": "Google Compute Engine Debian VM with Nginx",
+    "publicIp": "34.50.18.179",
+    "documentRoot": "/var/www/singdboo-site/public",
+    "reverseProxy": false
+  },
+  "canonicalUrl": "https://taehyeon-masu.xyz/",
+  "rankingUrl": "https://taehyeon-masu.xyz/ranking",
+  "dns": [
+    {
+      "type": "A",
+      "host": "@",
+      "value": "34.50.18.179",
+      "ttl": 600
+    },
+    {
+      "type": "CNAME",
+      "host": "www",
+      "value": "taehyeon-masu.xyz.",
+      "ttl": 600
+    }
+  ],
+  "redirects": {
+    "www": "301 to https://taehyeon-masu.xyz with path and query preserved",
+    "legacy": "301 from http/https singdboo.xyz to https://taehyeon-masu.xyz with path and query preserved"
+  },
+  "tls": {
+    "provider": "Let's Encrypt via Certbot",
+    "names": [
+      "taehyeon-masu.xyz",
+      "www.taehyeon-masu.xyz"
+    ],
+    "notAfter": "2026-12-29T04:48:14Z",
+    "automaticRenewal": true,
+    "renewalDryRun": "passed"
+  },
+  "backups": [
+    "/var/backups/soop-ranking/domain-migration-20260930T054526Z",
+    "/var/backups/soop-ranking/simulation-20260930T055225Z"
+  ],
+  "verification": {
+    "dns": "passed",
+    "rootHttps": "200",
+    "wwwHttpsRedirect": "301",
+    "legacyHttpRedirect": "301",
+    "legacyHttpsRedirect": "301",
+    "ranking": "passed",
+    "productionData": "passed",
+    "simulationBrowser": "passed",
+    "rankingBrowser": "passed",
+    "responsiveWidths": [
+      320,
+      390,
+      768,
+      850,
+      1024
+    ],
+    "nginxConfig": "passed"
+  }
+}

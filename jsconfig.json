@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM"
+    ],
+    "strict": false
+  },
+  "include": [
+    "assets/ranking.js",
+    "assets/ranking-ui.js",
+    "assets/ranking-view.js",
+    "assets/simulation.js",
+    "assets/simulation-ui.js",
+    "assets/simulation-config.js",
+    "assets/live-target.js",
+    "assets/dynamic-target.js",
+    "assets/rolling-target.js",
+    "types/cache-modules.d.ts",
+    "assets/ranking-exceptions.js",
+    "assets/trend-data.js",
+    "assets/trend-ui.js"
+  ]
+}

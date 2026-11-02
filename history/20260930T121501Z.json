@@ -1,0 +1,3013 @@
+{
+  "schemaVersion": 1,
+  "status": "stale",
+  "asOf": "2026-09-30",
+  "updatedAt": "2026-09-30T12:15:01.598841+00:00",
+  "attemptedAt": "2026-09-30T15:05:01.661331+00:00",
+  "periodFrom": "2026-01-01",
+  "periodEnd": "2026-11-30",
+  "source": "Trackify 공개 통계",
+  "sourceCount": 200,
+  "dateNote": "한국 시간 수집일 기준 연간 누적 통계입니다. 당일은 진행 중이며 원본 갱신 지연이 있을 수 있습니다.",
+  "streamers": [
+    {
+      "rankByViewer": 1,
+      "name": "봉준",
+      "soopId": "khm11903",
+      "category": "토크/캠방",
+      "cumulativeUsers": 113705545,
+      "balloonCount": 11752542,
+      "donorCount": 42879,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 2,
+      "name": "김민교.",
+      "soopId": "phonics1",
+      "category": "토크/캠방",
+      "cumulativeUsers": 105908825,
+      "balloonCount": 6268793,
+      "donorCount": 15816,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 3,
+      "name": "이상호",
+      "soopId": "lshooooo",
+      "category": "토크/캠방",
+      "cumulativeUsers": 72637520,
+      "balloonCount": 3196767,
+      "donorCount": 14544,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 4,
+      "name": "감스트",
+      "soopId": "devil0108",
+      "category": "국가대표",
+      "cumulativeUsers": 55171927,
+      "balloonCount": 7735840,
+      "donorCount": 13423,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 6,
+      "name": "항상#킴성태",
+      "soopId": "rrvv17",
+      "category": "마인크래프트",
+      "cumulativeUsers": 48915993,
+      "balloonCount": 7158560,
+      "donorCount": 13754,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 7,
+      "name": "철구형2↑",
+      "soopId": "y1026",
+      "category": "토크/캠방",
+      "cumulativeUsers": 33733205,
+      "balloonCount": 138487560,
+      "donorCount": 9305,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 8,
+      "name": "두치와뿌꾸",
+      "soopId": "galsa",
+      "category": "FC 온라인",
+      "cumulativeUsers": 33547976,
+      "balloonCount": 3171374,
+      "donorCount": 15846,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 9,
+      "name": "A-염보성!!",
+      "soopId": "yuambo",
+      "category": "스타크래프트",
+      "cumulativeUsers": 33474170,
+      "balloonCount": 70368239,
+      "donorCount": 10315,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 12,
+      "name": "저라뎃",
+      "soopId": "joey1114",
+      "category": "FC 온라인",
+      "cumulativeUsers": 28175351,
+      "balloonCount": 2975695,
+      "donorCount": 7395,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 13,
+      "name": "타요~",
+      "soopId": "b13246",
+      "category": "종합게임",
+      "cumulativeUsers": 27404336,
+      "balloonCount": 3483154,
+      "donorCount": 7635,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 14,
+      "name": "이지상:)",
+      "soopId": "jrdart",
+      "category": "여행",
+      "cumulativeUsers": 26586919,
+      "balloonCount": 5629777,
+      "donorCount": 8000,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 15,
+      "name": "남순",
+      "soopId": "wnnw",
+      "category": "토크/캠방",
+      "cumulativeUsers": 25631477,
+      "balloonCount": 61226983,
+      "donorCount": 7604,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 16,
+      "name": "s시조새s",
+      "soopId": "superbsw123",
+      "category": "토크/캠방",
+      "cumulativeUsers": 25198037,
+      "balloonCount": 49537119,
+      "donorCount": 5264,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 18,
+      "name": "지피티",
+      "soopId": "tjrdbs999",
+      "category": "피트니스",
+      "cumulativeUsers": 23979073,
+      "balloonCount": 4650367,
+      "donorCount": 8021,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 20,
+      "name": "Calm_김윤환",
+      "soopId": "brainzerg7",
+      "category": "스타크래프트",
+      "cumulativeUsers": 21688333,
+      "balloonCount": 4905135,
+      "donorCount": 4598,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 21,
+      "name": "오아",
+      "soopId": "legendhyuk",
+      "category": "FC 온라인",
+      "cumulativeUsers": 20561132,
+      "balloonCount": 3748392,
+      "donorCount": 5205,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 22,
+      "name": "수피",
+      "soopId": "lovely5959",
+      "category": "PUBG: 배틀그라운드",
+      "cumulativeUsers": 19982795,
+      "balloonCount": 4764562,
+      "donorCount": 5911,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 23,
+      "name": "우왁굳",
+      "soopId": "ecvhao",
+      "category": "종합게임",
+      "cumulativeUsers": 19968871,
+      "balloonCount": 4599600,
+      "donorCount": 5622,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 24,
+      "name": "정중만",
+      "soopId": "ititit",
+      "category": "스타크래프트",
+      "cumulativeUsers": 19949281,
+      "balloonCount": 2764158,
+      "donorCount": 4123,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 25,
+      "name": "피넛ㅁ",
+      "soopId": "kiss281004",
+      "category": "",
+      "cumulativeUsers": 19648883,
+      "balloonCount": 2839277,
+      "donorCount": 6129,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 26,
+      "name": "장지수",
+      "soopId": "iamquaddurup",
+      "category": "여행",
+      "cumulativeUsers": 19432115,
+      "balloonCount": 3892354,
+      "donorCount": 7494,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 27,
+      "name": "깨박이깨박이",
+      "soopId": "dlghfjs",
+      "category": "토크/캠방",
+      "cumulativeUsers": 19403351,
+      "balloonCount": 6061566,
+      "donorCount": 6432,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 28,
+      "name": "Alo.조경훈",
+      "soopId": "cnsgkcnehd74",
+      "category": "마인크래프트",
+      "cumulativeUsers": 17870662,
+      "balloonCount": 4509945,
+      "donorCount": 5108,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 29,
+      "name": "빵훈이",
+      "soopId": "vlfvlf789",
+      "category": "스타크래프트",
+      "cumulativeUsers": 17422257,
+      "balloonCount": 4584490,
+      "donorCount": 4257,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 30,
+      "name": "팡이요",
+      "soopId": "sccha21",
+      "category": "메이플스토리",
+      "cumulativeUsers": 17357855,
+      "balloonCount": 2317400,
+      "donorCount": 5770,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 31,
+      "name": "[BJ]케이",
+      "soopId": "zpdl1313",
+      "category": "토크/캠방",
+      "cumulativeUsers": 17076244,
+      "balloonCount": 190465244,
+      "donorCount": 6343,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 32,
+      "name": "강만식",
+      "soopId": "rkdakstlr911",
+      "category": "명조: 워더링 웨이브",
+      "cumulativeUsers": 16972539,
+      "balloonCount": 3206965,
+      "donorCount": 6719,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 33,
+      "name": "고세구!",
+      "soopId": "gosegu2",
+      "category": "버추얼",
+      "cumulativeUsers": 16971425,
+      "balloonCount": 2889717,
+      "donorCount": 4641,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 35,
+      "name": "기뉴다",
+      "soopId": "arinbbidol",
+      "category": "스타크래프트",
+      "cumulativeUsers": 16870759,
+      "balloonCount": 8114223,
+      "donorCount": 3245,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 36,
+      "name": "[JS]박퍼니",
+      "soopId": "roket0829",
+      "category": "토크/캠방",
+      "cumulativeUsers": 16809850,
+      "balloonCount": 120709334,
+      "donorCount": 7237,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 37,
+      "name": "최군형",
+      "soopId": "ch1716",
+      "category": "토크/캠방",
+      "cumulativeUsers": 16516619,
+      "balloonCount": 37404731,
+      "donorCount": 5288,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 38,
+      "name": "클리드1",
+      "soopId": "xoals137",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 16106599,
+      "balloonCount": 1767582,
+      "donorCount": 4827,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 39,
+      "name": "임아니",
+      "soopId": "1004suna",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 15484125,
+      "balloonCount": 3265192,
+      "donorCount": 3920,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 40,
+      "name": "황원태",
+      "soopId": "hwt1014",
+      "category": "뮤직/댄스",
+      "cumulativeUsers": 15111779,
+      "balloonCount": 3312561,
+      "donorCount": 5581,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 41,
+      "name": "한둬얼",
+      "soopId": "qn308dud",
+      "category": "여행",
+      "cumulativeUsers": 15084167,
+      "balloonCount": 3409267,
+      "donorCount": 9318,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 42,
+      "name": "제갈금자",
+      "soopId": "dlsn9911",
+      "category": "이환",
+      "cumulativeUsers": 14116542,
+      "balloonCount": 4319115,
+      "donorCount": 6727,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 43,
+      "name": "단츄♪",
+      "soopId": "danchu17",
+      "category": "버추얼",
+      "cumulativeUsers": 14056284,
+      "balloonCount": null,
+      "donorCount": null,
+      "status": "unavailable",
+      "unavailableReason": "Trackify 후원 통계 비공개"
+    },
+    {
+      "rankByViewer": 44,
+      "name": "박진우[JINU]",
+      "soopId": "pyh3646",
+      "category": "토크/캠방",
+      "cumulativeUsers": 13017642,
+      "balloonCount": 65634144,
+      "donorCount": 4142,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 45,
+      "name": "오메킴승현2",
+      "soopId": "rlatldgus",
+      "category": "주식",
+      "cumulativeUsers": 12949515,
+      "balloonCount": 1947247,
+      "donorCount": 5761,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 46,
+      "name": "천양",
+      "soopId": "243000",
+      "category": "버추얼",
+      "cumulativeUsers": 12698084,
+      "balloonCount": 2168669,
+      "donorCount": 3408,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 47,
+      "name": "스맵임",
+      "soopId": "townboy",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 12535599,
+      "balloonCount": 2073511,
+      "donorCount": 2802,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 48,
+      "name": "(주)박사장$",
+      "soopId": "wnstn0905",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 12473935,
+      "balloonCount": 2824267,
+      "donorCount": 3712,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 49,
+      "name": "안녕수야",
+      "soopId": "tntntn13",
+      "category": "메이플스토리",
+      "cumulativeUsers": 12472475,
+      "balloonCount": 3493906,
+      "donorCount": 3841,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 50,
+      "name": "깐숙",
+      "soopId": "nangnan",
+      "category": "버추얼",
+      "cumulativeUsers": 11918831,
+      "balloonCount": 3810343,
+      "donorCount": 4423,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 51,
+      "name": "김된모!",
+      "soopId": "kimdoenmo",
+      "category": "발로란트",
+      "cumulativeUsers": 11231567,
+      "balloonCount": 786230,
+      "donorCount": 2219,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 52,
+      "name": "릴파♬",
+      "soopId": "lilpa0309",
+      "category": "버추얼",
+      "cumulativeUsers": 10959859,
+      "balloonCount": 2639261,
+      "donorCount": 3483,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 53,
+      "name": "그릴래영",
+      "soopId": "eunyoung1238",
+      "category": "취미",
+      "cumulativeUsers": 10575351,
+      "balloonCount": 7953486,
+      "donorCount": 1427,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 54,
+      "name": "정윤종..",
+      "soopId": "ioioiobb",
+      "category": "주식",
+      "cumulativeUsers": 10570659,
+      "balloonCount": 1281480,
+      "donorCount": 5811,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 55,
+      "name": "JuM.윤중2",
+      "soopId": "jk890202",
+      "category": "스타크래프트",
+      "cumulativeUsers": 10152732,
+      "balloonCount": 4688418,
+      "donorCount": 3277,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 56,
+      "name": "Fresh토마토",
+      "soopId": "freshtomato",
+      "category": "스타크래프트",
+      "cumulativeUsers": 9779581,
+      "balloonCount": 4854032,
+      "donorCount": 3390,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 57,
+      "name": "강덕구",
+      "soopId": "sdkels",
+      "category": "여행",
+      "cumulativeUsers": 9563308,
+      "balloonCount": 2435833,
+      "donorCount": 3938,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 58,
+      "name": "비챤",
+      "soopId": "viichan6",
+      "category": "종합게임",
+      "cumulativeUsers": 9401829,
+      "balloonCount": 1767425,
+      "donorCount": 2636,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 59,
+      "name": "꾸티뉴",
+      "soopId": "aksen7833",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 9350891,
+      "balloonCount": 2470914,
+      "donorCount": 3451,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 60,
+      "name": "♥심장",
+      "soopId": "since821",
+      "category": "음악 스트리밍",
+      "cumulativeUsers": 9306293,
+      "balloonCount": 32007,
+      "donorCount": 439,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 61,
+      "name": "러아♡",
+      "soopId": "smmms2002",
+      "category": "토크/캠방",
+      "cumulativeUsers": 9216274,
+      "balloonCount": 5888828,
+      "donorCount": 2107,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 63,
+      "name": "조디악악악",
+      "soopId": "yjkim5500",
+      "category": "버추얼",
+      "cumulativeUsers": 9049127,
+      "balloonCount": 1196368,
+      "donorCount": 2434,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 64,
+      "name": "마이곰이",
+      "soopId": "mygomiee",
+      "category": "버추얼",
+      "cumulativeUsers": 8914143,
+      "balloonCount": 1892615,
+      "donorCount": 5025,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 65,
+      "name": "홍타쿠!",
+      "soopId": "lhtlgm",
+      "category": "취미",
+      "cumulativeUsers": 8804897,
+      "balloonCount": 2156593,
+      "donorCount": 5490,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 66,
+      "name": "클로이",
+      "soopId": "vf3366",
+      "category": "마인크래프트",
+      "cumulativeUsers": 8652061,
+      "balloonCount": 3490060,
+      "donorCount": 4178,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 67,
+      "name": "수이,",
+      "soopId": "suyeun0312",
+      "category": "토크/캠방",
+      "cumulativeUsers": 8633113,
+      "balloonCount": 1282019,
+      "donorCount": 2978,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 68,
+      "name": "김인호",
+      "soopId": "pookygamja",
+      "category": "토크/캠방",
+      "cumulativeUsers": 8407112,
+      "balloonCount": 78478121,
+      "donorCount": 4815,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 69,
+      "name": "민결희",
+      "soopId": "mingyeolhee",
+      "category": "종합게임",
+      "cumulativeUsers": 8307049,
+      "balloonCount": 1478053,
+      "donorCount": 3786,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 70,
+      "name": "양도끼",
+      "soopId": "yangdoki",
+      "category": "해적",
+      "cumulativeUsers": 8222486,
+      "balloonCount": 1477359,
+      "donorCount": 2563,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 71,
+      "name": "키마",
+      "soopId": "kymakyma",
+      "category": "버추얼",
+      "cumulativeUsers": 8185958,
+      "balloonCount": 3777428,
+      "donorCount": 4682,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 72,
+      "name": "설레랑",
+      "soopId": "dnwnwjdqhr53",
+      "category": "버추얼",
+      "cumulativeUsers": 8125639,
+      "balloonCount": 2020784,
+      "donorCount": 3618,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 73,
+      "name": "심청이_",
+      "soopId": "dearhal",
+      "category": "토크/캠방",
+      "cumulativeUsers": 8117699,
+      "balloonCount": 3541539,
+      "donorCount": 2319,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 74,
+      "name": "머독",
+      "soopId": "spbabobj",
+      "category": "종합게임",
+      "cumulativeUsers": 8116653,
+      "balloonCount": 1384496,
+      "donorCount": 2615,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 75,
+      "name": "망구랑",
+      "soopId": "nmangoquince",
+      "category": "버추얼",
+      "cumulativeUsers": 8099138,
+      "balloonCount": 4603459,
+      "donorCount": 4907,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 76,
+      "name": "과즙세연",
+      "soopId": "m0m099",
+      "category": "토크/캠방",
+      "cumulativeUsers": 8045626,
+      "balloonCount": 6224238,
+      "donorCount": 4690,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 77,
+      "name": "해기_",
+      "soopId": "he0901",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 8004780,
+      "balloonCount": 1518892,
+      "donorCount": 3915,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 78,
+      "name": "박가린님[♥]",
+      "soopId": "janjju",
+      "category": "토크/캠방",
+      "cumulativeUsers": 7889913,
+      "balloonCount": 59547799,
+      "donorCount": 2363,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 79,
+      "name": "해리",
+      "soopId": "gofl2237",
+      "category": "버추얼",
+      "cumulativeUsers": 7813284,
+      "balloonCount": 3253430,
+      "donorCount": 4045,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 80,
+      "name": "징버거☆",
+      "soopId": "jingburger1",
+      "category": "버추얼",
+      "cumulativeUsers": 7739288,
+      "balloonCount": 1689860,
+      "donorCount": 2592,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 81,
+      "name": "백하♥",
+      "soopId": "mj0128",
+      "category": "토크/캠방",
+      "cumulativeUsers": 7733486,
+      "balloonCount": 3477717,
+      "donorCount": 2395,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 82,
+      "name": "한갱",
+      "soopId": "rud9281",
+      "category": "토크/캠방",
+      "cumulativeUsers": 7672717,
+      "balloonCount": 7512010,
+      "donorCount": 3877,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 83,
+      "name": "박재박",
+      "soopId": "jaeparkk",
+      "category": "취미",
+      "cumulativeUsers": 7622220,
+      "balloonCount": 1842152,
+      "donorCount": 3588,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 84,
+      "name": "이경민+_+.",
+      "soopId": "rudals5467",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 7580154,
+      "balloonCount": 3000969,
+      "donorCount": 2850,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 85,
+      "name": "범프리카",
+      "soopId": "120510",
+      "category": "먹방/쿡방",
+      "cumulativeUsers": 7412542,
+      "balloonCount": 3714269,
+      "donorCount": 2921,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 86,
+      "name": "라로시_",
+      "soopId": "larothy",
+      "category": "버추얼",
+      "cumulativeUsers": 7382158,
+      "balloonCount": 1087440,
+      "donorCount": 3526,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 87,
+      "name": "미오탱ㅋㅋ",
+      "soopId": "juju0228",
+      "category": "토크/캠방",
+      "cumulativeUsers": 7271813,
+      "balloonCount": 20409461,
+      "donorCount": 6169,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 88,
+      "name": "아뚱.",
+      "soopId": "gjstn7637",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 7057864,
+      "balloonCount": 1377483,
+      "donorCount": 3538,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 89,
+      "name": "솜주먹",
+      "soopId": "ldrboo",
+      "category": "버추얼",
+      "cumulativeUsers": 7019425,
+      "balloonCount": 2849521,
+      "donorCount": 5031,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 90,
+      "name": "이주하!",
+      "soopId": "nyouuu30810",
+      "category": "토크/캠방",
+      "cumulativeUsers": 6970687,
+      "balloonCount": 2029806,
+      "donorCount": 3036,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 91,
+      "name": "도현ツ",
+      "soopId": "dobby1031",
+      "category": "FC 온라인",
+      "cumulativeUsers": 6879677,
+      "balloonCount": 1754525,
+      "donorCount": 2525,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 92,
+      "name": "아란♥",
+      "soopId": "dkfksl00",
+      "category": "버추얼",
+      "cumulativeUsers": 6867603,
+      "balloonCount": 716478,
+      "donorCount": 891,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 93,
+      "name": "준밧드",
+      "soopId": "gksdidqksxn",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 6803872,
+      "balloonCount": 1582830,
+      "donorCount": 3315,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 95,
+      "name": "우정잉",
+      "soopId": "nanajam",
+      "category": "토크/캠방",
+      "cumulativeUsers": 6546041,
+      "balloonCount": 1684182,
+      "donorCount": 3360,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 96,
+      "name": "띵귤_",
+      "soopId": "singgyul",
+      "category": "버추얼",
+      "cumulativeUsers": 6509852,
+      "balloonCount": 4264796,
+      "donorCount": 4584,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 97,
+      "name": "Bisu김택용",
+      "soopId": "rlaxordyd",
+      "category": "스타크래프트",
+      "cumulativeUsers": 6435962,
+      "balloonCount": 2195313,
+      "donorCount": 1224,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 98,
+      "name": "니니♥♥♥",
+      "soopId": "honeys2",
+      "category": "마인크래프트",
+      "cumulativeUsers": 6340974,
+      "balloonCount": null,
+      "donorCount": null,
+      "status": "unavailable",
+      "unavailableReason": "Trackify 후원 통계 비공개"
+    },
+    {
+      "rankByViewer": 99,
+      "name": "챈나",
+      "soopId": "chaenna02",
+      "category": "버추얼",
+      "cumulativeUsers": 6309904,
+      "balloonCount": 2794408,
+      "donorCount": 5072,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 101,
+      "name": "˚다누리",
+      "soopId": "dkrn56",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 6217411,
+      "balloonCount": 1602990,
+      "donorCount": 1601,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 102,
+      "name": "한결___",
+      "soopId": "kaksjak0730",
+      "category": "버추얼",
+      "cumulativeUsers": 6143303,
+      "balloonCount": 1228988,
+      "donorCount": 2601,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 103,
+      "name": "끠끼",
+      "soopId": "rmlrl771",
+      "category": "버추얼",
+      "cumulativeUsers": 6054280,
+      "balloonCount": 2247591,
+      "donorCount": 2734,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 104,
+      "name": "아야네_세나",
+      "soopId": "ayanesena",
+      "category": "버추얼",
+      "cumulativeUsers": 5981506,
+      "balloonCount": 1249712,
+      "donorCount": 1656,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 105,
+      "name": "고라니율.",
+      "soopId": "golaniyule0",
+      "category": "토크/캠방",
+      "cumulativeUsers": 5893226,
+      "balloonCount": 3095715,
+      "donorCount": 2317,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 106,
+      "name": "문모모",
+      "soopId": "doormomo",
+      "category": "버추얼",
+      "cumulativeUsers": 5868023,
+      "balloonCount": 1963580,
+      "donorCount": 4693,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 107,
+      "name": "문월:-)",
+      "soopId": "moonwol0614",
+      "category": "제우스: 오만의 신",
+      "cumulativeUsers": 5846693,
+      "balloonCount": 1881533,
+      "donorCount": 1905,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 108,
+      "name": "나는상윤",
+      "soopId": "sky2713",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 5809853,
+      "balloonCount": 1683616,
+      "donorCount": 2236,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 109,
+      "name": "뜨뜨뜨뜨-",
+      "soopId": "seokwngud",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 5773094,
+      "balloonCount": 454084,
+      "donorCount": 3486,
+      "status": "ok",
+      "unavailableReason": null
+    }
+  ],
+  "exclusions": [
+    {
+      "soopId": "aflol",
+      "name": "LCK_KR",
+      "reason": "official",
+      "evidence": "사용자 확인: LCK 공식 한국어 중계"
+    },
+    {
+      "soopId": "affifaonline",
+      "name": "FCO공식",
+      "reason": "official",
+      "evidence": "사용자 확인: FC 온라인 공식 채널"
+    },
+    {
+      "soopId": "valorantth",
+      "name": "VALORANT_TH",
+      "reason": "foreign",
+      "evidence": "사용자 확인: 발로란트 태국어 공식 중계"
+    },
+    {
+      "soopId": "valoranten",
+      "name": "VALORANT_EN",
+      "reason": "foreign",
+      "evidence": "사용자 확인: 발로란트 영어 공식 중계"
+    },
+    {
+      "soopId": "carrylck",
+      "name": "lckcarry",
+      "reason": "non-personal",
+      "evidence": "사용자 확인: 개인 스트리머가 아닌 중계 채널"
+    },
+    {
+      "soopId": "boomburapa",
+      "name": "boomburapa",
+      "reason": "foreign",
+      "evidence": "사용자 확인: 해외 스트리머"
+    },
+    {
+      "soopId": "rebirthztv",
+      "name": "rebirthztv",
+      "reason": "foreign",
+      "evidence": "사용자 확인: 해외 스트리머"
+    },
+    {
+      "soopId": "fifatargrean",
+      "name": "fifatargrean",
+      "reason": "foreign",
+      "evidence": "사용자 확인: 해외 스트리머"
+    },
+    {
+      "soopId": "0921388683",
+      "name": "MinhDienvn",
+      "reason": "foreign",
+      "evidence": "사용자 확인: 해외 스트리머. 연간 랭킹 응답에서 실제 ID 확인"
+    },
+    {
+      "soopId": "pubg",
+      "name": "PUBG공식",
+      "reason": "official",
+      "evidence": "Trackify 공개 프로필에서 PUBG공식 방송국 확인 (2026-09-30)"
+    },
+    {
+      "soopId": "afstar1",
+      "name": "ASL공식",
+      "reason": "official",
+      "evidence": "Trackify 공개 프로필에서 스타리그공식 방송국 확인 (2026-09-30)"
+    }
+  ],
+  "errors": [
+    {
+      "soopId": "dobby1031",
+      "message": "The read operation timed out"
+    }
+  ],
+  "unavailableCount": 2,
+  "completedAt": "2026-09-30T12:16:16.322338+00:00",
+  "forecast": {
+    "referenceMonth": "2026-09",
+    "isPartial": true,
+    "paceBasis": "observed-month-total",
+    "monthDays": 30,
+    "updatedAt": "2026-09-30T12:15:01.598841+00:00",
+    "status": "ok",
+    "rows": [
+      {
+        "soopId": "khm11903",
+        "recentMonthlyUsers": 14296930,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "phonics1",
+        "recentMonthlyUsers": 10215736,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "lshooooo",
+        "recentMonthlyUsers": 6164657,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "devil0108",
+        "recentMonthlyUsers": 6895245,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rrvv17",
+        "recentMonthlyUsers": 6851736,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "y1026",
+        "recentMonthlyUsers": 2890762,
+        "source": "monthly-overview.totalViewCountDelta",
+        "referenceMonth": "2026-07",
+        "fallback": true
+      },
+      {
+        "soopId": "galsa",
+        "recentMonthlyUsers": 8780340,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "yuambo",
+        "recentMonthlyUsers": 168542,
+        "source": "monthly-overview.totalViewCountDelta",
+        "referenceMonth": "2026-08",
+        "fallback": true
+      },
+      {
+        "soopId": "joey1114",
+        "recentMonthlyUsers": 2692669,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "b13246",
+        "recentMonthlyUsers": 3402572,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "jrdart",
+        "recentMonthlyUsers": 2226617,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "wnnw",
+        "recentMonthlyUsers": 3009246,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "superbsw123",
+        "recentMonthlyUsers": 2328872,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "tjrdbs999",
+        "recentMonthlyUsers": 3480701,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "brainzerg7",
+        "recentMonthlyUsers": 1629652,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "legendhyuk",
+        "recentMonthlyUsers": 1900026,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "lovely5959",
+        "recentMonthlyUsers": 2419384,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "ecvhao",
+        "recentMonthlyUsers": 2730850,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "ititit",
+        "recentMonthlyUsers": 7448673,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "kiss281004",
+        "recentMonthlyUsers": 48442,
+        "source": "monthly-overview.totalViewCountDelta",
+        "referenceMonth": "2026-06",
+        "fallback": true
+      },
+      {
+        "soopId": "iamquaddurup",
+        "recentMonthlyUsers": 2043830,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dlghfjs",
+        "recentMonthlyUsers": 2383392,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "cnsgkcnehd74",
+        "recentMonthlyUsers": 1711313,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "vlfvlf789",
+        "recentMonthlyUsers": 2623464,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "sccha21",
+        "recentMonthlyUsers": 1559069,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "zpdl1313",
+        "recentMonthlyUsers": 2329900,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rkdakstlr911",
+        "recentMonthlyUsers": 1294044,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "gosegu2",
+        "recentMonthlyUsers": 1855893,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "arinbbidol",
+        "recentMonthlyUsers": 2023135,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "roket0829",
+        "recentMonthlyUsers": 1747384,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "ch1716",
+        "recentMonthlyUsers": 1504334,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "xoals137",
+        "recentMonthlyUsers": 1829569,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "1004suna",
+        "recentMonthlyUsers": 1716783,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "hwt1014",
+        "recentMonthlyUsers": 2156007,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "qn308dud",
+        "recentMonthlyUsers": 1720999,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dlsn9911",
+        "recentMonthlyUsers": 1440519,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "danchu17",
+        "recentMonthlyUsers": 1488729,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "pyh3646",
+        "recentMonthlyUsers": 1755669,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rlatldgus",
+        "recentMonthlyUsers": 656305,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "243000",
+        "recentMonthlyUsers": 1453246,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "townboy",
+        "recentMonthlyUsers": 1468265,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "wnstn0905",
+        "recentMonthlyUsers": 1029916,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "tntntn13",
+        "recentMonthlyUsers": 1330447,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "nangnan",
+        "recentMonthlyUsers": 1301789,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "kimdoenmo",
+        "recentMonthlyUsers": 1575224,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "lilpa0309",
+        "recentMonthlyUsers": 32803,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "eunyoung1238",
+        "recentMonthlyUsers": 541584,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "ioioiobb",
+        "recentMonthlyUsers": 951052,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "jk890202",
+        "recentMonthlyUsers": 1569875,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "freshtomato",
+        "recentMonthlyUsers": 769447,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "sdkels",
+        "recentMonthlyUsers": 1084945,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "viichan6",
+        "recentMonthlyUsers": 1144762,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "aksen7833",
+        "recentMonthlyUsers": 1327770,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "since821",
+        "recentMonthlyUsers": 767724,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "smmms2002",
+        "recentMonthlyUsers": 2054564,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "yjkim5500",
+        "recentMonthlyUsers": 495448,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "mygomiee",
+        "recentMonthlyUsers": 990462,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "lhtlgm",
+        "recentMonthlyUsers": 732418,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "vf3366",
+        "recentMonthlyUsers": 1647145,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "suyeun0312",
+        "recentMonthlyUsers": 150691,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "pookygamja",
+        "recentMonthlyUsers": 537563,
+        "source": "monthly-overview.totalViewCountDelta",
+        "referenceMonth": "2026-08",
+        "fallback": true
+      },
+      {
+        "soopId": "mingyeolhee",
+        "recentMonthlyUsers": 1016899,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "yangdoki",
+        "recentMonthlyUsers": 954091,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "kymakyma",
+        "recentMonthlyUsers": 819528,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dnwnwjdqhr53",
+        "recentMonthlyUsers": 1047969,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dearhal",
+        "recentMonthlyUsers": 89063,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "spbabobj",
+        "recentMonthlyUsers": 730514,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "nmangoquince",
+        "recentMonthlyUsers": 1267043,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "m0m099",
+        "recentMonthlyUsers": 1175246,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "he0901",
+        "recentMonthlyUsers": 1070138,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "janjju",
+        "recentMonthlyUsers": 454226,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "gofl2237",
+        "recentMonthlyUsers": 702121,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "jingburger1",
+        "recentMonthlyUsers": 903902,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "mj0128",
+        "recentMonthlyUsers": 1674637,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rud9281",
+        "recentMonthlyUsers": 1184881,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "jaeparkk",
+        "recentMonthlyUsers": 1110541,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rudals5467",
+        "recentMonthlyUsers": 519948,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "120510",
+        "recentMonthlyUsers": 602684,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "larothy",
+        "recentMonthlyUsers": 540993,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "juju0228",
+        "recentMonthlyUsers": 767097,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "gjstn7637",
+        "recentMonthlyUsers": 715549,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "ldrboo",
+        "recentMonthlyUsers": 706724,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "nyouuu30810",
+        "recentMonthlyUsers": 2237563,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dobby1031",
+        "recentMonthlyUsers": 833564,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dkfksl00",
+        "recentMonthlyUsers": 143777,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "gksdidqksxn",
+        "recentMonthlyUsers": 569795,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "nanajam",
+        "recentMonthlyUsers": 1675768,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "singgyul",
+        "recentMonthlyUsers": 872472,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rlaxordyd",
+        "recentMonthlyUsers": 1346562,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "honeys2",
+        "recentMonthlyUsers": 743925,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "chaenna02",
+        "recentMonthlyUsers": 83038,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "dkrn56",
+        "recentMonthlyUsers": 760693,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "kaksjak0730",
+        "recentMonthlyUsers": 845986,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "rmlrl771",
+        "recentMonthlyUsers": 984423,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "ayanesena",
+        "recentMonthlyUsers": 294749,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "golaniyule0",
+        "recentMonthlyUsers": 111285,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "doormomo",
+        "recentMonthlyUsers": 1143768,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "moonwol0614",
+        "recentMonthlyUsers": 1064499,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "sky2713",
+        "recentMonthlyUsers": 578251,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      },
+      {
+        "soopId": "seokwngud",
+        "recentMonthlyUsers": 2714668,
+        "source": "monthly-summary.uniqueViewers",
+        "referenceMonth": "2026-09",
+        "fallback": false
+      }
+    ],
+    "errors": [],
+    "fallbackCount": 4
+  },
+  "simulationBaseline": {
+    "status": "provisional",
+    "asOf": "2026-09-30",
+    "cutoffAt": "2026-10-01T00:00:00+09:00",
+    "capturedAt": "2026-09-30T12:15:01.598841+00:00",
+    "source": "Trackify 공개 통계 · 스트리머별 연간 누적 원시값",
+    "note": "2026-09-30 종료 전 최신 관측값입니다. 종료 후 최초 수집에서 자동 고정됩니다.",
+    "rows": [
+      {
+        "rankByViewer": 1,
+        "name": "봉준",
+        "soopId": "khm11903",
+        "category": "토크/캠방",
+        "cumulativeUsers": 113705545,
+        "balloonCount": 11752542,
+        "donorCount": 42879,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 2,
+        "name": "김민교.",
+        "soopId": "phonics1",
+        "category": "토크/캠방",
+        "cumulativeUsers": 105908825,
+        "balloonCount": 6268793,
+        "donorCount": 15816,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 3,
+        "name": "이상호",
+        "soopId": "lshooooo",
+        "category": "토크/캠방",
+        "cumulativeUsers": 72637520,
+        "balloonCount": 3196767,
+        "donorCount": 14544,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 4,
+        "name": "감스트",
+        "soopId": "devil0108",
+        "category": "국가대표",
+        "cumulativeUsers": 55171927,
+        "balloonCount": 7735840,
+        "donorCount": 13423,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 6,
+        "name": "항상#킴성태",
+        "soopId": "rrvv17",
+        "category": "마인크래프트",
+        "cumulativeUsers": 48915993,
+        "balloonCount": 7158560,
+        "donorCount": 13754,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 7,
+        "name": "철구형2↑",
+        "soopId": "y1026",
+        "category": "토크/캠방",
+        "cumulativeUsers": 33733205,
+        "balloonCount": 138487560,
+        "donorCount": 9305,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 8,
+        "name": "두치와뿌꾸",
+        "soopId": "galsa",
+        "category": "FC 온라인",
+        "cumulativeUsers": 33547976,
+        "balloonCount": 3171374,
+        "donorCount": 15846,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 9,
+        "name": "A-염보성!!",
+        "soopId": "yuambo",
+        "category": "스타크래프트",
+        "cumulativeUsers": 33474170,
+        "balloonCount": 70368239,
+        "donorCount": 10315,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 12,
+        "name": "저라뎃",
+        "soopId": "joey1114",
+        "category": "FC 온라인",
+        "cumulativeUsers": 28175351,
+        "balloonCount": 2975695,
+        "donorCount": 7395,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 13,
+        "name": "타요~",
+        "soopId": "b13246",
+        "category": "종합게임",
+        "cumulativeUsers": 27404336,
+        "balloonCount": 3483154,
+        "donorCount": 7635,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 14,
+        "name": "이지상:)",
+        "soopId": "jrdart",
+        "category": "여행",
+        "cumulativeUsers": 26586919,
+        "balloonCount": 5629777,
+        "donorCount": 8000,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 15,
+        "name": "남순",
+        "soopId": "wnnw",
+        "category": "토크/캠방",
+        "cumulativeUsers": 25631477,
+        "balloonCount": 61226983,
+        "donorCount": 7604,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 16,
+        "name": "s시조새s",
+        "soopId": "superbsw123",
+        "category": "토크/캠방",
+        "cumulativeUsers": 25198037,
+        "balloonCount": 49537119,
+        "donorCount": 5264,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 18,
+        "name": "지피티",
+        "soopId": "tjrdbs999",
+        "category": "피트니스",
+        "cumulativeUsers": 23979073,
+        "balloonCount": 4650367,
+        "donorCount": 8021,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 20,
+        "name": "Calm_김윤환",
+        "soopId": "brainzerg7",
+        "category": "스타크래프트",
+        "cumulativeUsers": 21688333,
+        "balloonCount": 4905135,
+        "donorCount": 4598,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 21,
+        "name": "오아",
+        "soopId": "legendhyuk",
+        "category": "FC 온라인",
+        "cumulativeUsers": 20561132,
+        "balloonCount": 3748392,
+        "donorCount": 5205,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 22,
+        "name": "수피",
+        "soopId": "lovely5959",
+        "category": "PUBG: 배틀그라운드",
+        "cumulativeUsers": 19982795,
+        "balloonCount": 4764562,
+        "donorCount": 5911,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 23,
+        "name": "우왁굳",
+        "soopId": "ecvhao",
+        "category": "종합게임",
+        "cumulativeUsers": 19968871,
+        "balloonCount": 4599600,
+        "donorCount": 5622,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 24,
+        "name": "정중만",
+        "soopId": "ititit",
+        "category": "스타크래프트",
+        "cumulativeUsers": 19949281,
+        "balloonCount": 2764158,
+        "donorCount": 4123,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 25,
+        "name": "피넛ㅁ",
+        "soopId": "kiss281004",
+        "category": "",
+        "cumulativeUsers": 19648883,
+        "balloonCount": 2839277,
+        "donorCount": 6129,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 26,
+        "name": "장지수",
+        "soopId": "iamquaddurup",
+        "category": "여행",
+        "cumulativeUsers": 19432115,
+        "balloonCount": 3892354,
+        "donorCount": 7494,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 27,
+        "name": "깨박이깨박이",
+        "soopId": "dlghfjs",
+        "category": "토크/캠방",
+        "cumulativeUsers": 19403351,
+        "balloonCount": 6061566,
+        "donorCount": 6432,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 28,
+        "name": "Alo.조경훈",
+        "soopId": "cnsgkcnehd74",
+        "category": "마인크래프트",
+        "cumulativeUsers": 17870662,
+        "balloonCount": 4509945,
+        "donorCount": 5108,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 29,
+        "name": "빵훈이",
+        "soopId": "vlfvlf789",
+        "category": "스타크래프트",
+        "cumulativeUsers": 17422257,
+        "balloonCount": 4584490,
+        "donorCount": 4257,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 30,
+        "name": "팡이요",
+        "soopId": "sccha21",
+        "category": "메이플스토리",
+        "cumulativeUsers": 17357855,
+        "balloonCount": 2317400,
+        "donorCount": 5770,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 31,
+        "name": "[BJ]케이",
+        "soopId": "zpdl1313",
+        "category": "토크/캠방",
+        "cumulativeUsers": 17076244,
+        "balloonCount": 190465244,
+        "donorCount": 6343,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 32,
+        "name": "강만식",
+        "soopId": "rkdakstlr911",
+        "category": "명조: 워더링 웨이브",
+        "cumulativeUsers": 16972539,
+        "balloonCount": 3206965,
+        "donorCount": 6719,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 33,
+        "name": "고세구!",
+        "soopId": "gosegu2",
+        "category": "버추얼",
+        "cumulativeUsers": 16971425,
+        "balloonCount": 2889717,
+        "donorCount": 4641,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 35,
+        "name": "기뉴다",
+        "soopId": "arinbbidol",
+        "category": "스타크래프트",
+        "cumulativeUsers": 16870759,
+        "balloonCount": 8114223,
+        "donorCount": 3245,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 36,
+        "name": "[JS]박퍼니",
+        "soopId": "roket0829",
+        "category": "토크/캠방",
+        "cumulativeUsers": 16809850,
+        "balloonCount": 120709334,
+        "donorCount": 7237,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 37,
+        "name": "최군형",
+        "soopId": "ch1716",
+        "category": "토크/캠방",
+        "cumulativeUsers": 16516619,
+        "balloonCount": 37404731,
+        "donorCount": 5288,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 38,
+        "name": "클리드1",
+        "soopId": "xoals137",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 16106599,
+        "balloonCount": 1767582,
+        "donorCount": 4827,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 39,
+        "name": "임아니",
+        "soopId": "1004suna",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 15484125,
+        "balloonCount": 3265192,
+        "donorCount": 3920,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 40,
+        "name": "황원태",
+        "soopId": "hwt1014",
+        "category": "뮤직/댄스",
+        "cumulativeUsers": 15111779,
+        "balloonCount": 3312561,
+        "donorCount": 5581,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 41,
+        "name": "한둬얼",
+        "soopId": "qn308dud",
+        "category": "여행",
+        "cumulativeUsers": 15084167,
+        "balloonCount": 3409267,
+        "donorCount": 9318,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 42,
+        "name": "제갈금자",
+        "soopId": "dlsn9911",
+        "category": "이환",
+        "cumulativeUsers": 14116542,
+        "balloonCount": 4319115,
+        "donorCount": 6727,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 43,
+        "name": "단츄♪",
+        "soopId": "danchu17",
+        "category": "버추얼",
+        "cumulativeUsers": 14056284,
+        "balloonCount": null,
+        "donorCount": null,
+        "status": "unavailable",
+        "unavailableReason": "Trackify 후원 통계 비공개"
+      },
+      {
+        "rankByViewer": 44,
+        "name": "박진우[JINU]",
+        "soopId": "pyh3646",
+        "category": "토크/캠방",
+        "cumulativeUsers": 13017642,
+        "balloonCount": 65634144,
+        "donorCount": 4142,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 45,
+        "name": "오메킴승현2",
+        "soopId": "rlatldgus",
+        "category": "주식",
+        "cumulativeUsers": 12949515,
+        "balloonCount": 1947247,
+        "donorCount": 5761,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 46,
+        "name": "천양",
+        "soopId": "243000",
+        "category": "버추얼",
+        "cumulativeUsers": 12698084,
+        "balloonCount": 2168669,
+        "donorCount": 3408,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 47,
+        "name": "스맵임",
+        "soopId": "townboy",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 12535599,
+        "balloonCount": 2073511,
+        "donorCount": 2802,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 48,
+        "name": "(주)박사장$",
+        "soopId": "wnstn0905",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 12473935,
+        "balloonCount": 2824267,
+        "donorCount": 3712,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 49,
+        "name": "안녕수야",
+        "soopId": "tntntn13",
+        "category": "메이플스토리",
+        "cumulativeUsers": 12472475,
+        "balloonCount": 3493906,
+        "donorCount": 3841,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 50,
+        "name": "깐숙",
+        "soopId": "nangnan",
+        "category": "버추얼",
+        "cumulativeUsers": 11918831,
+        "balloonCount": 3810343,
+        "donorCount": 4423,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 51,
+        "name": "김된모!",
+        "soopId": "kimdoenmo",
+        "category": "발로란트",
+        "cumulativeUsers": 11231567,
+        "balloonCount": 786230,
+        "donorCount": 2219,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 52,
+        "name": "릴파♬",
+        "soopId": "lilpa0309",
+        "category": "버추얼",
+        "cumulativeUsers": 10959859,
+        "balloonCount": 2639261,
+        "donorCount": 3483,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 53,
+        "name": "그릴래영",
+        "soopId": "eunyoung1238",
+        "category": "취미",
+        "cumulativeUsers": 10575351,
+        "balloonCount": 7953486,
+        "donorCount": 1427,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 54,
+        "name": "정윤종..",
+        "soopId": "ioioiobb",
+        "category": "주식",
+        "cumulativeUsers": 10570659,
+        "balloonCount": 1281480,
+        "donorCount": 5811,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 55,
+        "name": "JuM.윤중2",
+        "soopId": "jk890202",
+        "category": "스타크래프트",
+        "cumulativeUsers": 10152732,
+        "balloonCount": 4688418,
+        "donorCount": 3277,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 56,
+        "name": "Fresh토마토",
+        "soopId": "freshtomato",
+        "category": "스타크래프트",
+        "cumulativeUsers": 9779581,
+        "balloonCount": 4854032,
+        "donorCount": 3390,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 57,
+        "name": "강덕구",
+        "soopId": "sdkels",
+        "category": "여행",
+        "cumulativeUsers": 9563308,
+        "balloonCount": 2435833,
+        "donorCount": 3938,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 58,
+        "name": "비챤",
+        "soopId": "viichan6",
+        "category": "종합게임",
+        "cumulativeUsers": 9401829,
+        "balloonCount": 1767425,
+        "donorCount": 2636,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 59,
+        "name": "꾸티뉴",
+        "soopId": "aksen7833",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 9350891,
+        "balloonCount": 2470914,
+        "donorCount": 3451,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 60,
+        "name": "♥심장",
+        "soopId": "since821",
+        "category": "음악 스트리밍",
+        "cumulativeUsers": 9306293,
+        "balloonCount": 32007,
+        "donorCount": 439,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 61,
+        "name": "러아♡",
+        "soopId": "smmms2002",
+        "category": "토크/캠방",
+        "cumulativeUsers": 9216274,
+        "balloonCount": 5888828,
+        "donorCount": 2107,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 63,
+        "name": "조디악악악",
+        "soopId": "yjkim5500",
+        "category": "버추얼",
+        "cumulativeUsers": 9049127,
+        "balloonCount": 1196368,
+        "donorCount": 2434,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 64,
+        "name": "마이곰이",
+        "soopId": "mygomiee",
+        "category": "버추얼",
+        "cumulativeUsers": 8914143,
+        "balloonCount": 1892615,
+        "donorCount": 5025,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 65,
+        "name": "홍타쿠!",
+        "soopId": "lhtlgm",
+        "category": "취미",
+        "cumulativeUsers": 8804897,
+        "balloonCount": 2156593,
+        "donorCount": 5490,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 66,
+        "name": "클로이",
+        "soopId": "vf3366",
+        "category": "마인크래프트",
+        "cumulativeUsers": 8652061,
+        "balloonCount": 3490060,
+        "donorCount": 4178,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 67,
+        "name": "수이,",
+        "soopId": "suyeun0312",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8633113,
+        "balloonCount": 1282019,
+        "donorCount": 2978,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 68,
+        "name": "김인호",
+        "soopId": "pookygamja",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8407112,
+        "balloonCount": 78478121,
+        "donorCount": 4815,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 69,
+        "name": "민결희",
+        "soopId": "mingyeolhee",
+        "category": "종합게임",
+        "cumulativeUsers": 8307049,
+        "balloonCount": 1478053,
+        "donorCount": 3786,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 70,
+        "name": "양도끼",
+        "soopId": "yangdoki",
+        "category": "해적",
+        "cumulativeUsers": 8222486,
+        "balloonCount": 1477359,
+        "donorCount": 2563,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 71,
+        "name": "키마",
+        "soopId": "kymakyma",
+        "category": "버추얼",
+        "cumulativeUsers": 8185958,
+        "balloonCount": 3777428,
+        "donorCount": 4682,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 72,
+        "name": "설레랑",
+        "soopId": "dnwnwjdqhr53",
+        "category": "버추얼",
+        "cumulativeUsers": 8125639,
+        "balloonCount": 2020784,
+        "donorCount": 3618,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 73,
+        "name": "심청이_",
+        "soopId": "dearhal",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8117699,
+        "balloonCount": 3541539,
+        "donorCount": 2319,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 74,
+        "name": "머독",
+        "soopId": "spbabobj",
+        "category": "종합게임",
+        "cumulativeUsers": 8116653,
+        "balloonCount": 1384496,
+        "donorCount": 2615,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 75,
+        "name": "망구랑",
+        "soopId": "nmangoquince",
+        "category": "버추얼",
+        "cumulativeUsers": 8099138,
+        "balloonCount": 4603459,
+        "donorCount": 4907,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 76,
+        "name": "과즙세연",
+        "soopId": "m0m099",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8045626,
+        "balloonCount": 6224238,
+        "donorCount": 4690,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 77,
+        "name": "해기_",
+        "soopId": "he0901",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 8004780,
+        "balloonCount": 1518892,
+        "donorCount": 3915,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 78,
+        "name": "박가린님[♥]",
+        "soopId": "janjju",
+        "category": "토크/캠방",
+        "cumulativeUsers": 7889913,
+        "balloonCount": 59547799,
+        "donorCount": 2363,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 79,
+        "name": "해리",
+        "soopId": "gofl2237",
+        "category": "버추얼",
+        "cumulativeUsers": 7813284,
+        "balloonCount": 3253430,
+        "donorCount": 4045,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 80,
+        "name": "징버거☆",
+        "soopId": "jingburger1",
+        "category": "버추얼",
+        "cumulativeUsers": 7739288,
+        "balloonCount": 1689860,
+        "donorCount": 2592,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 81,
+        "name": "백하♥",
+        "soopId": "mj0128",
+        "category": "토크/캠방",
+        "cumulativeUsers": 7733486,
+        "balloonCount": 3477717,
+        "donorCount": 2395,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 82,
+        "name": "한갱",
+        "soopId": "rud9281",
+        "category": "토크/캠방",
+        "cumulativeUsers": 7672717,
+        "balloonCount": 7512010,
+        "donorCount": 3877,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 83,
+        "name": "박재박",
+        "soopId": "jaeparkk",
+        "category": "취미",
+        "cumulativeUsers": 7622220,
+        "balloonCount": 1842152,
+        "donorCount": 3588,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 84,
+        "name": "이경민+_+.",
+        "soopId": "rudals5467",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 7580154,
+        "balloonCount": 3000969,
+        "donorCount": 2850,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 85,
+        "name": "범프리카",
+        "soopId": "120510",
+        "category": "먹방/쿡방",
+        "cumulativeUsers": 7412542,
+        "balloonCount": 3714269,
+        "donorCount": 2921,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 86,
+        "name": "라로시_",
+        "soopId": "larothy",
+        "category": "버추얼",
+        "cumulativeUsers": 7382158,
+        "balloonCount": 1087440,
+        "donorCount": 3526,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 87,
+        "name": "미오탱ㅋㅋ",
+        "soopId": "juju0228",
+        "category": "토크/캠방",
+        "cumulativeUsers": 7271813,
+        "balloonCount": 20409461,
+        "donorCount": 6169,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 88,
+        "name": "아뚱.",
+        "soopId": "gjstn7637",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 7057864,
+        "balloonCount": 1377483,
+        "donorCount": 3538,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 89,
+        "name": "솜주먹",
+        "soopId": "ldrboo",
+        "category": "버추얼",
+        "cumulativeUsers": 7019425,
+        "balloonCount": 2849521,
+        "donorCount": 5031,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 90,
+        "name": "이주하!",
+        "soopId": "nyouuu30810",
+        "category": "토크/캠방",
+        "cumulativeUsers": 6970687,
+        "balloonCount": 2029806,
+        "donorCount": 3036,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 91,
+        "name": "도현ツ",
+        "soopId": "dobby1031",
+        "category": "FC 온라인",
+        "cumulativeUsers": 6879677,
+        "balloonCount": 1754525,
+        "donorCount": 2525,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 92,
+        "name": "아란♥",
+        "soopId": "dkfksl00",
+        "category": "버추얼",
+        "cumulativeUsers": 6867603,
+        "balloonCount": 716478,
+        "donorCount": 891,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 93,
+        "name": "준밧드",
+        "soopId": "gksdidqksxn",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 6803872,
+        "balloonCount": 1582830,
+        "donorCount": 3315,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 95,
+        "name": "우정잉",
+        "soopId": "nanajam",
+        "category": "토크/캠방",
+        "cumulativeUsers": 6546041,
+        "balloonCount": 1684182,
+        "donorCount": 3360,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 96,
+        "name": "띵귤_",
+        "soopId": "singgyul",
+        "category": "버추얼",
+        "cumulativeUsers": 6509852,
+        "balloonCount": 4264796,
+        "donorCount": 4584,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 97,
+        "name": "Bisu김택용",
+        "soopId": "rlaxordyd",
+        "category": "스타크래프트",
+        "cumulativeUsers": 6435962,
+        "balloonCount": 2195313,
+        "donorCount": 1224,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 98,
+        "name": "니니♥♥♥",
+        "soopId": "honeys2",
+        "category": "마인크래프트",
+        "cumulativeUsers": 6340974,
+        "balloonCount": null,
+        "donorCount": null,
+        "status": "unavailable",
+        "unavailableReason": "Trackify 후원 통계 비공개"
+      },
+      {
+        "rankByViewer": 99,
+        "name": "챈나",
+        "soopId": "chaenna02",
+        "category": "버추얼",
+        "cumulativeUsers": 6309904,
+        "balloonCount": 2794408,
+        "donorCount": 5072,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 101,
+        "name": "˚다누리",
+        "soopId": "dkrn56",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 6217411,
+        "balloonCount": 1602990,
+        "donorCount": 1601,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 102,
+        "name": "한결___",
+        "soopId": "kaksjak0730",
+        "category": "버추얼",
+        "cumulativeUsers": 6143303,
+        "balloonCount": 1228988,
+        "donorCount": 2601,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 103,
+        "name": "끠끼",
+        "soopId": "rmlrl771",
+        "category": "버추얼",
+        "cumulativeUsers": 6054280,
+        "balloonCount": 2247591,
+        "donorCount": 2734,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 104,
+        "name": "아야네_세나",
+        "soopId": "ayanesena",
+        "category": "버추얼",
+        "cumulativeUsers": 5981506,
+        "balloonCount": 1249712,
+        "donorCount": 1656,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 105,
+        "name": "고라니율.",
+        "soopId": "golaniyule0",
+        "category": "토크/캠방",
+        "cumulativeUsers": 5893226,
+        "balloonCount": 3095715,
+        "donorCount": 2317,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 106,
+        "name": "문모모",
+        "soopId": "doormomo",
+        "category": "버추얼",
+        "cumulativeUsers": 5868023,
+        "balloonCount": 1963580,
+        "donorCount": 4693,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 107,
+        "name": "문월:-)",
+        "soopId": "moonwol0614",
+        "category": "제우스: 오만의 신",
+        "cumulativeUsers": 5846693,
+        "balloonCount": 1881533,
+        "donorCount": 1905,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 108,
+        "name": "나는상윤",
+        "soopId": "sky2713",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 5809853,
+        "balloonCount": 1683616,
+        "donorCount": 2236,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      {
+        "rankByViewer": 109,
+        "name": "뜨뜨뜨뜨-",
+        "soopId": "seokwngud",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 5773094,
+        "balloonCount": 454084,
+        "donorCount": 3486,
+        "status": "ok",
+        "unavailableReason": null
+      }
+    ]
+  },
+  "message": "1명 통계 확인 실패. 불완전한 후보군으로 순위를 다시 계산하지 않습니다."
+}

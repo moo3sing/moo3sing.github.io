@@ -1,0 +1,9 @@
+{
+  "competitors": {
+    "mode": "use_current_trackify_actuals",
+    "approvedBy": "user",
+    "approvedKstDate": "2026-10-18",
+    "excludedAccount": "singgyul",
+    "note": "User explicitly instructed all competitors to use current Trackify source actuals. Record source decreases separately; keep all schema, ID, integer, full-cohort, date and HTTP block checks. No repeated source confirmation requests are needed for these approved actuals."
+  }
+}

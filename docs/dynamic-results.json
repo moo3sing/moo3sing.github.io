@@ -1,0 +1,2138 @@
+{
+  "fixed": {
+    "horizon": {
+      "remainingDays": 60,
+      "months": [
+        {
+          "month": "2026-10",
+          "days": 30
+        },
+        {
+          "month": "2026-11",
+          "days": 30
+        }
+      ],
+      "ended": false
+    },
+    "models": [
+      {
+        "model": "rank",
+        "predictedRank": 81,
+        "currentRank": 80,
+        "remaining": 2417504,
+        "daily": 40292,
+        "requiredFinal": 8934496,
+        "boundary": {
+          "at": 70,
+          "before": 72
+        }
+      },
+      {
+        "model": "ratio",
+        "predictedRank": 79,
+        "currentRank": 82,
+        "remaining": 2687878,
+        "daily": 44798,
+        "requiredFinal": 9204870,
+        "boundary": {
+          "at": 70,
+          "before": 71
+        }
+      },
+      {
+        "model": "minmax",
+        "predictedRank": 79,
+        "currentRank": 82,
+        "remaining": 2711081,
+        "daily": 45185,
+        "requiredFinal": 9228073,
+        "boundary": {
+          "at": 70,
+          "before": 71
+        }
+      }
+    ],
+    "safe": 2711081,
+    "safeModel": "minmax",
+    "predictedRank": 79,
+    "currentUsers": 6516992,
+    "actualGain": 7140,
+    "daily": 45185,
+    "october": 1355540,
+    "november": 1355541,
+    "updatedAt": "2026-10-01T09:03:46.587464+00:00",
+    "pendingCount": 2
+  },
+  "dynamic": {
+    "mode": "dynamic-support",
+    "horizon": {
+      "remainingDays": 60,
+      "months": [
+        {
+          "month": "2026-10",
+          "days": 30
+        },
+        {
+          "month": "2026-11",
+          "days": 30
+        }
+      ],
+      "ended": false
+    },
+    "models": [
+      {
+        "model": "rank",
+        "predictedRank": 79,
+        "currentRank": 80,
+        "remaining": 2321595,
+        "requiredFinal": 8838587,
+        "daily": 38694,
+        "boundary": {
+          "at": 70,
+          "before": 72
+        },
+        "supportScores": [
+          {
+            "key": "donorCount",
+            "label": "후원자",
+            "weight": 0.1,
+            "rankKey": "donorRank",
+            "value": 5346,
+            "rank": 39,
+            "score": 60.824742268041234,
+            "weighted": 6.082474226804123,
+            "fixed": true
+          },
+          {
+            "key": "balloonCount",
+            "label": "별풍선",
+            "weight": 0.1,
+            "rankKey": "balloonRank",
+            "value": 5685444,
+            "rank": 27,
+            "score": 73.19587628865979,
+            "weighted": 7.319587628865979,
+            "fixed": true
+          }
+        ]
+      },
+      {
+        "model": "ratio",
+        "predictedRank": 79,
+        "currentRank": 82,
+        "remaining": 2630528,
+        "requiredFinal": 9147520,
+        "daily": 43843,
+        "boundary": {
+          "at": 70,
+          "before": 71
+        },
+        "supportScores": [
+          {
+            "key": "donorCount",
+            "label": "후원자",
+            "weight": 0.1,
+            "rankKey": "donorRank",
+            "value": 5346,
+            "rank": 39,
+            "score": 10.7059176930009,
+            "weighted": 1.0705917693000901,
+            "fixed": true
+          },
+          {
+            "key": "balloonCount",
+            "label": "별풍선",
+            "weight": 0.1,
+            "rankKey": "balloonRank",
+            "value": 5685444,
+            "rank": 27,
+            "score": 2.5075945180916666,
+            "weighted": 0.25075945180916664,
+            "fixed": true
+          }
+        ]
+      },
+      {
+        "model": "minmax",
+        "predictedRank": 79,
+        "currentRank": 82,
+        "remaining": 2655917,
+        "requiredFinal": 9172909,
+        "daily": 44266,
+        "boundary": {
+          "at": 70,
+          "before": 71
+        },
+        "supportScores": [
+          {
+            "key": "donorCount",
+            "label": "후원자",
+            "weight": 0.1,
+            "rankKey": "donorRank",
+            "value": 5346,
+            "rank": 39,
+            "score": 9.788172456349768,
+            "weighted": 0.9788172456349769,
+            "fixed": true
+          },
+          {
+            "key": "balloonCount",
+            "label": "별풍선",
+            "weight": 0.1,
+            "rankKey": "balloonRank",
+            "value": 5685444,
+            "rank": 27,
+            "score": 2.489663856744623,
+            "weighted": 0.2489663856744623,
+            "fixed": true
+          }
+        ]
+      }
+    ],
+    "safe": 2655917,
+    "safeModel": "minmax",
+    "predictedRank": 79,
+    "currentUsers": 6516992,
+    "actualGain": 7140,
+    "daily": 44266,
+    "october": 1327958,
+    "november": 1327959,
+    "updatedAt": "2026-10-01T09:03:46.587464+00:00",
+    "pendingCount": 2,
+    "target": {
+      "actual": {
+        "rankByViewer": 96,
+        "name": "띵귤_",
+        "soopId": "singgyul",
+        "category": "버추얼",
+        "cumulativeUsers": 6516992,
+        "balloonCount": 4272552,
+        "donorCount": 4652,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": false,
+        "donorSource": "annual-overview.monthDonors; granularity=month&period=2026",
+        "actualGain": {
+          "cumulativeUsers": 7140,
+          "donorCount": 68,
+          "balloonCount": 7756
+        }
+      },
+      "baseline": {
+        "rankByViewer": 96,
+        "name": "띵귤_",
+        "soopId": "singgyul",
+        "category": "버추얼",
+        "cumulativeUsers": 6509852,
+        "balloonCount": 4264796,
+        "donorCount": 4584,
+        "status": "ok",
+        "unavailableReason": null
+      },
+      "projected": {
+        "rankByViewer": 96,
+        "name": "띵귤_",
+        "soopId": "singgyul",
+        "category": "버추얼",
+        "cumulativeUsers": 8261936,
+        "balloonCount": 5685444,
+        "donorCount": 5346,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 7140,
+          "donorCount": 68,
+          "balloonCount": 7756
+        },
+        "valueKind": "forecast"
+      },
+      "donorPace": {
+        "daily": 16.791208791208792,
+        "source": "september-fallback",
+        "observedDays": 0,
+        "rawDaily": null
+      },
+      "balloonPace": {
+        "daily": 23548.2,
+        "source": "september-fallback",
+        "observedDays": 0,
+        "rawDaily": null
+      },
+      "donorForecastEstimated": true,
+      "gains": {
+        "cumulativeUsers": 7140,
+        "donorCount": 68,
+        "balloonCount": 7756
+      }
+    },
+    "projectedRows": [
+      {
+        "rankByViewer": 1,
+        "name": "봉준",
+        "soopId": "khm11903",
+        "category": "FC 온라인",
+        "cumulativeUsers": 143944829,
+        "balloonCount": 13864821,
+        "donorCount": 49935,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 341632,
+          "donorCount": 74,
+          "balloonCount": 12419
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 2,
+        "name": "김민교.",
+        "soopId": "phonics1",
+        "category": "토크/캠방",
+        "cumulativeUsers": 126398338,
+        "balloonCount": 7348241,
+        "donorCount": 18215,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 58041,
+          "donorCount": 4,
+          "balloonCount": 8
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 3,
+        "name": "이상호",
+        "soopId": "lshooooo",
+        "category": "토크/캠방",
+        "cumulativeUsers": 84966834,
+        "balloonCount": 3725927,
+        "donorCount": 16746,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 4,
+        "name": "감스트",
+        "soopId": "devil0108",
+        "category": "국가대표",
+        "cumulativeUsers": 68962417,
+        "balloonCount": 8524342,
+        "donorCount": 15456,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 6,
+        "name": "항상#킴성태",
+        "soopId": "rrvv17",
+        "category": "FC 온라인",
+        "cumulativeUsers": 63158543,
+        "balloonCount": 9173221,
+        "donorCount": 15942,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 124370,
+          "donorCount": 24,
+          "balloonCount": 96182
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 7,
+        "name": "철구형2↑",
+        "soopId": "y1026",
+        "category": "토크/캠방",
+        "cumulativeUsers": 39514729,
+        "balloonCount": 165638844,
+        "donorCount": 10714,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 8,
+        "name": "두치와뿌꾸",
+        "soopId": "galsa",
+        "category": "FC 온라인",
+        "cumulativeUsers": 51600497,
+        "balloonCount": 4320318,
+        "donorCount": 18357,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 209147,
+          "donorCount": 48,
+          "balloonCount": 11227
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 9,
+        "name": "A-염보성!!",
+        "soopId": "yuambo",
+        "category": "스타크래프트",
+        "cumulativeUsers": 33811254,
+        "balloonCount": 70455043,
+        "donorCount": 10523,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 12,
+        "name": "저라뎃",
+        "soopId": "joey1114",
+        "category": "FC 온라인",
+        "cumulativeUsers": 33560689,
+        "balloonCount": 3502954,
+        "donorCount": 8527,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 12,
+          "balloonCount": 2399
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 13,
+        "name": "타요~",
+        "soopId": "b13246",
+        "category": "종합게임",
+        "cumulativeUsers": 34391990,
+        "balloonCount": 6454177,
+        "donorCount": 8797,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 16026,
+          "donorCount": 1,
+          "balloonCount": 1118
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 14,
+        "name": "이지상:)",
+        "soopId": "jrdart",
+        "category": "여행",
+        "cumulativeUsers": 31251203,
+        "balloonCount": 7269090,
+        "donorCount": 9131,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 99631,
+          "donorCount": 25,
+          "balloonCount": 17117
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 15,
+        "name": "남순",
+        "soopId": "wnnw",
+        "category": "FC 온라인",
+        "cumulativeUsers": 31961037,
+        "balloonCount": 69558046,
+        "donorCount": 8766,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 41364,
+          "donorCount": 1,
+          "balloonCount": 1728
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 16,
+        "name": "s시조새s",
+        "soopId": "superbsw123",
+        "category": "토크/캠방",
+        "cumulativeUsers": 29862336,
+        "balloonCount": 60862643,
+        "donorCount": 6061,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 6555,
+          "donorCount": 0,
+          "balloonCount": 1998
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 18,
+        "name": "지피티",
+        "soopId": "tjrdbs999",
+        "category": "피트니스",
+        "cumulativeUsers": 30984289,
+        "balloonCount": 5483222,
+        "donorCount": 9238,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 428,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 20,
+        "name": "Calm_김윤환",
+        "soopId": "brainzerg7",
+        "category": "스타크래프트",
+        "cumulativeUsers": 24947637,
+        "balloonCount": 5483189,
+        "donorCount": 5294,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 21,
+        "name": "오아",
+        "soopId": "legendhyuk",
+        "category": "마인크래프트",
+        "cumulativeUsers": 24486740,
+        "balloonCount": 4343663,
+        "donorCount": 6013,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 20740,
+          "donorCount": 5,
+          "balloonCount": 742
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 22,
+        "name": "수피",
+        "soopId": "lovely5959",
+        "category": "PUBG: 배틀그라운드",
+        "cumulativeUsers": 24981451,
+        "balloonCount": 5584797,
+        "donorCount": 6831,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 42825,
+          "donorCount": 5,
+          "balloonCount": 1163
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 23,
+        "name": "우왁굳",
+        "soopId": "ecvhao",
+        "category": "토크/캠방",
+        "cumulativeUsers": 25573206,
+        "balloonCount": 5272015,
+        "donorCount": 6484,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 21840,
+          "donorCount": 1,
+          "balloonCount": 2350
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 24,
+        "name": "정중만",
+        "soopId": "ititit",
+        "category": "스타크래프트",
+        "cumulativeUsers": 34846627,
+        "balloonCount": 3263024,
+        "donorCount": 4747,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 25,
+        "name": "피넛ㅁ",
+        "soopId": "kiss281004",
+        "category": "",
+        "cumulativeUsers": 19745767,
+        "balloonCount": 3523679,
+        "donorCount": 6589,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 26,
+        "name": "장지수",
+        "soopId": "iamquaddurup",
+        "category": "토크/캠방",
+        "cumulativeUsers": 23589764,
+        "balloonCount": 4561580,
+        "donorCount": 8639,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 12572,
+          "donorCount": 1,
+          "balloonCount": 101
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 27,
+        "name": "깨박이깨박이",
+        "soopId": "dlghfjs",
+        "category": "토크/캠방",
+        "cumulativeUsers": 24262776,
+        "balloonCount": 6898180,
+        "donorCount": 7495,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 92641,
+          "donorCount": 89,
+          "balloonCount": 58096
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 28,
+        "name": "Alo.조경훈",
+        "soopId": "cnsgkcnehd74",
+        "category": "마인크래프트",
+        "cumulativeUsers": 21434369,
+        "balloonCount": 5263317,
+        "donorCount": 5901,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 75243,
+          "donorCount": 10,
+          "balloonCount": 4001
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 29,
+        "name": "빵훈이",
+        "soopId": "vlfvlf789",
+        "category": "스타크래프트",
+        "cumulativeUsers": 22767088,
+        "balloonCount": 5748139,
+        "donorCount": 4921,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 97903,
+          "donorCount": 19,
+          "balloonCount": 15639
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 30,
+        "name": "팡이요",
+        "soopId": "sccha21",
+        "category": "메이플스토리",
+        "cumulativeUsers": 20574906,
+        "balloonCount": 2519027,
+        "donorCount": 6653,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 13329,
+          "donorCount": 1,
+          "balloonCount": 46
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 31,
+        "name": "고세구!",
+        "soopId": "gosegu2",
+        "category": "버추얼",
+        "cumulativeUsers": 20974704,
+        "balloonCount": 3415900,
+        "donorCount": 5304,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 32,
+        "name": "[BJ]케이",
+        "soopId": "zpdl1313",
+        "category": "토크/캠방",
+        "cumulativeUsers": 21751442,
+        "balloonCount": 226729001,
+        "donorCount": 7307,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 15398,
+          "donorCount": 3,
+          "balloonCount": 354997
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 33,
+        "name": "강만식",
+        "soopId": "rkdakstlr911",
+        "category": "명조: 워더링 웨이브",
+        "cumulativeUsers": 19612243,
+        "balloonCount": 3553183,
+        "donorCount": 7316,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 3298,
+          "donorCount": 1,
+          "balloonCount": 220
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 35,
+        "name": "기뉴다",
+        "soopId": "arinbbidol",
+        "category": "토크/캠방",
+        "cumulativeUsers": 20964888,
+        "balloonCount": 8899506,
+        "donorCount": 3747,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 46614,
+          "donorCount": 11,
+          "balloonCount": 25515
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 36,
+        "name": "[JS]박퍼니",
+        "soopId": "roket0829",
+        "category": "토크/캠방",
+        "cumulativeUsers": 20318731,
+        "balloonCount": 147118077,
+        "donorCount": 8342,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 14113,
+          "donorCount": 9,
+          "balloonCount": 1625
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 37,
+        "name": "최군형",
+        "soopId": "ch1716",
+        "category": "토크/캠방",
+        "cumulativeUsers": 19543120,
+        "balloonCount": 42921682,
+        "donorCount": 6089,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 38,
+        "name": "클리드1",
+        "soopId": "xoals137",
+        "category": "FC 온라인",
+        "cumulativeUsers": 19951452,
+        "balloonCount": 2259266,
+        "donorCount": 5572,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 21199,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 39,
+        "name": "임아니",
+        "soopId": "1004suna",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 18971505,
+        "balloonCount": 3909295,
+        "donorCount": 4519,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 11197,
+          "donorCount": 3,
+          "balloonCount": 2470
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 40,
+        "name": "황원태",
+        "soopId": "hwt1014",
+        "category": "FC 온라인",
+        "cumulativeUsers": 19592013,
+        "balloonCount": 3713850,
+        "donorCount": 6465,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 13846,
+          "donorCount": 3,
+          "balloonCount": 91
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 41,
+        "name": "한둬얼",
+        "soopId": "qn308dud",
+        "category": "여행",
+        "cumulativeUsers": 18526165,
+        "balloonCount": 3854203,
+        "donorCount": 10729,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 42,
+        "name": "제갈금자",
+        "soopId": "dlsn9911",
+        "category": "이환",
+        "cumulativeUsers": 17117726,
+        "balloonCount": 5495082,
+        "donorCount": 7761,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 75175,
+          "donorCount": 13,
+          "balloonCount": 406
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 44,
+        "name": "박진우[JINU]",
+        "soopId": "pyh3646",
+        "category": "토크/캠방",
+        "cumulativeUsers": 16582951,
+        "balloonCount": 77545274,
+        "donorCount": 4771,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 53971,
+          "donorCount": 2,
+          "balloonCount": 21644
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 45,
+        "name": "오메킴승현2",
+        "soopId": "rlatldgus",
+        "category": "주식",
+        "cumulativeUsers": 14262125,
+        "balloonCount": 2210459,
+        "donorCount": 6230,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 46,
+        "name": "천양",
+        "soopId": "243000",
+        "category": "버추얼",
+        "cumulativeUsers": 15668170,
+        "balloonCount": 2894498,
+        "donorCount": 3926,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 815,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 47,
+        "name": "스맵임",
+        "soopId": "townboy",
+        "category": "FC 온라인",
+        "cumulativeUsers": 15720717,
+        "balloonCount": 2553292,
+        "donorCount": 3251,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 60219,
+          "donorCount": 1,
+          "balloonCount": 3
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 48,
+        "name": "안녕수야",
+        "soopId": "tntntn13",
+        "category": "메이플스토리",
+        "cumulativeUsers": 15215754,
+        "balloonCount": 4550826,
+        "donorCount": 4431,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 4376,
+          "donorCount": 2,
+          "balloonCount": 3995
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 49,
+        "name": "(주)박사장$",
+        "soopId": "wnstn0905",
+        "category": "FC 온라인",
+        "cumulativeUsers": 14592004,
+        "balloonCount": 3199668,
+        "donorCount": 4193,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 4753,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 50,
+        "name": "깐숙",
+        "soopId": "nangnan",
+        "category": "버추얼",
+        "cumulativeUsers": 14522409,
+        "balloonCount": 4556075,
+        "donorCount": 4980,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 51,
+        "name": "김된모!",
+        "soopId": "kimdoenmo",
+        "category": "발로란트",
+        "cumulativeUsers": 14498161,
+        "balloonCount": 946733,
+        "donorCount": 2559,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 5794,
+          "donorCount": 1,
+          "balloonCount": 4785
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 52,
+        "name": "릴파♬",
+        "soopId": "lilpa0309",
+        "category": "버추얼",
+        "cumulativeUsers": 11025465,
+        "balloonCount": 2671313,
+        "donorCount": 3517,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 53,
+        "name": "그릴래영",
+        "soopId": "eunyoung1238",
+        "category": "취미",
+        "cumulativeUsers": 11658519,
+        "balloonCount": 8800766,
+        "donorCount": 1595,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 54,
+        "name": "정윤종..",
+        "soopId": "ioioiobb",
+        "category": "주식",
+        "cumulativeUsers": 12521658,
+        "balloonCount": 1389228,
+        "donorCount": 6456,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 48895,
+          "donorCount": 8,
+          "balloonCount": 1076
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 55,
+        "name": "JuM.윤중2",
+        "soopId": "jk890202",
+        "category": "스타크래프트",
+        "cumulativeUsers": 13292482,
+        "balloonCount": 6091798,
+        "donorCount": 3773,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 56,
+        "name": "Fresh토마토",
+        "soopId": "freshtomato",
+        "category": "서든어택",
+        "cumulativeUsers": 11392890,
+        "balloonCount": 5778245,
+        "donorCount": 3906,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 5873,
+          "donorCount": 0,
+          "balloonCount": 9542
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 57,
+        "name": "강덕구",
+        "soopId": "sdkels",
+        "category": "여행",
+        "cumulativeUsers": 11785829,
+        "balloonCount": 2985444,
+        "donorCount": 4551,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 50200,
+          "donorCount": 17,
+          "balloonCount": 10411
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 58,
+        "name": "비챤",
+        "soopId": "viichan6",
+        "category": "버추얼",
+        "cumulativeUsers": 11763159,
+        "balloonCount": 2183591,
+        "donorCount": 3040,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 59,
+        "name": "꾸티뉴",
+        "soopId": "aksen7833",
+        "category": "FC 온라인",
+        "cumulativeUsers": 12055672,
+        "balloonCount": 2835843,
+        "donorCount": 3986,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 15757,
+          "donorCount": 4,
+          "balloonCount": 397
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 60,
+        "name": "♥심장",
+        "soopId": "since821",
+        "category": "음악 스트리밍",
+        "cumulativeUsers": 10870650,
+        "balloonCount": 41692,
+        "donorCount": 508,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 16226,
+          "donorCount": 1,
+          "balloonCount": 110
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 61,
+        "name": "러아♡",
+        "soopId": "smmms2002",
+        "category": "토크/캠방",
+        "cumulativeUsers": 13325402,
+        "balloonCount": 7306590,
+        "donorCount": 2426,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 63,
+        "name": "조디악악악",
+        "soopId": "yjkim5500",
+        "category": "버추얼",
+        "cumulativeUsers": 10113094,
+        "balloonCount": 1393023,
+        "donorCount": 2635,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 42967,
+          "donorCount": 13,
+          "balloonCount": 21178
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 64,
+        "name": "마이곰이",
+        "soopId": "mygomiee",
+        "category": "버추얼",
+        "cumulativeUsers": 10914354,
+        "balloonCount": 2152300,
+        "donorCount": 5794,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 19287,
+          "donorCount": 8,
+          "balloonCount": 693
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 65,
+        "name": "홍타쿠!",
+        "soopId": "lhtlgm",
+        "category": "취미",
+        "cumulativeUsers": 10323860,
+        "balloonCount": 2637688,
+        "donorCount": 6355,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 41385,
+          "donorCount": 27,
+          "balloonCount": 1162
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 66,
+        "name": "클로이",
+        "soopId": "vf3366",
+        "category": "마인크래프트",
+        "cumulativeUsers": 12144821,
+        "balloonCount": 5230678,
+        "donorCount": 4872,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 112069,
+          "donorCount": 50,
+          "balloonCount": 12344
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 67,
+        "name": "수이,",
+        "soopId": "suyeun0312",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8934495,
+        "balloonCount": 1289729,
+        "donorCount": 3033,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 68,
+        "name": "김인호",
+        "soopId": "pookygamja",
+        "category": "토크/캠방",
+        "cumulativeUsers": 9482238,
+        "balloonCount": 78577389,
+        "donorCount": 5096,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 69,
+        "name": "민결희",
+        "soopId": "mingyeolhee",
+        "category": "종합게임",
+        "cumulativeUsers": 10402033,
+        "balloonCount": 1788421,
+        "donorCount": 4365,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 7584,
+          "donorCount": 1,
+          "balloonCount": 587
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 70,
+        "name": "양도끼",
+        "soopId": "yangdoki",
+        "category": "버추얼",
+        "cumulativeUsers": 10164490,
+        "balloonCount": 1986483,
+        "donorCount": 2956,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 9850,
+          "donorCount": 5,
+          "balloonCount": 214
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 71,
+        "name": "키마",
+        "soopId": "kymakyma",
+        "category": "버추얼",
+        "cumulativeUsers": 9887505,
+        "balloonCount": 4406815,
+        "donorCount": 5343,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 2221,
+          "donorCount": 1,
+          "balloonCount": 10422
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 72,
+        "name": "머독",
+        "soopId": "spbabobj",
+        "category": "종합게임",
+        "cumulativeUsers": 9641851,
+        "balloonCount": 1697212,
+        "donorCount": 3018,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 5387,
+          "donorCount": 0,
+          "balloonCount": 3510
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 73,
+        "name": "설레랑",
+        "soopId": "dnwnwjdqhr53",
+        "category": "버추얼",
+        "cumulativeUsers": 10254270,
+        "balloonCount": 2728239,
+        "donorCount": 4170,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 19897,
+          "donorCount": 2,
+          "balloonCount": 678
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 74,
+        "name": "심청이_",
+        "soopId": "dearhal",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8295825,
+        "balloonCount": 3656081,
+        "donorCount": 2334,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 75,
+        "name": "망구랑",
+        "soopId": "nmangoquince",
+        "category": "버추얼",
+        "cumulativeUsers": 10676272,
+        "balloonCount": 5670872,
+        "donorCount": 5566,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 4144,
+          "donorCount": 0,
+          "balloonCount": 15
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 76,
+        "name": "과즙세연",
+        "soopId": "m0m099",
+        "category": "토크/캠방",
+        "cumulativeUsers": 10558436,
+        "balloonCount": 7361994,
+        "donorCount": 5181,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 77,
+        "name": "해기_",
+        "soopId": "he0901",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 10222184,
+        "balloonCount": 1867137,
+        "donorCount": 4493,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 11493,
+          "donorCount": 10,
+          "balloonCount": 75
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 78,
+        "name": "박가린님[♥]",
+        "soopId": "janjju",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8838586,
+        "balloonCount": 77455804,
+        "donorCount": 2736,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 8076,
+          "donorCount": 4,
+          "balloonCount": 449289
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 79,
+        "name": "해리",
+        "soopId": "gofl2237",
+        "category": "버추얼",
+        "cumulativeUsers": 9271356,
+        "balloonCount": 4060616,
+        "donorCount": 4809,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 5495,
+          "donorCount": 1,
+          "balloonCount": 1067
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 80,
+        "name": "백하♥",
+        "soopId": "mj0128",
+        "category": "피트니스",
+        "cumulativeUsers": 11190832,
+        "balloonCount": 4331393,
+        "donorCount": 2775,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 11691,
+          "donorCount": 2,
+          "balloonCount": 2139
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 81,
+        "name": "징버거☆",
+        "soopId": "jingburger1",
+        "category": "버추얼",
+        "cumulativeUsers": 9547092,
+        "balloonCount": 2141098,
+        "donorCount": 2985,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 82,
+        "name": "한갱",
+        "soopId": "rud9281",
+        "category": "토크/캠방",
+        "cumulativeUsers": 10042479,
+        "balloonCount": 9756642,
+        "donorCount": 4362,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 83,
+        "name": "박재박",
+        "soopId": "jaeparkk",
+        "category": "취미",
+        "cumulativeUsers": 9847580,
+        "balloonCount": 2380748,
+        "donorCount": 4131,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 84,
+        "name": "이경민+_+.",
+        "soopId": "rudals5467",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 8652972,
+        "balloonCount": 3292675,
+        "donorCount": 3191,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 1044,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 85,
+        "name": "범프리카",
+        "soopId": "120510",
+        "category": "먹방/쿡방",
+        "cumulativeUsers": 8710380,
+        "balloonCount": 4284207,
+        "donorCount": 3383,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 43153,
+          "donorCount": 17,
+          "balloonCount": 26506
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 86,
+        "name": "라로시_",
+        "soopId": "larothy",
+        "category": "버추얼",
+        "cumulativeUsers": 8481478,
+        "balloonCount": 1117957,
+        "donorCount": 3704,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 13072,
+          "donorCount": 3,
+          "balloonCount": 1315
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 87,
+        "name": "미오탱ㅋㅋ",
+        "soopId": "juju0228",
+        "category": "토크/캠방",
+        "cumulativeUsers": 8806007,
+        "balloonCount": 24864373,
+        "donorCount": 6770,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 88,
+        "name": "아뚱.",
+        "soopId": "gjstn7637",
+        "category": "먹방/쿡방",
+        "cumulativeUsers": 8539310,
+        "balloonCount": 1799270,
+        "donorCount": 4006,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 30840,
+          "donorCount": 6,
+          "balloonCount": 19513
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 89,
+        "name": "솜주먹",
+        "soopId": "ldrboo",
+        "category": "버추얼",
+        "cumulativeUsers": 8432873,
+        "balloonCount": 3458705,
+        "donorCount": 5793,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 90,
+        "name": "이주하!",
+        "soopId": "nyouuu30810",
+        "category": "토크/캠방",
+        "cumulativeUsers": 11451053,
+        "balloonCount": 2373042,
+        "donorCount": 3496,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 5240,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 91,
+        "name": "도현ツ",
+        "soopId": "dobby1031",
+        "category": "FC 온라인",
+        "cumulativeUsers": 8590783,
+        "balloonCount": 2003304,
+        "donorCount": 2912,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 7945,
+          "donorCount": 0,
+          "balloonCount": 10
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 92,
+        "name": "아란♥",
+        "soopId": "dkfksl00",
+        "category": "버추얼",
+        "cumulativeUsers": 7158099,
+        "balloonCount": 839184,
+        "donorCount": 1012,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 2942,
+          "donorCount": 0,
+          "balloonCount": 1210
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 93,
+        "name": "준밧드",
+        "soopId": "gksdidqksxn",
+        "category": "FC 온라인",
+        "cumulativeUsers": 7994593,
+        "balloonCount": 1856602,
+        "donorCount": 3762,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 14289,
+          "donorCount": 3,
+          "balloonCount": 1748
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 95,
+        "name": "우정잉",
+        "soopId": "nanajam",
+        "category": "토크/캠방",
+        "cumulativeUsers": 9897577,
+        "balloonCount": 2116348,
+        "donorCount": 3869,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 96,
+        "name": "띵귤_",
+        "soopId": "singgyul",
+        "category": "버추얼",
+        "cumulativeUsers": 8261936,
+        "balloonCount": 5685444,
+        "donorCount": 5346,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 7140,
+          "donorCount": 68,
+          "balloonCount": 7756
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 97,
+        "name": "Bisu김택용",
+        "soopId": "rlaxordyd",
+        "category": "스타크래프트",
+        "cumulativeUsers": 9129086,
+        "balloonCount": 2727371,
+        "donorCount": 1409,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 99,
+        "name": "챈나",
+        "soopId": "chaenna02",
+        "category": "버추얼",
+        "cumulativeUsers": 6512700,
+        "balloonCount": 3036806,
+        "donorCount": 5310,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 36720,
+          "donorCount": 11,
+          "balloonCount": 17578
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 100,
+        "name": "˚다누리",
+        "soopId": "dkrn56",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 7811599,
+        "balloonCount": 2181111,
+        "donorCount": 1853,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 16307,
+          "donorCount": 5,
+          "balloonCount": 2423
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 102,
+        "name": "한결___",
+        "soopId": "kaksjak0730",
+        "category": "버추얼",
+        "cumulativeUsers": 7868935,
+        "balloonCount": 1340439,
+        "donorCount": 2998,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 124,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 103,
+        "name": "끠끼",
+        "soopId": "rmlrl771",
+        "category": "버추얼",
+        "cumulativeUsers": 8023126,
+        "balloonCount": 2850529,
+        "donorCount": 3148,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 104,
+        "name": "아야네_세나",
+        "soopId": "ayanesena",
+        "category": "버추얼",
+        "cumulativeUsers": 6581858,
+        "balloonCount": 1441889,
+        "donorCount": 1858,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 1204,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 105,
+        "name": "고라니율.",
+        "soopId": "golaniyule0",
+        "category": "토크/캠방",
+        "cumulativeUsers": 6115796,
+        "balloonCount": 3111637,
+        "donorCount": 2356,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 106,
+        "name": "문모모",
+        "soopId": "doormomo",
+        "category": "버추얼",
+        "cumulativeUsers": 8212398,
+        "balloonCount": 2298329,
+        "donorCount": 5579,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 107,
+        "name": "문월:-)",
+        "soopId": "moonwol0614",
+        "category": "제우스: 오만의 신",
+        "cumulativeUsers": 8014202,
+        "balloonCount": 2423357,
+        "donorCount": 2197,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 0,
+          "donorCount": 0,
+          "balloonCount": 0
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 108,
+        "name": "나는상윤",
+        "soopId": "sky2713",
+        "category": "FC 온라인",
+        "cumulativeUsers": 7018552,
+        "balloonCount": 2051354,
+        "donorCount": 2476,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 17638,
+          "donorCount": 3,
+          "balloonCount": 411
+        },
+        "valueKind": "forecast"
+      },
+      {
+        "rankByViewer": 109,
+        "name": "뜨뜨뜨뜨-",
+        "soopId": "seokwngud",
+        "category": "리그 오브 레전드",
+        "cumulativeUsers": 11230912,
+        "balloonCount": 701219,
+        "donorCount": 4023,
+        "status": "ok",
+        "unavailableReason": null,
+        "donorEstimated": true,
+        "donorSource": "forecast: observed annual unique increments with diminishing marginal growth",
+        "actualGain": {
+          "cumulativeUsers": 12329,
+          "donorCount": 6,
+          "balloonCount": 2575
+        },
+        "valueKind": "forecast"
+      }
+    ],
+    "donorEstimated": false,
+    "donorForecastEstimated": true
+  },
+  "difference": -55164
+}

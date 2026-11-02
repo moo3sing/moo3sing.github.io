@@ -1,0 +1,38 @@
+{
+  "source": "user_pasted_trackify_table",
+  "corrections": [
+    {
+      "streamerId": "arinbbidol",
+      "streamerName": "기뉴다",
+      "metric": "cumulativeUsers",
+      "previous": 17060282,
+      "current": 15266404,
+      "delta": -1793878,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:25:33.631943+09:00"
+    },
+    {
+      "streamerId": "smmms2002",
+      "streamerName": "러아♡",
+      "metric": "cumulativeUsers",
+      "previous": 9320249,
+      "current": 8472464,
+      "delta": -847785,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:25:33.631943+09:00"
+    },
+    {
+      "streamerId": "nmangoquince",
+      "streamerName": "망구랑",
+      "metric": "cumulativeUsers",
+      "previous": 8167996,
+      "current": 7903571,
+      "delta": -264425,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T04:25:33.631943+09:00"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "deployedAt": "2026-10-04T19:23:50.999017+00:00",
+  "backup": "/var/backups/soop-ranking/manual-release-20261004T192349Z",
+  "blockedUntil": "2026-10-10T16:16:00+00:00",
+  "cronExpression": "unchanged: 15 * * * * masuj /opt/soop-ranking/scripts/refresh-production.sh >> /var/log/soop-ranking/collect.log 2>&1",
+  "files": [
+    "scripts/collect.py",
+    "scripts/trackify_block.py",
+    "scripts/manual_update_singgyul.py",
+    "scripts/manual-update-singgyul.py",
+    "services/trackify.py",
+    "assets/rolling-target.js",
+    "assets/rolling-target.js",
+    "assets/simulation-ui.js",
+    "index.html"
+  ],
+  "protectedHashes": {
+    "/etc/cron.d/soop-ranking": "256e0eccab4d22c4b4cea784254d7451aba095536136ea66c6c2c23e7fa10a02",
+    "/opt/soop-ranking/scripts/refresh-production.sh": "0aeed1e2ca0421fa902e37ad89738a0c43b8fbdde05d314098a0ba90cb111fcd",
+    "/opt/soop-ranking/assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e",
+    "/opt/soop-ranking/assets/simulation.js": "eee3096997ac3dd25a0a8adfa96d28fd13b8c8a43c3fb49f654598cee7970db6",
+    "/opt/soop-ranking/assets/simulation-config.js": "b2decd9c39e46e842aa3430c677090c1bd84dc17372eb8f7108c46bf5a1aa85f",
+    "/opt/soop-ranking/scripts/source_corrections.py": "861112dd7c40e50c6bf00a5df1f6909edb057c4d2514214553588f3253d2b2fa",
+    "/opt/soop-ranking/data/excluded-streamers.json": "914df482df05a7059778db2f17f5e7a8dd98b750adf76fa29fc9550f59f277bf",
+    "/var/www/singdboo-site/public/ranking.html": "e096e8c4f7cbd4569f579b55bfa3043a9cb003a2e29e609078f69911bd872746",
+    "/var/www/singdboo-site/public/assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e",
+    "/var/www/singdboo-site/public/assets/simulation.js": "eee3096997ac3dd25a0a8adfa96d28fd13b8c8a43c3fb49f654598cee7970db6",
+    "/etc/nginx/sites-available/taehyeon-masu.xyz": "20591483f4ec10fa7d152031c6790063ef8ba759c5646a9a200caaee922071b3"
+  },
+  "rankingSha256Unchanged": "e6fc2215f9ec3f955fb7db948befac644f706182db6ddebb0894f79a52e174d8",
+  "dryRun": {
+    "mode": "manual_partial",
+    "observedAt": "2026-10-05T04:23:49.885298+09:00",
+    "competitorDataAsOf": "2026-10-03T15:15:01.688785+00:00",
+    "previous": {
+      "viewer": 6625621,
+      "donor": 4691,
+      "balloon": 4328532
+    },
+    "actual": {
+      "cumulativeUsers": 6625721,
+      "donorCount": 4692,
+      "balloonCount": 4328632
+    },
+    "projected": {
+      "cumulativeUsers": 7968697,
+      "donorCount": 5431,
+      "balloonCount": 5238018
+    },
+    "models": {
+      "rank": 2427996,
+      "ratio": 2308499,
+      "minmax": 2347430
+    },
+    "safeTarget": 2427996,
+    "predictedRank": 80,
+    "corrections": [],
+    "snapshotHash": "e6fc2215f9ec3f955fb7db948befac644f706182db6ddebb0894f79a52e174d8",
+    "dryRun": true,
+    "published": false
+  },
+  "guardedCronOutput": "{\"timestamp\": \"2026-10-04T19:23:50.953445+00:00\", \"event\": \"collection_skipped_blocked\", \"blockedUntil\": \"2026-10-10T16:16:00+00:00\", \"lastSnapshotAt\": \"2026-10-03T14:15:01.476211+00:00\"}"
+}

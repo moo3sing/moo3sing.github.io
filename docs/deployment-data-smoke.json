@@ -1,0 +1,84 @@
+{
+  "candidateCount": 100,
+  "excludedIds": [
+    "aflol",
+    "affifaonline",
+    "valorantth",
+    "valoranten",
+    "carrylck",
+    "boomburapa",
+    "rebirthztv",
+    "fifatargrean",
+    "0921388683",
+    "pubg",
+    "afstar1"
+  ],
+  "checks": [
+    {
+      "rankByViewer": 1,
+      "name": "봉준",
+      "soopId": "khm11903",
+      "category": "FC 온라인",
+      "cumulativeUsers": 113705545,
+      "balloonCount": 11752539,
+      "donorCount": 42876,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 87,
+      "name": "미오탱ㅋㅋ",
+      "soopId": "juju0228",
+      "category": "토크/캠방",
+      "cumulativeUsers": 7271813,
+      "balloonCount": 20409461,
+      "donorCount": 6169,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 77,
+      "name": "해기_",
+      "soopId": "he0901",
+      "category": "리그 오브 레전드",
+      "cumulativeUsers": 7982685,
+      "balloonCount": 1506634,
+      "donorCount": 3913,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 96,
+      "name": "띵귤_",
+      "soopId": "singgyul",
+      "category": "버추얼",
+      "cumulativeUsers": 6509852,
+      "balloonCount": 4264796,
+      "donorCount": 4584,
+      "status": "ok",
+      "unavailableReason": null
+    },
+    {
+      "rankByViewer": 43,
+      "name": "단츄♪",
+      "soopId": "danchu17",
+      "category": "버추얼",
+      "cumulativeUsers": 14029428,
+      "balloonCount": null,
+      "donorCount": null,
+      "status": "unavailable",
+      "unavailableReason": "Trackify 후원 통계 비공개"
+    },
+    {
+      "rankByViewer": 98,
+      "name": "니니♥♥♥",
+      "soopId": "honeys2",
+      "category": "마인크래프트",
+      "cumulativeUsers": 6340974,
+      "balloonCount": null,
+      "donorCount": null,
+      "status": "unavailable",
+      "unavailableReason": "Trackify 후원 통계 비공개"
+    }
+  ]
+}

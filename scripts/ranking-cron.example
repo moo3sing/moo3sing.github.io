@@ -1,0 +1,8 @@
+# Active production registration already exists at /etc/cron.d/soop-ranking.
+# Maintain that one file; do not install a second user crontab entry.
+# Canonical system-cron content: ops/soop-ranking.cron
+SHELL=/bin/sh
+PATH=/usr/local/bin:/usr/bin:/bin
+# Host timezone: UTC. Next calendar day 03:15 KST, once daily.
+# Exactly one scheduler. The collector itself refuses all API calls after 2026-11-30 KST.
+15 18 * * * masuj /opt/soop-ranking/scripts/refresh-production.sh >> /var/log/soop-ranking/collect.log 2>&1

@@ -1,0 +1,30 @@
+name: Verify migration and calculations
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Scan source before adding development dependencies
+        run: |
+          python scripts/install_scan_tool.py
+          .tools/gitleaks dir . --no-banner --redact=100 --max-target-megabytes 10
+      - run: npm ci --ignore-scripts
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: python scripts/build_pages.py
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/pages-browser.cjs

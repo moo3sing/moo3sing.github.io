@@ -1,0 +1,16 @@
+{
+  "source": "user_pasted_annual_table",
+  "corrections": [
+    {
+      "streamerId": "ayanesena",
+      "streamerName": "아야네_세나",
+      "metric": "cumulativeUsers",
+      "previous": 5999116,
+      "current": 5140008,
+      "delta": -859108,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-19T09:46:56.008191+09:00"
+    }
+  ]
+}

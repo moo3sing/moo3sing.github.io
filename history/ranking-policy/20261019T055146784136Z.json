@@ -1,0 +1,38 @@
+{
+  "publishedAt": "2026-10-19T05:51:46.784136+00:00",
+  "rankingExceptions": {
+    "version": 2,
+    "reservedTop70": [],
+    "fixedSupport": [
+      {
+        "soopId": "danchu17",
+        "basis": "user_assumption",
+        "donorCount": 6405,
+        "balloonCount": 3089865,
+        "monthlyBalloonCounts": [
+          245538,
+          192259,
+          213278,
+          187618,
+          98793,
+          381242,
+          114725,
+          1128473,
+          400737,
+          127202
+        ],
+        "balloonSource": "User-supplied ten monthly totals; sum used as a fixed annual proxy, not verified annual actual.",
+        "donorSource": "Saved 2026 annual-response monthDonors reference; privacy flag true; not publicly reverified.",
+        "donorReferenceSha256": "3d1db3e1f24a9d190b2626f30ae2196d32633767679e4ee9c8defbd8d97d5933",
+        "futureSupportGrowth": "none",
+        "viewerForecastSource": "existing September monthly fallback",
+        "recordedAt": "2026-10-19T14:47:33.832832+09:00"
+      }
+    ]
+  },
+  "observedMetricsUnchanged": true,
+  "baselineUnchanged": true,
+  "apiRequests": 0,
+  "beforeSafeTarget": 1301281,
+  "afterSafeTarget": 1301281
+}

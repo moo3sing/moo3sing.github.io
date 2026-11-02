@@ -1,0 +1,1929 @@
+{
+  "matched": 99,
+  "competitors": 98,
+  "retained": 1,
+  "outside": 31,
+  "sourceCorrections": [
+    {
+      "streamerId": "kaksjak0730",
+      "streamerName": "한결___",
+      "metric": "cumulativeUsers",
+      "previous": 6194211,
+      "current": 5464547,
+      "delta": -729664,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T13:54:47.958451+09:00"
+    }
+  ],
+  "changes": [
+    {
+      "soopId": "khm11903",
+      "metric": "cumulativeUsers",
+      "previous": 123536367,
+      "current": 123664519
+    },
+    {
+      "soopId": "khm11903",
+      "metric": "balloonCount",
+      "previous": 12974469,
+      "current": 12977165
+    },
+    {
+      "soopId": "phonics1",
+      "metric": "cumulativeUsers",
+      "previous": 111610312,
+      "current": 111629647
+    },
+    {
+      "soopId": "phonics1",
+      "metric": "balloonCount",
+      "previous": 6455870,
+      "current": 6455944
+    },
+    {
+      "soopId": "devil0108",
+      "metric": "cumulativeUsers",
+      "previous": 59314360,
+      "current": 59336347
+    },
+    {
+      "soopId": "rrvv17",
+      "metric": "cumulativeUsers",
+      "previous": 52324389,
+      "current": 52330297
+    },
+    {
+      "soopId": "b13246",
+      "metric": "cumulativeUsers",
+      "previous": 29070962,
+      "current": 29092390
+    },
+    {
+      "soopId": "b13246",
+      "metric": "balloonCount",
+      "previous": 3629610,
+      "current": 3629622
+    },
+    {
+      "soopId": "jrdart",
+      "metric": "cumulativeUsers",
+      "previous": 27946019,
+      "current": 27960770
+    },
+    {
+      "soopId": "tjrdbs999",
+      "metric": "cumulativeUsers",
+      "previous": 25197268,
+      "current": 25219015
+    },
+    {
+      "soopId": "tjrdbs999",
+      "metric": "balloonCount",
+      "previous": 4794458,
+      "current": 4795216
+    },
+    {
+      "soopId": "lovely5959",
+      "metric": "cumulativeUsers",
+      "previous": 21614689,
+      "current": 21633430
+    },
+    {
+      "soopId": "lovely5959",
+      "metric": "balloonCount",
+      "previous": 4954369,
+      "current": 4954417
+    },
+    {
+      "soopId": "sccha21",
+      "metric": "cumulativeUsers",
+      "previous": 18208861,
+      "current": 18209384
+    },
+    {
+      "soopId": "xoals137",
+      "metric": "cumulativeUsers",
+      "previous": 17385489,
+      "current": 17398537
+    },
+    {
+      "soopId": "xoals137",
+      "metric": "balloonCount",
+      "previous": 1833619,
+      "current": 1833627
+    },
+    {
+      "soopId": "pyh3646",
+      "metric": "cumulativeUsers",
+      "previous": 14187637,
+      "current": 14192003
+    },
+    {
+      "soopId": "243000",
+      "metric": "cumulativeUsers",
+      "previous": 13778209,
+      "current": 13796413
+    },
+    {
+      "soopId": "243000",
+      "metric": "balloonCount",
+      "previous": 2535105,
+      "current": 2535717
+    },
+    {
+      "soopId": "townboy",
+      "metric": "cumulativeUsers",
+      "previous": 13513396,
+      "current": 13522986
+    },
+    {
+      "soopId": "townboy",
+      "metric": "balloonCount",
+      "previous": 2208541,
+      "current": 2210043
+    },
+    {
+      "soopId": "tntntn13",
+      "metric": "cumulativeUsers",
+      "previous": 13169917,
+      "current": 13180139
+    },
+    {
+      "soopId": "tntntn13",
+      "metric": "balloonCount",
+      "previous": 3802912,
+      "current": 3803030
+    },
+    {
+      "soopId": "nangnan",
+      "metric": "cumulativeUsers",
+      "previous": 13432054,
+      "current": 13444110
+    },
+    {
+      "soopId": "nangnan",
+      "metric": "balloonCount",
+      "previous": 4705735,
+      "current": 4706683
+    },
+    {
+      "soopId": "eunyoung1238",
+      "metric": "cumulativeUsers",
+      "previous": 11288023,
+      "current": 11364146
+    },
+    {
+      "soopId": "eunyoung1238",
+      "metric": "balloonCount",
+      "previous": 8652830,
+      "current": 8653614
+    },
+    {
+      "soopId": "jk890202",
+      "metric": "cumulativeUsers",
+      "previous": 11105211,
+      "current": 11109569
+    },
+    {
+      "soopId": "jk890202",
+      "metric": "balloonCount",
+      "previous": 5315740,
+      "current": 5315750
+    },
+    {
+      "soopId": "sdkels",
+      "metric": "cumulativeUsers",
+      "previous": 10270977,
+      "current": 10272256
+    },
+    {
+      "soopId": "sdkels",
+      "metric": "balloonCount",
+      "previous": 2525620,
+      "current": 2527845
+    },
+    {
+      "soopId": "since821",
+      "metric": "cumulativeUsers",
+      "previous": 9296064,
+      "current": 9300227
+    },
+    {
+      "soopId": "since821",
+      "metric": "balloonCount",
+      "previous": 32531,
+      "current": 32541
+    },
+    {
+      "soopId": "vf3366",
+      "metric": "cumulativeUsers",
+      "previous": 10369532,
+      "current": 10392681
+    },
+    {
+      "soopId": "vf3366",
+      "metric": "balloonCount",
+      "previous": 3987500,
+      "current": 3987525
+    },
+    {
+      "soopId": "dnwnwjdqhr53",
+      "metric": "cumulativeUsers",
+      "previous": 8678523,
+      "current": 8679108
+    },
+    {
+      "soopId": "dnwnwjdqhr53",
+      "metric": "balloonCount",
+      "previous": 2165221,
+      "current": 2165705
+    },
+    {
+      "soopId": "nmangoquince",
+      "metric": "cumulativeUsers",
+      "previous": 7903571,
+      "current": 7908422
+    },
+    {
+      "soopId": "nmangoquince",
+      "metric": "balloonCount",
+      "previous": 4827369,
+      "current": 4828377
+    },
+    {
+      "soopId": "he0901",
+      "metric": "cumulativeUsers",
+      "previous": 8552706,
+      "current": 8576651
+    },
+    {
+      "soopId": "he0901",
+      "metric": "balloonCount",
+      "previous": 1576178,
+      "current": 1576292
+    },
+    {
+      "soopId": "gofl2237",
+      "metric": "cumulativeUsers",
+      "previous": 8290340,
+      "current": 8299328
+    },
+    {
+      "soopId": "gofl2237",
+      "metric": "balloonCount",
+      "previous": 3330956,
+      "current": 3330967
+    },
+    {
+      "soopId": "rud9281",
+      "metric": "cumulativeUsers",
+      "previous": 9244586,
+      "current": 9297448
+    },
+    {
+      "soopId": "rud9281",
+      "metric": "balloonCount",
+      "previous": 8564550,
+      "current": 8660651
+    },
+    {
+      "soopId": "rudals5467",
+      "metric": "cumulativeUsers",
+      "previous": 7934924,
+      "current": 7936104
+    },
+    {
+      "soopId": "120510",
+      "metric": "cumulativeUsers",
+      "previous": 8276480,
+      "current": 8276854
+    },
+    {
+      "soopId": "120510",
+      "metric": "balloonCount",
+      "previous": 4223756,
+      "current": 4224911
+    },
+    {
+      "soopId": "gjstn7637",
+      "metric": "cumulativeUsers",
+      "previous": 7761823,
+      "current": 7768871
+    },
+    {
+      "soopId": "nyouuu30810",
+      "metric": "cumulativeUsers",
+      "previous": 6472762,
+      "current": 6483169
+    },
+    {
+      "soopId": "nyouuu30810",
+      "metric": "balloonCount",
+      "previous": 2110250,
+      "current": 2110576
+    },
+    {
+      "soopId": "dobby1031",
+      "metric": "cumulativeUsers",
+      "previous": 7353083,
+      "current": 7354135
+    },
+    {
+      "soopId": "dkfksl00",
+      "metric": "balloonCount",
+      "previous": 738181,
+      "current": 738316
+    },
+    {
+      "soopId": "gksdidqksxn",
+      "metric": "cumulativeUsers",
+      "previous": 7230513,
+      "current": 7234515
+    },
+    {
+      "soopId": "singgyul",
+      "metric": "cumulativeUsers",
+      "previous": 7382588,
+      "current": 7383901
+    },
+    {
+      "soopId": "singgyul",
+      "metric": "balloonCount",
+      "previous": 4929477,
+      "current": 4940278
+    },
+    {
+      "soopId": "honeys2",
+      "metric": "cumulativeUsers",
+      "previous": 6714158,
+      "current": 6718562
+    },
+    {
+      "soopId": "chaenna02",
+      "metric": "cumulativeUsers",
+      "previous": 6700499,
+      "current": 6700779
+    },
+    {
+      "soopId": "dkrn56",
+      "metric": "cumulativeUsers",
+      "previous": 6787613,
+      "current": 6790898
+    },
+    {
+      "soopId": "dkrn56",
+      "metric": "balloonCount",
+      "previous": 1798443,
+      "current": 1798592
+    },
+    {
+      "soopId": "kaksjak0730",
+      "metric": "cumulativeUsers",
+      "previous": 6194211,
+      "current": 5464547
+    },
+    {
+      "soopId": "kaksjak0730",
+      "metric": "balloonCount",
+      "previous": 1233932,
+      "current": 1259355
+    },
+    {
+      "soopId": "sky2713",
+      "metric": "cumulativeUsers",
+      "previous": 6085070,
+      "current": 6090176
+    },
+    {
+      "soopId": "seokwngud",
+      "metric": "cumulativeUsers",
+      "previous": 7371865,
+      "current": 7375792
+    }
+  ],
+  "target": {
+    "streamerId": "singgyul",
+    "observedAt": "2026-10-18T13:54:47.958451+09:00",
+    "appliedAt": "2026-10-18T04:57:06.386479+00:00",
+    "automaticBase": {
+      "cumulativeUsers": 6625621,
+      "donorCount": 4691,
+      "balloonCount": 4328532
+    },
+    "metrics": {
+      "viewer": 7383901,
+      "donor": 4817,
+      "balloon": 4940278
+    },
+    "source": "user_pasted_trackify_table",
+    "reason": "suspected_viewbot_traffic",
+    "rawViewer": 7423901,
+    "adjustedViewer": 7383901,
+    "adjustment": -40000,
+    "viewerAdjustments": [
+      {
+        "date": "2026-10-17",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "appliedDelta": -20000
+      },
+      {
+        "date": "2026-10-18",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "appliedDelta": -20000
+      }
+    ],
+    "rawMetrics": {
+      "viewer": 7423901,
+      "donor": 4817,
+      "balloon": 4940278
+    },
+    "adjustedMetrics": {
+      "viewer": 7383901,
+      "donor": 4817,
+      "balloon": 4940278
+    },
+    "sourceCorrectionReview": {
+      "status": "user_confirmed_no_source_correction",
+      "previousRawViewer": 7311517,
+      "currentRawViewer": 7422588,
+      "rawDelta": 111071,
+      "confirmedKstDate": "2026-10-18",
+      "reason": "User confirmed no source correction and revised both dates to -20000; today's daily viewer reference is 84818, with possible source update delay.",
+      "dailyViewerReference": 84818
+    }
+  },
+  "projected": 9182953,
+  "projectedRank": 63,
+  "models": {
+    "rank": 1340068,
+    "ratio": 953275,
+    "minmax": 984452
+  },
+  "safeTarget": 1340068,
+  "observedAt": "2026-10-18T13:54:47.958451+09:00",
+  "appliedAt": "2026-10-18T04:57:08.357559+00:00",
+  "sourceSha256": "cce63fc524999e21a1eeb8a8fee601644de5a266c46612b5bdec15f20d5122f3",
+  "sourcePeriod": {
+    "from": "2026-01-01",
+    "through": "2026-10-18",
+    "precision": "day",
+    "confirmedBy": "user"
+  },
+  "source": "user_pasted_trackify_table",
+  "apiRequests": 0,
+  "manualBatchOverride": {
+    "observedAt": "2026-10-18T13:54:47.958451+09:00",
+    "source": "user_pasted_trackify_table",
+    "sourceSha256": "d0f519f4bed4abe78caceca1bac5d3b275c9a40f480faad3ccce92ca1a55fe53",
+    "inputRows": 130,
+    "updatedCandidates": 99,
+    "updatedCompetitors": 98,
+    "retainedCandidates": 1,
+    "fields": [
+      "cumulativeUsers",
+      "balloonCount"
+    ],
+    "donorsUnchanged": true,
+    "matchedRows": [
+      {
+        "sourceRank": 1,
+        "sourceRankByViewer": 1,
+        "name": "봉준",
+        "viewer": 123664519,
+        "balloon": 12977165,
+        "soopId": "khm11903"
+      },
+      {
+        "sourceRank": 2,
+        "sourceRankByViewer": 2,
+        "name": "김민교.",
+        "viewer": 111629647,
+        "balloon": 6455944,
+        "soopId": "phonics1"
+      },
+      {
+        "sourceRank": 3,
+        "sourceRankByViewer": 3,
+        "name": "이상호",
+        "viewer": 77583233,
+        "balloon": 3397228,
+        "soopId": "lshooooo"
+      },
+      {
+        "sourceRank": 4,
+        "sourceRankByViewer": 4,
+        "name": "감스트",
+        "viewer": 59336347,
+        "balloon": 7845015,
+        "soopId": "devil0108"
+      },
+      {
+        "sourceRank": 6,
+        "sourceRankByViewer": 6,
+        "name": "항상#킴성태",
+        "viewer": 52330297,
+        "balloon": 7657882,
+        "soopId": "rrvv17"
+      },
+      {
+        "sourceRank": 7,
+        "sourceRankByViewer": 7,
+        "name": "두치와뿌꾸",
+        "viewer": 36641582,
+        "balloon": 3370951,
+        "soopId": "galsa"
+      },
+      {
+        "sourceRank": 8,
+        "sourceRankByViewer": 8,
+        "name": "철구형2↑",
+        "viewer": 33737094,
+        "balloon": 138487560,
+        "soopId": "y1026"
+      },
+      {
+        "sourceRank": 9,
+        "sourceRankByViewer": 9,
+        "name": "A-염보성!!",
+        "viewer": 33546215,
+        "balloon": 70368239,
+        "soopId": "yuambo"
+      },
+      {
+        "sourceRank": 12,
+        "sourceRankByViewer": 12,
+        "name": "저라뎃",
+        "viewer": 29481419,
+        "balloon": 3065466,
+        "soopId": "joey1114"
+      },
+      {
+        "sourceRank": 13,
+        "sourceRankByViewer": 13,
+        "name": "타요*",
+        "viewer": 29092390,
+        "balloon": 3629622,
+        "soopId": "b13246"
+      },
+      {
+        "sourceRank": 14,
+        "sourceRankByViewer": 14,
+        "name": "이지상:)",
+        "viewer": 27960770,
+        "balloon": 6189302,
+        "soopId": "jrdart"
+      },
+      {
+        "sourceRank": 15,
+        "sourceRankByViewer": 15,
+        "name": "남순",
+        "viewer": 27778584,
+        "balloon": 64856651,
+        "soopId": "wnnw"
+      },
+      {
+        "sourceRank": 16,
+        "sourceRankByViewer": 16,
+        "name": "s시조새s",
+        "viewer": 26650547,
+        "balloon": 51787734,
+        "soopId": "superbsw123"
+      },
+      {
+        "sourceRank": 18,
+        "sourceRankByViewer": 18,
+        "name": "지피티",
+        "viewer": 25219015,
+        "balloon": 4795216,
+        "soopId": "tjrdbs999"
+      },
+      {
+        "sourceRank": 20,
+        "sourceRankByViewer": 20,
+        "name": "Calm_김윤환",
+        "viewer": 22956143,
+        "balloon": 5067521,
+        "soopId": "brainzerg7"
+      },
+      {
+        "sourceRank": 21,
+        "sourceRankByViewer": 21,
+        "name": "우왁굳",
+        "viewer": 21964090,
+        "balloon": 4910293,
+        "soopId": "ecvhao"
+      },
+      {
+        "sourceRank": 22,
+        "sourceRankByViewer": 22,
+        "name": "수피",
+        "viewer": 21633430,
+        "balloon": 4954417,
+        "soopId": "lovely5959"
+      },
+      {
+        "sourceRank": 23,
+        "sourceRankByViewer": 23,
+        "name": "깨박이깨박이",
+        "viewer": 21386318,
+        "balloon": 6884382,
+        "soopId": "dlghfjs"
+      },
+      {
+        "sourceRank": 24,
+        "sourceRankByViewer": 24,
+        "name": "장지수",
+        "viewer": 20489460,
+        "balloon": 4354743,
+        "soopId": "iamquaddurup"
+      },
+      {
+        "sourceRank": 25,
+        "sourceRankByViewer": 25,
+        "name": "오아",
+        "viewer": 20077564,
+        "balloon": 4080695,
+        "soopId": "legendhyuk"
+      },
+      {
+        "sourceRank": 26,
+        "sourceRankByViewer": 26,
+        "name": "피넛ㅁ",
+        "viewer": 19648883,
+        "balloon": 2839277,
+        "soopId": "kiss281004"
+      },
+      {
+        "sourceRank": 27,
+        "sourceRankByViewer": 27,
+        "name": "빵훈이",
+        "viewer": 19102985,
+        "balloon": 5165074,
+        "soopId": "vlfvlf789"
+      },
+      {
+        "sourceRank": 28,
+        "sourceRankByViewer": 28,
+        "name": "Alo.조경훈",
+        "viewer": 19036331,
+        "balloon": 4581802,
+        "soopId": "cnsgkcnehd74"
+      },
+      {
+        "sourceRank": 29,
+        "sourceRankByViewer": 29,
+        "name": "팡이요",
+        "viewer": 18209384,
+        "balloon": 2330230,
+        "soopId": "sccha21"
+      },
+      {
+        "sourceRank": 30,
+        "sourceRankByViewer": 30,
+        "name": "고세구!",
+        "viewer": 18205064,
+        "balloon": 2980795,
+        "soopId": "gosegu2"
+      },
+      {
+        "sourceRank": 31,
+        "sourceRankByViewer": 31,
+        "name": "[BJ]케이",
+        "viewer": 18006436,
+        "balloon": 199935645,
+        "soopId": "zpdl1313"
+      },
+      {
+        "sourceRank": 32,
+        "sourceRankByViewer": 32,
+        "name": "강만식",
+        "viewer": 17881122,
+        "balloon": 3420362,
+        "soopId": "rkdakstlr911"
+      },
+      {
+        "sourceRank": 33,
+        "sourceRankByViewer": 33,
+        "name": "[JS]박퍼니",
+        "viewer": 17722097,
+        "balloon": 127184329,
+        "soopId": "roket0829"
+      },
+      {
+        "sourceRank": 34,
+        "sourceRankByViewer": 34,
+        "name": "클리드1",
+        "viewer": 17398537,
+        "balloon": 1833627,
+        "soopId": "xoals137"
+      },
+      {
+        "sourceRank": 35,
+        "sourceRankByViewer": 35,
+        "name": "최군형",
+        "viewer": 17345909,
+        "balloon": 37852212,
+        "soopId": "ch1716"
+      },
+      {
+        "sourceRank": 37,
+        "sourceRankByViewer": 37,
+        "name": "임아니",
+        "viewer": 16299077,
+        "balloon": 3408699,
+        "soopId": "1004suna"
+      },
+      {
+        "sourceRank": 38,
+        "sourceRankByViewer": 38,
+        "name": "가습기",
+        "viewer": 16019048,
+        "balloon": 3396094,
+        "soopId": "hwt1014"
+      },
+      {
+        "sourceRank": 39,
+        "sourceRankByViewer": 39,
+        "name": "정중만",
+        "viewer": 15930675,
+        "balloon": 2907644,
+        "soopId": "ititit"
+      },
+      {
+        "sourceRank": 40,
+        "sourceRankByViewer": 40,
+        "name": "한둬얼",
+        "viewer": 15684971,
+        "balloon": 3943719,
+        "soopId": "qn308dud"
+      },
+      {
+        "sourceRank": 41,
+        "sourceRankByViewer": 41,
+        "name": "제갈금자",
+        "viewer": 15277214,
+        "balloon": 4826313,
+        "soopId": "dlsn9911"
+      },
+      {
+        "sourceRank": 42,
+        "sourceRankByViewer": 42,
+        "name": "기뉴다",
+        "viewer": 15266404,
+        "balloon": 9711095,
+        "soopId": "arinbbidol"
+      },
+      {
+        "sourceRank": 43,
+        "sourceRankByViewer": 43,
+        "name": "박진우[JINU]",
+        "viewer": 14192003,
+        "balloon": 68779026,
+        "soopId": "pyh3646"
+      },
+      {
+        "sourceRank": 44,
+        "sourceRankByViewer": 44,
+        "name": "천양",
+        "viewer": 13796413,
+        "balloon": 2535717,
+        "soopId": "243000"
+      },
+      {
+        "sourceRank": 45,
+        "sourceRankByViewer": 45,
+        "name": "스맵임",
+        "viewer": 13522986,
+        "balloon": 2210043,
+        "soopId": "townboy"
+      },
+      {
+        "sourceRank": 46,
+        "sourceRankByViewer": 46,
+        "name": "깐숙",
+        "viewer": 13444110,
+        "balloon": 4706683,
+        "soopId": "nangnan"
+      },
+      {
+        "sourceRank": 47,
+        "sourceRankByViewer": 47,
+        "name": "오메킴승현2",
+        "viewer": 13291797,
+        "balloon": 1983711,
+        "soopId": "rlatldgus"
+      },
+      {
+        "sourceRank": 48,
+        "sourceRankByViewer": 48,
+        "name": "안녕수야",
+        "viewer": 13180139,
+        "balloon": 3803030,
+        "soopId": "tntntn13"
+      },
+      {
+        "sourceRank": 49,
+        "sourceRankByViewer": 49,
+        "name": "(주)박사장$",
+        "viewer": 13155358,
+        "balloon": 2944171,
+        "soopId": "wnstn0905"
+      },
+      {
+        "sourceRank": 50,
+        "sourceRankByViewer": 50,
+        "name": "단츄♪",
+        "viewer": 12790650,
+        "balloon": null,
+        "soopId": "danchu17"
+      },
+      {
+        "sourceRank": 51,
+        "sourceRankByViewer": 51,
+        "name": "김된모!",
+        "viewer": 12408763,
+        "balloon": 906888,
+        "soopId": "kimdoenmo"
+      },
+      {
+        "sourceRank": 52,
+        "sourceRankByViewer": 52,
+        "name": "릴파♬",
+        "viewer": 12048434,
+        "balloon": 2775233,
+        "soopId": "lilpa0309"
+      },
+      {
+        "sourceRank": 53,
+        "sourceRankByViewer": 53,
+        "name": "정윤종..",
+        "viewer": 11602517,
+        "balloon": 1302107,
+        "soopId": "ioioiobb"
+      },
+      {
+        "sourceRank": 54,
+        "sourceRankByViewer": 54,
+        "name": "그릴래영",
+        "viewer": 11364146,
+        "balloon": 8653614,
+        "soopId": "eunyoung1238"
+      },
+      {
+        "sourceRank": 55,
+        "sourceRankByViewer": 55,
+        "name": "JuM.윤중2",
+        "viewer": 11109569,
+        "balloon": 5315750,
+        "soopId": "jk890202"
+      },
+      {
+        "sourceRank": 56,
+        "sourceRankByViewer": 56,
+        "name": "“클로이”",
+        "viewer": 10392681,
+        "balloon": 3987525,
+        "soopId": "vf3366"
+      },
+      {
+        "sourceRank": 57,
+        "sourceRankByViewer": 57,
+        "name": "강덕구",
+        "viewer": 10272256,
+        "balloon": 2527845,
+        "soopId": "sdkels"
+      },
+      {
+        "sourceRank": 58,
+        "sourceRankByViewer": 58,
+        "name": "Fresh토마토",
+        "viewer": 10261617,
+        "balloon": 5191103,
+        "soopId": "freshtomato"
+      },
+      {
+        "sourceRank": 59,
+        "sourceRankByViewer": 59,
+        "name": "비챤",
+        "viewer": 9989089,
+        "balloon": 1857039,
+        "soopId": "viichan6"
+      },
+      {
+        "sourceRank": 60,
+        "sourceRankByViewer": 60,
+        "name": "꾸티뉴",
+        "viewer": 9747587,
+        "balloon": 2562055,
+        "soopId": "aksen7833"
+      },
+      {
+        "sourceRank": 61,
+        "sourceRankByViewer": 61,
+        "name": "♥심장",
+        "viewer": 9300227,
+        "balloon": 32541,
+        "soopId": "since821"
+      },
+      {
+        "sourceRank": 62,
+        "sourceRankByViewer": 62,
+        "name": "한갱",
+        "viewer": 9297448,
+        "balloon": 8660651,
+        "soopId": "rud9281"
+      },
+      {
+        "sourceRank": 64,
+        "sourceRankByViewer": 64,
+        "name": "홍타쿠!",
+        "viewer": 9087792,
+        "balloon": 2195540,
+        "soopId": "lhtlgm"
+      },
+      {
+        "sourceRank": 65,
+        "sourceRankByViewer": 65,
+        "name": "마이곰이",
+        "viewer": 8955868,
+        "balloon": 1981533,
+        "soopId": "mygomiee"
+      },
+      {
+        "sourceRank": 66,
+        "sourceRankByViewer": 66,
+        "name": "민결희",
+        "viewer": 8868983,
+        "balloon": 1526698,
+        "soopId": "mingyeolhee"
+      },
+      {
+        "sourceRank": 67,
+        "sourceRankByViewer": 67,
+        "name": "키마",
+        "viewer": 8781554,
+        "balloon": 3940347,
+        "soopId": "kymakyma"
+      },
+      {
+        "sourceRank": 68,
+        "sourceRankByViewer": 68,
+        "name": "수이,",
+        "viewer": 8703857,
+        "balloon": 1287402,
+        "soopId": "suyeun0312"
+      },
+      {
+        "sourceRank": 69,
+        "sourceRankByViewer": 69,
+        "name": "설레랑",
+        "viewer": 8679108,
+        "balloon": 2165705,
+        "soopId": "dnwnwjdqhr53"
+      },
+      {
+        "sourceRank": 70,
+        "sourceRankByViewer": 70,
+        "name": "머독",
+        "viewer": 8626475,
+        "balloon": 1508209,
+        "soopId": "spbabobj"
+      },
+      {
+        "sourceRank": 71,
+        "sourceRankByViewer": 71,
+        "name": "해기_",
+        "viewer": 8576651,
+        "balloon": 1576292,
+        "soopId": "he0901"
+      },
+      {
+        "sourceRank": 72,
+        "sourceRankByViewer": 72,
+        "name": "조디악악악",
+        "viewer": 8523112,
+        "balloon": 1307453,
+        "soopId": "yjkim5500"
+      },
+      {
+        "sourceRank": 73,
+        "sourceRankByViewer": 73,
+        "name": "러아♡",
+        "viewer": 8472464,
+        "balloon": 6436946,
+        "soopId": "smmms2002"
+      },
+      {
+        "sourceRank": 74,
+        "sourceRankByViewer": 74,
+        "name": "[BJ]김인호",
+        "viewer": 8438400,
+        "balloon": 78481110,
+        "soopId": "pookygamja"
+      },
+      {
+        "sourceRank": 75,
+        "sourceRankByViewer": 75,
+        "name": "해리",
+        "viewer": 8299328,
+        "balloon": 3330967,
+        "soopId": "gofl2237"
+      },
+      {
+        "sourceRank": 76,
+        "sourceRankByViewer": 76,
+        "name": "범프리카",
+        "viewer": 8276854,
+        "balloon": 4224911,
+        "soopId": "120510"
+      },
+      {
+        "sourceRank": 77,
+        "sourceRankByViewer": 77,
+        "name": "심청이_",
+        "viewer": 8220267,
+        "balloon": 3590291,
+        "soopId": "dearhal"
+      },
+      {
+        "sourceRank": 78,
+        "sourceRankByViewer": 78,
+        "name": "과즙세연",
+        "viewer": 8204201,
+        "balloon": 6362268,
+        "soopId": "m0m099"
+      },
+      {
+        "sourceRank": 79,
+        "sourceRankByViewer": 79,
+        "name": "박가린님[♥]",
+        "viewer": 8005491,
+        "balloon": 61919285,
+        "soopId": "janjju"
+      },
+      {
+        "sourceRank": 80,
+        "sourceRankByViewer": 80,
+        "name": "이경민+_+.",
+        "viewer": 7936104,
+        "balloon": 3151446,
+        "soopId": "rudals5467"
+      },
+      {
+        "sourceRank": 81,
+        "sourceRankByViewer": 81,
+        "name": "사내.박재박",
+        "viewer": 7930069,
+        "balloon": 1867551,
+        "soopId": "jaeparkk"
+      },
+      {
+        "sourceRank": 82,
+        "sourceRankByViewer": 82,
+        "name": "망구랑",
+        "viewer": 7908422,
+        "balloon": 4828377,
+        "soopId": "nmangoquince"
+      },
+      {
+        "sourceRank": 83,
+        "sourceRankByViewer": 83,
+        "name": "솜주먹",
+        "viewer": 7866010,
+        "balloon": 3346512,
+        "soopId": "ldrboo"
+      },
+      {
+        "sourceRank": 84,
+        "sourceRankByViewer": 84,
+        "name": "징버거☆",
+        "viewer": 7864954,
+        "balloon": 2113271,
+        "soopId": "jingburger1"
+      },
+      {
+        "sourceRank": 85,
+        "sourceRankByViewer": 85,
+        "name": "아뚱.",
+        "viewer": 7768871,
+        "balloon": 1449983,
+        "soopId": "gjstn7637"
+      },
+      {
+        "sourceRank": 86,
+        "sourceRankByViewer": 86,
+        "name": "라로시_",
+        "viewer": 7720758,
+        "balloon": 1199448,
+        "soopId": "larothy"
+      },
+      {
+        "sourceRank": 87,
+        "sourceRankByViewer": 87,
+        "name": "미오탱",
+        "viewer": 7634270,
+        "balloon": 21417622,
+        "soopId": "juju0228"
+      },
+      {
+        "sourceRank": 88,
+        "sourceRankByViewer": 88,
+        "name": "양도끼",
+        "viewer": 7510676,
+        "balloon": 1584804,
+        "soopId": "yangdoki"
+      },
+      {
+        "sourceRank": 89,
+        "sourceRankByViewer": 89,
+        "name": "띵귤_",
+        "viewer": 7423901,
+        "balloon": 4940278,
+        "soopId": "singgyul"
+      },
+      {
+        "sourceRank": 90,
+        "sourceRankByViewer": 90,
+        "name": "뜨뜨뜨뜨-",
+        "viewer": 7375792,
+        "balloon": 515193,
+        "soopId": "seokwngud"
+      },
+      {
+        "sourceRank": 91,
+        "sourceRankByViewer": 91,
+        "name": "도현ツ",
+        "viewer": 7354135,
+        "balloon": 1814086,
+        "soopId": "dobby1031"
+      },
+      {
+        "sourceRank": 92,
+        "sourceRankByViewer": 92,
+        "name": "준밧드",
+        "viewer": 7234515,
+        "balloon": 1628026,
+        "soopId": "gksdidqksxn"
+      },
+      {
+        "sourceRank": 93,
+        "sourceRankByViewer": 93,
+        "name": "고라니율_",
+        "viewer": 7110751,
+        "balloon": 3363886,
+        "soopId": "golaniyule0"
+      },
+      {
+        "sourceRank": 94,
+        "sourceRankByViewer": 94,
+        "name": "Bisu김택용",
+        "viewer": 7106949,
+        "balloon": 2293248,
+        "soopId": "rlaxordyd"
+      },
+      {
+        "sourceRank": 95,
+        "sourceRankByViewer": 95,
+        "name": "백하♥",
+        "viewer": 7091847,
+        "balloon": 3660218,
+        "soopId": "mj0128"
+      },
+      {
+        "sourceRank": 96,
+        "sourceRankByViewer": 96,
+        "name": "우정잉",
+        "viewer": 6910305,
+        "balloon": 1747575,
+        "soopId": "nanajam"
+      },
+      {
+        "sourceRank": 97,
+        "sourceRankByViewer": 97,
+        "name": "아란♥",
+        "viewer": 6809941,
+        "balloon": 738316,
+        "soopId": "dkfksl00"
+      },
+      {
+        "sourceRank": 98,
+        "sourceRankByViewer": 98,
+        "name": "˚다누리",
+        "viewer": 6790898,
+        "balloon": 1798592,
+        "soopId": "dkrn56"
+      },
+      {
+        "sourceRank": 100,
+        "sourceRankByViewer": 100,
+        "name": "니니♥♥♥",
+        "viewer": 6718562,
+        "balloon": null,
+        "soopId": "honeys2"
+      },
+      {
+        "sourceRank": 101,
+        "sourceRankByViewer": 101,
+        "name": "챈나",
+        "viewer": 6700779,
+        "balloon": 3130348,
+        "soopId": "chaenna02"
+      },
+      {
+        "sourceRank": 102,
+        "sourceRankByViewer": 102,
+        "name": "이주하♥",
+        "viewer": 6483169,
+        "balloon": 2110576,
+        "soopId": "nyouuu30810"
+      },
+      {
+        "sourceRank": 104,
+        "sourceRankByViewer": 104,
+        "name": "문모모",
+        "viewer": 6312029,
+        "balloon": 2193699,
+        "soopId": "doormomo"
+      },
+      {
+        "sourceRank": 105,
+        "sourceRankByViewer": 105,
+        "name": "문월:-)",
+        "viewer": 6266492,
+        "balloon": 2050676,
+        "soopId": "moonwol0614"
+      },
+      {
+        "sourceRank": 107,
+        "sourceRankByViewer": 107,
+        "name": "나는상윤",
+        "viewer": 6090176,
+        "balloon": 1753379,
+        "soopId": "sky2713"
+      },
+      {
+        "sourceRank": 108,
+        "sourceRankByViewer": 108,
+        "name": "끠끼",
+        "viewer": 6024677,
+        "balloon": 2471657,
+        "soopId": "rmlrl771"
+      },
+      {
+        "sourceRank": 123,
+        "sourceRankByViewer": 123,
+        "name": "한결___",
+        "viewer": 5464547,
+        "balloon": 1259355,
+        "soopId": "kaksjak0730"
+      }
+    ],
+    "outsideCandidateCount": 31,
+    "outsideCandidateRows": [
+      {
+        "sourceRank": 5,
+        "sourceRankByViewer": 5,
+        "name": "LCK_KR",
+        "viewer": 53938657,
+        "balloon": 5010
+      },
+      {
+        "sourceRank": 10,
+        "sourceRankByViewer": 10,
+        "name": "boomburapa",
+        "viewer": 32735926,
+        "balloon": 61
+      },
+      {
+        "sourceRank": 11,
+        "sourceRankByViewer": 11,
+        "name": "rebirthztv",
+        "viewer": 32219083,
+        "balloon": 1052
+      },
+      {
+        "sourceRank": 17,
+        "sourceRankByViewer": 17,
+        "name": "FCO공식",
+        "viewer": 26010827,
+        "balloon": 1584
+      },
+      {
+        "sourceRank": 19,
+        "sourceRankByViewer": 19,
+        "name": "fifatargrean",
+        "viewer": 23349786,
+        "balloon": 3351
+      },
+      {
+        "sourceRank": 36,
+        "sourceRankByViewer": 36,
+        "name": "VALORANT_TH",
+        "viewer": 16935417,
+        "balloon": 0
+      },
+      {
+        "sourceRank": 63,
+        "sourceRankByViewer": 63,
+        "name": "MinhDienvn",
+        "viewer": 9093657,
+        "balloon": 131
+      },
+      {
+        "sourceRank": 99,
+        "sourceRankByViewer": 99,
+        "name": "VALORANT_EN",
+        "viewer": 6733036,
+        "balloon": 0
+      },
+      {
+        "sourceRank": 103,
+        "sourceRankByViewer": 103,
+        "name": "깅예솔",
+        "viewer": 6329435,
+        "balloon": 2234539
+      },
+      {
+        "sourceRank": 106,
+        "sourceRankByViewer": 106,
+        "name": "lckcarry",
+        "viewer": 6238641,
+        "balloon": 4
+      },
+      {
+        "sourceRank": 109,
+        "sourceRankByViewer": 109,
+        "name": "마빡",
+        "viewer": 5997702,
+        "balloon": 921395
+      },
+      {
+        "sourceRank": 110,
+        "sourceRankByViewer": 110,
+        "name": "옥맨",
+        "viewer": 5968632,
+        "balloon": 1049883
+      },
+      {
+        "sourceRank": 111,
+        "sourceRankByViewer": 111,
+        "name": "서도일",
+        "viewer": 5950520,
+        "balloon": 1056947
+      },
+      {
+        "sourceRank": 112,
+        "sourceRankByViewer": 112,
+        "name": "주르르",
+        "viewer": 5914255,
+        "balloon": 1965166
+      },
+      {
+        "sourceRank": 113,
+        "sourceRankByViewer": 113,
+        "name": "뉴스",
+        "viewer": 5908984,
+        "balloon": 46752
+      },
+      {
+        "sourceRank": 114,
+        "sourceRankByViewer": 114,
+        "name": "연초록♪",
+        "viewer": 5806430,
+        "balloon": 4846941
+      },
+      {
+        "sourceRank": 115,
+        "sourceRankByViewer": 115,
+        "name": "감블러",
+        "viewer": 5782915,
+        "balloon": 1114532
+      },
+      {
+        "sourceRank": 116,
+        "sourceRankByViewer": 116,
+        "name": "블랙워크",
+        "viewer": 5729128,
+        "balloon": 1579344
+      },
+      {
+        "sourceRank": 117,
+        "sourceRankByViewer": 117,
+        "name": "BJ와이퍼♥",
+        "viewer": 5715832,
+        "balloon": 2311091
+      },
+      {
+        "sourceRank": 118,
+        "sourceRankByViewer": 118,
+        "name": "수찬",
+        "viewer": 5647604,
+        "balloon": 3454885
+      },
+      {
+        "sourceRank": 119,
+        "sourceRankByViewer": 119,
+        "name": "소룡님",
+        "viewer": 5600271,
+        "balloon": 1729751
+      },
+      {
+        "sourceRank": 120,
+        "sourceRankByViewer": 120,
+        "name": "커맨더지코",
+        "viewer": 5558189,
+        "balloon": 177072539
+      },
+      {
+        "sourceRank": 121,
+        "sourceRankByViewer": 121,
+        "name": "찬해",
+        "viewer": 5496795,
+        "balloon": 5914719
+      },
+      {
+        "sourceRank": 122,
+        "sourceRankByViewer": 122,
+        "name": "뽀현욱",
+        "viewer": 5475565,
+        "balloon": 17217287
+      },
+      {
+        "sourceRank": 124,
+        "sourceRankByViewer": 124,
+        "name": "박재혁;;;",
+        "viewer": 5462539,
+        "balloon": 2395888
+      },
+      {
+        "sourceRank": 125,
+        "sourceRankByViewer": 125,
+        "name": "울산큰고래",
+        "viewer": 5461639,
+        "balloon": 1747325
+      },
+      {
+        "sourceRank": 126,
+        "sourceRankByViewer": 126,
+        "name": "JD_이제동",
+        "viewer": 5423806,
+        "balloon": 2556857
+      },
+      {
+        "sourceRank": 127,
+        "sourceRankByViewer": 127,
+        "name": "이라333",
+        "viewer": 5353872,
+        "balloon": 963372
+      },
+      {
+        "sourceRank": 128,
+        "sourceRankByViewer": 128,
+        "name": "김진솔",
+        "viewer": 5352481,
+        "balloon": 634172
+      },
+      {
+        "sourceRank": 129,
+        "sourceRankByViewer": 129,
+        "name": "마왕0216",
+        "viewer": 5338691,
+        "balloon": 1323033
+      },
+      {
+        "sourceRank": 130,
+        "sourceRankByViewer": 130,
+        "name": "뮤즈_MUSE",
+        "viewer": 5329779,
+        "balloon": 1368923
+      }
+    ],
+    "changes": [
+      {
+        "soopId": "khm11903",
+        "metric": "cumulativeUsers",
+        "previous": 123536367,
+        "current": 123664519
+      },
+      {
+        "soopId": "khm11903",
+        "metric": "balloonCount",
+        "previous": 12974469,
+        "current": 12977165
+      },
+      {
+        "soopId": "phonics1",
+        "metric": "cumulativeUsers",
+        "previous": 111610312,
+        "current": 111629647
+      },
+      {
+        "soopId": "phonics1",
+        "metric": "balloonCount",
+        "previous": 6455870,
+        "current": 6455944
+      },
+      {
+        "soopId": "devil0108",
+        "metric": "cumulativeUsers",
+        "previous": 59314360,
+        "current": 59336347
+      },
+      {
+        "soopId": "rrvv17",
+        "metric": "cumulativeUsers",
+        "previous": 52324389,
+        "current": 52330297
+      },
+      {
+        "soopId": "b13246",
+        "metric": "cumulativeUsers",
+        "previous": 29070962,
+        "current": 29092390
+      },
+      {
+        "soopId": "b13246",
+        "metric": "balloonCount",
+        "previous": 3629610,
+        "current": 3629622
+      },
+      {
+        "soopId": "jrdart",
+        "metric": "cumulativeUsers",
+        "previous": 27946019,
+        "current": 27960770
+      },
+      {
+        "soopId": "tjrdbs999",
+        "metric": "cumulativeUsers",
+        "previous": 25197268,
+        "current": 25219015
+      },
+      {
+        "soopId": "tjrdbs999",
+        "metric": "balloonCount",
+        "previous": 4794458,
+        "current": 4795216
+      },
+      {
+        "soopId": "lovely5959",
+        "metric": "cumulativeUsers",
+        "previous": 21614689,
+        "current": 21633430
+      },
+      {
+        "soopId": "lovely5959",
+        "metric": "balloonCount",
+        "previous": 4954369,
+        "current": 4954417
+      },
+      {
+        "soopId": "sccha21",
+        "metric": "cumulativeUsers",
+        "previous": 18208861,
+        "current": 18209384
+      },
+      {
+        "soopId": "xoals137",
+        "metric": "cumulativeUsers",
+        "previous": 17385489,
+        "current": 17398537
+      },
+      {
+        "soopId": "xoals137",
+        "metric": "balloonCount",
+        "previous": 1833619,
+        "current": 1833627
+      },
+      {
+        "soopId": "pyh3646",
+        "metric": "cumulativeUsers",
+        "previous": 14187637,
+        "current": 14192003
+      },
+      {
+        "soopId": "243000",
+        "metric": "cumulativeUsers",
+        "previous": 13778209,
+        "current": 13796413
+      },
+      {
+        "soopId": "243000",
+        "metric": "balloonCount",
+        "previous": 2535105,
+        "current": 2535717
+      },
+      {
+        "soopId": "townboy",
+        "metric": "cumulativeUsers",
+        "previous": 13513396,
+        "current": 13522986
+      },
+      {
+        "soopId": "townboy",
+        "metric": "balloonCount",
+        "previous": 2208541,
+        "current": 2210043
+      },
+      {
+        "soopId": "tntntn13",
+        "metric": "cumulativeUsers",
+        "previous": 13169917,
+        "current": 13180139
+      },
+      {
+        "soopId": "tntntn13",
+        "metric": "balloonCount",
+        "previous": 3802912,
+        "current": 3803030
+      },
+      {
+        "soopId": "nangnan",
+        "metric": "cumulativeUsers",
+        "previous": 13432054,
+        "current": 13444110
+      },
+      {
+        "soopId": "nangnan",
+        "metric": "balloonCount",
+        "previous": 4705735,
+        "current": 4706683
+      },
+      {
+        "soopId": "eunyoung1238",
+        "metric": "cumulativeUsers",
+        "previous": 11288023,
+        "current": 11364146
+      },
+      {
+        "soopId": "eunyoung1238",
+        "metric": "balloonCount",
+        "previous": 8652830,
+        "current": 8653614
+      },
+      {
+        "soopId": "jk890202",
+        "metric": "cumulativeUsers",
+        "previous": 11105211,
+        "current": 11109569
+      },
+      {
+        "soopId": "jk890202",
+        "metric": "balloonCount",
+        "previous": 5315740,
+        "current": 5315750
+      },
+      {
+        "soopId": "sdkels",
+        "metric": "cumulativeUsers",
+        "previous": 10270977,
+        "current": 10272256
+      },
+      {
+        "soopId": "sdkels",
+        "metric": "balloonCount",
+        "previous": 2525620,
+        "current": 2527845
+      },
+      {
+        "soopId": "since821",
+        "metric": "cumulativeUsers",
+        "previous": 9296064,
+        "current": 9300227
+      },
+      {
+        "soopId": "since821",
+        "metric": "balloonCount",
+        "previous": 32531,
+        "current": 32541
+      },
+      {
+        "soopId": "vf3366",
+        "metric": "cumulativeUsers",
+        "previous": 10369532,
+        "current": 10392681
+      },
+      {
+        "soopId": "vf3366",
+        "metric": "balloonCount",
+        "previous": 3987500,
+        "current": 3987525
+      },
+      {
+        "soopId": "dnwnwjdqhr53",
+        "metric": "cumulativeUsers",
+        "previous": 8678523,
+        "current": 8679108
+      },
+      {
+        "soopId": "dnwnwjdqhr53",
+        "metric": "balloonCount",
+        "previous": 2165221,
+        "current": 2165705
+      },
+      {
+        "soopId": "nmangoquince",
+        "metric": "cumulativeUsers",
+        "previous": 7903571,
+        "current": 7908422
+      },
+      {
+        "soopId": "nmangoquince",
+        "metric": "balloonCount",
+        "previous": 4827369,
+        "current": 4828377
+      },
+      {
+        "soopId": "he0901",
+        "metric": "cumulativeUsers",
+        "previous": 8552706,
+        "current": 8576651
+      },
+      {
+        "soopId": "he0901",
+        "metric": "balloonCount",
+        "previous": 1576178,
+        "current": 1576292
+      },
+      {
+        "soopId": "gofl2237",
+        "metric": "cumulativeUsers",
+        "previous": 8290340,
+        "current": 8299328
+      },
+      {
+        "soopId": "gofl2237",
+        "metric": "balloonCount",
+        "previous": 3330956,
+        "current": 3330967
+      },
+      {
+        "soopId": "rud9281",
+        "metric": "cumulativeUsers",
+        "previous": 9244586,
+        "current": 9297448
+      },
+      {
+        "soopId": "rud9281",
+        "metric": "balloonCount",
+        "previous": 8564550,
+        "current": 8660651
+      },
+      {
+        "soopId": "rudals5467",
+        "metric": "cumulativeUsers",
+        "previous": 7934924,
+        "current": 7936104
+      },
+      {
+        "soopId": "120510",
+        "metric": "cumulativeUsers",
+        "previous": 8276480,
+        "current": 8276854
+      },
+      {
+        "soopId": "120510",
+        "metric": "balloonCount",
+        "previous": 4223756,
+        "current": 4224911
+      },
+      {
+        "soopId": "gjstn7637",
+        "metric": "cumulativeUsers",
+        "previous": 7761823,
+        "current": 7768871
+      },
+      {
+        "soopId": "nyouuu30810",
+        "metric": "cumulativeUsers",
+        "previous": 6472762,
+        "current": 6483169
+      },
+      {
+        "soopId": "nyouuu30810",
+        "metric": "balloonCount",
+        "previous": 2110250,
+        "current": 2110576
+      },
+      {
+        "soopId": "dobby1031",
+        "metric": "cumulativeUsers",
+        "previous": 7353083,
+        "current": 7354135
+      },
+      {
+        "soopId": "dkfksl00",
+        "metric": "balloonCount",
+        "previous": 738181,
+        "current": 738316
+      },
+      {
+        "soopId": "gksdidqksxn",
+        "metric": "cumulativeUsers",
+        "previous": 7230513,
+        "current": 7234515
+      },
+      {
+        "soopId": "singgyul",
+        "metric": "cumulativeUsers",
+        "previous": 7382588,
+        "current": 7383901
+      },
+      {
+        "soopId": "singgyul",
+        "metric": "balloonCount",
+        "previous": 4929477,
+        "current": 4940278
+      },
+      {
+        "soopId": "honeys2",
+        "metric": "cumulativeUsers",
+        "previous": 6714158,
+        "current": 6718562
+      },
+      {
+        "soopId": "chaenna02",
+        "metric": "cumulativeUsers",
+        "previous": 6700499,
+        "current": 6700779
+      },
+      {
+        "soopId": "dkrn56",
+        "metric": "cumulativeUsers",
+        "previous": 6787613,
+        "current": 6790898
+      },
+      {
+        "soopId": "dkrn56",
+        "metric": "balloonCount",
+        "previous": 1798443,
+        "current": 1798592
+      },
+      {
+        "soopId": "kaksjak0730",
+        "metric": "cumulativeUsers",
+        "previous": 6194211,
+        "current": 5464547
+      },
+      {
+        "soopId": "kaksjak0730",
+        "metric": "balloonCount",
+        "previous": 1233932,
+        "current": 1259355
+      },
+      {
+        "soopId": "sky2713",
+        "metric": "cumulativeUsers",
+        "previous": 6085070,
+        "current": 6090176
+      },
+      {
+        "soopId": "seokwngud",
+        "metric": "cumulativeUsers",
+        "previous": 7371865,
+        "current": 7375792
+      }
+    ],
+    "sourceSort": "viewer_desc",
+    "updatedViewerCandidates": 99,
+    "updatedBalloonCandidates": 97,
+    "retainedCandidateNames": [
+      "아야네_세나"
+    ],
+    "viewerRankingAudit": {
+      "sourceRawRank": 89,
+      "configuredExclusions": 11,
+      "excludedRowsPresent": [
+        "LCK_KR",
+        "boomburapa",
+        "rebirthztv",
+        "FCO공식",
+        "fifatargrean",
+        "VALORANT_TH",
+        "MinhDienvn",
+        "VALORANT_EN",
+        "lckcarry"
+      ],
+      "excludedRowsAboveTarget": [
+        "LCK_KR",
+        "boomburapa",
+        "rebirthztv",
+        "FCO공식",
+        "fifatargrean",
+        "VALORANT_TH",
+        "MinhDienvn"
+      ],
+      "rankAfterConfiguredExclusions": 82,
+      "adjustedViewerRankWithinExistingCandidates": 82
+    },
+    "sourcePeriod": {
+      "from": "2026-01-01",
+      "through": "2026-10-18",
+      "precision": "day",
+      "confirmedBy": "user"
+    }
+  }
+}

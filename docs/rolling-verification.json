@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-10-01T20:04:52.861Z",
+  "jsonURL": "https://taehyeon-masu.xyz/assets/data/ranking.json",
+  "jsonStatus": 200,
+  "jsonSha256": "9be2fb17f15a160ea88633eb0168b14c32d5a62716cb79f9c8f7366c09e9eecb",
+  "serverMtime": "2026-10-01T19:52:27.011Z",
+  "cacheControl": "public, max-age=300, must-revalidate",
+  "sourceUpdatedAt": "2026-10-01T19:24:55.198590+00:00",
+  "actualObservedAt": "2026-10-01T19:51:44.062874+00:00",
+  "status": {
+    "lastCollectionAttempt": "2026-10-01T19:51:44.062874+00:00",
+    "lastSuccessfulCollection": "2026-10-01T19:52:27.016129+00:00",
+    "lastDataChange": "2026-10-01T19:24:55.198590+00:00",
+    "collectionStatus": "updated",
+    "snapshotUpdatedAt": "2026-10-01T19:24:55.198590+00:00"
+  },
+  "historyPath": "/var/lib/soop-ranking/history/daily/2026-10-02.json",
+  "historyCandidates": 98,
+  "baselinePreserved": true,
+  "protectedHashesUnchanged": true,
+  "moduleResponses": [
+    {
+      "name": "index.html",
+      "status": 200,
+      "cacheControl": "no-store, no-cache, must-revalidate, max-age=0"
+    },
+    {
+      "name": "assets/simulation-ui.js?v=20261002-rolling",
+      "status": 200,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "name": "assets/rolling-target.js?v=20261002-rolling",
+      "status": 200,
+      "cacheControl": "public, max-age=3600"
+    },
+    {
+      "name": "assets/dynamic-target.js?v=20261002-rolling",
+      "status": 200,
+      "cacheControl": "public, max-age=3600"
+    }
+  ],
+  "display": {
+    "safe": "2,667,964",
+    "current": "6,561,420명",
+    "rank": "77위",
+    "updated": "데이터 기준 2026.10.02 04:24 KST",
+    "pace-state": "최근 추세와 10~11월 실제 데이터를 함께 반영한 예측 · 유저 actual 비중 22.2%",
+    "limits": "후원 통계 비공개 2명은 산정 대기입니다. 최근 월별 자료가 불완전한 7명은 사용 가능한 월 또는 기존 대체 추세를 사용합니다. 후원자는 월별 고유 수를 합산하지 않고 연간 실제 증가와 보수적 기준을 혼합한 추정입니다."
+  },
+  "checks": {
+    "javascriptTests": 68,
+    "pythonTests": 56,
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "productionMainBrowser": "passed",
+    "productionRankingBrowser": "passed"
+  }
+}

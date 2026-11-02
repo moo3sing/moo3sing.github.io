@@ -1,0 +1,5 @@
+SHELL=/bin/sh
+PATH=/usr/local/bin:/usr/bin:/bin
+# Verified host timezone: Etc/UTC; no CRON_TZ. 18:15 UTC = next day 03:15 KST.
+# One entry only. Daily attempt gate and file lock also apply to manual execution.
+15 18 * * * masuj /opt/soop-ranking/scripts/refresh-production.sh >> /var/log/soop-ranking/collect.log 2>&1

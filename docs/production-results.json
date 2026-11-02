@@ -1,0 +1,1726 @@
+{
+  "url": "https://singdboo.xyz/assets/data/ranking.json",
+  "httpStatus": 200,
+  "cacheControl": "public, max-age=300, must-revalidate",
+  "updatedAt": "2026-09-29T17:18:44.019001+00:00",
+  "completedAt": "2026-09-29T17:19:24.416840+00:00",
+  "asOf": "2026-09-30",
+  "status": "ok",
+  "candidates": 100,
+  "scored": 98,
+  "pending": 2,
+  "models": {
+    "rank": {
+      "label": "순위형",
+      "cutoff": "미오탱ㅋㅋ",
+      "score": 32.577319587628864,
+      "gap": 0.20618556701030144,
+      "top70": [
+        {
+          "soopId": "khm11903",
+          "name": "봉준",
+          "score": 98.8659793814433,
+          "predictedRank": 1
+        },
+        {
+          "soopId": "phonics1",
+          "name": "김민교.",
+          "score": 97.31958762886597,
+          "predictedRank": 2
+        },
+        {
+          "soopId": "devil0108",
+          "name": "감스트",
+          "score": 95.56701030927836,
+          "predictedRank": 3
+        },
+        {
+          "soopId": "y1026",
+          "name": "철구형2↑",
+          "score": 95.05154639175257,
+          "predictedRank": 4
+        },
+        {
+          "soopId": "rrvv17",
+          "name": "항상#킴성태",
+          "score": 94.63917525773196,
+          "predictedRank": 5
+        },
+        {
+          "soopId": "yuambo",
+          "name": "A-염보성!!",
+          "score": 94.02061855670104,
+          "predictedRank": 6
+        },
+        {
+          "soopId": "lshooooo",
+          "name": "이상호",
+          "score": 93.09278350515466,
+          "predictedRank": 7
+        },
+        {
+          "soopId": "wnnw",
+          "name": "남순",
+          "score": 89.07216494845362,
+          "predictedRank": 8
+        },
+        {
+          "soopId": "galsa",
+          "name": "두치와뿌꾸",
+          "score": 88.96907216494846,
+          "predictedRank": 9
+        },
+        {
+          "soopId": "jrdart",
+          "name": "이지상:)",
+          "score": 88.55670103092784,
+          "predictedRank": 10
+        },
+        {
+          "soopId": "b13246",
+          "name": "타요~",
+          "score": 87.31958762886599,
+          "predictedRank": 11
+        },
+        {
+          "soopId": "joey1114",
+          "name": "저라뎃",
+          "score": 86.59793814432992,
+          "predictedRank": 12
+        },
+        {
+          "soopId": "superbsw123",
+          "name": "s시조새s",
+          "score": 86.18556701030928,
+          "predictedRank": 13
+        },
+        {
+          "soopId": "tjrdbs999",
+          "name": "지피티",
+          "score": 85.6701030927835,
+          "predictedRank": 14
+        },
+        {
+          "soopId": "brainzerg7",
+          "name": "Calm_김윤환",
+          "score": 81.75257731958762,
+          "predictedRank": 15
+        },
+        {
+          "soopId": "ecvhao",
+          "name": "우왁굳",
+          "score": 81.34020618556701,
+          "predictedRank": 16
+        },
+        {
+          "soopId": "legendhyuk",
+          "name": "오아",
+          "score": 80.51546391752578,
+          "predictedRank": 17
+        },
+        {
+          "soopId": "lovely5959",
+          "name": "수피",
+          "score": 80.4123711340206,
+          "predictedRank": 18
+        },
+        {
+          "soopId": "dlghfjs",
+          "name": "깨박이깨박이",
+          "score": 79.69072164948453,
+          "predictedRank": 19
+        },
+        {
+          "soopId": "iamquaddurup",
+          "name": "장지수",
+          "score": 77.93814432989691,
+          "predictedRank": 20
+        },
+        {
+          "soopId": "zpdl1313",
+          "name": "[BJ]케이",
+          "score": 77.42268041237114,
+          "predictedRank": 21
+        },
+        {
+          "soopId": "kiss281004",
+          "name": "피넛ㅁ",
+          "score": 76.49484536082474,
+          "predictedRank": 22
+        },
+        {
+          "soopId": "cnsgkcnehd74",
+          "name": "Alo.조경훈",
+          "score": 75.56701030927834,
+          "predictedRank": 23
+        },
+        {
+          "soopId": "ititit",
+          "name": "정중만",
+          "score": 74.94845360824743,
+          "predictedRank": 24
+        },
+        {
+          "soopId": "roket0829",
+          "name": "[JS]박퍼니",
+          "score": 74.32989690721651,
+          "predictedRank": 25
+        },
+        {
+          "soopId": "vlfvlf789",
+          "name": "빵훈이",
+          "score": 73.29896907216495,
+          "predictedRank": 26
+        },
+        {
+          "soopId": "sccha21",
+          "name": "팡이요",
+          "score": 71.34020618556701,
+          "predictedRank": 27
+        },
+        {
+          "soopId": "ch1716",
+          "name": "최군형",
+          "score": 71.34020618556701,
+          "predictedRank": 28
+        },
+        {
+          "soopId": "rkdakstlr911",
+          "name": "강만식",
+          "score": 71.1340206185567,
+          "predictedRank": 29
+        },
+        {
+          "soopId": "gosegu2",
+          "name": "고세구!",
+          "score": 68.76288659793813,
+          "predictedRank": 30
+        },
+        {
+          "soopId": "arinbbidol",
+          "name": "기뉴다",
+          "score": 68.55670103092784,
+          "predictedRank": 31
+        },
+        {
+          "soopId": "qn308dud",
+          "name": "한둬얼",
+          "score": 66.70103092783505,
+          "predictedRank": 32
+        },
+        {
+          "soopId": "dlsn9911",
+          "name": "제갈금자",
+          "score": 66.28865979381443,
+          "predictedRank": 33
+        },
+        {
+          "soopId": "hwt1014",
+          "name": "황원태",
+          "score": 65.4639175257732,
+          "predictedRank": 34
+        },
+        {
+          "soopId": "pyh3646",
+          "name": "박진우[JINU]",
+          "score": 64.84536082474226,
+          "predictedRank": 35
+        },
+        {
+          "soopId": "1004suna",
+          "name": "임아니",
+          "score": 63.55670103092785,
+          "predictedRank": 36
+        },
+        {
+          "soopId": "xoals137",
+          "name": "클리드1",
+          "score": 62.78350515463918,
+          "predictedRank": 37
+        },
+        {
+          "soopId": "rlatldgus",
+          "name": "오메킴승현2",
+          "score": 59.48453608247423,
+          "predictedRank": 38
+        },
+        {
+          "soopId": "nangnan",
+          "name": "깐숙",
+          "score": 57.21649484536083,
+          "predictedRank": 39
+        },
+        {
+          "soopId": "tntntn13",
+          "name": "안녕수야",
+          "score": 56.49484536082475,
+          "predictedRank": 40
+        },
+        {
+          "soopId": "243000",
+          "name": "천양",
+          "score": 55.36082474226804,
+          "predictedRank": 41
+        },
+        {
+          "soopId": "wnstn0905",
+          "name": "(주)박사장$",
+          "score": 55.36082474226804,
+          "predictedRank": 42
+        },
+        {
+          "soopId": "townboy",
+          "name": "스맵임",
+          "score": 53.29896907216495,
+          "predictedRank": 43
+        },
+        {
+          "soopId": "eunyoung1238",
+          "name": "그릴래영",
+          "score": 51.85567010309279,
+          "predictedRank": 44
+        },
+        {
+          "soopId": "jk890202",
+          "name": "JuM.윤중2",
+          "score": 51.64948453608248,
+          "predictedRank": 45
+        },
+        {
+          "soopId": "freshtomato",
+          "name": "Fresh토마토",
+          "score": 51.34020618556701,
+          "predictedRank": 46
+        },
+        {
+          "soopId": "lilpa0309",
+          "name": "릴파♬",
+          "score": 51.23711340206186,
+          "predictedRank": 47
+        },
+        {
+          "soopId": "ioioiobb",
+          "name": "정윤종..",
+          "score": 50.41237113402062,
+          "predictedRank": 48
+        },
+        {
+          "soopId": "sdkels",
+          "name": "강덕구",
+          "score": 48.04123711340206,
+          "predictedRank": 49
+        },
+        {
+          "soopId": "pookygamja",
+          "name": "김인호",
+          "score": 47.11340206185567,
+          "predictedRank": 50
+        },
+        {
+          "soopId": "kimdoenmo",
+          "name": "김된모!",
+          "score": 45.670103092783506,
+          "predictedRank": 51
+        },
+        {
+          "soopId": "aksen7833",
+          "name": "꾸티뉴",
+          "score": 45.25773195876289,
+          "predictedRank": 52
+        },
+        {
+          "soopId": "smmms2002",
+          "name": "러아♡",
+          "score": 44.948453608247426,
+          "predictedRank": 53
+        },
+        {
+          "soopId": "lhtlgm",
+          "name": "홍타쿠!",
+          "score": 44.12371134020619,
+          "predictedRank": 54
+        },
+        {
+          "soopId": "mygomiee",
+          "name": "마이곰이",
+          "score": 43.50515463917526,
+          "predictedRank": 55
+        },
+        {
+          "soopId": "vf3366",
+          "name": "클로이",
+          "score": 43.09278350515464,
+          "predictedRank": 56
+        },
+        {
+          "soopId": "viichan6",
+          "name": "비챤",
+          "score": 42.98969072164949,
+          "predictedRank": 57
+        },
+        {
+          "soopId": "kymakyma",
+          "name": "키마",
+          "score": 41.03092783505155,
+          "predictedRank": 58
+        },
+        {
+          "soopId": "nmangoquince",
+          "name": "망구랑",
+          "score": 38.96907216494846,
+          "predictedRank": 59
+        },
+        {
+          "soopId": "m0m099",
+          "name": "과즙세연",
+          "score": 38.81443298969072,
+          "predictedRank": 60
+        },
+        {
+          "soopId": "yjkim5500",
+          "name": "조디악악악",
+          "score": 37.422680412371136,
+          "predictedRank": 61
+        },
+        {
+          "soopId": "since821",
+          "name": "♥심장",
+          "score": 37.11340206185567,
+          "predictedRank": 62
+        },
+        {
+          "soopId": "suyeun0312",
+          "name": "수이,",
+          "score": 36.49484536082474,
+          "predictedRank": 63
+        },
+        {
+          "soopId": "mingyeolhee",
+          "name": "민결희",
+          "score": 35.87628865979382,
+          "predictedRank": 64
+        },
+        {
+          "soopId": "dearhal",
+          "name": "심청이_",
+          "score": 35.36082474226804,
+          "predictedRank": 65
+        },
+        {
+          "soopId": "janjju",
+          "name": "박가린님[♥]",
+          "score": 33.71134020618557,
+          "predictedRank": 66
+        },
+        {
+          "soopId": "dnwnwjdqhr53",
+          "name": "설레랑",
+          "score": 33.19587628865979,
+          "predictedRank": 67
+        },
+        {
+          "soopId": "yangdoki",
+          "name": "양도끼",
+          "score": 32.680412371134025,
+          "predictedRank": 68
+        },
+        {
+          "soopId": "rud9281",
+          "name": "한갱",
+          "score": 32.68041237113402,
+          "predictedRank": 69
+        },
+        {
+          "soopId": "juju0228",
+          "name": "미오탱ㅋㅋ",
+          "score": 32.577319587628864,
+          "predictedRank": 70
+        }
+      ]
+    },
+    "percentile": {
+      "label": "백분위",
+      "cutoff": "미오탱ㅋㅋ",
+      "score": 32.577319587628864,
+      "gap": 0.20618556701030144,
+      "top70": [
+        {
+          "soopId": "khm11903",
+          "name": "봉준",
+          "score": 98.8659793814433,
+          "predictedRank": 1
+        },
+        {
+          "soopId": "phonics1",
+          "name": "김민교.",
+          "score": 97.31958762886597,
+          "predictedRank": 2
+        },
+        {
+          "soopId": "devil0108",
+          "name": "감스트",
+          "score": 95.56701030927836,
+          "predictedRank": 3
+        },
+        {
+          "soopId": "y1026",
+          "name": "철구형2↑",
+          "score": 95.05154639175257,
+          "predictedRank": 4
+        },
+        {
+          "soopId": "rrvv17",
+          "name": "항상#킴성태",
+          "score": 94.63917525773196,
+          "predictedRank": 5
+        },
+        {
+          "soopId": "yuambo",
+          "name": "A-염보성!!",
+          "score": 94.02061855670104,
+          "predictedRank": 6
+        },
+        {
+          "soopId": "lshooooo",
+          "name": "이상호",
+          "score": 93.09278350515466,
+          "predictedRank": 7
+        },
+        {
+          "soopId": "wnnw",
+          "name": "남순",
+          "score": 89.07216494845362,
+          "predictedRank": 8
+        },
+        {
+          "soopId": "galsa",
+          "name": "두치와뿌꾸",
+          "score": 88.96907216494846,
+          "predictedRank": 9
+        },
+        {
+          "soopId": "jrdart",
+          "name": "이지상:)",
+          "score": 88.55670103092784,
+          "predictedRank": 10
+        },
+        {
+          "soopId": "b13246",
+          "name": "타요~",
+          "score": 87.31958762886599,
+          "predictedRank": 11
+        },
+        {
+          "soopId": "joey1114",
+          "name": "저라뎃",
+          "score": 86.59793814432992,
+          "predictedRank": 12
+        },
+        {
+          "soopId": "superbsw123",
+          "name": "s시조새s",
+          "score": 86.18556701030928,
+          "predictedRank": 13
+        },
+        {
+          "soopId": "tjrdbs999",
+          "name": "지피티",
+          "score": 85.6701030927835,
+          "predictedRank": 14
+        },
+        {
+          "soopId": "brainzerg7",
+          "name": "Calm_김윤환",
+          "score": 81.75257731958762,
+          "predictedRank": 15
+        },
+        {
+          "soopId": "ecvhao",
+          "name": "우왁굳",
+          "score": 81.34020618556701,
+          "predictedRank": 16
+        },
+        {
+          "soopId": "legendhyuk",
+          "name": "오아",
+          "score": 80.51546391752578,
+          "predictedRank": 17
+        },
+        {
+          "soopId": "lovely5959",
+          "name": "수피",
+          "score": 80.4123711340206,
+          "predictedRank": 18
+        },
+        {
+          "soopId": "dlghfjs",
+          "name": "깨박이깨박이",
+          "score": 79.69072164948453,
+          "predictedRank": 19
+        },
+        {
+          "soopId": "iamquaddurup",
+          "name": "장지수",
+          "score": 77.93814432989691,
+          "predictedRank": 20
+        },
+        {
+          "soopId": "zpdl1313",
+          "name": "[BJ]케이",
+          "score": 77.42268041237114,
+          "predictedRank": 21
+        },
+        {
+          "soopId": "kiss281004",
+          "name": "피넛ㅁ",
+          "score": 76.49484536082474,
+          "predictedRank": 22
+        },
+        {
+          "soopId": "cnsgkcnehd74",
+          "name": "Alo.조경훈",
+          "score": 75.56701030927834,
+          "predictedRank": 23
+        },
+        {
+          "soopId": "ititit",
+          "name": "정중만",
+          "score": 74.94845360824743,
+          "predictedRank": 24
+        },
+        {
+          "soopId": "roket0829",
+          "name": "[JS]박퍼니",
+          "score": 74.32989690721651,
+          "predictedRank": 25
+        },
+        {
+          "soopId": "vlfvlf789",
+          "name": "빵훈이",
+          "score": 73.29896907216495,
+          "predictedRank": 26
+        },
+        {
+          "soopId": "sccha21",
+          "name": "팡이요",
+          "score": 71.34020618556701,
+          "predictedRank": 27
+        },
+        {
+          "soopId": "ch1716",
+          "name": "최군형",
+          "score": 71.34020618556701,
+          "predictedRank": 28
+        },
+        {
+          "soopId": "rkdakstlr911",
+          "name": "강만식",
+          "score": 71.1340206185567,
+          "predictedRank": 29
+        },
+        {
+          "soopId": "gosegu2",
+          "name": "고세구!",
+          "score": 68.76288659793813,
+          "predictedRank": 30
+        },
+        {
+          "soopId": "arinbbidol",
+          "name": "기뉴다",
+          "score": 68.55670103092784,
+          "predictedRank": 31
+        },
+        {
+          "soopId": "qn308dud",
+          "name": "한둬얼",
+          "score": 66.70103092783505,
+          "predictedRank": 32
+        },
+        {
+          "soopId": "dlsn9911",
+          "name": "제갈금자",
+          "score": 66.28865979381443,
+          "predictedRank": 33
+        },
+        {
+          "soopId": "hwt1014",
+          "name": "황원태",
+          "score": 65.4639175257732,
+          "predictedRank": 34
+        },
+        {
+          "soopId": "pyh3646",
+          "name": "박진우[JINU]",
+          "score": 64.84536082474226,
+          "predictedRank": 35
+        },
+        {
+          "soopId": "1004suna",
+          "name": "임아니",
+          "score": 63.55670103092785,
+          "predictedRank": 36
+        },
+        {
+          "soopId": "xoals137",
+          "name": "클리드1",
+          "score": 62.78350515463918,
+          "predictedRank": 37
+        },
+        {
+          "soopId": "rlatldgus",
+          "name": "오메킴승현2",
+          "score": 59.48453608247423,
+          "predictedRank": 38
+        },
+        {
+          "soopId": "nangnan",
+          "name": "깐숙",
+          "score": 57.21649484536083,
+          "predictedRank": 39
+        },
+        {
+          "soopId": "tntntn13",
+          "name": "안녕수야",
+          "score": 56.49484536082475,
+          "predictedRank": 40
+        },
+        {
+          "soopId": "243000",
+          "name": "천양",
+          "score": 55.36082474226804,
+          "predictedRank": 41
+        },
+        {
+          "soopId": "wnstn0905",
+          "name": "(주)박사장$",
+          "score": 55.36082474226804,
+          "predictedRank": 42
+        },
+        {
+          "soopId": "townboy",
+          "name": "스맵임",
+          "score": 53.29896907216495,
+          "predictedRank": 43
+        },
+        {
+          "soopId": "eunyoung1238",
+          "name": "그릴래영",
+          "score": 51.85567010309279,
+          "predictedRank": 44
+        },
+        {
+          "soopId": "jk890202",
+          "name": "JuM.윤중2",
+          "score": 51.64948453608248,
+          "predictedRank": 45
+        },
+        {
+          "soopId": "freshtomato",
+          "name": "Fresh토마토",
+          "score": 51.34020618556701,
+          "predictedRank": 46
+        },
+        {
+          "soopId": "lilpa0309",
+          "name": "릴파♬",
+          "score": 51.23711340206186,
+          "predictedRank": 47
+        },
+        {
+          "soopId": "ioioiobb",
+          "name": "정윤종..",
+          "score": 50.41237113402062,
+          "predictedRank": 48
+        },
+        {
+          "soopId": "sdkels",
+          "name": "강덕구",
+          "score": 48.04123711340206,
+          "predictedRank": 49
+        },
+        {
+          "soopId": "pookygamja",
+          "name": "김인호",
+          "score": 47.11340206185567,
+          "predictedRank": 50
+        },
+        {
+          "soopId": "kimdoenmo",
+          "name": "김된모!",
+          "score": 45.670103092783506,
+          "predictedRank": 51
+        },
+        {
+          "soopId": "aksen7833",
+          "name": "꾸티뉴",
+          "score": 45.25773195876289,
+          "predictedRank": 52
+        },
+        {
+          "soopId": "smmms2002",
+          "name": "러아♡",
+          "score": 44.948453608247426,
+          "predictedRank": 53
+        },
+        {
+          "soopId": "lhtlgm",
+          "name": "홍타쿠!",
+          "score": 44.12371134020619,
+          "predictedRank": 54
+        },
+        {
+          "soopId": "mygomiee",
+          "name": "마이곰이",
+          "score": 43.50515463917526,
+          "predictedRank": 55
+        },
+        {
+          "soopId": "vf3366",
+          "name": "클로이",
+          "score": 43.09278350515464,
+          "predictedRank": 56
+        },
+        {
+          "soopId": "viichan6",
+          "name": "비챤",
+          "score": 42.98969072164949,
+          "predictedRank": 57
+        },
+        {
+          "soopId": "kymakyma",
+          "name": "키마",
+          "score": 41.03092783505155,
+          "predictedRank": 58
+        },
+        {
+          "soopId": "nmangoquince",
+          "name": "망구랑",
+          "score": 38.96907216494846,
+          "predictedRank": 59
+        },
+        {
+          "soopId": "m0m099",
+          "name": "과즙세연",
+          "score": 38.81443298969072,
+          "predictedRank": 60
+        },
+        {
+          "soopId": "yjkim5500",
+          "name": "조디악악악",
+          "score": 37.422680412371136,
+          "predictedRank": 61
+        },
+        {
+          "soopId": "since821",
+          "name": "♥심장",
+          "score": 37.11340206185567,
+          "predictedRank": 62
+        },
+        {
+          "soopId": "suyeun0312",
+          "name": "수이,",
+          "score": 36.49484536082474,
+          "predictedRank": 63
+        },
+        {
+          "soopId": "mingyeolhee",
+          "name": "민결희",
+          "score": 35.87628865979382,
+          "predictedRank": 64
+        },
+        {
+          "soopId": "dearhal",
+          "name": "심청이_",
+          "score": 35.36082474226804,
+          "predictedRank": 65
+        },
+        {
+          "soopId": "janjju",
+          "name": "박가린님[♥]",
+          "score": 33.71134020618557,
+          "predictedRank": 66
+        },
+        {
+          "soopId": "dnwnwjdqhr53",
+          "name": "설레랑",
+          "score": 33.19587628865979,
+          "predictedRank": 67
+        },
+        {
+          "soopId": "yangdoki",
+          "name": "양도끼",
+          "score": 32.680412371134025,
+          "predictedRank": 68
+        },
+        {
+          "soopId": "rud9281",
+          "name": "한갱",
+          "score": 32.68041237113402,
+          "predictedRank": 69
+        },
+        {
+          "soopId": "juju0228",
+          "name": "미오탱ㅋㅋ",
+          "score": 32.577319587628864,
+          "predictedRank": 70
+        }
+      ]
+    },
+    "ratio": {
+      "label": "1위 대비",
+      "cutoff": "해리",
+      "score": 6.605644558333463,
+      "gap": 0.1614685543634593,
+      "top70": [
+        {
+          "soopId": "khm11903",
+          "name": "봉준",
+          "score": 90.61704375838775,
+          "predictedRank": 1
+        },
+        {
+          "soopId": "phonics1",
+          "name": "김민교.",
+          "score": 78.53235618713884,
+          "predictedRank": 2
+        },
+        {
+          "soopId": "lshooooo",
+          "name": "이상호",
+          "score": 54.66564851937666,
+          "predictedRank": 3
+        },
+        {
+          "soopId": "devil0108",
+          "name": "감스트",
+          "score": 42.28555003922337,
+          "predictedRank": 4
+        },
+        {
+          "soopId": "rrvv17",
+          "name": "항상#킴성태",
+          "score": 37.79386376189829,
+          "predictedRank": 5
+        },
+        {
+          "soopId": "y1026",
+          "name": "철구형2↑",
+          "score": 33.1749538531749,
+          "predictedRank": 6
+        },
+        {
+          "soopId": "yuambo",
+          "name": "A-염보성!!",
+          "score": 29.651797296345716,
+          "predictedRank": 7
+        },
+        {
+          "soopId": "galsa",
+          "name": "두치와뿌꾸",
+          "score": 27.232415186934087,
+          "predictedRank": 8
+        },
+        {
+          "soopId": "zpdl1313",
+          "name": "[BJ]케이",
+          "score": 23.4902555775312,
+          "predictedRank": 9
+        },
+        {
+          "soopId": "wnnw",
+          "name": "남순",
+          "score": 23.017078167149705,
+          "predictedRank": 10
+        },
+        {
+          "soopId": "joey1114",
+          "name": "저라뎃",
+          "score": 21.68938799579189,
+          "predictedRank": 11
+        },
+        {
+          "soopId": "superbsw123",
+          "name": "s시조새s",
+          "score": 21.497597125041402,
+          "predictedRank": 12
+        },
+        {
+          "soopId": "b13246",
+          "name": "타요~",
+          "score": 21.212053675279424,
+          "predictedRank": 13
+        },
+        {
+          "soopId": "jrdart",
+          "name": "이지상:)",
+          "score": 20.77955776106651,
+          "predictedRank": 14
+        },
+        {
+          "soopId": "roket0829",
+          "name": "[JS]박퍼니",
+          "score": 19.852429121981825,
+          "predictedRank": 15
+        },
+        {
+          "soopId": "tjrdbs999",
+          "name": "지피티",
+          "score": 18.92482885668318,
+          "predictedRank": 16
+        },
+        {
+          "soopId": "brainzerg7",
+          "name": "Calm_김윤환",
+          "score": 16.58922583393956,
+          "predictedRank": 17
+        },
+        {
+          "soopId": "legendhyuk",
+          "name": "오아",
+          "score": 15.755995579460343,
+          "predictedRank": 18
+        },
+        {
+          "soopId": "lovely5959",
+          "name": "수피",
+          "score": 15.65107431433968,
+          "predictedRank": 19
+        },
+        {
+          "soopId": "ecvhao",
+          "name": "우왁굳",
+          "score": 15.589307453907578,
+          "predictedRank": 20
+        },
+        {
+          "soopId": "iamquaddurup",
+          "name": "장지수",
+          "score": 15.527512551036187,
+          "predictedRank": 21
+        },
+        {
+          "soopId": "dlghfjs",
+          "name": "깨박이깨박이",
+          "score": 15.47003847824805,
+          "predictedRank": 22
+        },
+        {
+          "soopId": "kiss281004",
+          "name": "피넛ㅁ",
+          "score": 15.402939036348469,
+          "predictedRank": 23
+        },
+        {
+          "soopId": "ititit",
+          "name": "정중만",
+          "score": 15.142485776319822,
+          "predictedRank": 24
+        },
+        {
+          "soopId": "ch1716",
+          "name": "최군형",
+          "score": 14.79111677432057,
+          "predictedRank": 25
+        },
+        {
+          "soopId": "cnsgkcnehd74",
+          "name": "Alo.조경훈",
+          "score": 13.965452299513277,
+          "predictedRank": 26
+        },
+        {
+          "soopId": "rkdakstlr911",
+          "name": "강만식",
+          "score": 13.66153180053301,
+          "predictedRank": 27
+        },
+        {
+          "soopId": "sccha21",
+          "name": "팡이요",
+          "score": 13.657572635616967,
+          "predictedRank": 28
+        },
+        {
+          "soopId": "pyh3646",
+          "name": "박진우[JINU]",
+          "score": 13.570876306339729,
+          "predictedRank": 29
+        },
+        {
+          "soopId": "vlfvlf789",
+          "name": "빵훈이",
+          "score": 13.455879594484838,
+          "predictedRank": 30
+        },
+        {
+          "soopId": "gosegu2",
+          "name": "고세구!",
+          "score": 13.164512192781514,
+          "predictedRank": 31
+        },
+        {
+          "soopId": "arinbbidol",
+          "name": "기뉴다",
+          "score": 13.023097984713628,
+          "predictedRank": 32
+        },
+        {
+          "soopId": "qn308dud",
+          "name": "한둬얼",
+          "score": 12.907704176830403,
+          "predictedRank": 33
+        },
+        {
+          "soopId": "xoals137",
+          "name": "클리드1",
+          "score": 12.5338772527577,
+          "predictedRank": 34
+        },
+        {
+          "soopId": "hwt1014",
+          "name": "황원태",
+          "score": 12.048506095738842,
+          "predictedRank": 35
+        },
+        {
+          "soopId": "1004suna",
+          "name": "임아니",
+          "score": 11.968070766081896,
+          "predictedRank": 36
+        },
+        {
+          "soopId": "dlsn9911",
+          "name": "제갈금자",
+          "score": 11.702792018040173,
+          "predictedRank": 37
+        },
+        {
+          "soopId": "pookygamja",
+          "name": "김인호",
+          "score": 11.158349837745918,
+          "predictedRank": 38
+        },
+        {
+          "soopId": "rlatldgus",
+          "name": "오메킴승현2",
+          "score": 10.556790347011361,
+          "predictedRank": 39
+        },
+        {
+          "soopId": "tntntn13",
+          "name": "안녕수야",
+          "score": 9.83937330995915,
+          "predictedRank": 40
+        },
+        {
+          "soopId": "243000",
+          "name": "천양",
+          "score": 9.825961172240186,
+          "predictedRank": 41
+        },
+        {
+          "soopId": "wnstn0905",
+          "name": "(주)박사장$",
+          "score": 9.785262230838525,
+          "predictedRank": 42
+        },
+        {
+          "soopId": "nangnan",
+          "name": "깐숙",
+          "score": 9.61738575465272,
+          "predictedRank": 43
+        },
+        {
+          "soopId": "townboy",
+          "name": "스맵임",
+          "score": 9.552422704707235,
+          "predictedRank": 44
+        },
+        {
+          "soopId": "janjju",
+          "name": "박가린님[♥]",
+          "score": 9.201075792492556,
+          "predictedRank": 45
+        },
+        {
+          "soopId": "ioioiobb",
+          "name": "정윤종..",
+          "score": 8.824522381200307,
+          "predictedRank": 46
+        },
+        {
+          "soopId": "lilpa0309",
+          "name": "릴파♬",
+          "score": 8.661958017068702,
+          "predictedRank": 47
+        },
+        {
+          "soopId": "kimdoenmo",
+          "name": "김된모!",
+          "score": 8.442059178717118,
+          "predictedRank": 48
+        },
+        {
+          "soopId": "eunyoung1238",
+          "name": "그릴래영",
+          "score": 8.190919585589372,
+          "predictedRank": 49
+        },
+        {
+          "soopId": "jk890202",
+          "name": "JuM.윤중2",
+          "score": 8.132766556207077,
+          "predictedRank": 50
+        },
+        {
+          "soopId": "freshtomato",
+          "name": "Fresh토마토",
+          "score": 7.919811757035133,
+          "predictedRank": 51
+        },
+        {
+          "soopId": "sdkels",
+          "name": "강덕구",
+          "score": 7.728282650992339,
+          "predictedRank": 52
+        },
+        {
+          "soopId": "juju0228",
+          "name": "미오탱ㅋㅋ",
+          "score": 7.626600149677515,
+          "predictedRank": 53
+        },
+        {
+          "soopId": "lhtlgm",
+          "name": "홍타쿠!",
+          "score": 7.5662272835034035,
+          "predictedRank": 54
+        },
+        {
+          "soopId": "mygomiee",
+          "name": "마이곰이",
+          "score": 7.543090787686502,
+          "predictedRank": 55
+        },
+        {
+          "soopId": "aksen7833",
+          "name": "꾸티뉴",
+          "score": 7.51084998890585,
+          "predictedRank": 56
+        },
+        {
+          "soopId": "viichan6",
+          "name": "비챤",
+          "score": 7.313092073759703,
+          "predictedRank": 57
+        },
+        {
+          "soopId": "smmms2002",
+          "name": "러아♡",
+          "score": 7.284907622592556,
+          "predictedRank": 58
+        },
+        {
+          "soopId": "vf3366",
+          "name": "클로이",
+          "score": 7.1653969958992,
+          "predictedRank": 59
+        },
+        {
+          "soopId": "m0m099",
+          "name": "과즙세연",
+          "score": 7.081317821806452,
+          "predictedRank": 60
+        },
+        {
+          "soopId": "nmangoquince",
+          "name": "망구랑",
+          "score": 7.0721090018486406,
+          "predictedRank": 61
+        },
+        {
+          "soopId": "kymakyma",
+          "name": "키마",
+          "score": 7.0475688328887065,
+          "predictedRank": 62
+        },
+        {
+          "soopId": "yjkim5500",
+          "name": "조디악악악",
+          "score": 6.991932522690315,
+          "predictedRank": 63
+        },
+        {
+          "soopId": "suyeun0312",
+          "name": "수이,",
+          "score": 6.835884642276328,
+          "predictedRank": 64
+        },
+        {
+          "soopId": "mingyeolhee",
+          "name": "민결희",
+          "score": 6.791699593649367,
+          "predictedRank": 65
+        },
+        {
+          "soopId": "rud9281",
+          "name": "한갱",
+          "score": 6.6802567035977205,
+          "predictedRank": 66
+        },
+        {
+          "soopId": "dnwnwjdqhr53",
+          "name": "설레랑",
+          "score": 6.642911412585383,
+          "predictedRank": 67
+        },
+        {
+          "soopId": "since821",
+          "name": "♥심장",
+          "score": 6.637372521995938,
+          "predictedRank": 68
+        },
+        {
+          "soopId": "he0901",
+          "name": "해기_",
+          "score": 6.60812560993533,
+          "predictedRank": 69
+        },
+        {
+          "soopId": "gofl2237",
+          "name": "해리",
+          "score": 6.605644558333463,
+          "predictedRank": 70
+        }
+      ]
+    },
+    "minmax": {
+      "label": "Min-Max",
+      "cutoff": "해리",
+      "score": 2.53626494529817,
+      "gap": 0.150214497403236,
+      "top70": [
+        {
+          "soopId": "khm11903",
+          "name": "봉준",
+          "score": 90.61546948095888,
+          "predictedRank": 1
+        },
+        {
+          "soopId": "phonics1",
+          "name": "김민교.",
+          "score": 78.17313164962688,
+          "predictedRank": 2
+        },
+        {
+          "soopId": "lshooooo",
+          "name": "이상호",
+          "score": 53.05465483688632,
+          "predictedRank": 3
+        },
+        {
+          "soopId": "devil0108",
+          "name": "감스트",
+          "score": 40.01280125411172,
+          "predictedRank": 4
+        },
+        {
+          "soopId": "rrvv17",
+          "name": "항상#킴성태",
+          "score": 35.28065852624733,
+          "predictedRank": 5
+        },
+        {
+          "soopId": "y1026",
+          "name": "철구형2↑",
+          "score": 30.092473252298923,
+          "predictedRank": 6
+        },
+        {
+          "soopId": "yuambo",
+          "name": "A-염보성!!",
+          "score": 26.561420555422707,
+          "predictedRank": 7
+        },
+        {
+          "soopId": "galsa",
+          "name": "두치와뿌꾸",
+          "score": 24.146207596342002,
+          "predictedRank": 8
+        },
+        {
+          "soopId": "zpdl1313",
+          "name": "[BJ]케이",
+          "score": 19.775789872707236,
+          "predictedRank": 9
+        },
+        {
+          "soopId": "wnnw",
+          "name": "남순",
+          "score": 19.62561745907624,
+          "predictedRank": 10
+        },
+        {
+          "soopId": "joey1114",
+          "name": "저라뎃",
+          "score": 18.3917723307049,
+          "predictedRank": 11
+        },
+        {
+          "soopId": "superbsw123",
+          "name": "s시조새s",
+          "score": 18.081239143918364,
+          "predictedRank": 12
+        },
+        {
+          "soopId": "b13246",
+          "name": "타요~",
+          "score": 17.88512807587488,
+          "predictedRank": 13
+        },
+        {
+          "soopId": "jrdart",
+          "name": "이지상:)",
+          "score": 17.420182025574135,
+          "predictedRank": 14
+        },
+        {
+          "soopId": "roket0829",
+          "name": "[JS]박퍼니",
+          "score": 16.12968416332868,
+          "predictedRank": 15
+        },
+        {
+          "soopId": "tjrdbs999",
+          "name": "지피티",
+          "score": 15.468962678718142,
+          "predictedRank": 16
+        },
+        {
+          "soopId": "brainzerg7",
+          "name": "Calm_김윤환",
+          "score": 13.042214605864764,
+          "predictedRank": 17
+        },
+        {
+          "soopId": "legendhyuk",
+          "name": "오아",
+          "score": 12.162951431993955,
+          "predictedRank": 18
+        },
+        {
+          "soopId": "lovely5959",
+          "name": "수피",
+          "score": 12.041415195939619,
+          "predictedRank": 19
+        },
+        {
+          "soopId": "ecvhao",
+          "name": "우왁굳",
+          "score": 11.979532909296102,
+          "predictedRank": 20
+        },
+        {
+          "soopId": "iamquaddurup",
+          "name": "장지수",
+          "score": 11.897761233724882,
+          "predictedRank": 21
+        },
+        {
+          "soopId": "dlghfjs",
+          "name": "깨박이깨박이",
+          "score": 11.841685569572235,
+          "predictedRank": 22
+        },
+        {
+          "soopId": "kiss281004",
+          "name": "피넛ㅁ",
+          "score": 11.783044983355976,
+          "predictedRank": 23
+        },
+        {
+          "soopId": "ititit",
+          "name": "정중만",
+          "score": 11.529047510777716,
+          "predictedRank": 24
+        },
+        {
+          "soopId": "ch1716",
+          "name": "최군형",
+          "score": 11.050530425031925,
+          "predictedRank": 25
+        },
+        {
+          "soopId": "cnsgkcnehd74",
+          "name": "Alo.조경훈",
+          "score": 10.274546777933327,
+          "predictedRank": 26
+        },
+        {
+          "soopId": "sccha21",
+          "name": "팡이요",
+          "score": 9.949708535909899,
+          "predictedRank": 27
+        },
+        {
+          "soopId": "rkdakstlr911",
+          "name": "강만식",
+          "score": 9.941828046281726,
+          "predictedRank": 28
+        },
+        {
+          "soopId": "vlfvlf789",
+          "name": "빵훈이",
+          "score": 9.746110546221928,
+          "predictedRank": 29
+        },
+        {
+          "soopId": "pyh3646",
+          "name": "박진우[JINU]",
+          "score": 9.697889921561414,
+          "predictedRank": 30
+        },
+        {
+          "soopId": "gosegu2",
+          "name": "고세구!",
+          "score": 9.440072846578472,
+          "predictedRank": 31
+        },
+        {
+          "soopId": "arinbbidol",
+          "name": "기뉴다",
+          "score": 9.290588997781402,
+          "predictedRank": 32
+        },
+        {
+          "soopId": "qn308dud",
+          "name": "한둬얼",
+          "score": 9.121296842281275,
+          "predictedRank": 33
+        },
+        {
+          "soopId": "xoals137",
+          "name": "클리드1",
+          "score": 8.777023356800761,
+          "predictedRank": 34
+        },
+        {
+          "soopId": "hwt1014",
+          "name": "황원태",
+          "score": 8.254481722650306,
+          "predictedRank": 35
+        },
+        {
+          "soopId": "1004suna",
+          "name": "임아니",
+          "score": 8.186012303128223,
+          "predictedRank": 36
+        },
+        {
+          "soopId": "dlsn9911",
+          "name": "제갈금자",
+          "score": 7.875489726635295,
+          "predictedRank": 37
+        },
+        {
+          "soopId": "pookygamja",
+          "name": "김인호",
+          "score": 7.114057585237983,
+          "predictedRank": 38
+        },
+        {
+          "soopId": "rlatldgus",
+          "name": "오메킴승현2",
+          "score": 6.684574310551845,
+          "predictedRank": 39
+        },
+        {
+          "soopId": "tntntn13",
+          "name": "안녕수야",
+          "score": 5.943876406352135,
+          "predictedRank": 40
+        },
+        {
+          "soopId": "243000",
+          "name": "천양",
+          "score": 5.937796431989478,
+          "predictedRank": 41
+        },
+        {
+          "soopId": "wnstn0905",
+          "name": "(주)박사장$",
+          "score": 5.890033439088845,
+          "predictedRank": 42
+        },
+        {
+          "soopId": "nangnan",
+          "name": "깐숙",
+          "score": 5.703290739114496,
+          "predictedRank": 43
+        },
+        {
+          "soopId": "townboy",
+          "name": "스맵임",
+          "score": 5.656086767213349,
+          "predictedRank": 44
+        },
+        {
+          "soopId": "janjju",
+          "name": "박가린님[♥]",
+          "score": 5.130840416593333,
+          "predictedRank": 45
+        },
+        {
+          "soopId": "ioioiobb",
+          "name": "정윤종..",
+          "score": 4.861353575316798,
+          "predictedRank": 46
+        },
+        {
+          "soopId": "lilpa0309",
+          "name": "릴파♬",
+          "score": 4.709604518253675,
+          "predictedRank": 47
+        },
+        {
+          "soopId": "kimdoenmo",
+          "name": "김된모!",
+          "score": 4.495884587394829,
+          "predictedRank": 48
+        },
+        {
+          "soopId": "eunyoung1238",
+          "name": "그릴래영",
+          "score": 4.21924443419627,
+          "predictedRank": 49
+        },
+        {
+          "soopId": "jk890202",
+          "name": "JuM.윤중2",
+          "score": 4.1485978408045305,
+          "predictedRank": 50
+        },
+        {
+          "soopId": "freshtomato",
+          "name": "Fresh토마토",
+          "score": 3.922701457908362,
+          "predictedRank": 51
+        },
+        {
+          "soopId": "sdkels",
+          "name": "강덕구",
+          "score": 3.722354388120454,
+          "predictedRank": 52
+        },
+        {
+          "soopId": "juju0228",
+          "name": "미오탱ㅋㅋ",
+          "score": 3.542439858977019,
+          "predictedRank": 53
+        },
+        {
+          "soopId": "lhtlgm",
+          "name": "홍타쿠!",
+          "score": 3.536764013755649,
+          "predictedRank": 54
+        },
+        {
+          "soopId": "mygomiee",
+          "name": "마이곰이",
+          "score": 3.5176573367188024,
+          "predictedRank": 55
+        },
+        {
+          "soopId": "aksen7833",
+          "name": "꾸티뉴",
+          "score": 3.497894516490779,
+          "predictedRank": 56
+        },
+        {
+          "soopId": "viichan6",
+          "name": "비챤",
+          "score": 3.299744567881857,
+          "predictedRank": 57
+        },
+        {
+          "soopId": "smmms2002",
+          "name": "러아♡",
+          "score": 3.2638405976070177,
+          "predictedRank": 58
+        },
+        {
+          "soopId": "vf3366",
+          "name": "클로이",
+          "score": 3.1240584932883264,
+          "predictedRank": 59
+        },
+        {
+          "soopId": "m0m099",
+          "name": "과즙세연",
+          "score": 3.022522150718689,
+          "predictedRank": 60
+        },
+        {
+          "soopId": "nmangoquince",
+          "name": "망구랑",
+          "score": 3.015288988136734,
+          "predictedRank": 61
+        },
+        {
+          "soopId": "kymakyma",
+          "name": "키마",
+          "score": 2.9939252953640687,
+          "predictedRank": 62
+        },
+        {
+          "soopId": "yjkim5500",
+          "name": "조디악악악",
+          "score": 2.9651583354643596,
+          "predictedRank": 63
+        },
+        {
+          "soopId": "suyeun0312",
+          "name": "수이,",
+          "score": 2.794982538038637,
+          "predictedRank": 64
+        },
+        {
+          "soopId": "mingyeolhee",
+          "name": "민결희",
+          "score": 2.739805132577518,
+          "predictedRank": 65
+        },
+        {
+          "soopId": "since821",
+          "name": "♥심장",
+          "score": 2.6148817604910604,
+          "predictedRank": 66
+        },
+        {
+          "soopId": "rud9281",
+          "name": "한갱",
+          "score": 2.60467190874279,
+          "predictedRank": 67
+        },
+        {
+          "soopId": "dnwnwjdqhr53",
+          "name": "설레랑",
+          "score": 2.583377835250219,
+          "predictedRank": 68
+        },
+        {
+          "soopId": "he0901",
+          "name": "해기_",
+          "score": 2.545060128100241,
+          "predictedRank": 69
+        },
+        {
+          "soopId": "gofl2237",
+          "name": "해리",
+          "score": 2.53626494529817,
+          "predictedRank": 70
+        }
+      ]
+    }
+  }
+}

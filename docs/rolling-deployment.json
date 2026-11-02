@@ -1,0 +1,39 @@
+{
+  "deployedAt": "2026-10-01T19:52:27.063275+00:00",
+  "backup": "/var/backups/soop-ranking/rolling-20261001T195143Z",
+  "serverFiles": [
+    "assets/dynamic-target.js",
+    "assets/rolling-target.js",
+    "scripts/growth_guard.py",
+    "scripts/rolling_inputs.py",
+    "scripts/dynamic_collect.py",
+    "scripts/dynamic-report.js",
+    "scripts/collect.py"
+  ],
+  "publicFiles": [
+    "assets/dynamic-target.js",
+    "assets/rolling-target.js",
+    "assets/simulation-ui.js",
+    "index.html"
+  ],
+  "protectedHashes": {
+    "/etc/cron.d/soop-ranking": "256e0eccab4d22c4b4cea784254d7451aba095536136ea66c6c2c23e7fa10a02",
+    "/etc/nginx/sites-available/taehyeon-masu.xyz": "20591483f4ec10fa7d152031c6790063ef8ba759c5646a9a200caaee922071b3",
+    "/opt/soop-ranking/data/excluded-streamers.json": "914df482df05a7059778db2f17f5e7a8dd98b750adf76fa29fc9550f59f277bf",
+    "/opt/soop-ranking/scripts/source_corrections.py": "861112dd7c40e50c6bf00a5df1f6909edb057c4d2514214553588f3253d2b2fa",
+    "/var/www/singdboo-site/public/ranking.html": "e096e8c4f7cbd4569f579b55bfa3043a9cb003a2e29e609078f69911bd872746",
+    "/var/www/singdboo-site/public/assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e",
+    "/var/www/singdboo-site/public/assets/ranking-ui.js": "c6d522b29fba3f87ecd189ac837761c8ff50ab33eade1a5103485f8c7d6543c9",
+    "/var/www/singdboo-site/public/assets/simulation.js": "eee3096997ac3dd25a0a8adfa96d28fd13b8c8a43c3fb49f654598cee7970db6",
+    "/var/www/singdboo-site/public/assets/live-target.js": "58f404a662bda64b3e4cacf162d4ceb930823dc6770dbdd263725a70eb61a1e1",
+    "/var/www/singdboo-site/public/assets/simulation-config.js": "b2decd9c39e46e842aa3430c677090c1bd84dc17372eb8f7108c46bf5a1aa85f",
+    "/opt/soop-ranking/assets/simulation.js": "eee3096997ac3dd25a0a8adfa96d28fd13b8c8a43c3fb49f654598cee7970db6",
+    "/opt/soop-ranking/assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e"
+  },
+  "baselinePreserved": true,
+  "candidateStatusPreserved": true,
+  "snapshotBeforeSha256": "59704e15e45fed61805e81d99206f8606839d61374800cc06a90502e3d5df18a",
+  "snapshotAfterSha256": "9be2fb17f15a160ea88633eb0168b14c32d5a62716cb79f9c8f7366c09e9eecb",
+  "collectReturnCode": 0,
+  "safe": 2667964
+}

@@ -1,0 +1,48 @@
+{
+  "status": "deployed",
+  "at": "2026-10-01T09:09:51.439353+00:00",
+  "backup": "/var/backups/soop-ranking/dynamic-support-20261001T090949Z",
+  "rankingUnchanged": {
+    "ranking.html": "e096e8c4f7cbd4569f579b55bfa3043a9cb003a2e29e609078f69911bd872746",
+    "assets/ranking.js": "8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e",
+    "assets/ranking-ui.js": "c6d522b29fba3f87ecd189ac837761c8ff50ab33eade1a5103485f8c7d6543c9",
+    "assets/ranking.css": "532e3f69b2200401091045290c4ae6a5e9f36691ffc4224158521a34eeb84e2d"
+  },
+  "baselinePreserved": true,
+  "forecastPreserved": true,
+  "schedule": "hourly :15 UTC; final observation Nov 30 14:58 UTC",
+  "files": [
+    "/var/www/singdboo-site/public/assets/dynamic-target.js",
+    "/var/www/singdboo-site/public/assets/simulation-ui.js",
+    "/var/www/singdboo-site/public/assets/simulation.css",
+    "/opt/soop-ranking/scripts/collect.py",
+    "/opt/soop-ranking/scripts/dynamic_collect.py",
+    "/opt/soop-ranking/scripts/dynamic-report.js",
+    "/opt/soop-ranking/services/trackify.py",
+    "/opt/soop-ranking/package.json",
+    "/opt/soop-ranking/assets/dynamic-target.js",
+    "/opt/soop-ranking/assets/live-target.js",
+    "/opt/soop-ranking/assets/simulation.js",
+    "/opt/soop-ranking/assets/simulation-config.js",
+    "/opt/soop-ranking/assets/ranking.js",
+    "/opt/soop-ranking/runtime/node",
+    "/etc/cron.d/soop-ranking",
+    "/var/www/singdboo-site/public/assets/data/ranking.json",
+    "/var/www/singdboo-site/public/index.html"
+  ],
+  "validation": {
+    "tests": 86,
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "localBrowser": "main and ranking passed",
+    "productionBrowser": "main and ranking passed"
+  },
+  "productionCollector": {
+    "exitCode": 0,
+    "lastPollAt": "2026-10-01T09:11:04.752609+00:00",
+    "changed": false,
+    "historyPath": "/var/lib/soop-ranking/history/daily/2026-10-01.json",
+    "historyCandidates": 100
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {"soopId":"aflol","name":"LCK_KR","reason":"official","evidence":"사용자 확인: LCK 공식 한국어 중계"},
+  {"soopId":"affifaonline","name":"FCO공식","reason":"official","evidence":"사용자 확인: FC 온라인 공식 채널"},
+  {"soopId":"valorantth","name":"VALORANT_TH","reason":"foreign","evidence":"사용자 확인: 발로란트 태국어 공식 중계"},
+  {"soopId":"valoranten","name":"VALORANT_EN","reason":"foreign","evidence":"사용자 확인: 발로란트 영어 공식 중계"},
+  {"soopId":"carrylck","name":"lckcarry","reason":"non-personal","evidence":"사용자 확인: 개인 스트리머가 아닌 중계 채널"},
+  {"soopId":"boomburapa","name":"boomburapa","reason":"foreign","evidence":"사용자 확인: 해외 스트리머"},
+  {"soopId":"rebirthztv","name":"rebirthztv","reason":"foreign","evidence":"사용자 확인: 해외 스트리머"},
+  {"soopId":"fifatargrean","name":"fifatargrean","reason":"foreign","evidence":"사용자 확인: 해외 스트리머"},
+  {"soopId":"0921388683","name":"MinhDienvn","reason":"foreign","evidence":"사용자 확인: 해외 스트리머. 연간 랭킹 응답에서 실제 ID 확인"},
+  {"soopId":"pubg","name":"PUBG공식","reason":"official","evidence":"Trackify 공개 프로필에서 PUBG공식 방송국 확인 (2026-09-30)"},
+  {"soopId":"afstar1","name":"ASL공식","reason":"official","evidence":"Trackify 공개 프로필에서 스타리그공식 방송국 확인 (2026-09-30)"}
+]

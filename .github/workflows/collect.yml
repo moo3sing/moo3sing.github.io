@@ -1,0 +1,53 @@
+name: Daily collector
+on:
+  schedule:
+    - cron: '15 3 * * *'
+      timezone: Asia/Seoul
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Offline readiness check; no Trackify API requests'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+concurrency:
+  group: ranking-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    outputs:
+      has_commit: ${{ steps.commit.outputs.has_commit }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Existing daily gate, 429 handling and atomic collector
+        env:
+          COLLECTOR_ENABLED: ${{ vars.COLLECTOR_ENABLED }}
+          INPUT_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+        run: python scripts/github_runtime.py collect
+      - name: Persist data on success, or only gate/status after a blocked/failed collection
+        id: commit
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: sh scripts/commit_update.sh
+      - name: Deploy the newly committed default-branch revision
+        if: steps.commit.outputs.has_commit == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: gh workflow run pages.yml --ref "$DEFAULT_BRANCH"

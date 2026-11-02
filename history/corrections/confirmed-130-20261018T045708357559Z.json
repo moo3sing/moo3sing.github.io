@@ -1,0 +1,16 @@
+{
+  "source": "user_pasted_trackify_table",
+  "corrections": [
+    {
+      "streamerId": "kaksjak0730",
+      "streamerName": "한결___",
+      "metric": "cumulativeUsers",
+      "previous": 6194211,
+      "current": 5464547,
+      "delta": -729664,
+      "reason": "source_correction",
+      "source": "user_pasted_trackify_table",
+      "observedAt": "2026-10-18T13:54:47.958451+09:00"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "mode": "manual_partial",
+  "observedAt": "2026-10-17T03:03:40.132239+09:00",
+  "competitorDataAsOf": "2026-10-03T15:15:01.688785+00:00",
+  "previous": {
+    "cumulativeUsers": 7254668,
+    "donorCount": 4807,
+    "balloonCount": 4884328
+  },
+  "actual": {
+    "cumulativeUsers": 7291517,
+    "donorCount": 4817,
+    "balloonCount": 4895360
+  },
+  "projected": {
+    "cumulativeUsers": 9039741,
+    "donorCount": 5296,
+    "balloonCount": 6291620
+  },
+  "models": {
+    "rank": 1502092,
+    "ratio": 1212443,
+    "minmax": 1263496
+  },
+  "safeTarget": 1502092,
+  "predictedRank": 64,
+  "corrections": [],
+  "source": "manual",
+  "streamerId": "singgyul",
+  "appliedAt": "2026-10-16T18:03:40.132239+00:00",
+  "current": {
+    "cumulativeUsers": 7291517,
+    "donorCount": 4817,
+    "balloonCount": 4895360
+  },
+  "reason": "suspected_bot_traffic_adjustment",
+  "rawViewer": 7311517,
+  "adjustedViewer": 7291517,
+  "adjustment": -20000,
+  "note": "2026-10-17 drops/bot traffic suspected; approximately 20,000 viewers conservatively excluded for simulation."
+}

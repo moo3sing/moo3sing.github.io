@@ -1,0 +1,19 @@
+{
+  "publishedAt": "2026-10-19T05:41:21.398005+00:00",
+  "rankingExceptions": {
+    "version": 1,
+    "reservedTop70": [
+      {
+        "soopId": "danchu17",
+        "basis": "user_assumption",
+        "reason": "Private support metrics; user requested inclusion as a TOP70 entrant without fabricating donor or balloon values.",
+        "recordedAt": "2026-10-19T14:37:02.332685+09:00"
+      }
+    ]
+  },
+  "observedMetricsUnchanged": true,
+  "baselineUnchanged": true,
+  "apiRequests": 0,
+  "beforeSafeTarget": 1286038,
+  "afterSafeTarget": 1301281
+}

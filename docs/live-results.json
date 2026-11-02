@@ -1,0 +1,64 @@
+{
+  "horizon": {
+    "remainingDays": 60,
+    "months": [
+      {
+        "month": "2026-10",
+        "days": 30
+      },
+      {
+        "month": "2026-11",
+        "days": 30
+      }
+    ],
+    "ended": false
+  },
+  "models": [
+    {
+      "model": "rank",
+      "predictedRank": 81,
+      "currentRank": 80,
+      "remaining": 2417504,
+      "daily": 40292,
+      "requiredFinal": 8934496,
+      "boundary": {
+        "at": 70,
+        "before": 72
+      }
+    },
+    {
+      "model": "ratio",
+      "predictedRank": 79,
+      "currentRank": 82,
+      "remaining": 2687878,
+      "daily": 44798,
+      "requiredFinal": 9204870,
+      "boundary": {
+        "at": 70,
+        "before": 71
+      }
+    },
+    {
+      "model": "minmax",
+      "predictedRank": 79,
+      "currentRank": 82,
+      "remaining": 2711081,
+      "daily": 45185,
+      "requiredFinal": 9228073,
+      "boundary": {
+        "at": 70,
+        "before": 71
+      }
+    }
+  ],
+  "safe": 2711081,
+  "safeModel": "minmax",
+  "predictedRank": 79,
+  "currentUsers": 6516992,
+  "actualGain": 7140,
+  "daily": 45185,
+  "october": 1355540,
+  "november": 1355541,
+  "updatedAt": "2026-10-01T08:48:30.826021+00:00",
+  "pendingCount": 2
+}

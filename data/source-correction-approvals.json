@@ -1,0 +1,14 @@
+{
+  "approvals": [
+    {
+      "streamerId": "ititit",
+      "metric": "cumulativeUsers",
+      "previous": 19949281,
+      "current": 15930675,
+      "observedKstDate": "2026-10-18",
+      "approvedBy": "user",
+      "reason": "source_correction",
+      "reviewNote": "User explicitly instructed using the currently reported ititit source value. This approves one exact observation; global correction limits remain unchanged."
+    }
+  ]
+}
