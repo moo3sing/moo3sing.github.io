@@ -15,7 +15,8 @@ from scripts.viewer_adjustments import adjust,raw_previous
 from scripts.trend_history import history_before_update
 
 ALIASES={'[BJ]김인호':'pookygamja','미오탱':'juju0228','타요*':'b13246','가습기':'hwt1014',
-         '“클로이”':'vf3366','사내.박재박':'jaeparkk','이주하♥':'nyouuu30810','고라니율_':'golaniyule0'}
+         '“클로이”':'vf3366','사내.박재박':'jaeparkk','이주하♥':'nyouuu30810','고라니율_':'golaniyule0',
+         'BJ.정윤종':'ioioiobb','마이곰이_':'mygomiee','[ω]아란♥':'dkfksl00'}
 
 
 def parse_table(text,source_sort='balloon_desc'):

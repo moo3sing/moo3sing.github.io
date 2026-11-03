@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from unittest.mock import patch
 from urllib.error import HTTPError
 from scripts.github_runtime import run_manual, run_collection, prepare_manual, collection_schedule
@@ -36,8 +36,15 @@ class GitHubRuntimeTests(unittest.TestCase):
             self.addCleanup(setattr,collector,key,value)
 
     def inputs(self):
+        observed=datetime.fromisoformat(self.old.get('manualOverride',{}).get('observedAt') or self.old['updatedAt'])
         return dict(viewer=str(self.old['manualOverride']['rawViewer']+1000),
-                    balloon=str(self.old['manualOverride']['metrics']['balloon']+500),donor='',now=NOW)
+                    balloon=str(self.old['manualOverride']['metrics']['balloon']+500),donor='',now=max(NOW,observed))
+
+    def test_manual_preview_rejects_observation_older_than_snapshot(self):
+        inputs=self.inputs()
+        inputs['now']=datetime.fromisoformat(self.old['manualOverride']['observedAt'])-timedelta(minutes=1)
+        with self.assertRaisesRegex(ValueError,'관측 시각'):
+            run_manual(self.root,dry_run=True,**inputs)
 
     def test_dry_run_writes_no_json_and_uses_raw_minus_existing_adjustment(self):
         before={str(p):p.read_bytes() for p in self.root.rglob('*.json')}

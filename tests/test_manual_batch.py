@@ -13,6 +13,22 @@ BEFORE=ROOT/'tests/fixtures/manual-batch-before.json'
 VIEWER_PASTE=ROOT/'tests/fixtures/manual-batch-viewer.txt'
 
 
+class CurrentNameMatchingTests(unittest.TestCase):
+    def test_renamed_accounts_match_existing_ids_without_changing_the_cohort(self):
+        snapshot={'streamers':[
+            {'soopId':'singgyul','name':'띵귤_'},
+            {'soopId':'ioioiobb','name':'정윤종..'},
+            {'soopId':'mygomiee','name':'마이곰이'},
+            {'soopId':'dkfksl00','name':'아란♥'}]}
+        original=copy.deepcopy(snapshot)
+        rows=[{'name':name} for name in ['띵귤_','BJ.정윤종','마이곰이_','[ω]아란♥']]
+        matched,outside=match_table(rows,snapshot)
+        self.assertEqual([row['soopId'] for row in matched],
+                         ['singgyul','ioioiobb','mygomiee','dkfksl00'])
+        self.assertEqual(outside,[])
+        self.assertEqual(snapshot,original)
+
+
 @unittest.skipUnless(PASTE.exists() and BEFORE.exists(),'Pasted batch fixture not available')
 class ManualBatchTests(unittest.TestCase):
     def setUp(self):

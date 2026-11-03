@@ -1,36 +1,20 @@
 {
   "lastCollectionAttempt": "2026-11-03T00:59:51.327440+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
-  "lastDataChange": "2026-11-01T10:18:13+09:00",
-  "collectionStatus": "api_blocked",
-  "snapshotUpdatedAt": "2026-11-01T10:18:13+09:00",
+  "lastDataChange": "2026-11-03T14:08:23.504227+09:00",
+  "collectionStatus": "manual_partial",
+  "snapshotUpdatedAt": "2026-11-03T14:08:23.504227+09:00",
   "collectionMode": "manual_partial",
   "actualDataScope": "listed_candidates_viewer_balloon",
   "competitorDataAsOf": "2026-10-03T15:15:01.688785+00:00",
-  "lastManualUpdate": "2026-11-01T01:20:35.442049+00:00",
+  "lastManualUpdate": "2026-11-03T05:08:23.504227+00:00",
   "publicationStatus": "published_manual_partial",
   "viewerAdjustmentReview": {
-    "status": "existing_cumulative_adjustment_preserved",
     "applied": true,
     "assumptionBased": true,
-    "adjustmentEntries": 4,
-    "latestRequestedDelta": -10000,
-    "latestAdjustmentDate": "2026-10-19",
-    "rawViewer": 7984415,
+    "rawViewer": 8120044,
     "viewerAdjustmentTotal": -70000,
-    "adjustedViewer": 7914415,
-    "productionViewer": 7914415,
-    "thisUpdateAdditionalDelta": 0,
-    "intervalReview": {
-      "basis": "no_additional_adjustment_requested",
-      "statement": "Preserve existing cumulative adjustment; no additional adjustment amount supplied.",
-      "previousSnapshotObservedAt": "2026-10-31T14:04:48+09:00",
-      "currentSourceDate": "2026-11-01",
-      "receivedAt": "2026-11-01T10:16:55.824156+09:00",
-      "additionalRequestedDelta": 0,
-      "cumulativeAdjustment": -70000,
-      "newAdjustmentEventsAdded": 0
-    }
+    "adjustedViewer": 8050044
   },
   "automaticCollection": {
     "platform": "github_actions",
