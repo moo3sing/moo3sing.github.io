@@ -1,5 +1,5 @@
 {
-  "lastCollectionAttempt": "2026-11-03T23:25:08.357356+00:00",
+  "lastCollectionAttempt": "2026-11-04T23:42:05.638223+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
   "lastDataChange": "2026-11-03T14:08:23.504227+09:00",
   "collectionStatus": "api_blocked",
@@ -24,7 +24,7 @@
     "maxFullAttemptsPerKstDay": 1,
     "retryOnFailure": false,
     "minRequestIntervalSeconds": 2.0,
-    "nextScheduledKST": "2026-11-05T03:15:00+09:00",
+    "nextScheduledKST": "2026-11-06T03:15:00+09:00",
     "blockedUntil": "2026-11-09T14:07:43.243679+09:00",
     "nextEligibleDailyKST": "2026-11-10T03:15:00+09:00"
   },
