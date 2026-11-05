@@ -1,7 +1,7 @@
 import {calendarHorizon,liveTargets} from './live-target.js?v=20261019-fixed';
 import {fixedSupportScores,calculateForecastRanking,minimumAdditional,rankForAdditional} from './simulation.js';
 import {calculateRanking} from './ranking.js';
-import {SIMULATION_CONFIG} from './simulation-config.js';
+import {SIMULATION_CONFIG,TARGET_MODEL_POLICY} from './simulation-config.js';
 import {top70Reservations,rankBounds,fixedSupportCandidates} from './ranking-exceptions.js?v=20261019-fixed';
 const DAY=86400000;
 const valueKeys=['cumulativeUsers','donorCount','balloonCount'];
@@ -59,7 +59,7 @@ export function dynamicTargets(snapshot,now=new Date(),options={}){
  const target=rows.find(r=>r.actual.soopId===config.targetId);
  if(!target||rows.length<config.cutoffRank)throw new Error('TOP 70 계산에 필요한 후보 부족');
  const finalRows=rows.map(r=>r.projected),actualRows=rows.map(r=>r.actual);
- const models=['rank','ratio','minmax'].map(model=>{
+ const calculateModel=model=>{
  // Support is normalized from THIS projected dataset, once per threshold search.
  const support=fixedSupportScores(finalRows,model);
  const context={baselineRows:finalRows,forecastRows:finalRows,target:target.actual,config:scoreConfig,model,fixedSupport:support};
@@ -71,11 +71,13 @@ export function dynamicTargets(snapshot,now=new Date(),options={}){
  const predictedRankRange=rankBounds(predicted.predictedRank,reservedCount,config.cutoffRank),currentRankRange=rankBounds(current.predictedRank,reservedCount,config.cutoffRank);
  return {model,predictedRank:predictedRankRange.max,currentRank:currentRankRange.max,predictedRankRange,currentRankRange,remaining,requiredFinal:remaining===null?null:target.actual.cumulativeUsers+remaining,
  daily:remaining===null||!horizon.remainingDays?null:Math.ceil(remaining/horizon.remainingDays),boundary,supportScores:predicted.breakdown.filter(b=>b.key!=='cumulativeUsers')};
- });
+ };
+ const models=TARGET_MODEL_POLICY.safe.map(calculateModel);
+ const experimentalModels=TARGET_MODEL_POLICY.experimental.map(model=>({...calculateModel(model),experimental:true}));
  const safe=models.some(m=>m.remaining===null)?null:Math.max(...models.map(m=>m.remaining));
  const safeModel=models.find(m=>m.remaining===safe)||models[0];
  const october=safe===null||!horizon.remainingDays?null:Math.floor(safe*horizon.months[0].days/horizon.remainingDays);
- return {mode:'dynamic-support',horizon,models,safe,safeModel:safeModel.model,predictedRank:safeModel.predictedRank,
+ return {mode:'dynamic-support',horizon,models,experimentalModels,safe,safeModel:safeModel.model,predictedRank:safeModel.predictedRank,
  currentUsers:target.actual.cumulativeUsers,actualGain:target.gains.cumulativeUsers,daily:safe===null||!horizon.remainingDays?null:Math.ceil(safe/horizon.remainingDays),
  october,november:october===null?null:safe-october,updatedAt:snapshot.updatedAt,pendingCount:snapshot.streamers.length-rows.length-reservedCount,
  reservedCount,reserved,fixedSupport:rows.filter(row=>row.actual.supportFixed).map(row=>row.actual),fixedSupportCount:rows.filter(row=>row.actual.supportFixed).length,

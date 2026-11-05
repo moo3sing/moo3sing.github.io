@@ -31,13 +31,21 @@ const server = http.createServer((req,res) => {
     page.on('pageerror',error => errors.push(error.message));
     page.on('response',response => {if(response.status() >= 400)failed.push(response.url());});
     page.on('request',request => {if(request.url().includes('trackify.kr/api/'))externalAPI.push(request.url());});
-    await page.clock.install({time:new Date('2026-11-02T12:00:00+09:00')});
+    const sourceSnapshot = JSON.parse(fs.readFileSync('assets/data/ranking.json','utf8'));
+    const testTime = new Date(sourceSnapshot.updatedAt);
+    await page.clock.install({time:testTime});
     assert.equal((await page.goto(base + '/')).status(),200);
     await page.waitForSelector('#content:visible');
     assert.match(await page.locator('#safe').innerText(),/\d/);
     assert.match(await page.locator('#current-rank').innerText(),/\d/);
     assert.match(await page.locator('#rank').innerText(),/\d/);
-    assert.equal(await page.locator('.models article').count(),3);
+    assert.equal(await page.locator('.models article').count(),4);
+    assert.equal(await page.locator('.models article[data-experimental="false"]').count(),3);
+    assert.match(await page.locator('[data-model-result="log"]').innerText(),/실험[\s\S]*SafeTarget 미포함/);
+    const {rollingTargets} = await import('../assets/rolling-target.js');
+    const expectedTargets = rollingTargets(sourceSnapshot,testTime);
+    assert.equal(await page.locator('#safe').innerText(),expectedTargets.safe.toLocaleString('ko-KR'));
+    assert.equal(await page.locator('[data-model-result="log"] > strong').textContent(),expectedTargets.experimentalModels[0].remaining.toLocaleString('ko-KR')+'명');
     await page.waitForSelector('#trend-growth-chart svg');
     await page.waitForSelector('#trend-rank-chart svg');
     await page.locator('[data-trend-mode="pace"]').click();
@@ -55,11 +63,21 @@ const server = http.createServer((req,res) => {
     assert.equal((await page.goto(base + '/ranking')).status(),200);
     await page.waitForSelector('#table-wrap:visible');
     assert.equal(await page.locator('#ranking-rows > tr[data-id]').count(),100);
-    for(const model of ['rank','percentile','ratio','minmax']) {
+    for(const model of ['rank','percentile','ratio','minmax','log']) {
       await page.locator(`[data-model="${model}"]`).click();
       assert.equal(await page.locator('#ranking-rows > tr[data-id]').count(),100);
       assert.match(await page.locator('#cutoff-name').innerText(),/\S/);
     }
+    assert.match(await page.locator('#model-description').innerText(),/로그 정규화/);
+    const projectedLogScore = await page.locator('tr[data-id="singgyul"] .score-value').innerText();
+    await page.locator('[data-filter="boundary"]').click();
+    await page.locator('#search').fill('띵귤');
+    assert.equal(await page.locator('tr[data-id="singgyul"] .score-value').innerText(),projectedLogScore);
+    await page.locator('#search').fill('');
+    await page.locator('[data-filter="all"]').click();
+    await page.locator('#method-inline').click();
+    assert.match(await page.locator('#method-dialog').innerText(),/ln\(1\+x\)/);
+    await page.locator('#method-dialog [data-close]').click();
     await page.locator('[data-basis="actual"]').click();
     assert.match(await page.locator('#basis-note').innerText(),/마지막 확인값/);
     await page.locator('#search').fill('띵귤');
@@ -68,6 +86,9 @@ const server = http.createServer((req,res) => {
     for(const width of [1440,768,390,320]) {
       await page.setViewportSize({width,height:900});
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),false,'Ranking overflow at ' + width);
+      if(process.env.SCREENSHOT_DIR && [1440,390].includes(width)) {
+        await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`pages-ranking-${width}.png`),fullPage:true});
+      }
     }
     const actual = await (await context.request.get(base + '/assets/data/ranking.json')).json();
     const source = JSON.parse(fs.readFileSync('assets/data/ranking.json','utf8'));

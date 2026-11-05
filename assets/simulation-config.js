@@ -10,3 +10,9 @@ export const SIMULATION_CONFIG = Object.freeze({
   growthMultipliers: [1, 1.1, 1.2, 1.3],
   maxAdditionalUsers: 1_000_000_000_000,
 });
+
+// Explicit opt-in policy: experimental results never enter the production maximum.
+export const TARGET_MODEL_POLICY = Object.freeze({
+  safe: Object.freeze(['rank', 'ratio', 'minmax']),
+  experimental: Object.freeze(['log']),
+});

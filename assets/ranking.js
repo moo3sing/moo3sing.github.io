@@ -1,3 +1,4 @@
+import {LOG_MODEL, logMetricScore} from './log-model.js';
 /**
  * @typedef {{rankByViewer:number,name:string,soopId:string,category?:string,
  * cumulativeUsers:number,balloonCount:number,donorCount:number}} StreamerStats
@@ -7,6 +8,7 @@ export const MODELS = {
   percentile: {label: '백분위', description: '동점 중간값을 반영한 경험적 백분위입니다. 순위형과 같은 결과가 나옵니다.'},
   ratio: {label: '1위 대비', description: '각 지표의 1위 수치를 100점으로 두고 비율을 계산합니다.'},
   minmax: {label: 'Min-Max', description: '각 지표의 최솟값은 0점, 최댓값은 100점으로 환산합니다.'},
+  log: LOG_MODEL,
 };
 export const METRICS = [
   {key:'cumulativeUsers', label:'누적 유저', weight:.8, rankKey:'viewerRank'},
@@ -21,6 +23,7 @@ export function metricScore(values, value, model) {
   const min = Math.min(...values), max = Math.max(...values);
   if (model === 'ratio') return max === 0 ? 0 : value / max * 100;
   if (model === 'minmax') return max === min ? 0 : (value-min)/(max-min)*100;
+  if (model === 'log') return logMetricScore(values, value);
   if (n === 1) return 100;
   const lower = values.filter(v => v < value).length;
   const equal = values.filter(v => v === value).length;

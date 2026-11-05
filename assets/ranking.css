@@ -13,3 +13,5 @@ dialog{width:min(570px,calc(100% - 32px));max-height:85dvh;overflow:auto;backgro
 .rank-cell .rank-range{font-size:13px;white-space:nowrap}.reserved-row .rank-cell{font-size:11px}.reserved-actual{display:block;font-size:10px;font-weight:400;color:var(--muted)}.reservation-notice{margin-top:16px}
 
 .fixed-support-label{display:block;font-size:10px;font-weight:400;color:var(--muted)}
+
+.formulas code.log-formula{white-space:normal;overflow-wrap:anywhere}

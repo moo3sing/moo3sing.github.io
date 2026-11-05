@@ -1,5 +1,5 @@
 import {rollingTargets as dynamicTargets} from './rolling-target.js?v=20261019-fixed';
-const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max'};
+const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261028-totals';
 let snapshot;
@@ -13,7 +13,7 @@ function render(){
  el('daily').textContent=fmt(r.daily);el('daily-unit').hidden=r.daily===null;
  el('days').textContent=ended?'남은 기간 목표 계산 종료':r.horizon.remainingDays?`D-${r.horizon.remainingDays} · 내일부터 11월 30일까지 ${r.horizon.remainingDays}일`:'오늘 마감 · 남은 전체 날짜가 없어 일평균을 계산하지 않습니다.';
  el('gain').textContent=`${r.actualGain>=0?'+':''}${fmt(r.actualGain)}명`;el('current').textContent=fmt(r.currentUsers)+'명';el('current-rank').textContent=selectedModel.currentRank+'위';el('current-rank-basis').textContent=names[r.safeModel]+(r.fixedSupportCount?' · 가정 포함':' · 현재 누적');el('forecast-rank-label').textContent=ended?'11월 말 최종 관측 순위':'11월 말 예상 순위';el('rank').textContent=r.predictedRank+'위';el('rank-basis').textContent=names[r.safeModel]+(selectedModel.predictedRankRange.min!==selectedModel.predictedRankRange.max?` · ${rankLabel(selectedModel.predictedRankRange,r.predictedRank)}위 중 보수값`:ended?' · 최종 관측 기준':r.fixedSupportCount?' · 가정 포함':' · 안전 목표 모델');
- el('models').replaceChildren(...r.models.map(m=>{const card=document.createElement('article');card.innerHTML=`<h3>${names[m.model]}</h3><p class="model-rank">${ended?'관측':'예상'} ${rankLabel(m.predictedRankRange,m.predictedRank)}위</p><span>남은 목표</span><strong>${fmt(m.remaining)}<small>${m.remaining===null?'':'명'}</small></strong><p>하루 평균 <b>${fmt(m.daily)}</b>${m.daily===null?'':'명'}</p>`;return card;}));
+ el('models').replaceChildren(...[...r.models,...r.experimentalModels].map(m=>{const card=document.createElement('article');const experimental='experimental' in m&&m.experimental;card.dataset.modelResult=m.model;card.dataset.experimental=String(experimental);card.innerHTML=`<h3>${names[m.model]}${experimental?' <span class="model-badge">실험</span>':''}</h3><p class="model-rank">${ended?'관측':'예상'} ${rankLabel(m.predictedRankRange,m.predictedRank)}위</p><span>남은 목표</span><strong>${fmt(m.remaining)}<small>${m.remaining===null?'':'명'}</small></strong><p class="model-daily">하루 평균 <b>${fmt(m.daily)}</b>${m.daily===null?'':'명'}</p>${experimental?'<p class="model-policy">SafeTarget 미포함</p>':''}`;return card;}));
  el('october').textContent=fmt(r.october)+(r.october===null?'':'명');el('november').textContent=fmt(r.november)+(r.november===null?'':'명');
  const formatDate=value=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(value)).replaceAll('-','.');
  const manual=snapshot.collectionMode==='manual_partial';

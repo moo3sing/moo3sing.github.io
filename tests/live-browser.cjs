@@ -7,7 +7,7 @@ const root=process.env.BASE_URL||'http://127.0.0.1:4173/';
  const page=await browser.newPage({timezoneId:'Asia/Seoul',viewport:{width:1440,height:1000},colorScheme:'light'});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(root);await page.waitForSelector('#content:visible');
- assert.equal(await page.locator('.models article').count(),3);
+ assert.equal(await page.locator('.models article').count(),4);
  assert.match(await page.locator('#safe').innerText(),/\d/);
  assert.match(await page.locator('#support-state').innerText(),/ON/);
  await page.locator('summary').click();

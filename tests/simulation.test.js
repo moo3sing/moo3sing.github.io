@@ -100,8 +100,12 @@ test('locked simulation baseline is used instead of later annual values',()=>{
  assert.equal(simulation.target.balloonCount,target.balloonCount);
  assert.equal(simulation.horizon.remainingMonths,2);
 });
-test('ranking source remains byte-identical to deployed scoring model',async()=>{
+test('legacy scoring source stays identical after removing only the additive Log hooks',async()=>{
  const {createHash}=await import('node:crypto');
- const sha=createHash('sha256').update(readFileSync(new URL('../assets/ranking.js',import.meta.url))).digest('hex');
+ const legacy=readFileSync(new URL('../assets/ranking.js',import.meta.url),'utf8').replaceAll('\r\n','\n')
+   .replace("import {LOG_MODEL, logMetricScore} from './log-model.js';\n",'')
+   .replace('  log: LOG_MODEL,\n','')
+   .replace("  if (model === 'log') return logMetricScore(values, value);\n",'');
+ const sha=createHash('sha256').update(legacy).digest('hex');
  assert.equal(sha,'8539dec19c2c206bf3160271afc4c5ab1ac35e6b1e7fda63baa05303324fb95e');
 });

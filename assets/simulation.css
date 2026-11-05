@@ -5,3 +5,6 @@
 
 /* Keep current and projected ranks together on phones without compressing four columns. */
 @media(max-width:600px){.facts{grid-template-columns:repeat(2,minmax(0,1fr));padding:0}.facts>div{min-width:0;padding:20px 8px}.facts>div+div{border-left:0}.facts>div:nth-child(even){border-left:1px solid var(--line)}.facts>div:nth-child(n+3){border-top:1px solid var(--line)}.facts strong{font-size:18px}.facts span,.facts small{font-size:11px;line-height:1.5}}
+
+/* Experimental comparison: keep production SafeTarget separate. */
+.models{grid-template-columns:repeat(4,minmax(0,1fr))}.models article[data-experimental="true"]{border-style:dashed}.model-badge{font-size:10px;font-weight:400;color:var(--accent)}.models .model-daily{font-size:12px;color:var(--muted);margin:15px 0 0;line-height:1.8}.models article>p.model-policy{font-size:10px;line-height:1.5;margin:10px 0 0;color:var(--accent)}.log-formula{display:block;overflow-wrap:anywhere;white-space:normal;font-size:11px}@media(max-width:700px){.models{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.models .model-daily{font-size:10px}}
