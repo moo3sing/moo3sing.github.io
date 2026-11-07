@@ -1,0 +1,110 @@
+{
+  "matched": 98,
+  "competitors": 97,
+  "retained": 2,
+  "outside": 102,
+  "sourceCorrections": [],
+  "changes": [],
+  "target": {
+    "streamerId": "singgyul",
+    "observedAt": "2026-11-07T23:46:00+09:00",
+    "appliedAt": "2026-11-07T14:46:52.152423+00:00",
+    "automaticBase": {
+      "cumulativeUsers": 6625621,
+      "donorCount": 4691,
+      "balloonCount": 4328532
+    },
+    "metrics": {
+      "viewer": 8348157,
+      "donor": 4817,
+      "balloon": 5601160
+    },
+    "source": "user_pasted_trackify_table",
+    "reason": "suspected_viewbot_traffic",
+    "rawViewer": 8418157,
+    "adjustedViewer": 8348157,
+    "adjustment": -70000,
+    "viewerAdjustments": [
+      {
+        "date": "2026-10-17",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "eventId": "2026-10-17-existing",
+        "appliedDelta": -20000
+      },
+      {
+        "date": "2026-10-18",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "eventId": "2026-10-18-dawn-existing",
+        "appliedDelta": -20000
+      },
+      {
+        "eventId": "2026-10-18-evening-new",
+        "date": "2026-10-18",
+        "timeBand": "evening",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "includedIn2311Snapshot": "user_confirmed",
+        "appliedDelta": -20000
+      },
+      {
+        "eventId": "2026-10-19-user-requested-10000",
+        "date": "2026-10-19",
+        "delta": -10000,
+        "reason": "suspected_viewbot_traffic",
+        "amountIsApproximate": true,
+        "source": "user_request",
+        "includedInSourceAsOf": "2026-10-19T23:22:00+09:00",
+        "appliedDelta": -10000
+      }
+    ],
+    "rawMetrics": {
+      "viewer": 8418157,
+      "donor": 4817,
+      "balloon": 5601160
+    },
+    "adjustedMetrics": {
+      "viewer": 8348157,
+      "donor": 4817,
+      "balloon": 5601160
+    },
+    "sourceCorrectionReview": {
+      "status": "user_confirmed_no_source_correction",
+      "previousRawViewer": 7311517,
+      "currentRawViewer": 7422588,
+      "rawDelta": 111071,
+      "confirmedKstDate": "2026-10-18",
+      "reason": "User confirmed no source correction and revised both dates to -20000; today's daily viewer reference is 84818, with possible source update delay.",
+      "dailyViewerReference": 84818
+    },
+    "sourceObservation": {
+      "date": "2026-11-07",
+      "precision": "minute",
+      "observedAt": "2026-11-07T23:46:00+09:00",
+      "exactSourceTimestampProvided": false,
+      "observationTimestampRole": "operator_current_time_at_user_request",
+      "receivedAt": "2026-11-07T23:46:50.805951+09:00",
+      "statement": "User requested these annual totals be recorded as of the current KST time."
+    }
+  },
+  "projected": 9581840,
+  "projectedRank": 66,
+  "models": {
+    "rank": 358846,
+    "ratio": 733246,
+    "minmax": 756874
+  },
+  "safeTarget": 756874,
+  "observedAt": "2026-11-07T23:46:00+09:00",
+  "sourceMode": "annual_batch",
+  "rawViewer": 8418157,
+  "adjustedViewer": 8348157,
+  "viewerAdjustment": -70000,
+  "predictedRank": 66,
+  "dryRun": false,
+  "published": false,
+  "snapshotHash": "c9e17111d012a2ec368b199c01c7842d37b9a9fc414e77201ed229ce96acca13",
+  "source": "operator_github_workflow",
+  "rawAndAdjustedPreserved": true
+}
