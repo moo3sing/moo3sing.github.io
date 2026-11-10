@@ -1,8 +1,8 @@
 {
-  "lastCollectionAttempt": "2026-11-10T01:34:20.682962+00:00",
+  "lastCollectionAttempt": "2026-11-10T23:24:45.507774+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
   "lastDataChange": "2026-11-11T02:26:00+09:00",
-  "collectionStatus": "manual_partial",
+  "collectionStatus": "api_blocked",
   "snapshotUpdatedAt": "2026-11-11T02:26:00+09:00",
   "collectionMode": "manual_partial",
   "actualDataScope": "listed_candidates_viewer_balloon",
@@ -24,18 +24,18 @@
     "maxFullAttemptsPerKstDay": 1,
     "retryOnFailure": false,
     "minRequestIntervalSeconds": 2.0,
-    "nextScheduledKST": "2026-11-11T03:15:00+09:00",
+    "nextScheduledKST": "2026-11-12T03:15:00+09:00",
     "blockedUntil": "2026-11-17T10:36:20.318255+09:00",
     "nextEligibleDailyKST": "2026-11-18T03:15:00+09:00"
   },
-  "reason": "Blocked IP",
+  "reason": "Trackify Retry-After",
   "blockedUntil": "2026-11-17T01:36:20.318255+00:00",
   "retryAfterSeconds": 604798,
   "lastRunApiRequests": {
-    "totalRequests": 61,
+    "totalRequests": 0,
     "cacheHits": 0,
     "duplicateRequests": 0,
     "freshConfirmationRequests": 0,
-    "http429": 1
+    "http429": 0
   }
 }
