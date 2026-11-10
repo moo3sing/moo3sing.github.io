@@ -1,20 +1,20 @@
 {
   "lastCollectionAttempt": "2026-11-10T01:34:20.682962+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
-  "lastDataChange": "2026-11-10T02:38:00+09:00",
-  "collectionStatus": "api_blocked",
-  "snapshotUpdatedAt": "2026-11-10T02:38:00+09:00",
+  "lastDataChange": "2026-11-11T02:26:00+09:00",
+  "collectionStatus": "manual_partial",
+  "snapshotUpdatedAt": "2026-11-11T02:26:00+09:00",
   "collectionMode": "manual_partial",
   "actualDataScope": "listed_candidates_viewer_balloon",
   "competitorDataAsOf": "2026-10-03T15:15:01.688785+00:00",
-  "lastManualUpdate": "2026-11-09T17:38:22.412694+00:00",
+  "lastManualUpdate": "2026-11-10T17:26:10.919946+00:00",
   "publicationStatus": "published_manual_partial",
   "viewerAdjustmentReview": {
     "applied": true,
     "assumptionBased": true,
-    "rawViewer": 8671035,
+    "rawViewer": 8743256,
     "viewerAdjustmentTotal": -70000,
-    "adjustedViewer": 8601035
+    "adjustedViewer": 8673256
   },
   "automaticCollection": {
     "platform": "github_actions",
