@@ -45,10 +45,10 @@ const server = http.createServer((req,res) => {
     const {rollingTargets} = await import('../assets/rolling-target.js');
     const expectedTargets = rollingTargets(sourceSnapshot,testTime);
     assert.equal(await page.locator('#safe').innerText(),expectedTargets.safe.toLocaleString('ko-KR'));
-    const {currentViewerGap} = await import('../assets/viewer-reference.js');
-    const viewerReference = currentViewerGap(sourceSnapshot);
-    assert.equal(await page.locator('#viewer-reference-value').innerText(),viewerReference.gap.toLocaleString('ko-KR')+'명');
-    assert.match(await page.locator('#viewer-reference-note').innerText(),/현재 70위 누적 [\d,]+명 · 추세 미반영/);
+    const {viewerOnlyReference} = await import('../assets/viewer-reference.js');
+    const viewerReference = viewerOnlyReference(sourceSnapshot,expectedTargets);
+    assert.equal(await page.locator('#viewer-reference-value').innerText(),viewerReference.remaining.toLocaleString('ko-KR')+'명');
+    assert.match(await page.locator('#viewer-reference-note').innerText(),/경쟁자 추세 반영/);
     assert.match(await page.locator('#support-state').innerText(),/상·하위 경쟁자 추세 반영 · 전체 후보 100명/);
     assert.equal(await page.locator('#goal-updated-at').getAttribute('datetime'),sourceSnapshot.manualOverride?.observedAt||sourceSnapshot.updatedAt);
     assert.match(await page.locator('#goal-updated-at').innerText(),/\d+월 \d+일 (오전|오후) \d+:\d{2} KST/);

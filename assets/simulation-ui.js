@@ -2,7 +2,7 @@ import {rollingTargets as dynamicTargets} from './rolling-target.js?v=20261019-f
 const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261028-totals';
-import {currentViewerGap} from './viewer-reference.js?v=20261112-current';
+import {viewerOnlyReference} from './viewer-reference.js?v=20261112-trend';
 let snapshot;
 function render(){
  const r=dynamicTargets(snapshot),ended=r.horizon.ended;
@@ -44,9 +44,9 @@ function render(){
  const t=r.target;
  el('support-state').textContent=ended?`전체 후보 ${snapshot.streamers.length}명 최종 실적 반영`:`상·하위 경쟁자 추세 반영 · 전체 후보 ${snapshot.streamers.length}명`;
  try{
-  const reference=currentViewerGap(snapshot);
-  el('viewer-reference-value').textContent=fmt(reference.gap)+'명';
-  el('viewer-reference-note').textContent=(ended?'마지막 관측':'현재')+' 70위 누적 '+fmt(reference.cutoffUsers)+'명 · 추세 미반영';
+  const reference=viewerOnlyReference(snapshot,r);
+  el('viewer-reference-value').textContent=ended?'심사 종료':fmt(reference.remaining)+'명';
+  el('viewer-reference-note').textContent=ended?'마지막 관측값 기준 · 안전 목표 미포함':'TOP70까지 앞으로 필요한 누적 · 경쟁자 추세 반영';
  }catch(error){
   el('viewer-reference-value').textContent='산정 대기';
   el('viewer-reference-note').textContent='전체 후보의 시청자 자료를 확인할 수 없습니다.';
