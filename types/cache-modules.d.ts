@@ -60,3 +60,7 @@ declare module '*ranking-exceptions.js?v=20261019-fixed' {
  export const rankLabel: typeof import('../assets/ranking-exceptions.js').rankLabel;
  export const fixedSupportCandidates: typeof import('../assets/ranking-exceptions.js').fixedSupportCandidates;
 }
+
+declare module '*viewer-reference.js?v=20261112-current' {
+ export const currentViewerGap: typeof import('../assets/viewer-reference.js').currentViewerGap;
+}
