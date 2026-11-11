@@ -19,12 +19,13 @@ class CurrentNameMatchingTests(unittest.TestCase):
             {'soopId':'singgyul','name':'띵귤_'},
             {'soopId':'ioioiobb','name':'정윤종..'},
             {'soopId':'mygomiee','name':'마이곰이'},
-            {'soopId':'dkfksl00','name':'아란♥'}]}
+            {'soopId':'dkfksl00','name':'아란♥'},
+            {'soopId':'b13246','name':'타요~'}]}
         original=copy.deepcopy(snapshot)
-        rows=[{'name':name} for name in ['띵귤_','BJ.정윤종','마이곰이_','[ω]아란♥']]
+        rows=[{'name':name} for name in ['띵귤_','BJ.정윤종','마이곰이_','[ω]아란♥','타요b']]
         matched,outside=match_table(rows,snapshot)
         self.assertEqual([row['soopId'] for row in matched],
-                         ['singgyul','ioioiobb','mygomiee','dkfksl00'])
+                         ['singgyul','ioioiobb','mygomiee','dkfksl00','b13246'])
         self.assertEqual(outside,[])
         self.assertEqual(snapshot,original)
 
