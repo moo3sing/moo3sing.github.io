@@ -1,6 +1,6 @@
 import {MODELS} from './ranking.js';
 import {rankLabel,reservationBoundary as getBoundary} from './ranking-exceptions.js?v=20261019-fixed';
-import {rankingView, metricObservation, latestObservation} from './ranking-view.js?v=20261019-fixed';
+import {rankingView, metricObservation, latestObservation} from './ranking-view.js?v=20261112-seven';
 /** @template {HTMLElement} T @param {string} id @returns {T} */
 const el = id => /** @type {T} */ (document.getElementById(id));
 const fmt = n => n.toLocaleString('ko-KR');
@@ -12,13 +12,13 @@ function recalculate(){
   view=rankingView(snapshot,model,basis);ranked=view.ranked;pending=view.pending;reserved=view.reserved;fixedSupport=view.fixedSupport;
   document.documentElement.dataset.basis=view.forecast?'forecast':'actual';
   el('ranking-title').textContent=view.forecast?'11월 말 예상 순위':'현재 누적 기준 순위';
-  el('basis-note').textContent=view.forecast?'메인 시뮬레이션과 같은 최근 추세·실제 증가 모형으로 11월 30일을 예상합니다. 표의 세 지표는 미래 추정치이며, 후원자 수는 마지막 확인값과 기존 증가 추정에 기반합니다.':'각 지표의 마지막 확인값으로 계산합니다. 수동 반영일이 다른 후원자 수와 미갱신 후보의 기준일은 상세에서 확인할 수 있습니다.';
+  el('basis-note').textContent=view.forecast?'메인 시뮬레이션과 같은 최근 7일 평균 증가 속도으로 11월 30일을 예상합니다. 표의 세 지표는 미래 추정치이며, 후원자 수는 마지막 확인값과 기존 증가 추정에 기반합니다.':'각 지표의 마지막 확인값으로 계산합니다. 수동 반영일이 다른 후원자 수와 미갱신 후보의 기준일은 상세에서 확인할 수 있습니다.';
   el('users-label').textContent=view.forecast?'예상 누적 유저':'누적 유저';
   el('donors-label').textContent=view.forecast?'예상 후원자':'후원자';
   el('balloons-label').textContent=view.forecast?'예상 별풍선':'별풍선';
   if(el('ranking-exception')){
   el('ranking-exception').hidden=!(reserved.length||fixedSupport.length);
-  el('exception-note').textContent=fixedSupport.length?`${fixedSupport.map(row=>`${row.name}: 별풍선 ${fmt(row.balloonCount)}개(제공 월별 합계)·후원자 ${fmt(row.donorCount)}명(기존 연간 응답 참고)을 가정 고정합니다.`).join(' ')} 원본 비공개 값은 보존하며, 이 수치는 공개 확인된 연간 확정값이 아닙니다. 누적 유저는 새 자료로 갱신하고 미래 유저는 기존 9월 추세로 예상합니다.`:reserved.length?`${reserved.map(row=>row.name).join(', ')} · 사용자 가정으로 TOP70 ${reserved.length}자리를 반영합니다. 공개 지표 후보 ${70-reserved.length}명과 함께 진입 기준을 계산하며, 비공개 후원 수치와 정확한 순위는 추정해 채우지 않습니다. 범위 표시는 예외 후보의 위치를 알 수 없어 생기는 차이입니다.`:'';
+  el('exception-note').textContent=fixedSupport.length?`${fixedSupport.map(row=>`${row.name}: 별풍선 ${fmt(row.balloonCount)}개(제공 월별 합계)·후원자 ${fmt(row.donorCount)}명(기존 연간 응답 참고)을 가정 고정합니다.`).join(' ')} 원본 비공개 값은 보존하며, 이 수치는 공개 확인된 연간 확정값이 아닙니다. 누적 유저는 새 자료로 갱신하고 미래 유저는 최근 7일 관측 추세를 우선 사용하며, 관측 부족 시 기존 추세로 대체합니다.`:reserved.length?`${reserved.map(row=>row.name).join(', ')} · 사용자 가정으로 TOP70 ${reserved.length}자리를 반영합니다. 공개 지표 후보 ${70-reserved.length}명과 함께 진입 기준을 계산하며, 비공개 후원 수치와 정확한 순위는 추정해 채우지 않습니다. 범위 표시는 예외 후보의 위치를 알 수 없어 생기는 차이입니다.`:'';
   }
   el('table-note').textContent=`${view.forecast?'11월 말 예상치':'현재 관측값'} 기준입니다. 유저 대비 차이는 계산 가능한 후보(후원 가정 포함) 내 누적 유저 순위와 종합 점수 순위의 차이이며, 전일 대비 변동이 아닙니다.`;
 }

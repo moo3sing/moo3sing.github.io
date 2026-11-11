@@ -10,6 +10,7 @@ from services.trackify import number, KST, collection_date
 from scripts.source_corrections import confirm_correction, current_source_observation
 from scripts.growth_guard import confirm_growth
 from scripts.viewer_adjustments import raw_previous, adjust
+from scripts.recent_trend import attach_recent_trend
 
 KEYS=('cumulativeUsers','donorCount','balloonCount')
 
@@ -104,6 +105,7 @@ def daily_observations(history_dir,now):
 
 
 def calculate_targets(root,snapshot,now):
+    attach_recent_trend(Path(root),snapshot)
     node=os.environ.get('NODE_BINARY') or str(root/'runtime/node')
     if not Path(node).exists():node=shutil.which('node') or node
     run=subprocess.run([node,str(root/'scripts/dynamic-report.js')],input=json.dumps({'snapshot':snapshot,'now':now.isoformat()}),text=True,capture_output=True,timeout=60)

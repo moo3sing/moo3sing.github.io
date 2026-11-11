@@ -64,3 +64,16 @@ declare module '*ranking-exceptions.js?v=20261019-fixed' {
 declare module '*viewer-reference.js?v=20261112-trend' {
  export const viewerOnlyReference: typeof import('../assets/viewer-reference.js').viewerOnlyReference;
 }
+
+declare module '*rolling-target.js?v=20261112-seven' {
+ export const rollingTargets: typeof import('../assets/rolling-target.js').rollingTargets;
+ export const projectRollingCandidates: typeof import('../assets/rolling-target.js').projectRollingCandidates;
+}
+declare module '*ranking-view.js?v=20261112-seven' {
+ export const rankingView: typeof import('../assets/ranking-view.js').rankingView;
+ export const metricObservation: typeof import('../assets/ranking-view.js').metricObservation;
+ export const latestObservation: typeof import('../assets/ranking-view.js').latestObservation;
+}
+declare module '*viewer-reference.js?v=20261112-seven' {
+ export const viewerOnlyReference: typeof import('../assets/viewer-reference.js').viewerOnlyReference;
+}

@@ -1,4 +1,5 @@
 import {SIMULATION_CONFIG} from './simulation-config.js';
+import {recentSevenDayPace,usesRecentSevenDays} from './recent-pace.js';
 
 /** Display-only viewer 100% reference; never feeds a scoring model or SafeTarget. */
 export function viewerOnlyReference(snapshot, report, options={}) {
@@ -16,7 +17,10 @@ export function viewerOnlyReference(snapshot, report, options={}) {
    const monthly=rates.get(row.soopId);
    if(report.horizon.remainingDays&&!Number.isSafeInteger(monthly))throw new Error('Missing viewer trend');
    if(monthly<0)throw new Error('Invalid viewer trend');
-   finalUsers=row.cumulativeUsers+(report.horizon.remainingDays?Math.round(monthly/30*report.horizon.remainingDays):0);
+   const fallback={forecastDailyPace:report.horizon.remainingDays?monthly/30:0};
+   const observed=snapshot.collectionMode==='automatic'?snapshot.actualObservedAt||snapshot.updatedAt:row.metricObservedAt?.cumulativeUsers||snapshot.updatedAt;
+   const pace=usesRecentSevenDays(snapshot)?recentSevenDayPace(snapshot,row,'cumulativeUsers',fallback,observed):fallback;
+   finalUsers=row.cumulativeUsers+Math.round(pace.forecastDailyPace*report.horizon.remainingDays);
   }
   if(!Number.isSafeInteger(finalUsers)||finalUsers<row.cumulativeUsers)throw new Error('Invalid viewer projection');
   return {soopId:row.soopId,actualUsers:row.cumulativeUsers,finalUsers};

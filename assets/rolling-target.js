@@ -2,6 +2,7 @@ import {calendarHorizon,liveTargets} from './live-target.js?v=20261019-fixed';
 import {dynamicTargets as legacyTargets} from './dynamic-target.js?v=20261019-fixed';
 const KEYS=['cumulativeUsers','donorCount','balloonCount'];
 import {fixedSupportCandidates} from './ranking-exceptions.js?v=20261019-fixed';
+import {recentSevenDayPace,usesRecentSevenDays} from './recent-pace.js';
 const dateKey=t=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(t));
 export function blendPace(base,gain,days){
  const actualDailyPace=days?Math.max(0,gain/days):0,actualWeight=days/(days+7);
@@ -42,22 +43,33 @@ export function projectRollingCandidates(snapshot,now=new Date()){
  const metadata={},projected={...actual,valueKind:horizon.ended?'final_observation':'forecast',donorEstimated:!horizon.ended,donorSource:'Annual unique actual + estimated new-to-year rolling growth'};
  for(const key of KEYS){
  if(!Number.isSafeInteger(actual[key])||actual[key]<0||!Number.isFinite(input[key]?.daily)||input[key].daily<0)throw new Error('실제값 또는 추세 누락');
- const metricObservation=metricDates?.[key]||observation;
+ const metricObservation=usesRecentSevenDays(snapshot)&&snapshot.collectionMode==='automatic'?snapshot.actualObservedAt||observation:metricDates?.[key]||observation;
  const metricObservedDate=dateKey(metricObservation),metricDate=metricObservedDate>today?today:metricObservedDate;
- const pace=rollingMetric(input[key],actual[key],baseline[key],snapshot.octoberObservation,snapshot.oct31Observation,key,metricDate,actual.soopId);
+ const previousPace=rollingMetric(input[key],actual[key],baseline[key],snapshot.octoberObservation,snapshot.oct31Observation,key,metricDate,actual.soopId);
+ const pace=usesRecentSevenDays(snapshot)?recentSevenDayPace(snapshot,actual,key,previousPace,metricObservation):previousPace;
  const donorDays=Array.from({length:horizon.remainingDays},(_,i)=>1/(1+(i+1)/60)).reduce((s,n)=>s+n,0);
  const days=key==='donorCount'?donorDays:horizon.remainingDays;
  projected[key]=actual[key]+Math.round(pace.forecastDailyPace*days);
  metadata[key]={...pace,observedDate:metricDate,forecastRemaining:projected[key]-actual[key],projectedOctRemaining:key==='donorCount'?null:pace.forecastDailyPace*horizon.months[0].days,
- method:key==='donorCount'?'annual_unique_actual_rolling_conservative_base_damped':'recent_trend_actual_rolling'};
+ method:usesRecentSevenDays(snapshot)?(key==='donorCount'?'recent_7d_annual_unique_damped':'recent_7d_average'):key==='donorCount'?'annual_unique_actual_rolling_conservative_base_damped':'recent_trend_actual_rolling'};
  }
- projected.forecast={method:'recent_trend_actual_rolling',observedDate:actualDate,remainingDays:horizon.remainingDays,metrics:metadata};
- return {actual,baseline,projected,forecast:projected.forecast,donorPace:{daily:metadata.donorCount.forecastDailyPace,source:'annual-unique-rolling'},balloonPace:{daily:metadata.balloonCount.forecastDailyPace,source:'recent-trend-actual-rolling'},donorForecastEstimated:true,gains:Object.fromEntries(KEYS.map(k=>[k,actual[k]-baseline[k]]))};
+ projected.forecast={method:usesRecentSevenDays(snapshot)?'recent_7d_average':'recent_trend_actual_rolling',observedDate:usesRecentSevenDays(snapshot)?metadata.cumulativeUsers.observedDate:actualDate,remainingDays:horizon.remainingDays,metrics:metadata};
+ return {actual,baseline,projected,forecast:projected.forecast,donorPace:{daily:metadata.donorCount.forecastDailyPace,source:metadata.donorCount.paceSource||'annual-unique-rolling'},balloonPace:{daily:metadata.balloonCount.forecastDailyPace,source:metadata.balloonCount.paceSource||'recent-trend-actual-rolling'},donorForecastEstimated:true,gains:Object.fromEntries(KEYS.map(k=>[k,actual[k]-baseline[k]]))};
  });
- return {horizon,rows:[...rows,...fixedSupportCandidates(snapshot,horizon,now)]};
+ const fixed=fixedSupportCandidates(snapshot,horizon,now);
+ if(usesRecentSevenDays(snapshot))for(const item of fixed){
+  const previous=item.forecast.metrics.cumulativeUsers;
+  const observed=snapshot.collectionMode==='automatic'?snapshot.actualObservedAt||snapshot.updatedAt:item.actual.metricObservedAt?.cumulativeUsers||snapshot.updatedAt;
+  const pace=recentSevenDayPace(snapshot,item.actual,'cumulativeUsers',previous,observed);
+  const users=item.actual.cumulativeUsers+Math.round(pace.forecastDailyPace*horizon.remainingDays);
+  item.projected.cumulativeUsers=users;
+  item.forecast.method=pace.paceSource?.startsWith('recent-')?'recent_7d_viewer_fixed_support':item.forecast.method;
+  item.forecast.metrics.cumulativeUsers={...pace,method:'recent_7d_average',forecastRemaining:users-item.actual.cumulativeUsers};
+ }
+ return {horizon,rows:[...rows,...fixed]};
 }
 export function rollingTargets(snapshot,now=new Date(),options={}){
- return {...legacyTargets(snapshot,now,{...options,projector:projectRollingCandidates}),mode:'recent_trend_actual_rolling'};
+ return {...legacyTargets(snapshot,now,{...options,projector:projectRollingCandidates}),mode:usesRecentSevenDays(snapshot)?'recent_7d_average':'recent_trend_actual_rolling'};
 }
 export function compareRollingModes(snapshot,now=new Date()){
  const fixed=liveTargets(snapshot,now),previous=legacyTargets(snapshot,now),dynamic=rollingTargets(snapshot,now);

@@ -1,8 +1,8 @@
-import {rollingTargets as dynamicTargets} from './rolling-target.js?v=20261019-fixed';
+import {rollingTargets as dynamicTargets} from './rolling-target.js?v=20261112-seven';
 const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261028-totals';
-import {viewerOnlyReference} from './viewer-reference.js?v=20261112-trend';
+import {viewerOnlyReference} from './viewer-reference.js?v=20261112-seven';
 let snapshot;
 function render(){
  const r=dynamicTargets(snapshot),ended=r.horizon.ended;
@@ -42,11 +42,14 @@ function render(){
  }
  el('freshness').textContent=!manual&&!ended&&Date.now()-Date.parse(r.updatedAt)>86400000?'마지막 데이터 변경 이후 24시간 이상 지났습니다. 원본 갱신 지연 또는 수집 상태를 확인해 주세요.':'';
  const t=r.target;
- el('support-state').textContent=ended?`전체 후보 ${snapshot.streamers.length}명 최종 실적 반영`:`상·하위 경쟁자 추세 반영 · 전체 후보 ${snapshot.streamers.length}명`;
+ const recentViewers=r.projectedRows.filter(row=>row.forecast?.metrics?.cumulativeUsers?.paceSource==='recent-7d-average').length;
+ const partialViewers=r.projectedRows.filter(row=>row.forecast?.metrics?.cumulativeUsers?.paceSource==='recent-partial-average').length;
+ el('recent-trend-note').textContent=snapshot.recentTrend?`7일 평균 ${recentViewers}명${partialViewers?` · 단기 관측 ${partialViewers}명`:""} · 대체 추세 ${r.projectedRows.length-recentViewers-partialViewers}명 · 대기 ${r.pendingCount+r.reservedCount}명`:'';
+ el('support-state').textContent=ended?`전체 후보 ${snapshot.streamers.length}명 최종 실적 반영`:`상·하위 경쟁자 최근 7일 평균 추세 반영 · 전체 후보 ${snapshot.streamers.length}명`;
  try{
   const reference=viewerOnlyReference(snapshot,r);
   el('viewer-reference-value').textContent=ended?'심사 종료':fmt(reference.remaining)+'명';
-  el('viewer-reference-note').textContent=ended?'마지막 관측값 기준 · 안전 목표 미포함':'TOP70까지 앞으로 필요한 누적 · 경쟁자 추세 반영';
+  el('viewer-reference-note').textContent=ended?'마지막 관측값 기준 · 안전 목표 미포함':'TOP70까지 앞으로 필요한 누적 · 경쟁자 최근 7일 추세 반영';
  }catch(error){
   el('viewer-reference-value').textContent='산정 대기';
   el('viewer-reference-note').textContent='전체 후보의 시청자 자료를 확인할 수 없습니다.';
@@ -54,11 +57,12 @@ function render(){
  el('donor-state').textContent=r.donorEstimated?'후원자 추정 데이터':'후원자 실제 데이터 · 연간 고유 집계';
  el('support-actual').textContent=`후원자 ${fmt(t.actual.donorCount)}명 · 9/30 대비 +${fmt(t.gains.donorCount)}명 / 별풍선 ${fmt(t.actual.balloonCount)}개 · +${fmt(t.gains.balloonCount)}개`;
  el('support-forecast').textContent=ended?'심사 기간 종료 — 마지막 관측값 보존':`11/30 예상 후원자 ${fmt(t.projected.donorCount)}명 / 예상 별풍선 ${fmt(t.projected.balloonCount)}개`;
- el('pace-state').textContent=`최근 추세와 10~11월 실제 데이터를 함께 반영한 예측 · 유저 actual 비중 ${(t.forecast.metrics.cumulativeUsers.actualWeight*100).toFixed(1)}%`;
+ const viewerPace=t.forecast.metrics.cumulativeUsers;
+ el('pace-state').textContent=snapshot.recentTrend?`최근 7일 관측 증가 속도 · 시청자 하루 평균 ${fmt(Math.round(viewerPace.forecastDailyPace))}명 · 비교 가능한 관측 ${Number(viewerPace.observedDays||0).toFixed(1)}일${viewerPace.fallbackReason?' · '+viewerPace.fallbackReason:''}`:`최근 추세와 10~11월 실제 데이터를 함께 반영한 예측 · 유저 actual 비중 ${(viewerPace.actualWeight*100).toFixed(1)}%`;
  const exceptionNote=el('ranking-exception-note');
  if(exceptionNote){
  exceptionNote.hidden=!(r.reservedCount||r.fixedSupportCount);
- exceptionNote.textContent=r.fixedSupportCount?`${r.fixedSupport.map(row=>`${row.name}: 별풍선 ${fmt(row.balloonCount)}개·후원자 ${fmt(row.donorCount)}명 가정 고정`).join('; ')}. 원본 비공개 값은 보존합니다. 누적 유저는 새 자료로 갱신하며, 미래 유저는 기존 9월 추세로 예상합니다.`:r.reservedCount?`${r.reserved.map(row=>row.name).join(', ')}는 사용자 요청에 따라 TOP70 ${r.reservedCount}자리를 가정합니다. 비공개 후원 수치는 채우지 않으며, 순위 범위가 있으면 메인에는 보수값을 표시합니다.`:'';
+ exceptionNote.textContent=r.fixedSupportCount?`${r.fixedSupport.map(row=>`${row.name}: 별풍선 ${fmt(row.balloonCount)}개·후원자 ${fmt(row.donorCount)}명 가정 고정`).join('; ')}. 원본 비공개 값은 보존합니다. 누적 유저는 새 자료로 갱신하며, 미래 유저는 최근 7일 관측 추세를 우선 사용하고, 관측이 부족하면 기존 추세로 대체합니다.`:r.reservedCount?`${r.reserved.map(row=>row.name).join(', ')}는 사용자 요청에 따라 TOP70 ${r.reservedCount}자리를 가정합니다. 비공개 후원 수치는 채우지 않으며, 순위 범위가 있으면 메인에는 보수값을 표시합니다.`:'';
  }
  const fallback=snapshot.rollingForecast.rows.filter(x=>x.cumulativeUsers.fallbackReason||x.balloonCount.fallbackReason).length;
  el('limits').textContent=`후원 통계 비공개 ${r.pendingCount}명은 산정 대기입니다. 최근 월별 자료가 불완전한 ${fallback}명은 사용 가능한 월 또는 기존 대체 추세를 사용합니다. 후원자는 월별 고유 수를 합산하지 않고 연간 실제 증가와 보수적 기준을 혼합한 추정입니다.`;

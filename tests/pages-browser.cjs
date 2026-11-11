@@ -48,8 +48,8 @@ const server = http.createServer((req,res) => {
     const {viewerOnlyReference} = await import('../assets/viewer-reference.js');
     const viewerReference = viewerOnlyReference(sourceSnapshot,expectedTargets);
     assert.equal(await page.locator('#viewer-reference-value').innerText(),viewerReference.remaining.toLocaleString('ko-KR')+'명');
-    assert.match(await page.locator('#viewer-reference-note').innerText(),/경쟁자 추세 반영/);
-    assert.match(await page.locator('#support-state').innerText(),/상·하위 경쟁자 추세 반영 · 전체 후보 100명/);
+    assert.match(await page.locator('#viewer-reference-note').innerText(),/경쟁자 최근 7일 추세 반영/);
+    assert.match(await page.locator('#support-state').innerText(),/상·하위 경쟁자 최근 7일 평균 추세 반영 · 전체 후보 100명/);
     assert.equal(await page.locator('#goal-updated-at').getAttribute('datetime'),sourceSnapshot.manualOverride?.observedAt||sourceSnapshot.updatedAt);
     assert.match(await page.locator('#goal-updated-at').innerText(),/\d+월 \d+일 (오전|오후) \d+:\d{2} KST/);
     assert.equal(await page.locator('[data-model-result="log"] > strong').textContent(),expectedTargets.experimentalModels[0].remaining.toLocaleString('ko-KR')+'명');
