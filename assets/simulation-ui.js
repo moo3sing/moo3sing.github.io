@@ -2,6 +2,7 @@ import {rollingTargets as dynamicTargets} from './rolling-target.js?v=20261019-f
 const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261028-totals';
+import {viewerOnlyReference} from './viewer-reference.js';
 let snapshot;
 function render(){
  const r=dynamicTargets(snapshot),ended=r.horizon.ended;
@@ -19,6 +20,14 @@ function render(){
  const manual=snapshot.collectionMode==='manual_partial';
  const batch=manual?snapshot.manualBatchOverride:null;
  const sourceObservation=batch?.sourceObservation;
+ const updateTime=manual?snapshot.manualOverride.observedAt:r.updatedAt;
+ const updateLabel=el('goal-updated-label'),updateDate=el('goal-updated-at');
+ const dayOnly=sourceObservation?.precision==='day';
+ updateLabel.textContent=dayOnly?'자료 기준':'자료 업데이트';
+ updateDate.setAttribute('datetime',dayOnly?sourceObservation.date:updateTime);
+ updateDate.textContent=dayOnly?`${sourceObservation.date.replaceAll('-','.')} · 집계 시각 미제공`:
+  new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'long',day:'numeric',hour:'numeric',minute:'2-digit',hour12:true}).format(new Date(updateTime))+' KST';
+ updateDate.title=dayOnly?'원본 집계 시각이 제공되지 않은 날짜 기준 자료입니다.':formatDate(updateTime)+' KST · 누적 유저·별풍선 자료 기준';
  el('updated').textContent=sourceObservation?.precision==='day'?`누적 유저·별풍선: ${sourceObservation.date.replaceAll('-','.')} 연간 자료 · 수신 ${formatDate(sourceObservation.receivedAt)} KST (원본 집계 시각 미제공)`:manual?`띵귤 데이터 기준 ${formatDate(snapshot.manualOverride.observedAt)} KST · ${batch?`경쟁자 ${batch.updatedCompetitors}명 수동 자료 ${formatDate(batch.observedAt)}`:`경쟁자 데이터 기준 ${formatDate(snapshot.competitorDataAsOf)}`} KST`:'데이터 기준 '+formatDate(r.updatedAt)+' KST';
  el('manual-note').hidden=!manual;
  el('manual-note').textContent=batch?`기존 후보 ${batch.updatedCandidates}명의 누적 유저와 공개된 별풍선을 사용자 제공 자료로 수동 갱신했습니다. ${batch.retainedCandidates?`목록에 없는 ${batch.retainedCandidates}명은 이전 값입니다. `:''}후원자 수는 마지막 확인값을 유지하며, 지표별 기준일은 전체 랭킹의 상세에서 확인할 수 있습니다.`:manual?'띵귤 데이터는 수동 갱신됐습니다. 경쟁자 데이터는 마지막 자동 수집 시점을 기준으로 예측합니다.':'';
@@ -33,7 +42,15 @@ function render(){
  }
  el('freshness').textContent=!manual&&!ended&&Date.now()-Date.parse(r.updatedAt)>86400000?'마지막 데이터 변경 이후 24시간 이상 지났습니다. 원본 갱신 지연 또는 수집 상태를 확인해 주세요.':'';
  const t=r.target;
- el('support-state').textContent=ended?'후원 실적 반영 · 종료':'후원 추세 반영 ON';
+ el('support-state').textContent=ended?`전체 후보 ${snapshot.streamers.length}명 최종 실적 반영`:`상·하위 경쟁자 추세 반영 · 전체 후보 ${snapshot.streamers.length}명`;
+ try{
+  const reference=viewerOnlyReference(snapshot,r);
+  el('viewer-reference-value').textContent=ended?'심사 종료':fmt(reference.remaining)+'명';
+  el('viewer-reference-note').textContent=ended?'마지막 관측값 기준 · 안전 목표 미포함':'TOP70까지 앞으로 필요한 누적 · 경쟁자 예상 증가 포함';
+ }catch(error){
+  el('viewer-reference-value').textContent='산정 대기';
+  el('viewer-reference-note').textContent='전체 후보의 시청자 자료를 확인할 수 없습니다.';
+ }
  el('donor-state').textContent=r.donorEstimated?'후원자 추정 데이터':'후원자 실제 데이터 · 연간 고유 집계';
  el('support-actual').textContent=`후원자 ${fmt(t.actual.donorCount)}명 · 9/30 대비 +${fmt(t.gains.donorCount)}명 / 별풍선 ${fmt(t.actual.balloonCount)}개 · +${fmt(t.gains.balloonCount)}개`;
  el('support-forecast').textContent=ended?'심사 기간 종료 — 마지막 관측값 보존':`11/30 예상 후원자 ${fmt(t.projected.donorCount)}명 / 예상 별풍선 ${fmt(t.projected.balloonCount)}개`;

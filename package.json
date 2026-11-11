@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node tests/ranking.test.js && node tests/log-model.test.js && node tests/ranking-view.test.js && node tests/ranking-exceptions.test.js && node tests/simulation.test.js && node tests/live-target.test.js && node tests/dynamic-target.test.js && node tests/rolling-target.test.js && node tests/trend-data.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
-    "lint": "node --check assets/admin-status.js && node --check assets/ranking.js && node --check assets/log-model.js && node --check assets/ranking-ui.js && node --check assets/ranking-view.js && node --check assets/simulation.js && node --check assets/simulation-ui.js && node --check assets/live-target.js && node --check assets/dynamic-target.js && node --check assets/rolling-target.js && node --check assets/trend-data.js && node --check assets/trend-ui.js && python3 scripts/check.py",
+    "test": "node tests/ranking.test.js && node tests/log-model.test.js && node tests/viewer-reference.test.js && node tests/ranking-view.test.js && node tests/ranking-exceptions.test.js && node tests/simulation.test.js && node tests/live-target.test.js && node tests/dynamic-target.test.js && node tests/rolling-target.test.js && node tests/trend-data.test.js && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "lint": "node --check assets/admin-status.js && node --check assets/ranking.js && node --check assets/log-model.js && node --check assets/ranking-ui.js && node --check assets/ranking-view.js && node --check assets/simulation.js && node --check assets/simulation-ui.js && node --check assets/viewer-reference.js && node --check assets/live-target.js && node --check assets/dynamic-target.js && node --check assets/rolling-target.js && node --check assets/trend-data.js && node --check assets/trend-ui.js && python3 scripts/check.py",
     "typecheck": "tsc -p jsconfig.json",
     "build": "python3 scripts/build_pages.py",
     "collect": "python3 scripts/collect.py",
