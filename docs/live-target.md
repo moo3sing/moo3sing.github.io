@@ -1,5 +1,7 @@
 # Live TOP 70 target — 2026-10-01
 
+> 2026-11-13 변경: 아래는 도입 당시 기록입니다. 현재는 오늘 남은 시간을 포함해 초 단위로 예측하며, 기존 추세의 평균도 실제 관측 간격을 사용합니다. [시간 계산 수정·검증 결과](calculation-audit-20261113.md)를 우선 참고하세요.
+
 Main page uses assets/live-target.js, reusing existing support scoring, full-cohort viewer normalization, tie-breaking and integer threshold search. The ranking page and its scoring module are unchanged.
 
 - Preserve production simulationBaseline and September forecast byte-equivalent JSON values.

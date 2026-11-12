@@ -1,5 +1,7 @@
 # Dynamic support extension — 2026-10-01
 
+> 2026-11-13 변경: 아래는 도입 당시 기록입니다. 현재는 오늘 남은 시간을 포함해 초 단위로 예측하며, 기존 추세의 평균도 실제 관측 간격을 사용합니다. [시간 계산 수정·검증 결과](calculation-audit-20261113.md)를 우선 참고하세요.
+
 Field verification was completed before implementation. See trackify-audit/meaning.md and its aggregate-only comparison records. No monthly unique donors are added to annual donors. Annual overview data for every baseline candidate is fetched at the existing :15 hourly cron. Since summary has no donor aggregate, a summary equality check cannot safely skip annual details: a donor-only change must be detected. Existing 0.4 s pacing, 20 s timeout, three attempts, no parallel API flood.
 
 ## Preservation and actuals
