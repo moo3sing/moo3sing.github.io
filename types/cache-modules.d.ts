@@ -82,3 +82,11 @@ declare module '*goal-scenarios.js?v=20261112-models' {
  export const goalScenarios: typeof import('../assets/goal-scenarios.js').goalScenarios;
  export const conservativeModelGoals: typeof import('../assets/goal-scenarios.js').conservativeModelGoals;
 }
+
+declare module '*trend-ui.js?v=20261112-partial' {
+ export const updateTrends: typeof import('../assets/trend-ui.js').updateTrends;
+}
+declare module '*trend-data.js?v=20261112-partial' {
+ export const trendView: typeof import('../assets/trend-data.js').trendView;
+ export const MODEL_NAMES: typeof import('../assets/trend-data.js').MODEL_NAMES;
+}

@@ -1,6 +1,8 @@
-import {trendView,MODEL_NAMES} from './trend-data.js?v=20261028-totals';
+import {trendView,MODEL_NAMES} from './trend-data.js?v=20261112-partial';
 
-const el=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('ko-KR');
+const el=id=>document.getElementById(id),fmt=n=>Number.isFinite(n)?Math.round(n).toLocaleString('ko-KR'):'—';
+const people=n=>Number.isFinite(n)?fmt(n)+'명':'—';
+const daily=n=>Number.isFinite(n)?fmt(n)+'명/일':'—';
 const parts=value=>Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(value)).map(part=>[part.type,part.value]));
 const date=value=>{const p=parts(value);return `${p.month}/${p.day}`;};
 const stamp=value=>{const p=parts(value);return `${p.month}/${p.day} ${p.hour}:${p.minute}`;};
@@ -96,40 +98,43 @@ function render(){
  const select=/** @type {HTMLSelectElement} */(el('trend-rival'));
  select.replaceChildren(new Option('경계 경쟁자 중앙값','median'),...view.rivals.map(row=>new Option(`${row.name} · 예상 ${row.rank}위`,row.soopId)));
  select.value=rival;
- const name=view.selectedRival?.name||'경계 경쟁자 중앙값',latest=view.series.at(-1),recent=view.recent.at(-1),prior=view.recent.at(-2);
- text('trend-range',`${date(view.first.observedAt)}–${date(view.last.observedAt)} · ${view.series.length}회 관측`);
+ const name=view.selectedRival?.name||'경계 경쟁자 중앙값',latest=view.series.at(-1);
+ const targetRates=view.series.filter(row=>row.targetDaily!==null),recent=targetRates.at(-1),prior=targetRates.at(-2);
+ text('trend-range',`${date(view.first.observedAt)}–${stamp(view.last.observedAt)} · ${view.series.length}회 관측`);
  text('trend-cohort',`${MODEL_NAMES[model]} 기준, 마지막 관측의 11월 말 예상 65–75위 중 띵귤을 제외한 ${view.rivals.length}명을 같은 명단으로 비교합니다.`);
  text('trend-member-names',view.rivals.map(row=>`${row.name}(${row.rank}위)`).join(' · '));
- text('trend-rival-legend',name);text('trend-selected-model',`${MODEL_NAMES[model]} · 관측 당시 같은 계산 방식`);
+ text('trend-rival-legend',name);text('trend-selected-model',`${MODEL_NAMES[model]} · 최근 7일 기준 · 관측 당시 같은 계산 방식`);
  text('trend-growth-title',mode==='total'?'실제 누적 유저 추이':'관측 사이의 하루 평균 증가');
- text('trend-growth-subtitle',mode==='total'?'각 관측 시점의 연간 누적 유저 · 띵귤은 기존 보정 반영':'두 관측 사이 증가량 ÷ 실제 경과일 · 방송일 평균이 아닙니다');
+ text('trend-growth-subtitle',mode==='total'?'각 자료 시점의 마지막 확인 누적 · 띵귤은 기존 보정 반영':'두 새 관측 사이 증가량 ÷ 실제 경과일 · 방송일 평균이 아닙니다');
  text('trend-target-label',mode==='total'?'띵귤 누적 유저':'띵귤 하루 평균');
- text('trend-target-rate',mode==='total'?fmt(latest.targetUsers)+'명':recent?fmt(recent.targetDaily)+'명':'—');
- text('trend-rival-rate',mode==='total'?fmt(latest.rivalUsers)+'명':recent?fmt(recent.rivalDaily)+'명':'—');
- text('trend-rate-period',mode==='total'?`${stamp(latest.observedAt)}${latest.precision==='day'?' 수신 기준':' 관측 기준'} · 세로축은 표시된 누적값 범위에 맞춰 조정됩니다.`:recent?`${date(recent.intervalStart)}–${date(recent.observedAt)} 관측 사이 하루 평균`:'시각이 확인된 관측이 쌓이면 일평균을 표시합니다.');
+ text('trend-target-rate',people(mode==='total'?latest.targetUsers:latest.targetDaily));
+ text('trend-rival-rate',people(mode==='total'?latest.rivalUsers:latest.rivalDaily));
+ text('trend-rate-period',mode==='total'?`${stamp(latest.observedAt)}${latest.precision==='day'?' 수신 기준':' 관측 기준'} · 갱신 ${latest.updatedCandidates}명 / 이전 값 유지 ${latest.retainedCandidates}명 · 세로축은 누적값 범위에 맞춰 조정됩니다.`:
+  latest.targetDaily!==null||latest.rivalDaily!==null?`${stamp(latest.intervalStart)}–${stamp(latest.observedAt)} 관측 사이 평균${latest.rivalDaily===null?' · 경쟁자 일부 미갱신으로 비교 일평균 미표시':''}`:'최신 구간의 관측 시각 또는 새 관측이 부족해 일평균을 표시하지 않습니다.');
  text('trend-rate-rival-label',view.selectedRival?.name||'경계 경쟁자 중앙값');
  let insight='누적 유저의 증가만으로 순위를 설명할 수는 없습니다. 경쟁자의 유저·별풍선과 남은 기간도 예상 순위에 함께 반영됩니다.';
- if(recent&&prior&&prior.targetDaily>0){
+ if(recent===latest&&prior&&prior.targetDaily>0){
   const change=(recent.targetDaily/prior.targetDaily-1)*100;
   insight=`최근 구간 띵귤의 일평균은 앞 구간보다 ${Math.abs(change).toFixed(1)}% ${change>=0?'늘었습니다':'줄었습니다'}. 예상 순위에는 경쟁자의 실적과 남은 기간도 함께 반영됩니다.`;
  }
  text('trend-insight',insight);
- const growthRows=mode==='total'?view.series:view.series.filter(row=>row.targetDaily!==null&&row.rivalDaily!==null);
+ const growthRows=mode==='total'||view.series.some(row=>row.targetDaily!==null||row.rivalDaily!==null)?view.series:[];
  if(growthRows.length){
   plot('trend-growth-chart',growthRows,[{key:mode==='total'?'targetUsers':'targetDaily',kind:'target'},{key:mode==='total'?'rivalUsers':'rivalDaily',kind:'rival'}],false,row=>{
-   text('trend-growth-chart-readout',mode==='total'?`${stamp(row.observedAt)}${row.precision==='day'?' 수신 기준':''} · 띵귤 ${fmt(row.targetUsers)}명 / ${name} ${fmt(row.rivalUsers)}명`:
-    `${date(row.intervalStart)}–${date(row.observedAt)} (${row.spanDays.toFixed(2)}일) · 띵귤 ${fmt(row.targetDaily)}명/일 / ${name} ${fmt(row.rivalDaily)}명/일`);
+   text('trend-growth-chart-readout',mode==='total'?`${stamp(row.observedAt)}${row.precision==='day'?' 수신 기준':''} · 띵귤 ${people(row.targetUsers)} / ${name} ${people(row.rivalUsers)}`:
+    Number.isFinite(row.spanDays)?`${stamp(row.intervalStart)}–${stamp(row.observedAt)} (${row.spanDays.toFixed(2)}일) · 띵귤 ${daily(row.targetDaily)} / ${name} ${daily(row.rivalDaily)}`:
+    `${stamp(row.observedAt)} · 비교 가능한 새 관측이 부족해 일평균을 표시하지 않습니다.`);
   });
  }else{el('trend-growth-chart').replaceChildren();text('trend-growth-chart-readout','집계 시각이 확인된 비교 구간이 없습니다.');}
  plot('trend-rank-chart',view.series,[{key:'forecastRank',kind:'target'},{key:'currentRank',kind:'current'}],true,row=>{
   text('trend-rank-chart-readout',`${stamp(row.observedAt)}${row.precision==='day'?' 수신 기준':''} · 현재 ${row.currentRank}위 / 11월 말 예상 ${row.forecastRank}위`);
  });
  text('trend-rank-summary',`${view.series[0].forecastRank}위 → ${latest.forecastRank}위`);
- text('trend-history-note',`유저는 방송 지표 누적이며 서로 다른 신규 시청자 수가 아닙니다. 점은 실제 자료가 들어온 때만 표시하며, 선은 관측 사이를 연결한 것입니다. ${view.unknownTimes?'10/20은 원본 집계 시각이 없어 수신 시각에 표시하고, 해당 구간의 일평균은 제외했습니다. ':''}경계 명단은 다음 자료에서 달라질 수 있습니다.`);
+ text('trend-history-note',`유저는 방송 지표 누적이며 서로 다른 신규 시청자 수가 아닙니다. 점은 자료가 들어온 때만 표시하며, 선은 관측 사이를 연결합니다. 부분 갱신의 미갱신 후보는 이전 누적값을 유지하며, 양쪽에 새 관측이 없는 구간의 일평균은 표시하지 않습니다. ${view.unknownTimes?`집계 시각 미제공 ${view.unknownTimes}회는 수신 시각으로 표시하고 해당 구간 일평균을 제외합니다. `:''}경계 명단은 다음 자료에서 달라질 수 있습니다.`);
  const body=el('trend-table-body');body.replaceChildren();
  view.series.forEach(row=>{
   const tr=document.createElement('tr');
-  [stamp(row.observedAt)+(row.precision==='day'?' 수신':''),fmt(row.targetUsers),fmt(row.rivalUsers),fmt(row.targetGain),fmt(row.rivalGain),row.targetDaily===null?'—':fmt(row.targetDaily),String(row.forecastRank)].forEach(value=>{
+  [stamp(row.observedAt)+(row.precision==='day'?' 수신':''),`${row.updatedCandidates}/${row.updatedCandidates+row.retainedCandidates}명`,fmt(row.targetUsers),fmt(row.rivalUsers),fmt(row.targetGain),fmt(row.rivalGain),row.targetDaily===null?'—':fmt(row.targetDaily),String(row.forecastRank)].forEach(value=>{
    const td=document.createElement('td');td.textContent=value;tr.append(td);
   });body.append(tr);
  });

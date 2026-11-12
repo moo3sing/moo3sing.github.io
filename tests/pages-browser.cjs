@@ -65,7 +65,24 @@ const server = http.createServer((req,res) => {
     }
     await page.waitForSelector('#trend-growth-chart svg');
     await page.waitForSelector('#trend-rank-chart svg');
+    const {trendView} = await import('../assets/trend-data.js');
+    const latestTrend = trendView(sourceSnapshot,expectedTargets.safeModel);
+    const graphLast = latestTrend.series.at(-1);
+    const stamp = value => {
+      const parts=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date(value)).map(part=>[part.type,part.value]));
+      return `${parts.month}/${parts.day} ${parts.hour}:${parts.minute}`;
+    };
+    assert.equal(latestTrend.last.observedAt,sourceSnapshot.collectionMode==='automatic'?sourceSnapshot.actualObservedAt||sourceSnapshot.updatedAt:sourceSnapshot.updatedAt);
+    assert((await page.locator('#trend-range').innerText()).includes(stamp(graphLast.observedAt)));
+    assert.equal(await page.locator('#trend-target-rate').innerText(),graphLast.targetUsers.toLocaleString('ko-KR')+'명');
+    assert.equal(await page.locator('#trend-table-body > tr').count(),latestTrend.series.length);
+    assert((await page.locator('#trend-table-body > tr').last().textContent()).includes(stamp(graphLast.observedAt)));
+    assert((await page.locator('#trend-rank-chart-readout').innerText()).includes('예상 '+graphLast.forecastRank+'위'));
     await page.locator('[data-trend-mode="pace"]').click();
+    await page.locator('#trend-growth-chart svg').press('Home');
+    await page.locator('#trend-growth-chart svg').press('End');
+    assert.equal(await page.locator('#trend-target-rate').innerText(),graphLast.targetDaily===null?'—':Math.round(graphLast.targetDaily).toLocaleString('ko-KR')+'명');
+    assert.equal(await page.locator('#trend-rival-rate').innerText(),graphLast.rivalDaily===null?'—':Math.round(graphLast.rivalDaily).toLocaleString('ko-KR')+'명');
     await page.locator('[data-trend-mode="total"]').click();
     for(const width of [1440,1024,768,390,320]) {
       await page.setViewportSize({width,height:900});

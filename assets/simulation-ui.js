@@ -1,7 +1,7 @@
 import {goalScenarios,conservativeModelGoals} from './goal-scenarios.js?v=20261112-models';
 const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
-import {updateTrends} from './trend-ui.js?v=20261028-totals';
+import {updateTrends} from './trend-ui.js?v=20261112-partial';
 import {viewerOnlyReference} from './viewer-reference.js?v=20261112-seven';
 let snapshot;
 function render(){

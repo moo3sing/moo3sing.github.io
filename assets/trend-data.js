@@ -1,4 +1,5 @@
 import {calculateRanking} from './ranking.js';
+import {includeReservations} from './ranking-exceptions.js';
 
 const DAY=86400000;
 export const MODEL_NAMES={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max'};
@@ -9,16 +10,30 @@ export function median(values){
 /** The live point uses the saved observation-time forecast, never today's calendar on old data. */
 export function currentObservation(snapshot){
  const report=snapshot.targetResults?.dynamic,batch=snapshot.manualBatchOverride;
- if(!report||report.updatedAt!==snapshot.updatedAt)return null;
- if(snapshot.collectionMode==='manual_partial'&&(batch?.updatedCandidates!==snapshot.streamers.length||batch?.retainedCandidates!==0||
-  snapshot.streamers.some(row=>row.metricObservedAt?.cumulativeUsers!==snapshot.updatedAt)))return null;
+ if(!report||report.updatedAt!==snapshot.updatedAt||report.models?.length!==3||(snapshot.status&&snapshot.status!=='ok'))return null;
+ const automatic=snapshot.collectionMode==='automatic',manual=snapshot.manualOverride;
+ const observedAt=automatic?snapshot.actualObservedAt||snapshot.updatedAt:snapshot.updatedAt;
+ const rows=snapshot.streamers.map(row=>{
+  const dates={...row.metricObservedAt};
+  for(const key of ['cumulativeUsers','donorCount','balloonCount']){
+   const fallback=automatic||snapshot.collectionMode!=='manual_partial'?observedAt:
+    row.soopId==='singgyul'?manual?.observedAt:snapshot.competitorDataAsOf;
+   dates[key]=automatic?fallback:dates[key]||fallback||null;
+  }
+  return {...row,metricObservedAt:dates};
+ });
  const target=snapshot.streamers.find(row=>row.soopId==='singgyul');
  if(!target||!snapshot.trendHistory?.comparisonKey)return null;
- return {observedAt:snapshot.updatedAt,precision:batch?.sourceObservation?.precision||'minute',
+ if(Date.parse(rows.find(row=>row.soopId==='singgyul').metricObservedAt.cumulativeUsers)!==Date.parse(observedAt))return null;
+ const updatedCandidates=rows.filter(row=>Date.parse(row.metricObservedAt.cumulativeUsers)===Date.parse(observedAt)).length;
+ return {observedAt,precision:automatic?'minute':manual?.sourceObservation?.precision||batch?.sourceObservation?.precision||'minute',
   comparisonKey:snapshot.trendHistory.comparisonKey,viewerAdjustment:snapshot.manualOverride?.adjustment??target.viewerAdjustmentTotal??0,
   rawUsers:snapshot.manualOverride?.rawViewer??target.rawMetrics?.viewer??target.cumulativeUsers,
-  models:Object.fromEntries(report.models.map(row=>[row.model,row])),rows:snapshot.streamers,projectedRows:report.projectedRows};
+  models:Object.fromEntries(report.models.map(row=>[row.model,row])),rows,projectedRows:report.projectedRows,
+  updatedCandidates,retainedCandidates:rows.length-updatedCandidates,reservedCount:report.reservedCount||0};
 }
+const freshViewer=(row,point)=>Boolean(row)&&Date.parse(row.metricObservedAt&&'cumulativeUsers' in row.metricObservedAt?
+ row.metricObservedAt.cumulativeUsers:point.observedAt)===Date.parse(point.observedAt);
 export function observations(snapshot){
  const current=currentObservation(snapshot),key=snapshot.trendHistory?.comparisonKey;
  const points=[...(snapshot.trendHistory?.points||[]),...(current?[current]:[])];
@@ -34,9 +49,11 @@ export function intervalRate(previous,current,ids){
  if(previous.precision!=='minute'||current.precision!=='minute'||previous.viewerAdjustment!==current.viewerAdjustment)return null;
  const days=(Date.parse(current.observedAt)-Date.parse(previous.observedAt))/DAY;
  if(days<=0)return null;
- const old=new Map(previous.rows.map(row=>[row.soopId,row.cumulativeUsers]));
- const next=new Map(current.rows.map(row=>[row.soopId,row.cumulativeUsers]));
- const gains=ids.map(id=>old.has(id)&&next.has(id)?next.get(id)-old.get(id):null);
+ const old=new Map(previous.rows.map(row=>[row.soopId,row]));
+ const next=new Map(current.rows.map(row=>[row.soopId,row]));
+ // An unchanged observation date means retained data, not measured zero growth.
+ if(ids.some(id=>!old.has(id)||!next.has(id)||!freshViewer(old.get(id),previous)||!freshViewer(next.get(id),current)))return null;
+ const gains=ids.map(id=>next.get(id).cumulativeUsers-old.get(id).cumulativeUsers);
  if(gains.some(n=>n===null||n<0))return null;
  return {days,daily:median(gains.map(n=>n/days))};
 }
@@ -46,7 +63,7 @@ export function trendView(snapshot,model='minmax',rivalId='median'){
  if(points.length<2)return null;
  const first=points[0],last=points.at(-1);
  // Fix today's boundary cohort across the whole graph; no changing-membership average.
- const rivals=calculateRanking(last.projectedRows,model).filter(row=>row.soopId!=='singgyul'&&row.predictedRank>=65&&row.predictedRank<=75)
+ const rivals=includeReservations(calculateRanking(last.projectedRows,model),last.reservedCount||0).filter(row=>row.soopId!=='singgyul'&&row.predictedRank>=65&&row.predictedRank<=75)
   .map(row=>({soopId:row.soopId,name:row.name,rank:row.predictedRank}));
  const ids=rivalId==='median'?rivals.map(row=>row.soopId):rivals.filter(row=>row.soopId===rivalId).map(row=>row.soopId);
  if(!ids.length)return null;
@@ -63,8 +80,10 @@ export function trendView(snapshot,model='minmax',rivalId='median'){
    targetUsers:rows.get('singgyul'),targetGain:rows.get('singgyul')-targetBase,
    rivalUsers:totals.every(Number.isFinite)?median(totals):null,
    rivalGain:gains.every(Number.isFinite)?median(gains):null,
-   targetDaily:targetRate?.daily??null,rivalDaily:rivalRate?.daily??null,spanDays:targetRate?.days??null,
-   intervalStart:previous?.observedAt??null,forecastRank:point.models[model].predictedRank,currentRank:point.models[model].currentRank};
+   targetDaily:targetRate?.daily??null,rivalDaily:rivalRate?.daily??null,spanDays:targetRate?.days??rivalRate?.days??null,
+   intervalStart:previous?.observedAt??null,forecastRank:point.models[model].predictedRank,currentRank:point.models[model].currentRank,
+   updatedCandidates:point.updatedCandidates??point.rows.length,retainedCandidates:point.retainedCandidates??0,
+   rivalStaleCount:ids.filter(id=>!freshViewer(point.rows.find(row=>row.soopId===id),point)).length};
  });
  const recent=series.filter(p=>p.targetDaily!==null&&p.rivalDaily!==null).slice(-2);
  return {model,rivals,selectedRival:rivals.find(row=>row.soopId===rivalId)||null,first,last,series,recent,
