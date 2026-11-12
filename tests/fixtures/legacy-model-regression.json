@@ -1,90 +1,90 @@
 {
-  "description": "Captured before adding Log; complete legacy ranking and fixed/dynamic/rolling outputs on the existing immutable test fixture.",
+  "description": "2026-11-13 continuous-time horizon and observed-interval rolling rates, on the unchanged pre-Log fixture; scoring, weights and solver preserved.",
   "fixtureSha256": "9be2fb17f15a160ea88633eb0168b14c32d5a62716cb79f9c8f7366c09e9eecb",
   "cases": [
     {
       "now": "2026-10-01T12:00:00+09:00",
       "rankings": {
-        "actual:rank": "2fc182aeb074e436a1f5b4608c534f4a10aac128a815eb2abea42ca9aa35b6aa",
-        "actual:percentile": "2fc182aeb074e436a1f5b4608c534f4a10aac128a815eb2abea42ca9aa35b6aa",
-        "actual:ratio": "cef51fad40ea9fe0825d3161df35a8653bb58489ab552a9a0c18a3c85745a40d",
-        "actual:minmax": "ac967608b3421ea698fa461b1a264052ba7289b5912f29abf0788583e794712d",
-        "forecast:rank": "7efcf33bd2f6781bd1d32bd1408ba588387a8c1d1f83383bd451a8d56b1b1572",
-        "forecast:percentile": "7efcf33bd2f6781bd1d32bd1408ba588387a8c1d1f83383bd451a8d56b1b1572",
-        "forecast:ratio": "898eaf6df8dffb639704a29c7ab6be43de0110db08f2728f752685a0940b2eb8",
-        "forecast:minmax": "5f7aae19212aa38d2bf94c23de3179ff9a22279e0c78bea3e246a7d786e49c7a"
+        "actual:rank": "c55c66043cf9e492d940b967e0b939d8881b63e3ec51ae493b20a16b72c9288a",
+        "actual:percentile": "c55c66043cf9e492d940b967e0b939d8881b63e3ec51ae493b20a16b72c9288a",
+        "actual:ratio": "4a6e94bf709c34d953accb336f3b3807ed01b516528731b07dcab8b319c6d089",
+        "actual:minmax": "038043bd48f90091f0a3fbe9a0c1ae7a83e0aec98ff7c7a0dcc8d744911c7abd",
+        "forecast:rank": "1d74490b5c7e5aa13a515546a5e51d553c54028acd3c1c89be286d1ca07b7c42",
+        "forecast:percentile": "1d74490b5c7e5aa13a515546a5e51d553c54028acd3c1c89be286d1ca07b7c42",
+        "forecast:ratio": "68b91823b28af1140007b4429e2b0ad0b87ce5edce2e9b29659740f9bcdf0b15",
+        "forecast:minmax": "1f5182f3e71f87f1c994252aa108b7c837259bcef0a75ac27e29a76b569c236b"
       },
-      "targets": "ceb18adc5f8f4761a7cd4796c9e1766e1a43ab8d4ed37dfcc44c0d2baed24710"
+      "targets": "1812282129026bed49bea8dbb218faf9cefa59e2505e1933647836ef324b987e"
     },
     {
       "now": "2026-10-15T12:00:00+09:00",
       "rankings": {
-        "actual:rank": "57a0321c7e89341449d9b07c8183bdc7a87f286f5b10814800cb1fece39fcc6a",
-        "actual:percentile": "57a0321c7e89341449d9b07c8183bdc7a87f286f5b10814800cb1fece39fcc6a",
-        "actual:ratio": "320d51115c121c75604697e5e9819f33cde0b675a26f2a301573861a5487c9d0",
-        "actual:minmax": "af7aa431132e10796afc05fb93fd18af7d3ba4f88c2b2b06cd0482f030e5d692",
-        "forecast:rank": "84cad71574f2fcc14857a325e4c75b62ab7c68febc27587370f6d5c5fc966238",
-        "forecast:percentile": "84cad71574f2fcc14857a325e4c75b62ab7c68febc27587370f6d5c5fc966238",
-        "forecast:ratio": "2b9cddee2b755c2ba02c29c99681ee406e21aeb5d689d5e28a7200d3fd0c8dff",
-        "forecast:minmax": "88609aed15439f16e021fd28ce408635d9886b3946240519cfc9e30ea2244a15"
+        "actual:rank": "808cb2ec4e28ee329e12533a7a54c4396a0c59a33af47b09381227baf1a76198",
+        "actual:percentile": "808cb2ec4e28ee329e12533a7a54c4396a0c59a33af47b09381227baf1a76198",
+        "actual:ratio": "73627f0eed5f4556a495ca44da74d25c7414dfd81a4850180d767e47621c71b4",
+        "actual:minmax": "3491caf1ea182d04a4f5f4255b1579665ce8510c3bf8ee9ed21422233309ba24",
+        "forecast:rank": "a07663a6ff2f21afd0c1866ac8e6f44eeec7384fd8ea1757aaf7b517d2a196b0",
+        "forecast:percentile": "a07663a6ff2f21afd0c1866ac8e6f44eeec7384fd8ea1757aaf7b517d2a196b0",
+        "forecast:ratio": "4dd01aa2a7a4896972adce398f55ed4df627623a44fce2ae6ddbcb0de813b865",
+        "forecast:minmax": "830b6dd0ccb175404b978f069ce75d80881cc9b661fa098a70cb69f28d125258"
       },
-      "targets": "db3d55351e8f1214a3ec1e2c239b5373580c6306818db33118ce3d1701593c8b"
+      "targets": "8316221b0ef296dfc07600081ce86b1aad8e6f22cf8e205d80af74883548c4f2"
     },
     {
       "now": "2026-10-31T12:00:00+09:00",
       "rankings": {
-        "actual:rank": "81db6263a68a1ed3afd5bb68465990de3b5eb701badade475d18fdaa41e8a1cb",
-        "actual:percentile": "81db6263a68a1ed3afd5bb68465990de3b5eb701badade475d18fdaa41e8a1cb",
-        "actual:ratio": "2040e631b4231c86002a8140c020f9e403e2db19b0291cc802e35be201f215dc",
-        "actual:minmax": "699d4ab5e49ebf2539127988d13eb37f75c5c91839427430bca1ebdac8eb690d",
-        "forecast:rank": "c645e4ed2e940cd38f5221004fbc1b376d99282b6bc7ff33292209b4fb529053",
-        "forecast:percentile": "c645e4ed2e940cd38f5221004fbc1b376d99282b6bc7ff33292209b4fb529053",
-        "forecast:ratio": "1687ef8d00a8cc921ff8432b711d8a0bd87e0a41d66a7ebbdea32bea760dfc1d",
-        "forecast:minmax": "d451c02b547668c6da655eacedad86df7ce0153dd4055090eeff5f7d218b90c8"
+        "actual:rank": "cbc8ab7b1ea08d99cd0f849cffecb1a498a527bd52e5065873dedc3b92b35c43",
+        "actual:percentile": "cbc8ab7b1ea08d99cd0f849cffecb1a498a527bd52e5065873dedc3b92b35c43",
+        "actual:ratio": "eb63b7f92a90f638f5ef37dacfe10fdf7cd5723f1e670e78947c7e40a65427b4",
+        "actual:minmax": "1383e0c92321c1fe90ab5aa9ae98e13e57ddc351a2d44682f10fd875dd870c69",
+        "forecast:rank": "afafff6ddc01590a42ef55619ea2a684ec43c904ebefd634cff5e20731662ba4",
+        "forecast:percentile": "afafff6ddc01590a42ef55619ea2a684ec43c904ebefd634cff5e20731662ba4",
+        "forecast:ratio": "d812d970a2f41917e2783fe167da99b66de8468272dc1c66adad4893869a5ac1",
+        "forecast:minmax": "83f7b90e5a945d395026f0fe9cdccb20c9a18917cc59077cfdf1314a4e47f355"
       },
-      "targets": "f762ff78d4a8abce1bb1e83fee69e7eb7ae4982d0bef46e56ee81452e3d02605"
+      "targets": "9302d33fe51180f55fd0264672b1775683e09ef3681d917079520f6e89b4d4b9"
     },
     {
       "now": "2026-11-01T12:00:00+09:00",
       "rankings": {
-        "actual:rank": "2d847fca9e599c507b7440209f8e21e560d275a4982daecd3354b5534721c8e4",
-        "actual:percentile": "2d847fca9e599c507b7440209f8e21e560d275a4982daecd3354b5534721c8e4",
-        "actual:ratio": "75a6aa6b967ba7b5e290ffa9277f6c3ea9db7afb75ce703eb8b13458072b8255",
-        "actual:minmax": "44736b31a4c47da23249e86ea913ffff3dbd609d6d08e3ea8f5e0f3dda536174",
-        "forecast:rank": "fa87fefc21593ffca6b5fa79ac74107e0b8caed6535cf1fa3f4e2dac13e0ae78",
-        "forecast:percentile": "fa87fefc21593ffca6b5fa79ac74107e0b8caed6535cf1fa3f4e2dac13e0ae78",
-        "forecast:ratio": "48b03b6654f150b119e0cc9afde041aebe5c18df65eef3ed0146d75cbb336e92",
-        "forecast:minmax": "837c93413878c0a1b09b8ce22e672e301b4b6c3d3b9c746f9e2e51c77ba7e355"
+        "actual:rank": "e3e42196fa3a095dfbe508fdaa2b0ff67bab888f29ffa1ccd8307fa584226f14",
+        "actual:percentile": "e3e42196fa3a095dfbe508fdaa2b0ff67bab888f29ffa1ccd8307fa584226f14",
+        "actual:ratio": "ddd4b768dd80652d9d313b6c6d3efcf682cd08aa8251e0c1e6d739ebbd513367",
+        "actual:minmax": "10ce7f390cb547a4b3aaa683713abe285ad12102644e76e5045e985cfb7c68c9",
+        "forecast:rank": "0fccd5c96511d29da01287a4107bf08e200c0ead93cf9dc22762d95cdca0f00e",
+        "forecast:percentile": "0fccd5c96511d29da01287a4107bf08e200c0ead93cf9dc22762d95cdca0f00e",
+        "forecast:ratio": "12d6775bbb45eaefd6fbc9a6bcc0c132ef7e76859a6be75299e7e4480be9ee68",
+        "forecast:minmax": "3921b957782fe4fe09ef4ea9ccc5510ac8acd5715af2115134cd43501fc6db35"
       },
-      "targets": "4e948282abdd1fa44643945c8f3b5946f3f5de50377cac102b4e32736e0edd50"
+      "targets": "fbe2212232fbebf4fe31454ff3f069a716a0be00d06e10d428affd1b0d1f671b"
     },
     {
       "now": "2026-11-05T12:00:00+09:00",
       "rankings": {
-        "actual:rank": "83760c0471f32fdc7f233394bc41a9080f9123c4c1fc7967ebd52ca6f017e86d",
-        "actual:percentile": "83760c0471f32fdc7f233394bc41a9080f9123c4c1fc7967ebd52ca6f017e86d",
-        "actual:ratio": "058e3d3adbf4b6a3314a6ffc5c7978ea4f07b41356fa29f02eeda2a140c48d9f",
-        "actual:minmax": "2c8cba066f49a0702e7ec9842b534b12f59b01a6e99e7e872943fde3c6493ade",
-        "forecast:rank": "112582151cff24e3ef3398405b3960d4b17a72a15beba9001fa974446186e739",
-        "forecast:percentile": "112582151cff24e3ef3398405b3960d4b17a72a15beba9001fa974446186e739",
-        "forecast:ratio": "b8651860b615ebd059a1906be227e9a90a68dfdfc79a86d8a5cb6a121b427119",
-        "forecast:minmax": "44065c8e707b7d66ae96a0be392a0c472365452394684bcceb933d9a2a4a4d08"
+        "actual:rank": "fd2fb593f4b4ad69ed3663abde57ef633961f2eb3f4e18d3bf8cc12ddb15ac14",
+        "actual:percentile": "fd2fb593f4b4ad69ed3663abde57ef633961f2eb3f4e18d3bf8cc12ddb15ac14",
+        "actual:ratio": "557744f97a3acc2c115fbc727ecf77ef54907f9ab32e51e6fbb3e0c69f6ddc00",
+        "actual:minmax": "00dc23403de41580c634be01859f3d4c252a00477f6f98293eeaa29c3d4397d0",
+        "forecast:rank": "8b5f92d1c4c6c78df516a67b196c3c6352777253a438a7e7dc4c663b82b77506",
+        "forecast:percentile": "8b5f92d1c4c6c78df516a67b196c3c6352777253a438a7e7dc4c663b82b77506",
+        "forecast:ratio": "a02b4e441724b8c9c8faefce0d394bca9afaf0e183e97e24cc008c70af519e7b",
+        "forecast:minmax": "aafcb85455a349449bd5907c9b9c15d2bfa8d27221c99bf3333152c15541ed55"
       },
-      "targets": "ed3d9c95fa966345b4e394e1eadf8631b4aaf7b67ed9401a7e52c89aac298652"
+      "targets": "79012b5e9e85f6ff9bc25758e54b8f60071672f01b30b64858747397c478c585"
     },
     {
       "now": "2026-11-30T12:00:00+09:00",
       "rankings": {
-        "actual:rank": "75d81b19bf3920d1af8b4952ab6e524b1ec3626978c5e4206635b7e809683e5a",
-        "actual:percentile": "75d81b19bf3920d1af8b4952ab6e524b1ec3626978c5e4206635b7e809683e5a",
-        "actual:ratio": "8e0016fa7ffba7e6c0cd67de1c0d1d697ba8ffebfb78faab30c559edfb28ba43",
-        "actual:minmax": "e291abe9f4a095bb7b053655617a43b41f9e3a49c67727c819a5902c13b9f574",
-        "forecast:rank": "930cebc6ca834dc50b37fe7f3bad625c17957625ae9f57f57cb7111c25643b22",
-        "forecast:percentile": "930cebc6ca834dc50b37fe7f3bad625c17957625ae9f57f57cb7111c25643b22",
-        "forecast:ratio": "3bc55ac39993a116c739d2072167dd4d2bda047e38f55e3dc9be7884a3262e3e",
-        "forecast:minmax": "d2717cf35c66cd44c980f557a302acdcc3253a8f55ea2b3e3a326934ec6c680c"
+        "actual:rank": "81a173c4341812ae34cd7965f091643174f2cb350bc91235bc22d7fe08964811",
+        "actual:percentile": "81a173c4341812ae34cd7965f091643174f2cb350bc91235bc22d7fe08964811",
+        "actual:ratio": "7fbb608d0b262fcff9107cf619c7b5ae150e1e7e462f2f4690811ef454b0d2f0",
+        "actual:minmax": "b03ed8773890279f4c4d921e6f14a55ef39430ff4c93341a7c592de5e24feccb",
+        "forecast:rank": "f32c1b60e3e07ef95ba13b5e02a2cd04e863f20bb2d30f3d0c1bafadcf4c0e94",
+        "forecast:percentile": "f32c1b60e3e07ef95ba13b5e02a2cd04e863f20bb2d30f3d0c1bafadcf4c0e94",
+        "forecast:ratio": "0250511d82c0079621fe10933787155916b03ecc3b36f71604af74d486800f03",
+        "forecast:minmax": "43eff8683f072e70950eccdca6cc7c813d4c783483e624a9667276d6965c1e40"
       },
-      "targets": "aa8d53cfbb20ab6e11f4a0112e6902ecc0bc15dcdaef5e075a6c81e4e58967af"
+      "targets": "0dd39ee3d63e223ffe76ac0ba667b3ffce5367b781906866743455f867a20bfe"
     },
     {
       "now": "2026-12-01T12:00:00+09:00",
@@ -93,12 +93,12 @@
         "actual:percentile": "e3aaae52c1e5911511c470640e3d49dedf330046fe53d5fe52e5030e1ac3d05d",
         "actual:ratio": "288d57df19525a95214221a6d410b6c0d1c0b1177f8bb5d1633e5f505bbbc9be",
         "actual:minmax": "5a0aadf13b42ed97add52bd583f21d910860f9825a9025bfd29f4e2c2c55eb67",
-        "forecast:rank": "558ceaa828e8b6477c2ea31d02ba2722081c4bdf953d886cb0399d369ab41975",
-        "forecast:percentile": "558ceaa828e8b6477c2ea31d02ba2722081c4bdf953d886cb0399d369ab41975",
-        "forecast:ratio": "b55ec519462c768bf45854f97cbb538dd0d3c3932402d4fb046c7143644a9ca2",
-        "forecast:minmax": "4db4ac3ac1eb2fed39d7ab4538989524b1775ce0f112733f62fa87c8bbe4f8dc"
+        "forecast:rank": "4fa8c49abb24ce2f8e499142fe9725ca3e5cce25c736f391fe24fe4a2359db45",
+        "forecast:percentile": "4fa8c49abb24ce2f8e499142fe9725ca3e5cce25c736f391fe24fe4a2359db45",
+        "forecast:ratio": "d724ae922c2ad570ce6d5cf7eaef467085b854ebfede7ca16509f8f2fb09f945",
+        "forecast:minmax": "2aa7db555d83d2843fa8f9d0a95abe7f889760c2f7a257197d33b6b62605fdb5"
       },
-      "targets": "a594073103d9cc4b965c164248a61e81831886d537be65eb379449184e25f299"
+      "targets": "1d03529d4462bd4d41b2eafd7e2d375b5858df7f671cab9fd7b6816ea5f97bc4"
     }
   ]
 }

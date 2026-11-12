@@ -1,11 +1,11 @@
-import {goalScenarios,conservativeModelGoals} from './goal-scenarios.js?v=20261112-models';
+import {goalScenarios,conservativeModelGoals} from './goal-scenarios.js?v=20261113-time';
 const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261112-partial';
 import {viewerOnlyReference} from './viewer-reference.js?v=20261112-seven';
 let snapshot;
 function render(){
- const scenarios=goalScenarios(snapshot),r=scenarios.recent,original=scenarios.original,conservative=scenarios.conservative,ended=r.horizon.ended;
+ const calculationTime=new Date(),scenarios=goalScenarios(snapshot,calculationTime),r=scenarios.recent,original=scenarios.original,conservative=scenarios.conservative,ended=r.horizon.ended;
  const selectedModel=r.models.find(m=>m.model===r.safeModel);
  el('content').hidden=false;el('retry').hidden=true;
  el('status').textContent=ended?'2026 심사 기간 종료':snapshot.status==='stale'?'최근 수집에 실패하여 마지막 정상 데이터를 표시합니다.':'';
@@ -17,7 +17,8 @@ function render(){
  el('conservative-policy').textContent='보수적: 띵귤은 낮은 추세 · 경쟁자는 높은 추세 / 세 경우 중 최대 목표 적용';
  el('verdict').textContent=ended?'11월 30일 마지막 관측값을 보존합니다.':original.safe===0?'기존 추세 기준 TOP 70 예상권':original.safe===null?'일부 모델의 목표가 산정 범위를 벗어났습니다.':'';
  el('daily').textContent=fmt(original.daily);el('daily-unit').hidden=original.daily===null;
- el('days').textContent=ended?'남은 기간 목표 계산 종료':r.horizon.remainingDays?`D-${r.horizon.remainingDays} · 내일부터 11월 30일까지 ${r.horizon.remainingDays}일`:'오늘 마감 · 남은 전체 날짜가 없어 일평균을 계산하지 않습니다.';
+ const minutes=Math.ceil(r.horizon.remainingDays*1440-1e-9);
+ el('days').textContent=ended?'남은 기간 목표 계산 종료':`현재 시각부터 11월 30일 마감까지 · 약 ${Math.floor(minutes/1440)}일 ${Math.floor(minutes/60)%24}시간 ${minutes%60}분 남음 · 계산 ${new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'numeric',day:'numeric',hour:'numeric',minute:'2-digit',hour12:false}).format(calculationTime)} KST`;
  el('gain').textContent=`${r.actualGain>=0?'+':''}${fmt(r.actualGain)}명`;el('current').textContent=fmt(r.currentUsers)+'명';el('current-rank').textContent=selectedModel.currentRank+'위';el('current-rank-basis').textContent=names[r.safeModel]+(r.fixedSupportCount?' · 가정 포함':' · 현재 누적');el('forecast-rank-label').textContent=ended?'11월 말 최종 관측 순위':'11월 말 예상 순위 · 최근 7일';el('rank').textContent=r.predictedRank+'위';el('rank-basis').textContent=names[r.safeModel]+(selectedModel.predictedRankRange.min!==selectedModel.predictedRankRange.max?` · ${rankLabel(selectedModel.predictedRankRange,r.predictedRank)}위 중 보수값`:ended?' · 최종 관측 기준':r.fixedSupportCount?' · 가정 포함':' · 안전 목표 모델');
  el('models').replaceChildren(...conservativeModelGoals(scenarios).map(m=>{const card=document.createElement('article');const experimental='experimental' in m&&m.experimental;card.dataset.modelResult=m.model;card.dataset.experimental=String(experimental);card.innerHTML=`<h3>${names[m.model]}${experimental?' <span class="model-badge">실험</span>':''}</h3><p class="model-rank">${ended?'관측':'보수 예상'} ${m.predictedRank}위</p><span>남은 목표</span><strong>${fmt(m.remaining)}<small>${m.remaining===null?'':'명'}</small></strong><p class="model-daily">하루 평균 <b>${fmt(m.daily)}</b>${m.daily===null?'':'명'}</p>${experimental?'<p class="model-policy">SafeTarget 미포함</p>':''}`;return card;}));
  el('october').textContent=fmt(r.october)+(r.october===null?'':'명');el('november').textContent=fmt(r.november)+(r.november===null?'':'명');

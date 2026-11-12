@@ -20,7 +20,10 @@ test('initial fallback never treats all monthly uniques as new annual donors',()
 test('future support for target and every competitor; no past-date forecast',()=>{
  const p=projectCandidates(data,now);assert.equal(p.rows.length,98);
  for(const x of p.rows){assert(x.projected.balloonCount>=x.actual.balloonCount);assert(x.projected.donorCount>=x.actual.donorCount);}
- const end=projectCandidates(data,'2026-11-30T23:59:00+09:00');for(const x of end.rows)for(const k of ['donorCount','balloonCount','cumulativeUsers'])assert.equal(x.projected[k],x.actual[k]);
+ const lastMinute=projectCandidates(data,'2026-11-30T23:59:00+09:00');
+ assert.equal(lastMinute.horizon.remainingDays,1/1440);
+ assert(lastMinute.rows.some(x=>x.projected.balloonCount>x.actual.balloonCount));
+ const end=projectCandidates(data,'2026-12-01T00:00:00+09:00');for(const x of end.rows)for(const k of ['donorCount','balloonCount','cumulativeUsers'])assert.equal(x.projected[k],x.actual[k]);
 });
 test('all three models match full projected-dataset normalization',()=>{
  for(const m of r.models){const expected=calculateRanking(r.projectedRows,m.model).find(x=>x.soopId==='singgyul');assert.equal(m.predictedRank,expected.predictedRank);assert.deepEqual(m.supportScores.map(s=>s.score),expected.breakdown.slice(1).map(s=>s.score));}

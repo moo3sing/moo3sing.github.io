@@ -90,3 +90,25 @@ declare module '*trend-data.js?v=20261112-partial' {
  export const trendView: typeof import('../assets/trend-data.js').trendView;
  export const MODEL_NAMES: typeof import('../assets/trend-data.js').MODEL_NAMES;
 }
+
+declare module '*live-target.js?v=20261113-time' {
+ export const calendarHorizon: typeof import('../assets/live-target.js').calendarHorizon;
+ export const dampedDays: typeof import('../assets/live-target.js').dampedDays;
+ export const liveTargets: typeof import('../assets/live-target.js').liveTargets;
+}
+declare module '*dynamic-target.js?v=20261113-time' {
+ export const dynamicTargets: typeof import('../assets/dynamic-target.js').dynamicTargets;
+}
+declare module '*rolling-target.js?v=20261113-time' {
+ export const rollingTargets: typeof import('../assets/rolling-target.js').rollingTargets;
+ export const projectRollingCandidates: typeof import('../assets/rolling-target.js').projectRollingCandidates;
+}
+declare module '*ranking-view.js?v=20261113-time' {
+ export const rankingView: typeof import('../assets/ranking-view.js').rankingView;
+ export const metricObservation: typeof import('../assets/ranking-view.js').metricObservation;
+ export const latestObservation: typeof import('../assets/ranking-view.js').latestObservation;
+}
+declare module '*goal-scenarios.js?v=20261113-time' {
+ export const goalScenarios: typeof import('../assets/goal-scenarios.js').goalScenarios;
+ export const conservativeModelGoals: typeof import('../assets/goal-scenarios.js').conservativeModelGoals;
+}

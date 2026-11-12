@@ -1,4 +1,4 @@
-import {calendarHorizon,liveTargets} from './live-target.js?v=20261019-fixed';
+import {calendarHorizon,liveTargets,dampedDays} from './live-target.js?v=20261113-time';
 import {fixedSupportScores,calculateForecastRanking,minimumAdditional,rankForAdditional} from './simulation.js';
 import {calculateRanking} from './ranking.js';
 import {SIMULATION_CONFIG,TARGET_MODEL_POLICY} from './simulation-config.js';
@@ -42,7 +42,7 @@ export function projectCandidates(snapshot,now=new Date()){
  const viewerDaily=viewers.get(actual.soopId)/30;
  if(!Number.isFinite(viewerDaily)||viewerDaily<0)throw new Error('9월 유저 추세 누락');
  // Explicit scenario assumption: marginal new annual donors decay with a 60-day scale.
- const effectiveDonorDays=Array.from({length:horizon.remainingDays},(_,i)=>1/(1+(i+1)/60)).reduce((s,n)=>s+n,0);
+ const effectiveDonorDays=dampedDays(horizon.remainingDays);
  const projected={...actual,valueKind:'forecast',donorEstimated:true,donorSource:'forecast: observed annual unique increments with diminishing marginal growth',cumulativeUsers:actual.cumulativeUsers+Math.round(viewerDaily*horizon.remainingDays),
  donorCount:actual.donorCount+Math.round(donorPace.daily*effectiveDonorDays),balloonCount:actual.balloonCount+Math.round(balloonPace.daily*horizon.remainingDays)};
  return {actual,baseline:base,projected,donorPace,balloonPace,donorForecastEstimated:true,

@@ -74,7 +74,7 @@ test('Log compresses the requested 100 to 1000000 example without production dat
 });
 
 assert.equal(createHash('sha256').update(fixtureText).digest('hex'),golden.fixtureSha256);
-for(const scenario of golden.cases)test(`legacy rankings, targets and SafeTarget are unchanged at ${scenario.now}`,()=>{
+for(const scenario of golden.cases)test(`continuous-time rankings, targets and SafeTarget match the audited fixture at ${scenario.now}`,()=>{
   for(const [key,expected] of Object.entries(scenario.rankings)){
     const [basis,model]=key.split(':');
     assert.equal(hash(rankingView(fixture,model,basis,scenario.now)),expected,key);

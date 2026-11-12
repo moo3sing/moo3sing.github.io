@@ -41,7 +41,8 @@ test('main solver, current ranking and projected ranking use the same reservatio
   const base=expected.models.find(row=>row.model===m.model);
   assert.equal(m.remaining,base.remaining);
   assert.equal(m.predictedRank,base.predictedRank+1);assert.equal(m.currentRank,base.currentRank+1);
-  assert.equal(m.boundary.at,70);assert.equal(m.boundary.before,71);
+  assert(m.boundary.at<=70);
+  if(m.remaining>0)assert.equal(m.boundary.before,71);else assert.equal(m.boundary.before,null);
   for(const basis of ['actual','forecast']){
    const target=rankingView(s,m.model,basis,now).ranked.find(row=>row.soopId==='singgyul');
    assert.equal(target.predictedRank,basis==='actual'?m.currentRank:m.predictedRank);

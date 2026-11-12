@@ -5,12 +5,19 @@ const DAY=86400000, START=Date.parse('2026-10-01T00:00:00+09:00'), NOV=Date.pars
 export function calendarHorizon(now=new Date()) {
  const time=new Date(now).getTime();
  if(!Number.isFinite(time))throw new Error('날짜가 올바르지 않습니다.');
- const day=Math.floor((time+9*3600000)/DAY)*DAY-9*3600000;
- // Today's observed actual is used as-is. Forecast starts tomorrow; Nov 30 is included.
- const begin=Math.max(START,day+DAY);
+ // Include the unelapsed part of today, through Dec 1 00:00 KST (exclusive).
+ const begin=Math.max(START,Math.min(END,time));
  const months=[{month:'2026-10',days:Math.max(0,(NOV-Math.min(NOV,begin))/DAY)},
  {month:'2026-11',days:Math.max(0,(END-Math.max(NOV,begin))/DAY)}];
  return {remainingDays:months.reduce((s,m)=>s+m.days,0),months,ended:time>=END};
+}
+/** Preserve the existing daily donor decay, with a proportional final partial day. */
+export function dampedDays(days){
+ if(!Number.isFinite(days)||days<0)throw new Error('남은 시간이 올바르지 않습니다.');
+ const whole=Math.floor(days),fraction=days-whole;
+ let total=0;
+ for(let day=1;day<=whole;day++)total+=1/(1+day/60);
+ return total+fraction/(1+(whole+1)/60);
 }
 export function liveTargets(snapshot,now=new Date(),options={}) {
  const horizon=calendarHorizon(now),config={...SIMULATION_CONFIG,...options};

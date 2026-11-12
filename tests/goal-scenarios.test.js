@@ -10,6 +10,25 @@ const snapshot=JSON.parse(readFileSync(new URL('../assets/data/ranking.json',imp
 const now=new Date(snapshot.updatedAt),before=JSON.stringify(snapshot),result=goalScenarios(snapshot,now);
 const old={...snapshot,recentTrend:undefined};
 
+test('midnight recheck of unchanged actuals has no whole-day goal or rolling-pace jump',()=>{
+ const recheck=at=>{
+  const s=structuredClone(snapshot),previous=s.updatedAt;
+  s.updatedAt=at;s.manualOverride.observedAt=at;s.recentTrend.asOf=at;
+  for(const row of s.streamers)for(const key of ['cumulativeUsers','balloonCount']){
+   if(row.metricObservedAt?.[key]===previous)row.metricObservedAt[key]=at;
+  }
+  return goalScenarios(s,new Date(at));
+ };
+ const a=recheck('2026-11-12T23:59:59+09:00'),b=recheck('2026-11-13T00:00:00+09:00');
+ for(const key of ['recent','original','conservative']){
+  assert(Math.abs(a[key].safe-b[key].safe)<=10,`${key} changed by ${a[key].safe-b[key].safe}`);
+  assert(Math.abs(a[key].horizon.remainingDays-b[key].horizon.remainingDays-1/86400)<1e-12);
+  const p=a[key].target.forecast.metrics.cumulativeUsers.forecastDailyPace;
+  const q=b[key].target.forecast.metrics.cumulativeUsers.forecastDailyPace;
+  assert(Math.abs(p-q)<1,`${key} pace jumps at midnight`);
+ }
+});
+
 test('left uses current seven-day model and center restores the original rolling calculation',()=>{
  assert.deepEqual(result.recent,rollingTargets(snapshot,now));
  assert.deepEqual(result.original,rollingTargets(old,now));

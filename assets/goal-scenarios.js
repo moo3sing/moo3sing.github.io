@@ -1,5 +1,5 @@
-import {projectRollingCandidates} from './rolling-target.js?v=20261112-seven';
-import {dynamicTargets} from './dynamic-target.js?v=20261019-fixed';
+import {projectRollingCandidates} from './rolling-target.js?v=20261113-time';
+import {dynamicTargets} from './dynamic-target.js?v=20261113-time';
 import {usesRecentSevenDays} from './recent-pace.js';
 
 /** Model cards compare the same three cases as the top conservative goal. */

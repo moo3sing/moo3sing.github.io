@@ -1,6 +1,6 @@
 import {MODELS} from './ranking.js';
 import {rankLabel,reservationBoundary as getBoundary} from './ranking-exceptions.js?v=20261019-fixed';
-import {rankingView, metricObservation, latestObservation} from './ranking-view.js?v=20261112-seven';
+import {rankingView, metricObservation, latestObservation} from './ranking-view.js?v=20261113-time';
 /** @template {HTMLElement} T @param {string} id @returns {T} */
 const el = id => /** @type {T} */ (document.getElementById(id));
 const fmt = n => n.toLocaleString('ko-KR');

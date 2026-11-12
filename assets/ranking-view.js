@@ -1,6 +1,6 @@
 import {calculateRanking} from './ranking.js';
-import {calendarHorizon} from './live-target.js';
-import {projectRollingCandidates} from './rolling-target.js?v=20261112-seven';
+import {calendarHorizon} from './live-target.js?v=20261113-time';
+import {projectRollingCandidates} from './rolling-target.js?v=20261113-time';
 import {top70Reservations,includeReservations,fixedSupportCandidates} from './ranking-exceptions.js?v=20261019-fixed';
 
 // Use the same candidate projection as the main simulation, without running its target solver.

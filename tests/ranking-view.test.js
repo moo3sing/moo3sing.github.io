@@ -35,8 +35,8 @@ test('manual updates keep separate metric dates and do not age old donor observa
   row.metricObservedAt={cumulativeUsers:now,balloonCount:now,donorCount:'2026-10-17T09:00:00+09:00'};
   const donor=row.donorCount;
   const result=rankingView(s,'rank','forecast',now).ranked.find(r=>r.soopId==='singgyul');
-  assert.equal(result.forecast.metrics.cumulativeUsers.elapsedActualDays,18);
-  assert.equal(result.forecast.metrics.donorCount.elapsedActualDays,17);
+  assert.equal(result.forecast.metrics.cumulativeUsers.elapsedActualDays,17+14/24);
+  assert.equal(result.forecast.metrics.donorCount.elapsedActualDays,16+9/24);
   assert.equal(metricObservation(s,row,'donorCount'),row.metricObservedAt.donorCount);
   assert.equal(row.donorCount,donor);
   const other=s.streamers.find(r=>r.soopId==='khm11903');

@@ -4,7 +4,7 @@ import hashlib
 import json
 from datetime import datetime
 
-MODEL_VERSION = 'recent-trend-actual-rolling-20261019-fixed'
+MODEL_VERSION = 'recent-trend-continuous-time-v2'
 METRICS = ('cumulativeUsers', 'donorCount', 'balloonCount')
 
 
@@ -15,7 +15,7 @@ def comparison_key(snapshot):
         inputs['rollingForecast'] = {key: value for key, value in inputs['rollingForecast'].items()
                                      if key not in ('capturedAt', 'errors')}
     inputs['candidates'] = sorted(row['soopId'] for row in snapshot['streamers'])
-    inputs['modelVersion'] = 'recent-seven-day-v1' if snapshot.get('recentTrend') else MODEL_VERSION
+    inputs['modelVersion'] = 'recent-seven-day-continuous-time-v2' if snapshot.get('recentTrend') else MODEL_VERSION
     return hashlib.sha256(json.dumps(inputs, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
 
@@ -74,7 +74,7 @@ def history_before_update(previous, current):
     key = comparison_key(current)
     unique = {p['observedAt']: p for p in points if p.get('comparisonKey') == key}
     ordered = sorted(unique.values(), key=lambda p: datetime.fromisoformat(p['observedAt']))
-    version = 'recent-seven-day-v1' if current.get('recentTrend') else MODEL_VERSION
+    version = 'recent-seven-day-continuous-time-v2' if current.get('recentTrend') else MODEL_VERSION
     return {'version': 2, 'modelVersion': version, 'comparisonKey': key,
             'definition': 'Successful observations with per-metric dates; retained values disclosed; no missing-day interpolation.',
             'points': ordered[-90:]}

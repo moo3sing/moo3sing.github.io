@@ -33,7 +33,7 @@ const server = http.createServer((req,res) => {
     page.on('request',request => {if(request.url().includes('trackify.kr/api/'))externalAPI.push(request.url());});
     const sourceSnapshot = JSON.parse(fs.readFileSync('assets/data/ranking.json','utf8'));
     const testTime = new Date(sourceSnapshot.updatedAt);
-    await page.clock.install({time:testTime});
+    await page.clock.setFixedTime(testTime);
     assert.equal((await page.goto(base + '/')).status(),200);
     await page.waitForSelector('#content:visible');
     assert.match(await page.locator('#safe').innerText(),/\d/);
@@ -50,6 +50,8 @@ const server = http.createServer((req,res) => {
     assert.equal(await page.locator('#recent-goal').innerText(),expectedTargets.safe.toLocaleString('ko-KR'));
     assert.equal(await page.locator('#conservative-goal').innerText(),scenarios.conservative.safe.toLocaleString('ko-KR'));
     assert.equal(await page.locator('#daily').innerText(),scenarios.original.daily.toLocaleString('ko-KR'));
+    assert.match(await page.locator('#days').innerText(),/현재 시각부터 11월 30일 마감까지/);
+    assert(!((await page.locator('#days').innerText()).includes('내일부터')));
     assert.match(await page.locator('#conservative-policy').innerText(),/띵귤은 낮은 추세 · 경쟁자는 높은 추세/);
     const {viewerOnlyReference} = await import('../assets/viewer-reference.js');
     const viewerReference = viewerOnlyReference(sourceSnapshot,expectedTargets);
