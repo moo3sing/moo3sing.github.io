@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {goalScenarios} from '../assets/goal-scenarios.js';
+import {goalScenarios,conservativeModelGoals} from '../assets/goal-scenarios.js';
 import {rollingTargets,projectRollingCandidates} from '../assets/rolling-target.js';
 import {viewerOnlyReference} from '../assets/viewer-reference.js';
 import {calculateRanking} from '../assets/ranking.js';
@@ -61,4 +61,30 @@ test('an unreachable conservative goal cannot be displayed as a smaller reassuri
  const bounded=goalScenarios(snapshot,now,{maxAdditionalUsers:1});
  assert.equal(bounded.conservative.safe,null);
  assert.equal(bounded.conservative.daily,null);
+});
+
+test('conservative model cards take the maximum goal and worst rank separately without mutating scenarios',()=>{
+ const before=JSON.stringify(result),cards=conservativeModelGoals(result);
+ assert.deepEqual(cards.map(row=>row.model),['rank','ratio','minmax','log']);
+ for(const card of cards){
+  const rows=['recent','original','conservative'].map(key=>[...result[key].models,...result[key].experimentalModels].find(row=>row.model===card.model));
+  assert.equal(card.remaining,Math.max(...rows.map(row=>row.remaining)));
+  assert.equal(card.predictedRank,Math.max(...rows.map(row=>row.predictedRank)));
+  const rankRow=[...result[card.rankScenario].models,...result[card.rankScenario].experimentalModels].find(row=>row.model===card.model);
+  assert.deepEqual(card.predictedRankRange,rankRow.predictedRankRange);
+ }
+ assert.equal(Math.max(...cards.filter(row=>!row.experimental).map(row=>row.remaining)),result.conservative.safe);
+ assert.equal(cards.filter(row=>row.experimental).length,1);
+ assert.equal(JSON.stringify(result),before);
+});
+
+test('model comparison never converts an unavailable goal or ended period into a smaller valid goal',()=>{
+ const bounded=goalScenarios(snapshot,now,{maxAdditionalUsers:1});
+ for(const card of conservativeModelGoals(bounded)){
+  const rows=['recent','original','conservative'].map(key=>[...bounded[key].models,...bounded[key].experimentalModels].find(row=>row.model===card.model));
+  if(rows.some(row=>row.remaining===null)){assert.equal(card.remaining,null);assert.equal(card.daily,null);}
+ }
+ for(const card of conservativeModelGoals(goalScenarios(snapshot,'2026-12-01T00:00:00+09:00'))){
+  assert.equal(card.remaining,null);assert.equal(card.daily,null);
+ }
 });

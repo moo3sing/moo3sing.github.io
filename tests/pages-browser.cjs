@@ -44,7 +44,7 @@ const server = http.createServer((req,res) => {
     assert.match(await page.locator('[data-model-result="log"]').innerText(),/실험[\s\S]*SafeTarget 미포함/);
     const {rollingTargets} = await import('../assets/rolling-target.js');
     const expectedTargets = rollingTargets(sourceSnapshot,testTime);
-    const {goalScenarios} = await import('../assets/goal-scenarios.js');
+    const {goalScenarios,conservativeModelGoals} = await import('../assets/goal-scenarios.js');
     const scenarios = goalScenarios(sourceSnapshot,testTime);
     assert.equal(await page.locator('#safe').innerText(),scenarios.original.safe.toLocaleString('ko-KR'));
     assert.equal(await page.locator('#recent-goal').innerText(),expectedTargets.safe.toLocaleString('ko-KR'));
@@ -58,7 +58,11 @@ const server = http.createServer((req,res) => {
     assert.match(await page.locator('#support-state').innerText(),/상·하위 경쟁자 추세 반영 · 전체 후보 100명/);
     assert.equal(await page.locator('#goal-updated-at').getAttribute('datetime'),sourceSnapshot.manualOverride?.observedAt||sourceSnapshot.updatedAt);
     assert.match(await page.locator('#goal-updated-at').innerText(),/\d+월 \d+일 (오전|오후) \d+:\d{2} KST/);
-    assert.equal(await page.locator('[data-model-result="log"] > strong').textContent(),expectedTargets.experimentalModels[0].remaining.toLocaleString('ko-KR')+'명');
+    assert.equal(await page.locator('#models-title').innerText(),'모델별 목표 · 보수적');
+    for(const model of conservativeModelGoals(scenarios)){
+      assert.equal(await page.locator(`[data-model-result="${model.model}"] > strong`).textContent(),model.remaining.toLocaleString('ko-KR')+'명');
+      assert.equal(await page.locator(`[data-model-result="${model.model}"] .model-rank`).innerText(),'보수 예상 '+model.predictedRank+'위');
+    }
     await page.waitForSelector('#trend-growth-chart svg');
     await page.waitForSelector('#trend-rank-chart svg');
     await page.locator('[data-trend-mode="pace"]').click();

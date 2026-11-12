@@ -77,3 +77,8 @@ declare module '*ranking-view.js?v=20261112-seven' {
 declare module '*viewer-reference.js?v=20261112-seven' {
  export const viewerOnlyReference: typeof import('../assets/viewer-reference.js').viewerOnlyReference;
 }
+
+declare module '*goal-scenarios.js?v=20261112-models' {
+ export const goalScenarios: typeof import('../assets/goal-scenarios.js').goalScenarios;
+ export const conservativeModelGoals: typeof import('../assets/goal-scenarios.js').conservativeModelGoals;
+}
