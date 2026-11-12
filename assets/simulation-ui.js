@@ -1,19 +1,24 @@
-import {rollingTargets as dynamicTargets} from './rolling-target.js?v=20261112-seven';
+import {goalScenarios} from './goal-scenarios.js';
 const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString('ko-KR'),names={rank:'순위형',ratio:'1위 대비',minmax:'Min-Max',log:'Log'};
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261028-totals';
 import {viewerOnlyReference} from './viewer-reference.js?v=20261112-seven';
 let snapshot;
 function render(){
- const r=dynamicTargets(snapshot),ended=r.horizon.ended;
+ const scenarios=goalScenarios(snapshot),r=scenarios.recent,original=scenarios.original,conservative=scenarios.conservative,ended=r.horizon.ended;
  const selectedModel=r.models.find(m=>m.model===r.safeModel);
  el('content').hidden=false;el('retry').hidden=true;
  el('status').textContent=ended?'2026 심사 기간 종료':snapshot.status==='stale'?'최근 수집에 실패하여 마지막 정상 데이터를 표시합니다.':'';
- el('safe').textContent=ended?'심사 종료':fmt(r.safe);el('unit').hidden=ended||r.safe===null;
- el('verdict').textContent=ended?'11월 30일 마지막 관측값을 보존합니다.':r.safe===0?'현재 기준 TOP 70 예상권':r.safe===null?'일부 모델의 목표가 산정 범위를 벗어났습니다.':'';
- el('daily').textContent=fmt(r.daily);el('daily-unit').hidden=r.daily===null;
+ el('safe').textContent=ended?'종료':fmt(original.safe);el('unit').hidden=ended||original.safe===null;
+ el('recent-goal').textContent=ended?'종료':fmt(r.safe);el('recent-unit').hidden=ended||r.safe===null;
+ el('conservative-goal').textContent=ended?'종료':fmt(conservative.safe);el('conservative-unit').hidden=ended||conservative.safe===null;
+ el('recent-daily').textContent=fmt(r.daily);el('recent-daily-unit').hidden=r.daily===null;
+ el('conservative-daily').textContent=fmt(conservative.daily);el('conservative-daily-unit').hidden=conservative.daily===null;
+ el('conservative-policy').textContent='보수적: 띵귤은 낮은 추세 · 경쟁자는 높은 추세 / 세 경우 중 최대 목표 적용';
+ el('verdict').textContent=ended?'11월 30일 마지막 관측값을 보존합니다.':original.safe===0?'기존 추세 기준 TOP 70 예상권':original.safe===null?'일부 모델의 목표가 산정 범위를 벗어났습니다.':'';
+ el('daily').textContent=fmt(original.daily);el('daily-unit').hidden=original.daily===null;
  el('days').textContent=ended?'남은 기간 목표 계산 종료':r.horizon.remainingDays?`D-${r.horizon.remainingDays} · 내일부터 11월 30일까지 ${r.horizon.remainingDays}일`:'오늘 마감 · 남은 전체 날짜가 없어 일평균을 계산하지 않습니다.';
- el('gain').textContent=`${r.actualGain>=0?'+':''}${fmt(r.actualGain)}명`;el('current').textContent=fmt(r.currentUsers)+'명';el('current-rank').textContent=selectedModel.currentRank+'위';el('current-rank-basis').textContent=names[r.safeModel]+(r.fixedSupportCount?' · 가정 포함':' · 현재 누적');el('forecast-rank-label').textContent=ended?'11월 말 최종 관측 순위':'11월 말 예상 순위';el('rank').textContent=r.predictedRank+'위';el('rank-basis').textContent=names[r.safeModel]+(selectedModel.predictedRankRange.min!==selectedModel.predictedRankRange.max?` · ${rankLabel(selectedModel.predictedRankRange,r.predictedRank)}위 중 보수값`:ended?' · 최종 관측 기준':r.fixedSupportCount?' · 가정 포함':' · 안전 목표 모델');
+ el('gain').textContent=`${r.actualGain>=0?'+':''}${fmt(r.actualGain)}명`;el('current').textContent=fmt(r.currentUsers)+'명';el('current-rank').textContent=selectedModel.currentRank+'위';el('current-rank-basis').textContent=names[r.safeModel]+(r.fixedSupportCount?' · 가정 포함':' · 현재 누적');el('forecast-rank-label').textContent=ended?'11월 말 최종 관측 순위':'11월 말 예상 순위 · 최근 7일';el('rank').textContent=r.predictedRank+'위';el('rank-basis').textContent=names[r.safeModel]+(selectedModel.predictedRankRange.min!==selectedModel.predictedRankRange.max?` · ${rankLabel(selectedModel.predictedRankRange,r.predictedRank)}위 중 보수값`:ended?' · 최종 관측 기준':r.fixedSupportCount?' · 가정 포함':' · 안전 목표 모델');
  el('models').replaceChildren(...[...r.models,...r.experimentalModels].map(m=>{const card=document.createElement('article');const experimental='experimental' in m&&m.experimental;card.dataset.modelResult=m.model;card.dataset.experimental=String(experimental);card.innerHTML=`<h3>${names[m.model]}${experimental?' <span class="model-badge">실험</span>':''}</h3><p class="model-rank">${ended?'관측':'예상'} ${rankLabel(m.predictedRankRange,m.predictedRank)}위</p><span>남은 목표</span><strong>${fmt(m.remaining)}<small>${m.remaining===null?'':'명'}</small></strong><p class="model-daily">하루 평균 <b>${fmt(m.daily)}</b>${m.daily===null?'':'명'}</p>${experimental?'<p class="model-policy">SafeTarget 미포함</p>':''}`;return card;}));
  el('october').textContent=fmt(r.october)+(r.october===null?'':'명');el('november').textContent=fmt(r.november)+(r.november===null?'':'명');
  const formatDate=value=>new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(value)).replaceAll('-','.');
@@ -44,8 +49,8 @@ function render(){
  const t=r.target;
  const recentViewers=r.projectedRows.filter(row=>row.forecast?.metrics?.cumulativeUsers?.paceSource==='recent-7d-average').length;
  const partialViewers=r.projectedRows.filter(row=>row.forecast?.metrics?.cumulativeUsers?.paceSource==='recent-partial-average').length;
- el('recent-trend-note').textContent=snapshot.recentTrend?`7일 평균 ${recentViewers}명${partialViewers?` · 단기 관측 ${partialViewers}명`:""} · 대체 추세 ${r.projectedRows.length-recentViewers-partialViewers}명 · 대기 ${r.pendingCount+r.reservedCount}명`:'';
- el('support-state').textContent=ended?`전체 후보 ${snapshot.streamers.length}명 최종 실적 반영`:`상·하위 경쟁자 최근 7일 평균 추세 반영 · 전체 후보 ${snapshot.streamers.length}명`;
+ el('recent-trend-note').textContent=snapshot.recentTrend?`최근 7일: 평균 ${recentViewers}명${partialViewers?` · 단기 관측 ${partialViewers}명`:""} · 대체 추세 ${r.projectedRows.length-recentViewers-partialViewers}명 · 대기 ${r.pendingCount+r.reservedCount}명`:'';
+ el('support-state').textContent=ended?`전체 후보 ${snapshot.streamers.length}명 최종 실적 반영`:`상·하위 경쟁자 추세 반영 · 전체 후보 ${snapshot.streamers.length}명`;
  try{
   const reference=viewerOnlyReference(snapshot,r);
   el('viewer-reference-value').textContent=ended?'심사 종료':fmt(reference.remaining)+'명';

@@ -44,12 +44,18 @@ const server = http.createServer((req,res) => {
     assert.match(await page.locator('[data-model-result="log"]').innerText(),/실험[\s\S]*SafeTarget 미포함/);
     const {rollingTargets} = await import('../assets/rolling-target.js');
     const expectedTargets = rollingTargets(sourceSnapshot,testTime);
-    assert.equal(await page.locator('#safe').innerText(),expectedTargets.safe.toLocaleString('ko-KR'));
+    const {goalScenarios} = await import('../assets/goal-scenarios.js');
+    const scenarios = goalScenarios(sourceSnapshot,testTime);
+    assert.equal(await page.locator('#safe').innerText(),scenarios.original.safe.toLocaleString('ko-KR'));
+    assert.equal(await page.locator('#recent-goal').innerText(),expectedTargets.safe.toLocaleString('ko-KR'));
+    assert.equal(await page.locator('#conservative-goal').innerText(),scenarios.conservative.safe.toLocaleString('ko-KR'));
+    assert.equal(await page.locator('#daily').innerText(),scenarios.original.daily.toLocaleString('ko-KR'));
+    assert.match(await page.locator('#conservative-policy').innerText(),/띵귤은 낮은 추세 · 경쟁자는 높은 추세/);
     const {viewerOnlyReference} = await import('../assets/viewer-reference.js');
     const viewerReference = viewerOnlyReference(sourceSnapshot,expectedTargets);
     assert.equal(await page.locator('#viewer-reference-value').innerText(),viewerReference.remaining.toLocaleString('ko-KR')+'명');
     assert.match(await page.locator('#viewer-reference-note').innerText(),/경쟁자 최근 7일 추세 반영/);
-    assert.match(await page.locator('#support-state').innerText(),/상·하위 경쟁자 최근 7일 평균 추세 반영 · 전체 후보 100명/);
+    assert.match(await page.locator('#support-state').innerText(),/상·하위 경쟁자 추세 반영 · 전체 후보 100명/);
     assert.equal(await page.locator('#goal-updated-at').getAttribute('datetime'),sourceSnapshot.manualOverride?.observedAt||sourceSnapshot.updatedAt);
     assert.match(await page.locator('#goal-updated-at').innerText(),/\d+월 \d+일 (오전|오후) \d+:\d{2} KST/);
     assert.equal(await page.locator('[data-model-result="log"] > strong').textContent(),expectedTargets.experimentalModels[0].remaining.toLocaleString('ko-KR')+'명');
@@ -60,6 +66,11 @@ const server = http.createServer((req,res) => {
     for(const width of [1440,1024,768,390,320]) {
       await page.setViewportSize({width,height:900});
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),false,'Home overflow at ' + width);
+      const cards = await page.locator('.goal-scenarios > article').all();
+      const boxes = await Promise.all(cards.map(card=>card.boundingBox()));
+      assert.equal(boxes.length,3);
+      assert(boxes.every(box=>Math.abs(box.y-boxes[0].y)<1),'Scenario cards must remain horizontal at ' + width);
+      assert(boxes[0].x<boxes[1].x&&boxes[1].x<boxes[2].x);
       if(process.env.SCREENSHOT_DIR && [1440,390].includes(width)) {
         fs.mkdirSync(process.env.SCREENSHOT_DIR,{recursive:true});
         await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`pages-home-${width}.png`),fullPage:true});
