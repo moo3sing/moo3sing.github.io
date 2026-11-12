@@ -1,8 +1,8 @@
 {
-  "lastCollectionAttempt": "2026-11-12T00:46:04.416081+00:00",
+  "lastCollectionAttempt": "2026-11-12T23:40:08.724838+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
   "lastDataChange": "2026-11-13T00:28:00+09:00",
-  "collectionStatus": "manual_partial",
+  "collectionStatus": "api_blocked",
   "snapshotUpdatedAt": "2026-11-13T00:28:00+09:00",
   "collectionMode": "manual_partial",
   "actualDataScope": "listed_candidates_viewer_balloon",
@@ -24,7 +24,7 @@
     "maxFullAttemptsPerKstDay": 1,
     "retryOnFailure": false,
     "minRequestIntervalSeconds": 2.0,
-    "nextScheduledKST": "2026-11-13T03:15:00+09:00",
+    "nextScheduledKST": "2026-11-14T03:15:00+09:00",
     "blockedUntil": "2026-11-17T10:36:20.318255+09:00",
     "nextEligibleDailyKST": "2026-11-18T03:15:00+09:00"
   },
