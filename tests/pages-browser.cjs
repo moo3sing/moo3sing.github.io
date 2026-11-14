@@ -111,9 +111,18 @@ const server = http.createServer((req,res) => {
     }
     assert.match(await page.locator('#model-description').innerText(),/로그 정규화/);
     const projectedLogScore = await page.locator('tr[data-id="singgyul"] .score-value').innerText();
-    await page.locator('[data-filter="boundary"]').click();
     await page.locator('#search').fill('띵귤');
     assert.equal(await page.locator('tr[data-id="singgyul"] .score-value').innerText(),projectedLogScore);
+    await page.locator('#search').fill('');
+    // The target can move outside the 60–80 boundary filter as new data arrives.
+    const {rankingView} = await import('../assets/ranking-view.js');
+    const boundaryCandidate = rankingView(sourceSnapshot,'log','forecast',testTime).ranked.find(row=>row.predictedRank===70);
+    assert(boundaryCandidate);
+    const boundaryScore = page.locator(`tr[data-id="${boundaryCandidate.soopId}"] .score-value`);
+    const fullCohortScore = await boundaryScore.innerText();
+    await page.locator('[data-filter="boundary"]').click();
+    await page.locator('#search').fill(boundaryCandidate.soopId);
+    assert.equal(await boundaryScore.innerText(),fullCohortScore);
     await page.locator('#search').fill('');
     await page.locator('[data-filter="all"]').click();
     await page.locator('#method-inline').click();
