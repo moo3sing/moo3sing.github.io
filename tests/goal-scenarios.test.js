@@ -77,7 +77,10 @@ test('period end stops all three goals and leaves the final observations unchang
 });
 
 test('an unreachable conservative goal cannot be displayed as a smaller reassuring target',()=>{
- const bounded=goalScenarios(snapshot,now,{maxAdditionalUsers:1});
+ // Make the goal exceed the cap explicitly, even when the latest real target is zero.
+ const unreachable=structuredClone(snapshot);
+ unreachable.streamers.filter(row=>row.soopId!=='singgyul').forEach(row=>row.cumulativeUsers+=1_000_000_000);
+ const bounded=goalScenarios(unreachable,now,{maxAdditionalUsers:1});
  assert.equal(bounded.conservative.safe,null);
  assert.equal(bounded.conservative.daily,null);
 });
