@@ -1,20 +1,20 @@
 {
   "lastCollectionAttempt": "2026-11-14T22:27:28.156435+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
-  "lastDataChange": "2026-11-15T12:32:00+09:00",
+  "lastDataChange": "2026-11-17T02:07:00+09:00",
   "collectionStatus": "manual_partial",
-  "snapshotUpdatedAt": "2026-11-15T12:32:00+09:00",
+  "snapshotUpdatedAt": "2026-11-17T02:07:00+09:00",
   "collectionMode": "manual_partial",
   "actualDataScope": "listed_candidates_viewer_balloon",
   "competitorDataAsOf": "2026-10-03T15:15:01.688785+00:00",
-  "lastManualUpdate": "2026-11-15T03:32:00+00:00",
+  "lastManualUpdate": "2026-11-16T17:07:10.042064+00:00",
   "publicationStatus": "published_manual_partial",
   "viewerAdjustmentReview": {
     "applied": true,
     "assumptionBased": true,
-    "rawViewer": 9009711,
+    "rawViewer": 9183066,
     "viewerAdjustmentTotal": -70000,
-    "adjustedViewer": 8939711
+    "adjustedViewer": 9113066
   },
   "automaticCollection": {
     "platform": "github_actions",
@@ -24,7 +24,7 @@
     "maxFullAttemptsPerKstDay": 1,
     "retryOnFailure": false,
     "minRequestIntervalSeconds": 2.0,
-    "nextScheduledKST": "2026-11-16T03:15:00+09:00",
+    "nextScheduledKST": "2026-11-17T03:15:00+09:00",
     "blockedUntil": "2026-11-17T10:36:20.318255+09:00",
     "nextEligibleDailyKST": "2026-11-18T03:15:00+09:00"
   },
