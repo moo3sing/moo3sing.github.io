@@ -1,6 +1,13 @@
 {
   "kstDate": "2026-11-17",
   "startedAt": "2026-11-17T01:52:26.764979+00:00",
-  "status": "started",
-  "policy": "one full attempt per KST day; no automatic retry"
+  "status": "failed",
+  "policy": "one full attempt per KST day; no automatic retry",
+  "apiRequests": {
+    "totalRequests": 1,
+    "cacheHits": 0,
+    "duplicateRequests": 0,
+    "freshConfirmationRequests": 0,
+    "http429": 0
+  }
 }
