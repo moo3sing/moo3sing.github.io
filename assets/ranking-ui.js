@@ -9,7 +9,19 @@ const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<'
 const formatDate=value=>Number.isFinite(Date.parse(value))?new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(value)).replaceAll('-','.')+' KST':'기준일 미확인';
 let snapshot = null, ranked = [], pending = [], reserved = [], fixedSupport = [], model = 'rank', basis = 'forecast', filter = 'all', selectedId = null, view = null, loading = false;
 function recalculate(){
-  view=rankingView(snapshot,model,basis);ranked=view.ranked;pending=view.pending;reserved=view.reserved;fixedSupport=view.fixedSupport;
+  const calculationTime=new Date();
+  view=rankingView(snapshot,model,basis,calculationTime);ranked=view.ranked;pending=view.pending;reserved=view.reserved;fixedSupport=view.fixedSupport;
+  const actualView=basis==='actual'?view:rankingView(snapshot,model,'actual',calculationTime);
+  const forecastView=basis==='forecast'?view:rankingView(snapshot,model,'forecast',calculationTime);
+  el('target-summary').hidden=false;
+  el('target-summary-model').textContent=MODELS[model].label+(model==='log'?' · 실험':'');
+  /** @type {HTMLSelectElement} */ (el('target-model-select')).value=model;
+  for(const {key,targetView} of [{key:'actual',targetView:actualView},{key:'forecast',targetView:forecastView}]){
+    const target=targetView.ranked.find(row=>row.soopId==='singgyul');
+    el('target-'+key+'-rank').textContent=target?rankLabel(target.rankRange,target.predictedRank)+'위':'산정 대기';
+    el('target-'+key+'-card').dataset.active=String(basis===key);
+  }
+  el('target-forecast-label').textContent=forecastView.horizon.ended?'11월 말 최종 관측':'11월 말 예상';
   document.documentElement.dataset.basis=view.forecast?'forecast':'actual';
   el('ranking-title').textContent=view.forecast?'11월 말 예상 순위':'현재 누적 기준 순위';
   el('basis-note').textContent=view.forecast?'메인 시뮬레이션과 같은 최근 7일 평균 증가 속도으로 11월 30일을 예상합니다. 표의 세 지표는 미래 추정치이며, 후원자 수는 마지막 확인값과 기존 증가 추정에 기반합니다.':'각 지표의 마지막 확인값으로 계산합니다. 수동 반영일이 다른 후원자 수와 미갱신 후보의 기준일은 상세에서 확인할 수 있습니다.';
@@ -95,12 +107,15 @@ el('ranking-rows').addEventListener('click',event=>{
   renderDetail(row.getAttribute('data-id'));
   detailDialog.showModal();
 });
-document.querySelectorAll('[data-model]').forEach(button=>button.addEventListener('click',()=>{
-  model=button.getAttribute('data-model');
-  document.querySelectorAll('[data-model]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+el('target-detail').addEventListener('click',()=>{renderDetail('singgyul');detailDialog.showModal();});
+function selectModel(nextModel){
+  model=nextModel;
+  document.querySelectorAll('[data-model]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-model')===model)));
   el('model-description').textContent=MODELS[model].description;
   if(snapshot?.streamers?.length){recalculate();draw();}
-}));
+}
+document.querySelectorAll('[data-model]').forEach(button=>button.addEventListener('click',()=>selectModel(button.getAttribute('data-model'))));
+el('target-model-select').addEventListener('change',event=>selectModel(/** @type {HTMLSelectElement} */ (event.target).value));
 document.querySelectorAll('button[data-basis]').forEach(button=>button.addEventListener('click',()=>{
   basis=button.getAttribute('data-basis');
   document.querySelectorAll('button[data-basis]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));

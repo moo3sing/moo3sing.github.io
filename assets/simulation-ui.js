@@ -3,11 +3,22 @@ const el=id=>document.getElementById(id),fmt=n=>n===null?'—':n.toLocaleString(
 import {rankLabel} from './ranking-exceptions.js?v=20261019-fixed';
 import {updateTrends} from './trend-ui.js?v=20261112-partial';
 import {viewerOnlyReference} from './viewer-reference.js?v=20261112-seven';
+import {MODELS} from './ranking.js';
+import {rankingView,latestObservation} from './ranking-view.js?v=20261113-time';
 let snapshot;
 function render(){
  const calculationTime=new Date(),scenarios=goalScenarios(snapshot,calculationTime),r=scenarios.recent,original=scenarios.original,conservative=scenarios.conservative,ended=r.horizon.ended;
  const selectedModel=r.models.find(m=>m.model===r.safeModel);
  el('content').hidden=false;el('retry').hidden=true;
+ el('current-model-ranks').replaceChildren(...Object.keys(MODELS).map(model=>{
+  const row=rankingView(snapshot,model,'actual',calculationTime).ranked.find(row=>row.soopId==='singgyul');
+  const card=document.createElement('div');card.dataset.currentModel=model;
+  card.innerHTML=`<span>${MODELS[model].label}${model==='log'?' · 실험':''}</span><strong>${row?rankLabel(row.rankRange,row.predictedRank)+'<small>위</small>':'산정 대기'}</strong>`;
+  return card;
+ }));
+ const rankObserved=latestObservation(snapshot),rankDate=el('current-ranks-observed');
+ rankDate.setAttribute('datetime',rankObserved);
+ rankDate.textContent=new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date(rankObserved))+' KST';
  el('status').textContent=ended?'2026 심사 기간 종료':snapshot.status==='stale'?'최근 수집에 실패하여 마지막 정상 데이터를 표시합니다.':'';
  el('safe').textContent=ended?'종료':fmt(original.safe);el('unit').hidden=ended||original.safe===null;
  el('recent-goal').textContent=ended?'종료':fmt(r.safe);el('recent-unit').hidden=ended||r.safe===null;

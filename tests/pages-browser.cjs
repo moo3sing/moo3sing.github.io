@@ -36,6 +36,13 @@ const server = http.createServer((req,res) => {
     await page.clock.setFixedTime(testTime);
     assert.equal((await page.goto(base + '/')).status(),200);
     await page.waitForSelector('#content:visible');
+    const {rankingView} = await import('../assets/ranking-view.js');
+    const {rankLabel} = await import('../assets/ranking-exceptions.js');
+    for(const model of ['rank','percentile','ratio','minmax','log']){
+      const target=rankingView(sourceSnapshot,model,'actual',testTime).ranked.find(row=>row.soopId==='singgyul');
+      assert.equal(await page.locator(`[data-current-model="${model}"] strong`).innerText(),rankLabel(target.rankRange,target.predictedRank)+'위');
+    }
+    assert.equal(await page.locator('#current-ranks-observed').getAttribute('datetime'),sourceSnapshot.updatedAt);
     assert.match(await page.locator('#safe').innerText(),/\d/);
     assert.match(await page.locator('#current-rank').innerText(),/\d/);
     assert.match(await page.locator('#rank').innerText(),/\d/);
@@ -89,6 +96,9 @@ const server = http.createServer((req,res) => {
     for(const width of [1440,1024,768,390,320]) {
       await page.setViewportSize({width,height:900});
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),false,'Home overflow at ' + width);
+      await page.evaluate(()=>window.scrollTo(0,0));
+      const rankPanel=await page.locator('.current-ranks').boundingBox();
+      assert(rankPanel.y>=0&&rankPanel.y+rankPanel.height<=900,'Current ranks visible without scrolling at '+width);
       const cards = await page.locator('.goal-scenarios > article').all();
       const boxes = await Promise.all(cards.map(card=>card.boundingBox()));
       assert.equal(boxes.length,3);
@@ -96,26 +106,40 @@ const server = http.createServer((req,res) => {
       assert(boxes[0].x<boxes[1].x&&boxes[1].x<boxes[2].x);
       if(process.env.SCREENSHOT_DIR && [1440,390].includes(width)) {
         fs.mkdirSync(process.env.SCREENSHOT_DIR,{recursive:true});
-        await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`pages-home-${width}.png`),fullPage:true});
+        await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`pages-home-${width}.png`)});
       }
     }
     await page.locator('#theme').click();
     assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');
     assert.equal((await page.goto(base + '/ranking')).status(),200);
     await page.waitForSelector('#table-wrap:visible');
+    assert.equal(await page.locator('#target-model-select option').allTextContents().then(items=>items.join(', ')),'순위형, 백분위, 1위 대비, Min-Max, Log · 실험');
+    async function checkTargetSummary(snapshot,model){
+      for(const basis of ['actual','forecast']){
+        const target=rankingView(snapshot,model,basis,testTime).ranked.find(row=>row.soopId==='singgyul');
+        assert.equal(await page.locator(`#target-${basis}-rank`).innerText(),rankLabel(target.rankRange,target.predictedRank)+'위');
+      }
+    }
     assert.equal(await page.locator('#ranking-rows > tr[data-id]').count(),100);
     for(const model of ['rank','percentile','ratio','minmax','log']) {
       await page.locator(`[data-model="${model}"]`).click();
       assert.equal(await page.locator('#ranking-rows > tr[data-id]').count(),100);
       assert.match(await page.locator('#cutoff-name').innerText(),/\S/);
+      await checkTargetSummary(sourceSnapshot,model);
+      assert.equal(await page.locator('#target-model-select').inputValue(),model);
+      assert.equal(await page.locator('#target-forecast-card').getAttribute('data-active'),'true');
     }
     assert.match(await page.locator('#model-description').innerText(),/로그 정규화/);
+    await page.locator('#target-model-select').selectOption('ratio');
+    await checkTargetSummary(sourceSnapshot,'ratio');
+    assert.equal(await page.locator('[data-model="ratio"]').getAttribute('aria-pressed'),'true');
+    await page.locator('#target-model-select').selectOption('log');
     const projectedLogScore = await page.locator('tr[data-id="singgyul"] .score-value').innerText();
     await page.locator('#search').fill('띵귤');
+    await checkTargetSummary(sourceSnapshot,'log');
     assert.equal(await page.locator('tr[data-id="singgyul"] .score-value').innerText(),projectedLogScore);
     await page.locator('#search').fill('');
     // The target can move outside the 60–80 boundary filter as new data arrives.
-    const {rankingView} = await import('../assets/ranking-view.js');
     const boundaryCandidate = rankingView(sourceSnapshot,'log','forecast',testTime).ranked.find(row=>row.predictedRank===70);
     assert(boundaryCandidate);
     const boundaryScore = page.locator(`tr[data-id="${boundaryCandidate.soopId}"] .score-value`);
@@ -129,18 +153,48 @@ const server = http.createServer((req,res) => {
     assert.match(await page.locator('#method-dialog').innerText(),/ln\(1\+x\)/);
     await page.locator('#method-dialog [data-close]').click();
     await page.locator('[data-basis="actual"]').click();
+    for(const model of ['rank','percentile','ratio','minmax','log']){
+      await page.locator(`[data-model="${model}"]`).click();
+      await checkTargetSummary(sourceSnapshot,model);
+      assert.equal(await page.locator('#target-actual-card').getAttribute('data-active'),'true');
+    }
     assert.match(await page.locator('#basis-note').innerText(),/마지막 확인값/);
     await page.locator('#search').fill('띵귤');
     assert.equal(await page.locator('#ranking-rows > tr[data-id]').count(),1);
     await page.locator('#search').fill('');
+    await page.locator('[data-filter="boundary"]').click();
+    await page.locator('#search').fill('no-such-streamer');
+    await checkTargetSummary(sourceSnapshot,'log');
+    await page.locator('#target-detail').click();
+    assert.match(await page.locator('#detail-dialog').innerText(),/띵귤/);
+    await page.locator('#detail-dialog [data-close]').click();
+    await page.locator('#search').fill('');
+    await page.locator('[data-filter="all"]').click();
+    const refreshed=structuredClone(sourceSnapshot);
+    refreshed.streamers.find(row=>row.soopId==='singgyul').cumulativeUsers+=1000000;
+    await page.route('**/assets/data/ranking.json',route=>route.fulfill({json:refreshed}));
+    await page.locator('#refresh').click();
+    await page.waitForFunction(expected=>document.querySelector('tr[data-id="singgyul"] .users-cell')?.textContent.includes(expected.toLocaleString('ko-KR')),refreshed.streamers.find(row=>row.soopId==='singgyul').cumulativeUsers);
+    await checkTargetSummary(refreshed,'log');
+    await page.unroute('**/assets/data/ranking.json');
+    await page.locator('#refresh').click();
+    await page.waitForFunction(expected=>document.querySelector('tr[data-id="singgyul"] .users-cell')?.textContent.includes(expected.toLocaleString('ko-KR')),sourceSnapshot.streamers.find(row=>row.soopId==='singgyul').cumulativeUsers);
+    await checkTargetSummary(sourceSnapshot,'log');
     for(const width of [1440,768,390,320]) {
       await page.setViewportSize({width,height:900});
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),false,'Ranking overflow at ' + width);
+      await page.evaluate(()=>window.scrollTo(0,0));
+      const summary=await page.locator('#target-summary').boundingBox();
+      assert(summary.y>=0&&summary.y+summary.height<=900,'Target summary visible without scrolling at '+width);
       if(process.env.SCREENSHOT_DIR && [1440,390].includes(width)) {
-        await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`pages-ranking-${width}.png`),fullPage:true});
+        await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,`pages-ranking-${width}.png`)});
       }
     }
     const actual = await (await context.request.get(base + '/assets/data/ranking.json')).json();
+    await page.locator('#theme').click();
+    assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');
+    await checkTargetSummary(sourceSnapshot,'log');
+    if(process.env.SCREENSHOT_DIR)await page.screenshot({path:path.join(process.env.SCREENSHOT_DIR,'pages-ranking-dark.png')});
     const source = JSON.parse(fs.readFileSync('assets/data/ranking.json','utf8'));
     assert.deepEqual(actual,source);
     for(const route of ['/privacy','/assets/ranking-favicon.svg','/robots.txt','/admin/']) {
