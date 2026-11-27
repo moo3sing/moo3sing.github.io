@@ -1,5 +1,5 @@
 {
-  "lastCollectionAttempt": "2026-11-26T01:46:59.356496+00:00",
+  "lastCollectionAttempt": "2026-11-27T01:45:00.582524+00:00",
   "lastSuccessfulCollection": "2026-10-03T15:15:43.710964+00:00",
   "lastDataChange": "2026-11-26T00:18:00+09:00",
   "collectionStatus": "api_error",
@@ -24,9 +24,9 @@
     "maxFullAttemptsPerKstDay": 1,
     "retryOnFailure": false,
     "minRequestIntervalSeconds": 2.0,
-    "nextScheduledKST": "2026-11-27T03:15:00+09:00",
+    "nextScheduledKST": "2026-11-28T03:15:00+09:00",
     "blockedUntil": null,
-    "nextEligibleDailyKST": "2026-11-27T03:15:00+09:00"
+    "nextEligibleDailyKST": "2026-11-28T03:15:00+09:00"
   },
   "reason": "HTTP Error 403: Forbidden",
   "lastRunApiRequests": {
