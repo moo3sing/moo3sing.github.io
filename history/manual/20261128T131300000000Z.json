@@ -1,0 +1,1158 @@
+{
+  "matched": 97,
+  "competitors": 96,
+  "retained": 3,
+  "outside": 103,
+  "sourceCorrections": [],
+  "changes": [
+    {
+      "soopId": "khm11903",
+      "metric": "cumulativeUsers",
+      "previous": 140475466,
+      "current": 140498167
+    },
+    {
+      "soopId": "khm11903",
+      "metric": "balloonCount",
+      "previous": 14071032,
+      "current": 14072985
+    },
+    {
+      "soopId": "phonics1",
+      "metric": "cumulativeUsers",
+      "previous": 123099614,
+      "current": 124271812
+    },
+    {
+      "soopId": "phonics1",
+      "metric": "balloonCount",
+      "previous": 6711684,
+      "current": 6740633
+    },
+    {
+      "soopId": "lshooooo",
+      "metric": "cumulativeUsers",
+      "previous": 87024673,
+      "current": 87708227
+    },
+    {
+      "soopId": "lshooooo",
+      "metric": "balloonCount",
+      "previous": 3615245,
+      "current": 3644101
+    },
+    {
+      "soopId": "devil0108",
+      "metric": "cumulativeUsers",
+      "previous": 66921725,
+      "current": 67425514
+    },
+    {
+      "soopId": "devil0108",
+      "metric": "balloonCount",
+      "previous": 8253661,
+      "current": 8263139
+    },
+    {
+      "soopId": "rrvv17",
+      "metric": "cumulativeUsers",
+      "previous": 59051699,
+      "current": 59143457
+    },
+    {
+      "soopId": "rrvv17",
+      "metric": "balloonCount",
+      "previous": 8112190,
+      "current": 8114133
+    },
+    {
+      "soopId": "y1026",
+      "metric": "cumulativeUsers",
+      "previous": 43778724,
+      "current": 44020100
+    },
+    {
+      "soopId": "y1026",
+      "metric": "balloonCount",
+      "previous": 140860975,
+      "current": 140874020
+    },
+    {
+      "soopId": "galsa",
+      "metric": "cumulativeUsers",
+      "previous": 42282971,
+      "current": 42882008
+    },
+    {
+      "soopId": "galsa",
+      "metric": "balloonCount",
+      "previous": 3921900,
+      "current": 3975513
+    },
+    {
+      "soopId": "joey1114",
+      "metric": "cumulativeUsers",
+      "previous": 33348596,
+      "current": 33944297
+    },
+    {
+      "soopId": "joey1114",
+      "metric": "balloonCount",
+      "previous": 3360390,
+      "current": 3400410
+    },
+    {
+      "soopId": "b13246",
+      "metric": "cumulativeUsers",
+      "previous": 34300581,
+      "current": 34654328
+    },
+    {
+      "soopId": "b13246",
+      "metric": "balloonCount",
+      "previous": 4195608,
+      "current": 4202356
+    },
+    {
+      "soopId": "jrdart",
+      "metric": "cumulativeUsers",
+      "previous": 30638469,
+      "current": 30746693
+    },
+    {
+      "soopId": "jrdart",
+      "metric": "balloonCount",
+      "previous": 6648603,
+      "current": 6681321
+    },
+    {
+      "soopId": "wnnw",
+      "metric": "cumulativeUsers",
+      "previous": 30999672,
+      "current": 31007379
+    },
+    {
+      "soopId": "wnnw",
+      "metric": "balloonCount",
+      "previous": 71618375,
+      "current": 71618819
+    },
+    {
+      "soopId": "superbsw123",
+      "metric": "cumulativeUsers",
+      "previous": 30225430,
+      "current": 30409048
+    },
+    {
+      "soopId": "superbsw123",
+      "metric": "balloonCount",
+      "previous": 59258743,
+      "current": 59292925
+    },
+    {
+      "soopId": "tjrdbs999",
+      "metric": "cumulativeUsers",
+      "previous": 29309509,
+      "current": 29594538
+    },
+    {
+      "soopId": "tjrdbs999",
+      "metric": "balloonCount",
+      "previous": 5336702,
+      "current": 5388288
+    },
+    {
+      "soopId": "brainzerg7",
+      "metric": "cumulativeUsers",
+      "previous": 25702828,
+      "current": 26020905
+    },
+    {
+      "soopId": "brainzerg7",
+      "metric": "balloonCount",
+      "previous": 5796851,
+      "current": 5805182
+    },
+    {
+      "soopId": "legendhyuk",
+      "metric": "cumulativeUsers",
+      "previous": 22846142,
+      "current": 22878489
+    },
+    {
+      "soopId": "legendhyuk",
+      "metric": "balloonCount",
+      "previous": 4319494,
+      "current": 4320057
+    },
+    {
+      "soopId": "ecvhao",
+      "metric": "cumulativeUsers",
+      "previous": 27994370,
+      "current": 28236091
+    },
+    {
+      "soopId": "ecvhao",
+      "metric": "balloonCount",
+      "previous": 5679830,
+      "current": 5711637
+    },
+    {
+      "soopId": "iamquaddurup",
+      "metric": "cumulativeUsers",
+      "previous": 24041297,
+      "current": 24055790
+    },
+    {
+      "soopId": "iamquaddurup",
+      "metric": "balloonCount",
+      "previous": 4735870,
+      "current": 4755881
+    },
+    {
+      "soopId": "dlghfjs",
+      "metric": "cumulativeUsers",
+      "previous": 24803921,
+      "current": 24951460
+    },
+    {
+      "soopId": "dlghfjs",
+      "metric": "balloonCount",
+      "previous": 7529239,
+      "current": 7564445
+    },
+    {
+      "soopId": "cnsgkcnehd74",
+      "metric": "cumulativeUsers",
+      "previous": 20955816,
+      "current": 21039118
+    },
+    {
+      "soopId": "cnsgkcnehd74",
+      "metric": "balloonCount",
+      "previous": 5094415,
+      "current": 5110336
+    },
+    {
+      "soopId": "vlfvlf789",
+      "metric": "cumulativeUsers",
+      "previous": 22407421,
+      "current": 22566885
+    },
+    {
+      "soopId": "vlfvlf789",
+      "metric": "balloonCount",
+      "previous": 5816372,
+      "current": 5929203
+    },
+    {
+      "soopId": "sccha21",
+      "metric": "cumulativeUsers",
+      "previous": 20027022,
+      "current": 20132512
+    },
+    {
+      "soopId": "sccha21",
+      "metric": "balloonCount",
+      "previous": 2473712,
+      "current": 2480250
+    },
+    {
+      "soopId": "rkdakstlr911",
+      "metric": "cumulativeUsers",
+      "previous": 19863990,
+      "current": 19899395
+    },
+    {
+      "soopId": "rkdakstlr911",
+      "metric": "balloonCount",
+      "previous": 3584993,
+      "current": 3585597
+    },
+    {
+      "soopId": "arinbbidol",
+      "metric": "cumulativeUsers",
+      "previous": 17116598,
+      "current": 17260245
+    },
+    {
+      "soopId": "arinbbidol",
+      "metric": "balloonCount",
+      "previous": 12825003,
+      "current": 12829628
+    },
+    {
+      "soopId": "roket0829",
+      "metric": "cumulativeUsers",
+      "previous": 19723407,
+      "current": 19804932
+    },
+    {
+      "soopId": "roket0829",
+      "metric": "balloonCount",
+      "previous": 140986852,
+      "current": 142376324
+    },
+    {
+      "soopId": "ch1716",
+      "metric": "cumulativeUsers",
+      "previous": 19401578,
+      "current": 19547469
+    },
+    {
+      "soopId": "ch1716",
+      "metric": "balloonCount",
+      "previous": 41182163,
+      "current": 41212523
+    },
+    {
+      "soopId": "xoals137",
+      "metric": "cumulativeUsers",
+      "previous": 21073183,
+      "current": 21739129
+    },
+    {
+      "soopId": "xoals137",
+      "metric": "balloonCount",
+      "previous": 1994769,
+      "current": 2007662
+    },
+    {
+      "soopId": "1004suna",
+      "metric": "cumulativeUsers",
+      "previous": 17100317,
+      "current": 17194369
+    },
+    {
+      "soopId": "1004suna",
+      "metric": "balloonCount",
+      "previous": 3475610,
+      "current": 3487199
+    },
+    {
+      "soopId": "hwt1014",
+      "metric": "cumulativeUsers",
+      "previous": 18743032,
+      "current": 18819214
+    },
+    {
+      "soopId": "hwt1014",
+      "metric": "balloonCount",
+      "previous": 3752778,
+      "current": 3766348
+    },
+    {
+      "soopId": "qn308dud",
+      "metric": "cumulativeUsers",
+      "previous": 18369314,
+      "current": 18629418
+    },
+    {
+      "soopId": "qn308dud",
+      "metric": "balloonCount",
+      "previous": 4370873,
+      "current": 4406354
+    },
+    {
+      "soopId": "dlsn9911",
+      "metric": "cumulativeUsers",
+      "previous": 16980445,
+      "current": 17106022
+    },
+    {
+      "soopId": "dlsn9911",
+      "metric": "balloonCount",
+      "previous": 5377703,
+      "current": 5400863
+    },
+    {
+      "soopId": "danchu17",
+      "metric": "cumulativeUsers",
+      "previous": 13937800,
+      "current": 13977938
+    },
+    {
+      "soopId": "pyh3646",
+      "metric": "cumulativeUsers",
+      "previous": 16008937,
+      "current": 16164475
+    },
+    {
+      "soopId": "pyh3646",
+      "metric": "balloonCount",
+      "previous": 74170868,
+      "current": 74841927
+    },
+    {
+      "soopId": "rlatldgus",
+      "metric": "cumulativeUsers",
+      "previous": 14331904,
+      "current": 14395587
+    },
+    {
+      "soopId": "rlatldgus",
+      "metric": "balloonCount",
+      "previous": 2232139,
+      "current": 2238608
+    },
+    {
+      "soopId": "243000",
+      "metric": "cumulativeUsers",
+      "previous": 15797143,
+      "current": 15919323
+    },
+    {
+      "soopId": "243000",
+      "metric": "balloonCount",
+      "previous": 2771174,
+      "current": 2800201
+    },
+    {
+      "soopId": "townboy",
+      "metric": "cumulativeUsers",
+      "previous": 15140920,
+      "current": 15378531
+    },
+    {
+      "soopId": "townboy",
+      "metric": "balloonCount",
+      "previous": 2307603,
+      "current": 2330362
+    },
+    {
+      "soopId": "tntntn13",
+      "metric": "cumulativeUsers",
+      "previous": 14667210,
+      "current": 14821440
+    },
+    {
+      "soopId": "tntntn13",
+      "metric": "balloonCount",
+      "previous": 4406975,
+      "current": 4434700
+    },
+    {
+      "soopId": "wnstn0905",
+      "metric": "cumulativeUsers",
+      "previous": 14147093,
+      "current": 14227516
+    },
+    {
+      "soopId": "wnstn0905",
+      "metric": "balloonCount",
+      "previous": 3104220,
+      "current": 3106333
+    },
+    {
+      "soopId": "nangnan",
+      "metric": "cumulativeUsers",
+      "previous": 14856905,
+      "current": 14961752
+    },
+    {
+      "soopId": "nangnan",
+      "metric": "balloonCount",
+      "previous": 4979218,
+      "current": 5006611
+    },
+    {
+      "soopId": "kimdoenmo",
+      "metric": "cumulativeUsers",
+      "previous": 13613023,
+      "current": 13668897
+    },
+    {
+      "soopId": "kimdoenmo",
+      "metric": "balloonCount",
+      "previous": 992430,
+      "current": 999781
+    },
+    {
+      "soopId": "lilpa0309",
+      "metric": "cumulativeUsers",
+      "previous": 14542044,
+      "current": 14628722
+    },
+    {
+      "soopId": "lilpa0309",
+      "metric": "balloonCount",
+      "previous": 2978514,
+      "current": 2987566
+    },
+    {
+      "soopId": "eunyoung1238",
+      "metric": "cumulativeUsers",
+      "previous": 13227158,
+      "current": 13362551
+    },
+    {
+      "soopId": "eunyoung1238",
+      "metric": "balloonCount",
+      "previous": 9622332,
+      "current": 9675137
+    },
+    {
+      "soopId": "ioioiobb",
+      "metric": "cumulativeUsers",
+      "previous": 13677358,
+      "current": 13859164
+    },
+    {
+      "soopId": "ioioiobb",
+      "metric": "balloonCount",
+      "previous": 1389817,
+      "current": 1399136
+    },
+    {
+      "soopId": "jk890202",
+      "metric": "cumulativeUsers",
+      "previous": 12778672,
+      "current": 12886454
+    },
+    {
+      "soopId": "jk890202",
+      "metric": "balloonCount",
+      "previous": 6225506,
+      "current": 6256188
+    },
+    {
+      "soopId": "freshtomato",
+      "metric": "cumulativeUsers",
+      "previous": 11215937,
+      "current": 11243826
+    },
+    {
+      "soopId": "freshtomato",
+      "metric": "balloonCount",
+      "previous": 5822043,
+      "current": 5840910
+    },
+    {
+      "soopId": "sdkels",
+      "metric": "cumulativeUsers",
+      "previous": 12021708,
+      "current": 12132858
+    },
+    {
+      "soopId": "sdkels",
+      "metric": "balloonCount",
+      "previous": 2946518,
+      "current": 2971024
+    },
+    {
+      "soopId": "viichan6",
+      "metric": "cumulativeUsers",
+      "previous": 11166314,
+      "current": 11212085
+    },
+    {
+      "soopId": "viichan6",
+      "metric": "balloonCount",
+      "previous": 1970444,
+      "current": 1980271
+    },
+    {
+      "soopId": "aksen7833",
+      "metric": "cumulativeUsers",
+      "previous": 10819742,
+      "current": 10861751
+    },
+    {
+      "soopId": "aksen7833",
+      "metric": "balloonCount",
+      "previous": 2747862,
+      "current": 2751666
+    },
+    {
+      "soopId": "since821",
+      "metric": "cumulativeUsers",
+      "previous": 10285481,
+      "current": 10359836
+    },
+    {
+      "soopId": "since821",
+      "metric": "balloonCount",
+      "previous": 39498,
+      "current": 39736
+    },
+    {
+      "soopId": "yjkim5500",
+      "metric": "cumulativeUsers",
+      "previous": 9300032,
+      "current": 9349134
+    },
+    {
+      "soopId": "yjkim5500",
+      "metric": "balloonCount",
+      "previous": 1472916,
+      "current": 1474414
+    },
+    {
+      "soopId": "mygomiee",
+      "metric": "cumulativeUsers",
+      "previous": 10218016,
+      "current": 10297613
+    },
+    {
+      "soopId": "mygomiee",
+      "metric": "balloonCount",
+      "previous": 2165093,
+      "current": 2174932
+    },
+    {
+      "soopId": "lhtlgm",
+      "metric": "cumulativeUsers",
+      "previous": 10064243,
+      "current": 10117576
+    },
+    {
+      "soopId": "lhtlgm",
+      "metric": "balloonCount",
+      "previous": 2443554,
+      "current": 2453019
+    },
+    {
+      "soopId": "vf3366",
+      "metric": "cumulativeUsers",
+      "previous": 15415465,
+      "current": 15718682
+    },
+    {
+      "soopId": "vf3366",
+      "metric": "balloonCount",
+      "previous": 5290447,
+      "current": 5368951
+    },
+    {
+      "soopId": "yangdoki",
+      "metric": "cumulativeUsers",
+      "previous": 8193266,
+      "current": 8251656
+    },
+    {
+      "soopId": "yangdoki",
+      "metric": "balloonCount",
+      "previous": 1761136,
+      "current": 1764664
+    },
+    {
+      "soopId": "kymakyma",
+      "metric": "cumulativeUsers",
+      "previous": 10591991,
+      "current": 10605434
+    },
+    {
+      "soopId": "kymakyma",
+      "metric": "balloonCount",
+      "previous": 4663990,
+      "current": 4665079
+    },
+    {
+      "soopId": "spbabobj",
+      "metric": "cumulativeUsers",
+      "previous": 10120589,
+      "current": 10174472
+    },
+    {
+      "soopId": "spbabobj",
+      "metric": "balloonCount",
+      "previous": 1820185,
+      "current": 1824697
+    },
+    {
+      "soopId": "dnwnwjdqhr53",
+      "metric": "cumulativeUsers",
+      "previous": 10506551,
+      "current": 10623062
+    },
+    {
+      "soopId": "dnwnwjdqhr53",
+      "metric": "balloonCount",
+      "previous": 2857509,
+      "current": 2873285
+    },
+    {
+      "soopId": "dearhal",
+      "metric": "cumulativeUsers",
+      "previous": 8293189,
+      "current": 8360968
+    },
+    {
+      "soopId": "dearhal",
+      "metric": "balloonCount",
+      "previous": 3623816,
+      "current": 3632195
+    },
+    {
+      "soopId": "nmangoquince",
+      "metric": "cumulativeUsers",
+      "previous": 8723989,
+      "current": 8785091
+    },
+    {
+      "soopId": "nmangoquince",
+      "metric": "balloonCount",
+      "previous": 5510408,
+      "current": 5546863
+    },
+    {
+      "soopId": "m0m099",
+      "metric": "cumulativeUsers",
+      "previous": 8655768,
+      "current": 8705173
+    },
+    {
+      "soopId": "m0m099",
+      "metric": "balloonCount",
+      "previous": 7076704,
+      "current": 7159419
+    },
+    {
+      "soopId": "he0901",
+      "metric": "cumulativeUsers",
+      "previous": 9521816,
+      "current": 9592470
+    },
+    {
+      "soopId": "he0901",
+      "metric": "balloonCount",
+      "previous": 1664925,
+      "current": 1669837
+    },
+    {
+      "soopId": "gofl2237",
+      "metric": "cumulativeUsers",
+      "previous": 10439360,
+      "current": 10540435
+    },
+    {
+      "soopId": "gofl2237",
+      "metric": "balloonCount",
+      "previous": 3849176,
+      "current": 3861015
+    },
+    {
+      "soopId": "mj0128",
+      "metric": "cumulativeUsers",
+      "previous": 7551579,
+      "current": 7585157
+    },
+    {
+      "soopId": "mj0128",
+      "metric": "balloonCount",
+      "previous": 3891434,
+      "current": 3910315
+    },
+    {
+      "soopId": "jingburger1",
+      "metric": "cumulativeUsers",
+      "previous": 9395772,
+      "current": 9443933
+    },
+    {
+      "soopId": "jingburger1",
+      "metric": "balloonCount",
+      "previous": 2579837,
+      "current": 2587644
+    },
+    {
+      "soopId": "rud9281",
+      "metric": "cumulativeUsers",
+      "previous": 10303309,
+      "current": 10446014
+    },
+    {
+      "soopId": "rud9281",
+      "metric": "balloonCount",
+      "previous": 9968156,
+      "current": 10149802
+    },
+    {
+      "soopId": "jaeparkk",
+      "metric": "cumulativeUsers",
+      "previous": 9236963,
+      "current": 9345752
+    },
+    {
+      "soopId": "jaeparkk",
+      "metric": "balloonCount",
+      "previous": 2043399,
+      "current": 2055778
+    },
+    {
+      "soopId": "rudals5467",
+      "metric": "cumulativeUsers",
+      "previous": 9251726,
+      "current": 9292392
+    },
+    {
+      "soopId": "rudals5467",
+      "metric": "balloonCount",
+      "previous": 3608345,
+      "current": 3611528
+    },
+    {
+      "soopId": "120510",
+      "metric": "cumulativeUsers",
+      "previous": 10636275,
+      "current": 10823415
+    },
+    {
+      "soopId": "120510",
+      "metric": "balloonCount",
+      "previous": 5720155,
+      "current": 5805555
+    },
+    {
+      "soopId": "larothy",
+      "metric": "cumulativeUsers",
+      "previous": 8393160,
+      "current": 8412503
+    },
+    {
+      "soopId": "larothy",
+      "metric": "balloonCount",
+      "previous": 1259061,
+      "current": 1259440
+    },
+    {
+      "soopId": "juju0228",
+      "metric": "cumulativeUsers",
+      "previous": 8468105,
+      "current": 8883395
+    },
+    {
+      "soopId": "juju0228",
+      "metric": "balloonCount",
+      "previous": 25527834,
+      "current": 25606006
+    },
+    {
+      "soopId": "gjstn7637",
+      "metric": "cumulativeUsers",
+      "previous": 11946456,
+      "current": 12079070
+    },
+    {
+      "soopId": "gjstn7637",
+      "metric": "balloonCount",
+      "previous": 1801775,
+      "current": 1822210
+    },
+    {
+      "soopId": "ldrboo",
+      "metric": "cumulativeUsers",
+      "previous": 8609698,
+      "current": 8690393
+    },
+    {
+      "soopId": "ldrboo",
+      "metric": "balloonCount",
+      "previous": 3519713,
+      "current": 3603275
+    },
+    {
+      "soopId": "nyouuu30810",
+      "metric": "cumulativeUsers",
+      "previous": 7047568,
+      "current": 7117720
+    },
+    {
+      "soopId": "nyouuu30810",
+      "metric": "balloonCount",
+      "previous": 2216391,
+      "current": 2233590
+    },
+    {
+      "soopId": "dobby1031",
+      "metric": "cumulativeUsers",
+      "previous": 7993204,
+      "current": 8033158
+    },
+    {
+      "soopId": "dobby1031",
+      "metric": "balloonCount",
+      "previous": 1922360,
+      "current": 1929324
+    },
+    {
+      "soopId": "dkfksl00",
+      "metric": "cumulativeUsers",
+      "previous": 6926034,
+      "current": 6929578
+    },
+    {
+      "soopId": "dkfksl00",
+      "metric": "balloonCount",
+      "previous": 830784,
+      "current": 836666
+    },
+    {
+      "soopId": "gksdidqksxn",
+      "metric": "cumulativeUsers",
+      "previous": 8454422,
+      "current": 8509411
+    },
+    {
+      "soopId": "gksdidqksxn",
+      "metric": "balloonCount",
+      "previous": 1789723,
+      "current": 1802442
+    },
+    {
+      "soopId": "nanajam",
+      "metric": "cumulativeUsers",
+      "previous": 7947110,
+      "current": 7953016
+    },
+    {
+      "soopId": "nanajam",
+      "metric": "balloonCount",
+      "previous": 1902830,
+      "current": 1902842
+    },
+    {
+      "soopId": "singgyul",
+      "metric": "cumulativeUsers",
+      "previous": 9685085,
+      "current": 9757259
+    },
+    {
+      "soopId": "singgyul",
+      "metric": "balloonCount",
+      "previous": 6976189,
+      "current": 7049647
+    },
+    {
+      "soopId": "rlaxordyd",
+      "metric": "cumulativeUsers",
+      "previous": 8176610,
+      "current": 8203271
+    },
+    {
+      "soopId": "rlaxordyd",
+      "metric": "balloonCount",
+      "previous": 2629994,
+      "current": 2630617
+    },
+    {
+      "soopId": "chaenna02",
+      "metric": "cumulativeUsers",
+      "previous": 7667571,
+      "current": 7728086
+    },
+    {
+      "soopId": "chaenna02",
+      "metric": "balloonCount",
+      "previous": 3713055,
+      "current": 3733330
+    },
+    {
+      "soopId": "dkrn56",
+      "metric": "cumulativeUsers",
+      "previous": 7690988,
+      "current": 7778825
+    },
+    {
+      "soopId": "dkrn56",
+      "metric": "balloonCount",
+      "previous": 2042213,
+      "current": 2048493
+    },
+    {
+      "soopId": "kaksjak0730",
+      "metric": "cumulativeUsers",
+      "previous": 6288725,
+      "current": 6314486
+    },
+    {
+      "soopId": "kaksjak0730",
+      "metric": "balloonCount",
+      "previous": 1660699,
+      "current": 1666149
+    },
+    {
+      "soopId": "ayanesena",
+      "metric": "cumulativeUsers",
+      "previous": 5271499,
+      "current": 5272461
+    },
+    {
+      "soopId": "ayanesena",
+      "metric": "balloonCount",
+      "previous": 1299704,
+      "current": 1299830
+    },
+    {
+      "soopId": "golaniyule0",
+      "metric": "cumulativeUsers",
+      "previous": 8885253,
+      "current": 8990540
+    },
+    {
+      "soopId": "golaniyule0",
+      "metric": "balloonCount",
+      "previous": 3992030,
+      "current": 4012671
+    },
+    {
+      "soopId": "doormomo",
+      "metric": "cumulativeUsers",
+      "previous": 7768986,
+      "current": 7797444
+    },
+    {
+      "soopId": "doormomo",
+      "metric": "balloonCount",
+      "previous": 2527532,
+      "current": 2532302
+    },
+    {
+      "soopId": "moonwol0614",
+      "metric": "cumulativeUsers",
+      "previous": 7197816,
+      "current": 7371075
+    },
+    {
+      "soopId": "moonwol0614",
+      "metric": "balloonCount",
+      "previous": 2527191,
+      "current": 2563494
+    },
+    {
+      "soopId": "sky2713",
+      "metric": "cumulativeUsers",
+      "previous": 7051235,
+      "current": 7111426
+    },
+    {
+      "soopId": "sky2713",
+      "metric": "balloonCount",
+      "previous": 1882874,
+      "current": 1884636
+    },
+    {
+      "soopId": "seokwngud",
+      "metric": "cumulativeUsers",
+      "previous": 9455343,
+      "current": 9806596
+    },
+    {
+      "soopId": "seokwngud",
+      "metric": "balloonCount",
+      "previous": 580229,
+      "current": 589366
+    }
+  ],
+  "target": {
+    "streamerId": "singgyul",
+    "observedAt": "2026-11-28T22:13:00+09:00",
+    "appliedAt": "2026-11-28T13:15:30.850453+00:00",
+    "automaticBase": {
+      "cumulativeUsers": 6625621,
+      "donorCount": 4691,
+      "balloonCount": 4328532
+    },
+    "metrics": {
+      "viewer": 9757259,
+      "donor": 4817,
+      "balloon": 7049647
+    },
+    "source": "user_pasted_trackify_table",
+    "reason": "suspected_viewbot_traffic",
+    "rawViewer": 9827259,
+    "adjustedViewer": 9757259,
+    "adjustment": -70000,
+    "viewerAdjustments": [
+      {
+        "date": "2026-10-17",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "eventId": "2026-10-17-existing",
+        "appliedDelta": -20000
+      },
+      {
+        "date": "2026-10-18",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "eventId": "2026-10-18-dawn-existing",
+        "appliedDelta": -20000
+      },
+      {
+        "eventId": "2026-10-18-evening-new",
+        "date": "2026-10-18",
+        "timeBand": "evening",
+        "delta": -20000,
+        "reason": "suspected_viewbot_traffic",
+        "includedIn2311Snapshot": "user_confirmed",
+        "appliedDelta": -20000
+      },
+      {
+        "eventId": "2026-10-19-user-requested-10000",
+        "date": "2026-10-19",
+        "delta": -10000,
+        "reason": "suspected_viewbot_traffic",
+        "amountIsApproximate": true,
+        "source": "user_request",
+        "includedInSourceAsOf": "2026-10-19T23:22:00+09:00",
+        "appliedDelta": -10000
+      }
+    ],
+    "rawMetrics": {
+      "viewer": 9827259,
+      "donor": 4817,
+      "balloon": 7049647
+    },
+    "adjustedMetrics": {
+      "viewer": 9757259,
+      "donor": 4817,
+      "balloon": 7049647
+    },
+    "sourceCorrectionReview": {
+      "status": "user_confirmed_no_source_correction",
+      "previousRawViewer": 7311517,
+      "currentRawViewer": 7422588,
+      "rawDelta": 111071,
+      "confirmedKstDate": "2026-10-18",
+      "reason": "User confirmed no source correction and revised both dates to -20000; today's daily viewer reference is 84818, with possible source update delay.",
+      "dailyViewerReference": 84818
+    },
+    "sourceObservation": {
+      "date": "2026-11-28",
+      "precision": "minute",
+      "observedAt": "2026-11-28T22:13:00+09:00",
+      "exactSourceTimestampProvided": false,
+      "observationTimestampRole": "operator_current_time_at_user_request",
+      "receivedAt": "2026-11-28T22:13:00+09:00",
+      "statement": "The user requested the current KST time. The attachment has no original source timestamp."
+    }
+  },
+  "projected": 9848664,
+  "projectedRank": 60,
+  "models": {
+    "rank": 0,
+    "ratio": 0,
+    "minmax": 0
+  },
+  "safeTarget": 0,
+  "observedAt": "2026-11-28T22:13:00+09:00",
+  "sourceMode": "annual_batch",
+  "rawViewer": 9827259,
+  "adjustedViewer": 9757259,
+  "viewerAdjustment": -70000,
+  "predictedRank": 60,
+  "dryRun": false,
+  "published": false,
+  "snapshotHash": "377238e98b5b18b9cf539e77d33a00936f108d12911df8e05fb7c7faa14ea1d2",
+  "source": "operator_github_workflow",
+  "rawAndAdjustedPreserved": true,
+  "sourceObservation": {
+    "date": "2026-11-28",
+    "precision": "minute",
+    "observedAt": "2026-11-28T22:13:00+09:00",
+    "exactSourceTimestampProvided": false,
+    "observationTimestampRole": "operator_current_time_at_user_request",
+    "receivedAt": "2026-11-28T22:13:00+09:00",
+    "statement": "The user requested the current KST time. The attachment has no original source timestamp."
+  }
+}
